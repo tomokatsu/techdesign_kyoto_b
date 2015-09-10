@@ -83,6 +83,9 @@
 			isa = PBXGroup;
 			children = (
 				49E67D371BA180B200AC8108 /* AppDelegate.swift */,
+				49E67D5D1BA1CDED00AC8108 /* controller */,
+				49E67D5C1BA1CDD600AC8108 /* view */,
+				49E67D5B1BA1CDD000AC8108 /* model */,
 				49E67D3B1BA180B200AC8108 /* Main.storyboard */,
 				49E67D3E1BA180B200AC8108 /* Images.xcassets */,
 				49E67D401BA180B200AC8108 /* LaunchScreen.xib */,
@@ -114,6 +117,27 @@
 				49E67D4C1BA180B200AC8108 /* Info.plist */,
 			);
 			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		49E67D5B1BA1CDD000AC8108 /* model */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			name = model;
+			sourceTree = "<group>";
+		};
+		49E67D5C1BA1CDD600AC8108 /* view */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			name = view;
+			sourceTree = "<group>";
+		};
+		49E67D5D1BA1CDED00AC8108 /* controller */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			name = controller;
 			sourceTree = "<group>";
 		};
 		75F3DFD6CD4EE800BE09F7AA /* Pods */ = {
