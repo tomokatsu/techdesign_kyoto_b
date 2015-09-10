@@ -28,3 +28,6 @@ xcuserdata
 ## cocoapods
 Pods/
 *.xcworkspace
+
+## mac
+.DS_Store
