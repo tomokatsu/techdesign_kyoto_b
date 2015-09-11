@@ -5,16 +5,12 @@ import Alamofire
 class APIClient {
     static let sharedInstance = APIClient()
 
-    private static let rootURL = ""
+    private static let rootURL = "http://ax.itunes.apple.com/WebObjects/MZStoreServices.woa/wa/wsSearch"
 
     private init() {}
 
-    private func getPathFromEndpoint(endpoint: String) -> String {
-        return APIClient.rootURL + endpoint
-    }
-
-    func GET<T: Mappable>(endpoint: String, parameter: [String: AnyObject], completion: ((T?, NSError?) -> Void)) {
-        Alamofire.request(.GET, getPathFromEndpoint(endpoint), parameters: parameter, encoding: .URL)
+    func GET<T: Mappable>(parameter: [String: AnyObject]?, completion: ((T?, NSError?) -> Void)) {
+        Alamofire.request(.GET, APIClient.rootURL, parameters: parameter, encoding: .URL)
             .responseObject { (response: T?, err: NSError?) in
                 if let error = err { /* エラー処理 */}
                 completion(response, err)

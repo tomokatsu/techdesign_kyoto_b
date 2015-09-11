@@ -8,7 +8,7 @@ class MusicTrackResponse: Mappable {
     }
 
     func mapping(map: Map) {
-        musics <- map["result"]
+        musics <- map["results"]
     }
 }
 
