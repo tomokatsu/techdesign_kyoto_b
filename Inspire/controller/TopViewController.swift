@@ -5,7 +5,7 @@ class TopViewController: ISPViewController, UITableViewDelegate, UITableViewData
 
     @IBOutlet weak var tableView: UITableView!
 
-    static let cellHeightWidthRatio = CGFloat(182.0 / 320.0)
+    static let cellHeightWidthRatio = CGFloat(190.0 / 320.0)
     let realm = Realm()
     var playlists: Results<Playlist>?
 
@@ -15,12 +15,25 @@ class TopViewController: ISPViewController, UITableViewDelegate, UITableViewData
     }
 
     func tableView(tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return playlists?.count ?? 0
+        return 3
     }
 
     func tableView(tableView: UITableView, cellForRowAtIndexPath indexPath: NSIndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCellWithIdentifier("Cell", forIndexPath: indexPath) as? TopTableViewCell ?? TopTableViewCell()
-        let playlist = playlists![indexPath.row]
+        let playlist = Playlist()
+        playlist.title = "テストですーーー"
+        playlist.playlister = "テストユーザー"
+        playlist.comment = "テストしてみました！"
+        var tracks = List<MusicTrack>()
+        for i in 0...7 {
+            let track = MusicTrack()
+            track.title = "test song"
+            track.artworkUrl = "http://vector-sozai.up.seesaa.net/image/HumanSkulls.png"
+            track.artist = "test artist"
+            tracks.append(track)
+        }
+        playlist.musisTracks = tracks
+
         cell.titleLabel.text = playlist.title
         cell.playlisterLabel.text = playlist.playlister
         cell.commentLabel.text = playlist.comment

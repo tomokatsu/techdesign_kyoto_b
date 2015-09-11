@@ -8,19 +8,6 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
     let realm = Realm()
 
     func application(application: UIApplication, didFinishLaunchingWithOptions launchOptions: [NSObject: AnyObject]?) -> Bool {
-
-
-
-        APIClient.sharedInstance.GET(["term":"dinka", "country":"JP", "entity":"musicTrack"]) { (response: MusicTrackResponse?, error: NSError?) in
-            for music in response!.musics {
-                //println("\(music.artistName) \(music.artworkUrl) \(music.name)")
-                self.realm.write {
-                    self.realm.add(music, update: false)
-                }
-            }
-        }
-
-        
         return true
     }
 
