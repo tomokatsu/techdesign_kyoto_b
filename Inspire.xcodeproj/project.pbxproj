@@ -8,6 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		153BE10CEACB064F2A28EBB3 /* Pods.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A905C659755439296FD27D7E /* Pods.framework */; settings = {ATTRIBUTES = (Weak, ); }; };
+		497B68981BA2642100613715 /* MusicTrackResponse.swift in Sources */ = {isa = PBXBuildFile; fileRef = 497B68971BA2642100613715 /* MusicTrackResponse.swift */; };
 		49E67D381BA180B200AC8108 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 49E67D371BA180B200AC8108 /* AppDelegate.swift */; };
 		49E67D3D1BA180B200AC8108 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 49E67D3B1BA180B200AC8108 /* Main.storyboard */; };
 		49E67D3F1BA180B200AC8108 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 49E67D3E1BA180B200AC8108 /* Images.xcassets */; };
@@ -27,6 +28,7 @@
 
 /* Begin PBXFileReference section */
 		023A452FAB889A56FC854F17 /* Pods.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = Pods.debug.xcconfig; path = "Pods/Target Support Files/Pods/Pods.debug.xcconfig"; sourceTree = "<group>"; };
+		497B68971BA2642100613715 /* MusicTrackResponse.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MusicTrackResponse.swift; sourceTree = "<group>"; };
 		49E67D321BA180B200AC8108 /* Inspire.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Inspire.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		49E67D361BA180B200AC8108 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		49E67D371BA180B200AC8108 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
@@ -59,6 +61,21 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		497B68951BA2633400613715 /* iTunesResponse */ = {
+			isa = PBXGroup;
+			children = (
+				497B68971BA2642100613715 /* MusicTrackResponse.swift */,
+			);
+			name = iTunesResponse;
+			sourceTree = "<group>";
+		};
+		497B68961BA2634600613715 /* Util */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			name = Util;
+			sourceTree = "<group>";
+		};
 		49E67D291BA180B200AC8108 = {
 			isa = PBXGroup;
 			children = (
@@ -83,6 +100,7 @@
 			isa = PBXGroup;
 			children = (
 				49E67D371BA180B200AC8108 /* AppDelegate.swift */,
+				497B68961BA2634600613715 /* Util */,
 				49E67D5D1BA1CDED00AC8108 /* controller */,
 				49E67D5C1BA1CDD600AC8108 /* view */,
 				49E67D5B1BA1CDD000AC8108 /* model */,
@@ -122,6 +140,7 @@
 		49E67D5B1BA1CDD000AC8108 /* model */ = {
 			isa = PBXGroup;
 			children = (
+				497B68951BA2633400613715 /* iTunesResponse */,
 			);
 			name = model;
 			sourceTree = "<group>";
@@ -308,6 +327,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				497B68981BA2642100613715 /* MusicTrackResponse.swift in Sources */,
 				49E67D381BA180B200AC8108 /* AppDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
