@@ -10,6 +10,8 @@ class MusicTrackResponse: Mappable {
     func mapping(map: Map) {
         musics <- map["results"]
     }
+
+
 }
 
 
@@ -17,6 +19,7 @@ class OMMusicTrack: Mappable {
     var name = ""
     var artistName = ""
     var previewUrl = ""
+    var artworkUrl = ""
 
     static func newInstance(map: Map) -> Mappable? {
         return OMMusicTrack()
@@ -26,5 +29,6 @@ class OMMusicTrack: Mappable {
         name <- map["trackName"]
         artistName <- map["artistName"]
         previewUrl <- map["previewUrl"]
+        artworkUrl <- map["artworkUrl100"]
     }
 }

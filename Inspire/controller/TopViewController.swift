@@ -20,7 +20,6 @@ class TopViewController: ISPViewController, UITableViewDelegate, UITableViewData
     }
 
     func tableView(tableView: UITableView, heightForRowAtIndexPath indexPath: NSIndexPath) -> CGFloat {
-        println(TopViewController.cellHeightWidthRatio)
         return TopViewController.cellHeightWidthRatio * UIScreen.mainScreen().bounds.width
     }
 
