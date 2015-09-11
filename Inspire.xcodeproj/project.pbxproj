@@ -159,7 +159,7 @@
 				497B68991BA269B700613715 /* realm */,
 				497B68951BA2633400613715 /* iTunesResponse */,
 			);
-			name = model;
+			path = model;
 			sourceTree = "<group>";
 		};
 		49E67D5C1BA1CDD600AC8108 /* view */ = {
