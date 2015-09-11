@@ -1,7 +1,7 @@
 import ObjectMapper
 
 class MusicTrackResponse: Mappable {
-    var musics: [MusicTrack] = []
+    var musics: [OMMusicTrack] = []
 
     static func newInstance(map: Map) -> Mappable? {
         return MusicTrackResponse()
@@ -13,13 +13,13 @@ class MusicTrackResponse: Mappable {
 }
 
 
-class MusicTrack: Mappable {
+class OMMusicTrack: Mappable {
     var name = ""
     var artistName = ""
     var previewUrl = ""
 
     static func newInstance(map: Map) -> Mappable? {
-        return MusicTrack()
+        return OMMusicTrack()
     }
 
     func mapping(map: Map) {
