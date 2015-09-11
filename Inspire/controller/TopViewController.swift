@@ -4,6 +4,8 @@ class TopViewController: ISPViewController, UITableViewDelegate, UITableViewData
 
     @IBOutlet weak var tableView: UITableView!
 
+    static let cellHeightWidthRatio = CGFloat(182.0 / 320.0)
+
     override func viewDidLoad() {
         super.viewDidLoad()
     }
@@ -17,6 +19,10 @@ class TopViewController: ISPViewController, UITableViewDelegate, UITableViewData
         return cell
     }
 
+    func tableView(tableView: UITableView, heightForRowAtIndexPath indexPath: NSIndexPath) -> CGFloat {
+        println(TopViewController.cellHeightWidthRatio)
+        return TopViewController.cellHeightWidthRatio * UIScreen.mainScreen().bounds.width
+    }
 
 
     func tableView(tableView: UITableView, didSelectRowAtIndexPath indexPath: NSIndexPath) {
