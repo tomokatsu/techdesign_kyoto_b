@@ -1,18 +1,19 @@
 
 import UIKit
+import SDWebImage
 
 class PlaylistJacketImagesView: UIView {
 
     let mainImageView = UIImageView()
     var subImageViews: [UIImageView] = []
 
-    var images: [UIImage] {
+    var artWorkURLs: [String] {
         get {
-            return self.images
+            return self.artWorkURLs
         }
 
-        set(images) {
-            self.images = images
+        set(artWorkURLs) {
+            self.artWorkURLs = artWorkURLs
             layoutIfNeeded()
         }
     }
@@ -27,9 +28,9 @@ class PlaylistJacketImagesView: UIView {
         mainImageView.frame = CGRectMake(0, 0, viewSize.height, viewSize.height)
         mainImageView.backgroundColor = UIColor.yellowColor()
         self.addSubview(mainImageView)
-        mainImageView.image = UIImage(named: "dammy.jpg")
+        mainImageView.sd_setImageWithURL(NSURL(string: artWorkURLs[0]))
         let subImageViewSize = CGSizeMake(floor(viewSize.height/2), floor(viewSize.height/2))
-        for i in 0...5 {
+        for i in 0...4 {
             let subImageView = UIImageView(frame: CGRectMake(0, 0, subImageViewSize.width, subImageViewSize.width))
             var subImageViewFrame = subImageView.frame
             subImageViewFrame.origin.x = CGFloat(Int(i/2)) * subImageViewSize.width + mainImageView.frame.size.width
@@ -38,7 +39,7 @@ class PlaylistJacketImagesView: UIView {
             }
             subImageView.frame = subImageViewFrame
 
-            subImageView.image = UIImage(named: "dammy.jpg")
+            subImageView.sd_setImageWithURL(NSURL(string: artWorkURLs[i + 1]))
 
             self.addSubview(subImageView)
             subImageViews.append(subImageView)
