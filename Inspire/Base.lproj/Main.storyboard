@@ -131,7 +131,7 @@
                                 <color key="sectionIndexBackgroundColor" red="0.11518297697368421" green="0.11372549019607843" blue="0.12549019607843137" alpha="1" colorSpace="calibratedRGB"/>
                                 <color key="sectionIndexTrackingBackgroundColor" red="0.11372549019607843" green="0.11372549019607843" blue="0.12549019607843137" alpha="1" colorSpace="calibratedRGB"/>
                                 <prototypes>
-                                    <tableViewCell contentMode="scaleToFill" selectionStyle="none" indentationWidth="10" reuseIdentifier="MainCell" rowHeight="320" id="WPT-a8-bO5">
+                                    <tableViewCell contentMode="scaleToFill" selectionStyle="none" indentationWidth="10" reuseIdentifier="MainCell" rowHeight="320" id="WPT-a8-bO5" customClass="PlaylistMainCell" customModule="Inspire" customModuleProvider="target">
                                         <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="WPT-a8-bO5" id="c8o-ZF-kSk">
@@ -140,14 +140,43 @@
                                                 <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="dammy" translatesAutoresizingMaskIntoConstraints="NO" id="rys-UU-c6n">
                                                     <rect key="frame" x="0.0" y="0.0" width="320" height="319.5"/>
                                                 </imageView>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="V5u-wl-bqk">
+                                                    <rect key="frame" x="12" y="258" width="170" height="20"/>
+                                                    <constraints>
+                                                        <constraint firstAttribute="width" constant="170" id="Bgx-OF-Nfg"/>
+                                                        <constraint firstAttribute="height" constant="20" id="y9W-NL-dOJ"/>
+                                                    </constraints>
+                                                    <fontDescription key="fontDescription" type="system" pointSize="16"/>
+                                                    <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="3oW-OT-vsB">
+                                                    <rect key="frame" x="12" y="288" width="95" height="15"/>
+                                                    <constraints>
+                                                        <constraint firstAttribute="height" constant="15" id="ZHb-nF-dSE"/>
+                                                        <constraint firstAttribute="width" constant="95" id="nzi-Nb-Mi6"/>
+                                                    </constraints>
+                                                    <fontDescription key="fontDescription" type="system" pointSize="10"/>
+                                                    <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
                                             </subviews>
                                             <constraints>
+                                                <constraint firstAttribute="bottom" secondItem="3oW-OT-vsB" secondAttribute="bottom" constant="16" id="AHe-LR-aRI"/>
+                                                <constraint firstItem="V5u-wl-bqk" firstAttribute="leading" secondItem="c8o-ZF-kSk" secondAttribute="leading" constant="12" id="PGA-06-h1m"/>
                                                 <constraint firstAttribute="trailing" secondItem="rys-UU-c6n" secondAttribute="trailing" id="RD7-hG-oYu"/>
                                                 <constraint firstItem="rys-UU-c6n" firstAttribute="top" secondItem="c8o-ZF-kSk" secondAttribute="top" id="WuL-6M-brY"/>
                                                 <constraint firstAttribute="bottom" secondItem="rys-UU-c6n" secondAttribute="bottom" id="ZG5-PT-6Wz"/>
+                                                <constraint firstItem="3oW-OT-vsB" firstAttribute="top" secondItem="V5u-wl-bqk" secondAttribute="bottom" constant="10" id="hBN-li-eag"/>
+                                                <constraint firstItem="3oW-OT-vsB" firstAttribute="leading" secondItem="c8o-ZF-kSk" secondAttribute="leading" constant="12" id="rgN-xj-piN"/>
                                                 <constraint firstItem="rys-UU-c6n" firstAttribute="leading" secondItem="c8o-ZF-kSk" secondAttribute="leading" id="yOA-sl-DpY"/>
                                             </constraints>
                                         </tableViewCellContentView>
+                                        <connections>
+                                            <outlet property="mainImageView" destination="rys-UU-c6n" id="GyQ-sM-93L"/>
+                                            <outlet property="playlisterLabel" destination="3oW-OT-vsB" id="1Op-WE-8fF"/>
+                                            <outlet property="titleLabel" destination="V5u-wl-bqk" id="fk9-C6-ULb"/>
+                                        </connections>
                                     </tableViewCell>
                                     <tableViewCell contentMode="scaleToFill" selectionStyle="none" indentationWidth="10" reuseIdentifier="PlaylistInfoCell" rowHeight="56" id="VJk-xd-4n9" customClass="PlaylistInfoCell" customModule="Inspire" customModuleProvider="target">
                                         <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>

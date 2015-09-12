@@ -29,7 +29,7 @@ class PlaylistJacketImagesView: UIView {
         let viewSize = self.frame.size
         mainImageView.frame = CGRectMake(0, 0, viewSize.height, viewSize.height)
         self.addSubview(mainImageView)
-        let subImageViewSize = CGSizeMake(floor(viewSize.height/2), floor(viewSize.height/2))
+        let subImageViewSize = CGSizeMake(viewSize.height/2, viewSize.height/2)
         for i in 0...4 {
             let subImageView = UIImageView(frame: CGRectMake(0, 0, subImageViewSize.width, subImageViewSize.width))
             var subImageViewFrame = subImageView.frame
@@ -47,7 +47,8 @@ class PlaylistJacketImagesView: UIView {
         gradient.frame = gradientView.bounds
         gradient.colors = [
             UIColor(red: 0, green: 0, blue: 0, alpha: 0).CGColor,
-            UIColor(red: 0, green: 0, blue: 0, alpha: 45).CGColor
+            UIColor(red: 0, green: 0, blue: 0, alpha: 0.45).CGColor,
+            UIColor(red: 0, green: 0, blue: 0, alpha: 0.60).CGColor
         ]
         gradientView.layer.insertSublayer(gradient, atIndex: 0)
         self.addSubview(gradientView)
@@ -58,7 +59,7 @@ class PlaylistJacketImagesView: UIView {
         let viewSize = self.frame.size
         mainImageView.frame = CGRectMake(0, 0, viewSize.height, viewSize.height)
         mainImageView.sd_setImageWithURL(NSURL(string: artWorkURLs[0]))
-        let subImageViewSize = CGSizeMake(floor(viewSize.height/2), floor(viewSize.height/2))
+        let subImageViewSize = CGSizeMake(viewSize.height/2, viewSize.height/2)
         for i in 0...4 {
             let subImageView = subImageViews[i]
             var subImageViewFrame = subImageView.frame
