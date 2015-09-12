@@ -18,6 +18,15 @@ class TopViewController: ISPViewController, UITableViewDelegate, UITableViewData
         return 3
     }
 
+    override func viewWillAppear(animated: Bool) {
+        title = "Inspire"
+        (self.navigationController?.navigationBar as? ISPNavigationBar)?.show()
+    }
+
+    override func viewDidDisappear(animated: Bool) {
+        title = ""
+    }
+
     func tableView(tableView: UITableView, cellForRowAtIndexPath indexPath: NSIndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCellWithIdentifier("Cell", forIndexPath: indexPath) as? TopTableViewCell ?? TopTableViewCell()
         let playlist = Playlist()

@@ -7,6 +7,8 @@ class PlaylistJacketImagesView: UIView {
     let mainImageView = UIImageView()
     var subImageViews: [UIImageView] = []
     private var _artWorksURL: [String] = []
+    private var gradientView = UIView()
+
     var artWorkURLs: [String] {
         get {
             return _artWorksURL
@@ -40,7 +42,7 @@ class PlaylistJacketImagesView: UIView {
             self.addSubview(subImageView)
             subImageViews.append(subImageView)
         }
-        let gradientView = UIView(frame: self.bounds)
+        gradientView.frame = self.bounds
         let gradient = CAGradientLayer()
         gradient.frame = gradientView.bounds
         gradient.colors = [
@@ -68,6 +70,7 @@ class PlaylistJacketImagesView: UIView {
             subImageView.sd_setImageWithURL(NSURL(string: artWorkURLs[i + 1]))
             subImageView.frame = subImageViewFrame
         }
+        (gradientView.layer.sublayers[0] as! CAGradientLayer).frame = self.bounds
         self.superview?.layoutIfNeeded()
     }
 }
