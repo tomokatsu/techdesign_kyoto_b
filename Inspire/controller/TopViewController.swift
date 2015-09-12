@@ -23,7 +23,7 @@ class TopViewController: ISPViewController, UITableViewDelegate, UITableViewData
         (self.navigationController?.navigationBar as? ISPNavigationBar)?.show()
     }
 
-    override func viewDidDisappear(animated: Bool) {
+    override func viewWillDisappear(animated: Bool) {
         title = ""
     }
 

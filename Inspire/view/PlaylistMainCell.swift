@@ -1,4 +1,4 @@
 import UIKit
 
-class PlaylistMainCell: UITableViewCell {
+class PlaylistMainCell: ISPTableViewCell {
 }
