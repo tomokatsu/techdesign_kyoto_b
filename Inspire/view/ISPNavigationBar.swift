@@ -11,7 +11,6 @@ class ISPNavigationBar: UINavigationBar {
         setBackgroundImage(UIImage(), forBarMetrics: .Default)
         shadowImage = UIImage()
         translucent = true
-        println(3)
     }
 
 }
