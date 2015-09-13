@@ -30,14 +30,14 @@ class PlaylistViewController: ISPViewController, UITableViewDelegate, UITableVie
 
     func tableView(tableView: UITableView, heightForRowAtIndexPath indexPath: NSIndexPath) -> CGFloat {
         switch indexPath.section {
-        case 0:
-            return UIScreen.mainScreen().bounds.width
-        case 1:
-            return 66
-        case 2:
-            return 80
-        default:
-            return 0
+            case 0:
+                return UIScreen.mainScreen().bounds.width
+            case 1:
+                return 66
+            case 2:
+                return 80
+            default:
+                return 0
         }
     }
 
@@ -45,6 +45,8 @@ class PlaylistViewController: ISPViewController, UITableViewDelegate, UITableVie
         switch indexPath.section {
             case 0:
                 let cell = tableView.dequeueReusableCellWithIdentifier("MainCell", forIndexPath: indexPath) as? PlaylistMainCell ?? PlaylistMainCell()
+                cell.contentView.bringSubviewToFront(cell.titleLabel)
+                cell.contentView.bringSubviewToFront(cell.inspiredNumberLabel)
                 return cell
             case 1:
                 let cell = tableView.dequeueReusableCellWithIdentifier("PlaylistInfoCell", forIndexPath: indexPath) as? PlaylistInfoCell ?? PlaylistInfoCell()

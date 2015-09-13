@@ -12,6 +12,49 @@
 		490B45E11BA26D6600093DA7 /* APIClient.swift in Sources */ = {isa = PBXBuildFile; fileRef = 490B45E01BA26D6600093DA7 /* APIClient.swift */; };
 		490B45E51BA2796F00093DA7 /* TopViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 490B45E41BA2796F00093DA7 /* TopViewController.swift */; };
 		4956CC641BA50914003254D2 /* DetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4956CC631BA50914003254D2 /* DetailViewController.swift */; };
+		4956CCBC1BA519E9003254D2 /* mplus-1c-black.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 4956CC651BA50C0F003254D2 /* mplus-1c-black.ttf */; };
+		4956CCBD1BA519E9003254D2 /* mplus-1c-bold.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 4956CC661BA50C0F003254D2 /* mplus-1c-bold.ttf */; };
+		4956CCBE1BA519E9003254D2 /* mplus-1c-heavy.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 4956CC671BA50C0F003254D2 /* mplus-1c-heavy.ttf */; };
+		4956CCBF1BA519E9003254D2 /* mplus-1c-light.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 4956CC681BA50C0F003254D2 /* mplus-1c-light.ttf */; };
+		4956CCC01BA519E9003254D2 /* mplus-1c-medium.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 4956CC691BA50C0F003254D2 /* mplus-1c-medium.ttf */; };
+		4956CCC11BA519E9003254D2 /* mplus-1c-regular.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 4956CC6A1BA50C0F003254D2 /* mplus-1c-regular.ttf */; };
+		4956CCC21BA519E9003254D2 /* mplus-1c-thin.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 4956CC6B1BA50C0F003254D2 /* mplus-1c-thin.ttf */; };
+		4956CCC31BA519E9003254D2 /* mplus-1m-bold.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 4956CC6C1BA50C0F003254D2 /* mplus-1m-bold.ttf */; };
+		4956CCC41BA519E9003254D2 /* mplus-1m-light.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 4956CC6D1BA50C0F003254D2 /* mplus-1m-light.ttf */; };
+		4956CCC51BA519E9003254D2 /* mplus-1m-medium.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 4956CC6E1BA50C0F003254D2 /* mplus-1m-medium.ttf */; };
+		4956CCC61BA519E9003254D2 /* mplus-1m-regular.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 4956CC6F1BA50C0F003254D2 /* mplus-1m-regular.ttf */; };
+		4956CCC71BA519E9003254D2 /* mplus-1m-thin.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 4956CC701BA50C0F003254D2 /* mplus-1m-thin.ttf */; };
+		4956CCC81BA519E9003254D2 /* mplus-1mn-bold.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 4956CC711BA50C0F003254D2 /* mplus-1mn-bold.ttf */; };
+		4956CCC91BA519E9003254D2 /* mplus-1mn-light.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 4956CC721BA50C0F003254D2 /* mplus-1mn-light.ttf */; };
+		4956CCCA1BA519E9003254D2 /* mplus-1mn-medium.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 4956CC731BA50C0F003254D2 /* mplus-1mn-medium.ttf */; };
+		4956CCCB1BA519E9003254D2 /* mplus-1mn-regular.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 4956CC741BA50C0F003254D2 /* mplus-1mn-regular.ttf */; };
+		4956CCCC1BA519E9003254D2 /* mplus-1mn-thin.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 4956CC751BA50C0F003254D2 /* mplus-1mn-thin.ttf */; };
+		4956CCCD1BA519E9003254D2 /* mplus-1p-black.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 4956CC761BA50C0F003254D2 /* mplus-1p-black.ttf */; };
+		4956CCCE1BA519E9003254D2 /* mplus-1p-bold.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 4956CC771BA50C0F003254D2 /* mplus-1p-bold.ttf */; };
+		4956CCCF1BA519E9003254D2 /* mplus-1p-heavy.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 4956CC781BA50C0F003254D2 /* mplus-1p-heavy.ttf */; };
+		4956CCD01BA519E9003254D2 /* mplus-1p-light.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 4956CC791BA50C0F003254D2 /* mplus-1p-light.ttf */; };
+		4956CCD11BA519E9003254D2 /* mplus-1p-medium.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 4956CC7A1BA50C0F003254D2 /* mplus-1p-medium.ttf */; };
+		4956CCD21BA519E9003254D2 /* mplus-1p-regular.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 4956CC7B1BA50C0F003254D2 /* mplus-1p-regular.ttf */; };
+		4956CCD31BA519E9003254D2 /* mplus-1p-thin.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 4956CC7C1BA50C0F003254D2 /* mplus-1p-thin.ttf */; };
+		4956CCD41BA519E9003254D2 /* mplus-2c-black.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 4956CC7D1BA50C0F003254D2 /* mplus-2c-black.ttf */; };
+		4956CCD51BA519E9003254D2 /* mplus-2c-bold.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 4956CC7E1BA50C0F003254D2 /* mplus-2c-bold.ttf */; };
+		4956CCD61BA519E9003254D2 /* mplus-2c-heavy.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 4956CC7F1BA50C0F003254D2 /* mplus-2c-heavy.ttf */; };
+		4956CCD71BA519E9003254D2 /* mplus-2c-light.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 4956CC801BA50C0F003254D2 /* mplus-2c-light.ttf */; };
+		4956CCD81BA519E9003254D2 /* mplus-2c-medium.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 4956CC811BA50C10003254D2 /* mplus-2c-medium.ttf */; };
+		4956CCD91BA519E9003254D2 /* mplus-2c-regular.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 4956CC821BA50C10003254D2 /* mplus-2c-regular.ttf */; };
+		4956CCDA1BA519E9003254D2 /* mplus-2c-thin.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 4956CC831BA50C10003254D2 /* mplus-2c-thin.ttf */; };
+		4956CCDB1BA519E9003254D2 /* mplus-2m-bold.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 4956CC841BA50C10003254D2 /* mplus-2m-bold.ttf */; };
+		4956CCDC1BA519E9003254D2 /* mplus-2m-light.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 4956CC851BA50C10003254D2 /* mplus-2m-light.ttf */; };
+		4956CCDD1BA519E9003254D2 /* mplus-2m-medium.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 4956CC861BA50C10003254D2 /* mplus-2m-medium.ttf */; };
+		4956CCDE1BA519E9003254D2 /* mplus-2m-regular.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 4956CC871BA50C10003254D2 /* mplus-2m-regular.ttf */; };
+		4956CCDF1BA519E9003254D2 /* mplus-2m-thin.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 4956CC881BA50C10003254D2 /* mplus-2m-thin.ttf */; };
+		4956CCE01BA519E9003254D2 /* mplus-2p-black.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 4956CC891BA50C10003254D2 /* mplus-2p-black.ttf */; };
+		4956CCE11BA519E9003254D2 /* mplus-2p-bold.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 4956CC8A1BA50C10003254D2 /* mplus-2p-bold.ttf */; };
+		4956CCE21BA519E9003254D2 /* mplus-2p-heavy.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 4956CC8B1BA50C10003254D2 /* mplus-2p-heavy.ttf */; };
+		4956CCE31BA519E9003254D2 /* mplus-2p-light.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 4956CC8C1BA50C10003254D2 /* mplus-2p-light.ttf */; };
+		4956CCE41BA519E9003254D2 /* mplus-2p-medium.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 4956CC8D1BA50C10003254D2 /* mplus-2p-medium.ttf */; };
+		4956CCE51BA519E9003254D2 /* mplus-2p-regular.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 4956CC8E1BA50C10003254D2 /* mplus-2p-regular.ttf */; };
+		4956CCE61BA519E9003254D2 /* mplus-2p-thin.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 4956CC8F1BA50C10003254D2 /* mplus-2p-thin.ttf */; };
 		497B68981BA2642100613715 /* MusicTrackResponse.swift in Sources */ = {isa = PBXBuildFile; fileRef = 497B68971BA2642100613715 /* MusicTrackResponse.swift */; };
 		497B689B1BA269E800613715 /* MusicTrack.swift in Sources */ = {isa = PBXBuildFile; fileRef = 497B689A1BA269E800613715 /* MusicTrack.swift */; };
 		49C1B57E1BA2815500B52C7F /* ISPViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 49C1B57D1BA2815500B52C7F /* ISPViewController.swift */; };
@@ -406,6 +449,49 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				4956CCBC1BA519E9003254D2 /* mplus-1c-black.ttf in Resources */,
+				4956CCBD1BA519E9003254D2 /* mplus-1c-bold.ttf in Resources */,
+				4956CCBE1BA519E9003254D2 /* mplus-1c-heavy.ttf in Resources */,
+				4956CCBF1BA519E9003254D2 /* mplus-1c-light.ttf in Resources */,
+				4956CCC01BA519E9003254D2 /* mplus-1c-medium.ttf in Resources */,
+				4956CCC11BA519E9003254D2 /* mplus-1c-regular.ttf in Resources */,
+				4956CCC21BA519E9003254D2 /* mplus-1c-thin.ttf in Resources */,
+				4956CCC31BA519E9003254D2 /* mplus-1m-bold.ttf in Resources */,
+				4956CCC41BA519E9003254D2 /* mplus-1m-light.ttf in Resources */,
+				4956CCC51BA519E9003254D2 /* mplus-1m-medium.ttf in Resources */,
+				4956CCC61BA519E9003254D2 /* mplus-1m-regular.ttf in Resources */,
+				4956CCC71BA519E9003254D2 /* mplus-1m-thin.ttf in Resources */,
+				4956CCC81BA519E9003254D2 /* mplus-1mn-bold.ttf in Resources */,
+				4956CCC91BA519E9003254D2 /* mplus-1mn-light.ttf in Resources */,
+				4956CCCA1BA519E9003254D2 /* mplus-1mn-medium.ttf in Resources */,
+				4956CCCB1BA519E9003254D2 /* mplus-1mn-regular.ttf in Resources */,
+				4956CCCC1BA519E9003254D2 /* mplus-1mn-thin.ttf in Resources */,
+				4956CCCD1BA519E9003254D2 /* mplus-1p-black.ttf in Resources */,
+				4956CCCE1BA519E9003254D2 /* mplus-1p-bold.ttf in Resources */,
+				4956CCCF1BA519E9003254D2 /* mplus-1p-heavy.ttf in Resources */,
+				4956CCD01BA519E9003254D2 /* mplus-1p-light.ttf in Resources */,
+				4956CCD11BA519E9003254D2 /* mplus-1p-medium.ttf in Resources */,
+				4956CCD21BA519E9003254D2 /* mplus-1p-regular.ttf in Resources */,
+				4956CCD31BA519E9003254D2 /* mplus-1p-thin.ttf in Resources */,
+				4956CCD41BA519E9003254D2 /* mplus-2c-black.ttf in Resources */,
+				4956CCD51BA519E9003254D2 /* mplus-2c-bold.ttf in Resources */,
+				4956CCD61BA519E9003254D2 /* mplus-2c-heavy.ttf in Resources */,
+				4956CCD71BA519E9003254D2 /* mplus-2c-light.ttf in Resources */,
+				4956CCD81BA519E9003254D2 /* mplus-2c-medium.ttf in Resources */,
+				4956CCD91BA519E9003254D2 /* mplus-2c-regular.ttf in Resources */,
+				4956CCDA1BA519E9003254D2 /* mplus-2c-thin.ttf in Resources */,
+				4956CCDB1BA519E9003254D2 /* mplus-2m-bold.ttf in Resources */,
+				4956CCDC1BA519E9003254D2 /* mplus-2m-light.ttf in Resources */,
+				4956CCDD1BA519E9003254D2 /* mplus-2m-medium.ttf in Resources */,
+				4956CCDE1BA519E9003254D2 /* mplus-2m-regular.ttf in Resources */,
+				4956CCDF1BA519E9003254D2 /* mplus-2m-thin.ttf in Resources */,
+				4956CCE01BA519E9003254D2 /* mplus-2p-black.ttf in Resources */,
+				4956CCE11BA519E9003254D2 /* mplus-2p-bold.ttf in Resources */,
+				4956CCE21BA519E9003254D2 /* mplus-2p-heavy.ttf in Resources */,
+				4956CCE31BA519E9003254D2 /* mplus-2p-light.ttf in Resources */,
+				4956CCE41BA519E9003254D2 /* mplus-2p-medium.ttf in Resources */,
+				4956CCE51BA519E9003254D2 /* mplus-2p-regular.ttf in Resources */,
+				4956CCE61BA519E9003254D2 /* mplus-2p-thin.ttf in Resources */,
 				49E67D3D1BA180B200AC8108 /* Main.storyboard in Resources */,
 				49E67D421BA180B200AC8108 /* LaunchScreen.xib in Resources */,
 				49E67D3F1BA180B200AC8108 /* Images.xcassets in Resources */,

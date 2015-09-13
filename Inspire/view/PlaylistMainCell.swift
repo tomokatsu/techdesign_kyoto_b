@@ -3,7 +3,8 @@ import UIKit
 class PlaylistMainCell: ISPTableViewCell {
     @IBOutlet weak var mainImageView: UIImageView!
     @IBOutlet weak var titleLabel: UILabel!
-    @IBOutlet weak var playlisterLabel: UILabel!
+    @IBOutlet weak var inspiredNumberLabel: UILabel!
+
     private var gradientView = UIView()
 
     override func awakeFromNib() {
