@@ -10,8 +10,11 @@
             <string>mplus-1p-light</string>
             <string>mplus-1p-light</string>
             <string>mplus-1p-light</string>
+            <string>mplus-1p-light</string>
+            <string>mplus-1p-light</string>
         </mutableArray>
         <mutableArray key="mplus-1p-regular.ttf">
+            <string>mplus-1p-regular</string>
             <string>mplus-1p-regular</string>
         </mutableArray>
     </customFonts>
@@ -162,6 +165,9 @@
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="WPT-a8-bO5" id="c8o-ZF-kSk">
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
+                                                <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="dammy" translatesAutoresizingMaskIntoConstraints="NO" id="rys-UU-c6n">
+                                                    <rect key="frame" x="0.0" y="0.0" width="320" height="319.5"/>
+                                                </imageView>
                                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="V5u-wl-bqk">
                                                     <rect key="frame" x="53" y="235" width="213" height="30"/>
                                                     <constraints>
@@ -182,17 +188,32 @@
                                                     <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                                                     <nil key="highlightedColor"/>
                                                 </label>
-                                                <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="dammy" translatesAutoresizingMaskIntoConstraints="NO" id="rys-UU-c6n">
-                                                    <rect key="frame" x="0.0" y="0.0" width="320" height="319.5"/>
-                                                </imageView>
+                                                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="lF4-Vj-YI2">
+                                                    <rect key="frame" x="120.5" y="119.5" width="80" height="80"/>
+                                                    <color key="backgroundColor" red="0.11372549019607843" green="0.11372549019607843" blue="0.12549019607843137" alpha="0.84999999999999998" colorSpace="calibratedRGB"/>
+                                                    <constraints>
+                                                        <constraint firstAttribute="height" constant="80" id="v8V-Ot-iX8"/>
+                                                        <constraint firstAttribute="width" constant="80" id="yuI-Rb-uPe"/>
+                                                    </constraints>
+                                                    <state key="normal" image="PlayButtonImage">
+                                                        <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                                    </state>
+                                                    <userDefinedRuntimeAttributes>
+                                                        <userDefinedRuntimeAttribute type="number" keyPath="layer.cornerRadius">
+                                                            <integer key="value" value="40"/>
+                                                        </userDefinedRuntimeAttribute>
+                                                    </userDefinedRuntimeAttributes>
+                                                </button>
                                             </subviews>
                                             <constraints>
+                                                <constraint firstAttribute="centerX" secondItem="lF4-Vj-YI2" secondAttribute="centerX" id="2Da-Hw-ZgO"/>
                                                 <constraint firstAttribute="centerX" secondItem="V5u-wl-bqk" secondAttribute="centerX" id="Gyh-pR-K8P"/>
                                                 <constraint firstAttribute="centerX" secondItem="nVf-eY-Vpd" secondAttribute="centerX" id="HRl-mj-HY0"/>
                                                 <constraint firstAttribute="trailing" secondItem="rys-UU-c6n" secondAttribute="trailing" id="RD7-hG-oYu"/>
                                                 <constraint firstItem="nVf-eY-Vpd" firstAttribute="top" secondItem="V5u-wl-bqk" secondAttribute="bottom" constant="12" id="VFb-gW-lmd"/>
                                                 <constraint firstItem="rys-UU-c6n" firstAttribute="top" secondItem="c8o-ZF-kSk" secondAttribute="top" id="WuL-6M-brY"/>
                                                 <constraint firstAttribute="bottom" secondItem="rys-UU-c6n" secondAttribute="bottom" id="ZG5-PT-6Wz"/>
+                                                <constraint firstAttribute="centerY" secondItem="lF4-Vj-YI2" secondAttribute="centerY" id="cUu-Db-N24"/>
                                                 <constraint firstAttribute="bottom" secondItem="nVf-eY-Vpd" secondAttribute="bottom" constant="24" id="dO5-xu-ZJn"/>
                                                 <constraint firstItem="rys-UU-c6n" firstAttribute="leading" secondItem="c8o-ZF-kSk" secondAttribute="leading" id="yOA-sl-DpY"/>
                                             </constraints>
@@ -216,7 +237,7 @@
                                                         <constraint firstAttribute="width" constant="68" id="BVF-sD-ryS"/>
                                                         <constraint firstAttribute="height" constant="30" id="x0n-bi-CEs"/>
                                                     </constraints>
-                                                    <fontDescription key="fontDescription" type="system" pointSize="10"/>
+                                                    <fontDescription key="fontDescription" name="mplus-1p-regular" family="M+ 1p" pointSize="12"/>
                                                     <state key="normal" title="Inspire">
                                                         <color key="titleColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                                                         <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
@@ -231,7 +252,7 @@
                                                     </userDefinedRuntimeAttributes>
                                                 </button>
                                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="test user" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="GU5-YV-gZt">
-                                                    <rect key="frame" x="48" y="20.5" width="181" height="15"/>
+                                                    <rect key="frame" x="48" y="20" width="181" height="15"/>
                                                     <constraints>
                                                         <constraint firstAttribute="height" constant="15" id="vp0-fe-2Lp"/>
                                                     </constraints>
@@ -285,7 +306,7 @@
                                                     <constraints>
                                                         <constraint firstAttribute="height" constant="20" id="She-Xw-jjN"/>
                                                     </constraints>
-                                                    <fontDescription key="fontDescription" type="system" pointSize="12"/>
+                                                    <fontDescription key="fontDescription" name="mplus-1p-light" family="M+ 1p" pointSize="12"/>
                                                     <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                                                     <nil key="highlightedColor"/>
                                                 </label>
@@ -295,7 +316,7 @@
                                                         <constraint firstAttribute="width" constant="25" id="kpn-Wp-D3H"/>
                                                         <constraint firstAttribute="height" constant="15" id="uYU-gO-rX6"/>
                                                     </constraints>
-                                                    <fontDescription key="fontDescription" type="system" pointSize="10"/>
+                                                    <fontDescription key="fontDescription" name="HelveticaNeue" family="Helvetica Neue" pointSize="10"/>
                                                     <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                                                     <nil key="highlightedColor"/>
                                                 </label>
@@ -304,7 +325,7 @@
                                                     <constraints>
                                                         <constraint firstAttribute="height" constant="13" id="baB-Xx-F8C"/>
                                                     </constraints>
-                                                    <fontDescription key="fontDescription" type="system" pointSize="10"/>
+                                                    <fontDescription key="fontDescription" name="mplus-1p-light" family="M+ 1p" pointSize="10"/>
                                                     <color key="textColor" red="1" green="1" blue="1" alpha="0.70000000000000007" colorSpace="calibratedRGB"/>
                                                     <nil key="highlightedColor"/>
                                                 </label>
@@ -464,6 +485,7 @@
         </scene>
     </scenes>
     <resources>
+        <image name="PlayButtonImage" width="30" height="36"/>
         <image name="dammy" width="100" height="100"/>
     </resources>
     <simulatedMetricsContainer key="defaultSimulatedMetrics">
