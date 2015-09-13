@@ -12,6 +12,8 @@ class PlaylistEditViewController: ISPViewController, UITableViewDataSource, UITa
         (self.navigationController?.navigationBar as? ISPNavigationBar)?.hide()
         tableView.editing = true
         tableView.registerNib(UINib(nibName: "EditTableViewHeader", bundle: nil), forHeaderFooterViewReuseIdentifier: "Header")
+        tableView.allowsSelectionDuringEditing = true
+        title = ""
     }
 
     @IBAction func closeButtonTouchUpInside(sender: UIBarButtonItem) {
@@ -49,6 +51,9 @@ class PlaylistEditViewController: ISPViewController, UITableViewDataSource, UITa
 
     func tableView(tableView: UITableView, shouldIndentWhileEditingRowAtIndexPath indexPath: NSIndexPath) -> Bool {
         return false
+    }
+
+    func tableView(tableView: UITableView, didSelectRowAtIndexPath indexPath: NSIndexPath) {
     }
 
 }

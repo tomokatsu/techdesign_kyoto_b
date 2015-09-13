@@ -5,8 +5,7 @@ class EditTableViewHeader: UITableViewHeaderFooterView {
 
     @IBOutlet weak var blurImageView: UIImageView!
     @IBOutlet weak var mainImageView: UIImageView!
-    private var blurView = UIVisualEffectView(effect: UIBlurEffect(style: .Dark))
-
+    private let blurView = UIVisualEffectView(effect: UIBlurEffect(style: .Dark))
 
     override func awakeFromNib() {
         var fixedFrame = frame
