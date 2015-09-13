@@ -55,6 +55,10 @@
 		4956CCE41BA519E9003254D2 /* mplus-2p-medium.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 4956CC8D1BA50C10003254D2 /* mplus-2p-medium.ttf */; };
 		4956CCE51BA519E9003254D2 /* mplus-2p-regular.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 4956CC8E1BA50C10003254D2 /* mplus-2p-regular.ttf */; };
 		4956CCE61BA519E9003254D2 /* mplus-2p-thin.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 4956CC8F1BA50C10003254D2 /* mplus-2p-thin.ttf */; };
+		4956CCE81BA535DE003254D2 /* PlaylistEditViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4956CCE71BA535DE003254D2 /* PlaylistEditViewController.swift */; };
+		4956CCEA1BA53E4D003254D2 /* MovableTrackCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4956CCE91BA53E4D003254D2 /* MovableTrackCell.swift */; };
+		4956CCEE1BA54D4D003254D2 /* EditTableViewHeader.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4956CCED1BA54D4D003254D2 /* EditTableViewHeader.swift */; };
+		4956CCF01BA550B4003254D2 /* EditTableViewHeader.xib in Resources */ = {isa = PBXBuildFile; fileRef = 4956CCEF1BA550B4003254D2 /* EditTableViewHeader.xib */; };
 		497B68981BA2642100613715 /* MusicTrackResponse.swift in Sources */ = {isa = PBXBuildFile; fileRef = 497B68971BA2642100613715 /* MusicTrackResponse.swift */; };
 		497B689B1BA269E800613715 /* MusicTrack.swift in Sources */ = {isa = PBXBuildFile; fileRef = 497B689A1BA269E800613715 /* MusicTrack.swift */; };
 		49C1B57E1BA2815500B52C7F /* ISPViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 49C1B57D1BA2815500B52C7F /* ISPViewController.swift */; };
@@ -133,6 +137,10 @@
 		4956CC8D1BA50C10003254D2 /* mplus-2p-medium.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "mplus-2p-medium.ttf"; sourceTree = "<group>"; };
 		4956CC8E1BA50C10003254D2 /* mplus-2p-regular.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "mplus-2p-regular.ttf"; sourceTree = "<group>"; };
 		4956CC8F1BA50C10003254D2 /* mplus-2p-thin.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "mplus-2p-thin.ttf"; sourceTree = "<group>"; };
+		4956CCE71BA535DE003254D2 /* PlaylistEditViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PlaylistEditViewController.swift; sourceTree = "<group>"; };
+		4956CCE91BA53E4D003254D2 /* MovableTrackCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MovableTrackCell.swift; sourceTree = "<group>"; };
+		4956CCED1BA54D4D003254D2 /* EditTableViewHeader.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = EditTableViewHeader.swift; path = ../controller/EditTableViewHeader.swift; sourceTree = "<group>"; };
+		4956CCEF1BA550B4003254D2 /* EditTableViewHeader.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; name = EditTableViewHeader.xib; path = resources/EditTableViewHeader.xib; sourceTree = "<group>"; };
 		497B68971BA2642100613715 /* MusicTrackResponse.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MusicTrackResponse.swift; sourceTree = "<group>"; };
 		497B689A1BA269E800613715 /* MusicTrack.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MusicTrack.swift; sourceTree = "<group>"; };
 		49C1B57D1BA2815500B52C7F /* ISPViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ISPViewController.swift; sourceTree = "<group>"; };
@@ -278,6 +286,7 @@
 			children = (
 				49C1B57F1BA2908800B52C7F /* resources */,
 				49E67D371BA180B200AC8108 /* AppDelegate.swift */,
+				4956CCEF1BA550B4003254D2 /* EditTableViewHeader.xib */,
 				497B68961BA2634600613715 /* Util */,
 				49E67D5D1BA1CDED00AC8108 /* controller */,
 				49E67D5C1BA1CDD600AC8108 /* view */,
@@ -334,6 +343,8 @@
 				49C1B5921BA32F9700B52C7F /* MusicTrackCell.swift */,
 				49C1B5941BA4666900B52C7F /* PlaylistInfoCell.swift */,
 				49C1B5961BA46CD500B52C7F /* ISPTableViewCell.swift */,
+				4956CCE91BA53E4D003254D2 /* MovableTrackCell.swift */,
+				4956CCED1BA54D4D003254D2 /* EditTableViewHeader.swift */,
 			);
 			path = view;
 			sourceTree = "<group>";
@@ -345,6 +356,7 @@
 				490B45E41BA2796F00093DA7 /* TopViewController.swift */,
 				49C1B58A1BA31A5B00B52C7F /* PlaylistViewController.swift */,
 				4956CC631BA50914003254D2 /* DetailViewController.swift */,
+				4956CCE71BA535DE003254D2 /* PlaylistEditViewController.swift */,
 			);
 			path = controller;
 			sourceTree = "<group>";
@@ -460,6 +472,7 @@
 				4956CCC41BA519E9003254D2 /* mplus-1m-light.ttf in Resources */,
 				4956CCC51BA519E9003254D2 /* mplus-1m-medium.ttf in Resources */,
 				4956CCC61BA519E9003254D2 /* mplus-1m-regular.ttf in Resources */,
+				4956CCF01BA550B4003254D2 /* EditTableViewHeader.xib in Resources */,
 				4956CCC71BA519E9003254D2 /* mplus-1m-thin.ttf in Resources */,
 				4956CCC81BA519E9003254D2 /* mplus-1mn-bold.ttf in Resources */,
 				4956CCC91BA519E9003254D2 /* mplus-1mn-light.ttf in Resources */,
@@ -562,9 +575,11 @@
 			files = (
 				49C1B5971BA46CD500B52C7F /* ISPTableViewCell.swift in Sources */,
 				49C1B5891BA2BC5C00B52C7F /* PlayerManager.swift in Sources */,
+				4956CCEE1BA54D4D003254D2 /* EditTableViewHeader.swift in Sources */,
 				49C1B5931BA32F9700B52C7F /* MusicTrackCell.swift in Sources */,
 				490B45E51BA2796F00093DA7 /* TopViewController.swift in Sources */,
 				497B68981BA2642100613715 /* MusicTrackResponse.swift in Sources */,
+				4956CCEA1BA53E4D003254D2 /* MovableTrackCell.swift in Sources */,
 				49E67D381BA180B200AC8108 /* AppDelegate.swift in Sources */,
 				497B689B1BA269E800613715 /* MusicTrack.swift in Sources */,
 				49C1B5871BA2A03300B52C7F /* PlaylistJacketImagesView.swift in Sources */,
@@ -576,6 +591,7 @@
 				4956CC641BA50914003254D2 /* DetailViewController.swift in Sources */,
 				49C1B5911BA32F6B00B52C7F /* PlaylistMainCell.swift in Sources */,
 				49C1B5951BA4666900B52C7F /* PlaylistInfoCell.swift in Sources */,
+				4956CCE81BA535DE003254D2 /* PlaylistEditViewController.swift in Sources */,
 				49C1B5851BA29B7300B52C7F /* TopTableViewCell.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
