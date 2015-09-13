@@ -11,14 +11,27 @@ class PlaylistEditViewController: ISPViewController, UITableViewDataSource, UITa
         super.viewDidLoad()
         (self.navigationController?.navigationBar as? ISPNavigationBar)?.hide()
         tableView.editing = true
+        tableView.registerNib(UINib(nibName: "EditTableViewHeader", bundle: nil), forHeaderFooterViewReuseIdentifier: "Header")
     }
 
     @IBAction func closeButtonTouchUpInside(sender: UIBarButtonItem) {
         dismissViewControllerAnimated(true, completion: nil)
     }
 
+    func tableView(tableView: UITableView, heightForHeaderInSection section: Int) -> CGFloat {
+        return UIScreen.mainScreen().bounds.width
+    }
+
+    func tableView(tableView: UITableView, viewForHeaderInSection section: Int) -> UIView? {
+        return tableView.dequeueReusableHeaderFooterViewWithIdentifier("Header") as! EditTableViewHeader
+    }
+
     func tableView(tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return 8
+        return 9
+    }
+
+    func tableView(tableView: UITableView, heightForRowAtIndexPath indexPath: NSIndexPath) -> CGFloat {
+        return 80
     }
 
     func tableView(tableView: UITableView, cellForRowAtIndexPath indexPath: NSIndexPath) -> UITableViewCell {
