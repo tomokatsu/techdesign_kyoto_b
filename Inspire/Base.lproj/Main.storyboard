@@ -20,6 +20,7 @@
             <string>mplus-1p-light</string>
             <string>mplus-1p-light</string>
             <string>mplus-1p-light</string>
+            <string>mplus-1p-light</string>
         </mutableArray>
         <mutableArray key="mplus-1p-regular.ttf">
             <string>mplus-1p-regular</string>
@@ -673,7 +674,7 @@
                                     <constraint firstAttribute="height" constant="18" id="M0M-vg-IUT"/>
                                     <constraint firstAttribute="width" constant="100" id="jGP-42-mzc"/>
                                 </constraints>
-                                <fontDescription key="fontDescription" type="system" pointSize="12"/>
+                                <fontDescription key="fontDescription" name="mplus-1p-light" family="M+ 1p" pointSize="12"/>
                                 <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                                 <nil key="highlightedColor"/>
                             </label>
