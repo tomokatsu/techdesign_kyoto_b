@@ -8,7 +8,6 @@ class PlaylistViewController: ISPViewController, UITableViewDelegate, UITableVie
     override func viewDidLoad() {
         super.viewDidLoad()
         (self.navigationController?.navigationBar as? ISPNavigationBar)?.hide()
-        tableView.contentInset = UIEdgeInsetsZero
     }
 
     func numberOfSectionsInTableView(tableView: UITableView) -> Int {
