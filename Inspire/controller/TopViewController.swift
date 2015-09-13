@@ -30,9 +30,9 @@ class TopViewController: ISPViewController, UITableViewDelegate, UITableViewData
     func tableView(tableView: UITableView, cellForRowAtIndexPath indexPath: NSIndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCellWithIdentifier("Cell", forIndexPath: indexPath) as? TopTableViewCell ?? TopTableViewCell()
         let playlist = Playlist()
-        playlist.title = "テストですーーー"
+        playlist.title = "test test testあ"
         playlist.playlister = "テストユーザー"
-        playlist.comment = "テストしてみました！"
+
         var tracks = List<MusicTrack>()
         for i in 0...7 {
             let track = MusicTrack()
@@ -45,7 +45,7 @@ class TopViewController: ISPViewController, UITableViewDelegate, UITableViewData
 
         cell.titleLabel.text = playlist.title
         cell.playlisterLabel.text = playlist.playlister
-        cell.commentLabel.text = playlist.comment
+
         var artWorkURLs: [String] = []
         for (index, musicTrack) in enumerate(playlist.musisTracks) {
             if index > 5 { break }
