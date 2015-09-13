@@ -58,6 +58,28 @@ class PublishViewController: ISPViewController, UITextFieldDelegate {
         showMoodActionSheet()
     }
 
+    @IBAction func publishButtonTouchUpInside(sender: UIBarButtonItem) {
+        let publishedView = UIView(frame: CGRectMake(0, 0, UIScreen.mainScreen().bounds.width, UIScreen.mainScreen().bounds.height))
+        publishedView.backgroundColor = UIColor(red: 0, green: 0, blue: 0, alpha: 0.7)
+        let messageLabel = UILabel(frame: CGRectMake(20, 200, UIScreen.mainScreen().bounds.width - 40, 40))
+        messageLabel.text = "プレイリストの作成が完了しました"
+        messageLabel.font = UIFont(name: "mplus-1p-regular", size: 16)
+        messageLabel.textColor = UIColor.whiteColor()
+        messageLabel.textAlignment = .Center
+        publishedView.addSubview(messageLabel)
+
+        let checkButton = UIButton(frame: CGRectMake((UIScreen.mainScreen().bounds.width / 2) - 40, 260, 80, 80))
+        checkButton.setBackgroundImage(UIImage(named: "check"), forState: .Normal)
+        checkButton.addTarget(self, action: Selector("moveTop"), forControlEvents: .TouchUpInside)
+        publishedView.addSubview(checkButton)
+        self.navigationController?.navigationBarHidden = true
+        self.view.addSubview(publishedView)
+    }
+
+    func moveTop() {
+        (UIApplication.sharedApplication().delegate as! AppDelegate).moveTop()
+    }
+
     func showMoodActionSheet() {
         let alertController = DOAlertController(title: nil, message: nil, preferredStyle: .ActionSheet)
         alertController.alertViewBgColor = UIColor(red: 0.149019608, green: 0.149019608, blue: 0.164705882, alpha: 1)

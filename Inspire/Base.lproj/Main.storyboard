@@ -395,7 +395,7 @@
         <!--Navigation Controller-->
         <scene sceneID="cb2-Lr-T0p">
             <objects>
-                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="H51-Bk-8g2" sceneMemberID="viewController">
+                <navigationController storyboardIdentifier="Initial" automaticallyAdjustsScrollViewInsets="NO" id="H51-Bk-8g2" sceneMemberID="viewController">
                     <toolbarItems/>
                     <nil key="simulatedStatusBarMetrics"/>
                     <navigationBar key="navigationBar" contentMode="scaleToFill" translucent="NO" id="KE0-Zj-1ak" customClass="ISPNavigationBar" customModule="Inspire" customModuleProvider="target">
@@ -765,7 +765,11 @@
                         </constraints>
                     </view>
                     <navigationItem key="navigationItem" id="Cos-kO-OVM">
-                        <barButtonItem key="rightBarButtonItem" title="完了" id="Ruj-b9-cE4"/>
+                        <barButtonItem key="rightBarButtonItem" title="完了" id="Ruj-b9-cE4">
+                            <connections>
+                                <action selector="publishButtonTouchUpInside:" destination="n6B-dB-8uN" id="cie-mG-x0o"/>
+                            </connections>
+                        </barButtonItem>
                     </navigationItem>
                     <connections>
                         <outlet property="backBlurImageView" destination="4N0-ei-8zd" id="IQn-EQ-qhv"/>
