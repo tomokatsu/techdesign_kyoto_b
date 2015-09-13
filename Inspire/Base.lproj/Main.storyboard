@@ -21,6 +21,9 @@
             <string>mplus-1p-light</string>
             <string>mplus-1p-light</string>
             <string>mplus-1p-light</string>
+            <string>mplus-1p-light</string>
+            <string>mplus-1p-light</string>
+            <string>mplus-1p-light</string>
         </mutableArray>
         <mutableArray key="mplus-1p-regular.ttf">
             <string>mplus-1p-regular</string>
@@ -193,7 +196,7 @@
                                                         <constraint firstAttribute="width" constant="60" id="SMF-RL-nsg"/>
                                                         <constraint firstAttribute="height" constant="18" id="yc1-rW-xga"/>
                                                     </constraints>
-                                                    <fontDescription key="fontDescription" type="system" pointSize="11"/>
+                                                    <fontDescription key="fontDescription" name="mplus-1p-light" family="M+ 1p" pointSize="11"/>
                                                     <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                                                     <nil key="highlightedColor"/>
                                                 </label>
@@ -621,7 +624,7 @@
                                 <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
                             </imageView>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="22u-0Y-d2A">
-                                <rect key="frame" x="15" y="474" width="290" height="1"/>
+                                <rect key="frame" x="15" y="474" width="290" height="0.5"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="1" id="FJu-6u-4f7"/>
@@ -683,12 +686,18 @@
                                 <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                                 <fontDescription key="fontDescription" name="mplus-1p-light" family="M+ 1p" pointSize="14"/>
                                 <textInputTraits key="textInputTraits"/>
+                                <connections>
+                                    <outlet property="delegate" destination="n6B-dB-8uN" id="oj8-Pz-26l"/>
+                                </connections>
                             </textField>
                             <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" text="test title" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="hxk-YQ-0cL">
                                 <rect key="frame" x="20" y="397" width="280" height="20"/>
                                 <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                                 <fontDescription key="fontDescription" name="mplus-1p-light" family="M+ 1p" pointSize="14"/>
                                 <textInputTraits key="textInputTraits"/>
+                                <connections>
+                                    <outlet property="delegate" destination="n6B-dB-8uN" id="bcs-dW-rjq"/>
+                                </connections>
                             </textField>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" buttonType="roundedRect" reversesTitleShadowWhenHighlighted="YES" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="71J-Qp-8Hi">
                                 <rect key="frame" x="20" y="457" width="280" height="15"/>
@@ -700,12 +709,29 @@
                                     <color key="titleColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                                     <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
+                                <connections>
+                                    <action selector="moodSelectButtonTouchUpInside:" destination="n6B-dB-8uN" eventType="touchUpInside" id="KlN-gY-Tis"/>
+                                </connections>
                             </button>
+                            <label opaque="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="c55-fw-tR8">
+                                <rect key="frame" x="20" y="487" width="280" height="20"/>
+                                <gestureRecognizers/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="20" id="Nru-eI-sRH"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" name="mplus-1p-light" family="M+ 1p" pointSize="14"/>
+                                <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                <nil key="highlightedColor"/>
+                                <connections>
+                                    <outletCollection property="gestureRecognizers" destination="SpI-M4-IKa" appends="YES" id="kJR-ee-OTB"/>
+                                </connections>
+                            </label>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <constraints>
                             <constraint firstItem="22u-0Y-d2A" firstAttribute="top" secondItem="71J-Qp-8Hi" secondAttribute="bottom" constant="2" id="1gP-yv-6xl"/>
                             <constraint firstAttribute="trailing" secondItem="z4o-3X-1v0" secondAttribute="trailing" constant="15" id="6De-Dt-Yvf"/>
+                            <constraint firstItem="c55-fw-tR8" firstAttribute="top" secondItem="22u-0Y-d2A" secondAttribute="bottom" constant="13" id="B1P-5b-dou"/>
                             <constraint firstAttribute="centerX" secondItem="cgC-zM-sCT" secondAttribute="centerX" id="CbV-Cd-TCG"/>
                             <constraint firstAttribute="trailing" secondItem="4N0-ei-8zd" secondAttribute="trailing" id="Dap-GJ-khZ"/>
                             <constraint firstItem="LU0-8O-soZ" firstAttribute="top" secondItem="4N0-ei-8zd" secondAttribute="bottom" id="Ez0-Hi-2xc"/>
@@ -725,12 +751,14 @@
                             <constraint firstItem="cgC-zM-sCT" firstAttribute="top" secondItem="Zar-gS-zYb" secondAttribute="bottom" constant="45" id="ZpK-Mx-udu"/>
                             <constraint firstItem="18H-4o-mvI" firstAttribute="top" secondItem="gjz-fX-eEg" secondAttribute="bottom" constant="2" id="aPh-Rd-yHU"/>
                             <constraint firstItem="OZ2-ij-asr" firstAttribute="leading" secondItem="gf2-Vr-7kF" secondAttribute="leading" constant="20" id="bPN-UO-rFA"/>
+                            <constraint firstAttribute="trailing" secondItem="c55-fw-tR8" secondAttribute="trailing" constant="20" id="dZU-4x-1to"/>
                             <constraint firstAttribute="trailing" secondItem="71J-Qp-8Hi" secondAttribute="trailing" constant="20" id="ddf-QS-43f"/>
                             <constraint firstAttribute="trailing" secondItem="18H-4o-mvI" secondAttribute="trailing" constant="15" id="fK2-Mz-uFO"/>
                             <constraint firstItem="kjr-XF-Pvf" firstAttribute="leading" secondItem="OZ2-ij-asr" secondAttribute="trailing" id="hRp-eg-ro5"/>
                             <constraint firstItem="4N0-ei-8zd" firstAttribute="leading" secondItem="gf2-Vr-7kF" secondAttribute="leading" id="i5m-Wf-ZzP"/>
                             <constraint firstItem="hxk-YQ-0cL" firstAttribute="leading" secondItem="gf2-Vr-7kF" secondAttribute="leading" constant="20" id="lWn-N6-dVF"/>
                             <constraint firstAttribute="trailing" secondItem="kjr-XF-Pvf" secondAttribute="trailing" constant="20" id="nzF-CD-CNZ"/>
+                            <constraint firstItem="c55-fw-tR8" firstAttribute="leading" secondItem="gf2-Vr-7kF" secondAttribute="leading" constant="20" id="qQC-3t-m1x"/>
                             <constraint firstItem="KJs-4m-R8t" firstAttribute="top" secondItem="cgC-zM-sCT" secondAttribute="bottom" constant="30" id="rBe-wh-h5E"/>
                             <constraint firstItem="gjz-fX-eEg" firstAttribute="leading" secondItem="gf2-Vr-7kF" secondAttribute="leading" constant="20" id="rut-aq-b3K"/>
                             <constraint firstItem="18H-4o-mvI" firstAttribute="leading" secondItem="gf2-Vr-7kF" secondAttribute="leading" constant="15" id="vZk-do-hjd"/>
@@ -741,9 +769,15 @@
                     </navigationItem>
                     <connections>
                         <outlet property="backBlurImageView" destination="4N0-ei-8zd" id="IQn-EQ-qhv"/>
+                        <outlet property="moodLabel" destination="c55-fw-tR8" id="eaw-zq-8oA"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="fJH-ma-MGn" userLabel="First Responder" sceneMemberID="firstResponder"/>
+                <tapGestureRecognizer id="SpI-M4-IKa">
+                    <connections>
+                        <action selector="moodLabelTapped:" destination="n6B-dB-8uN" id="mOg-xK-c1t"/>
+                    </connections>
+                </tapGestureRecognizer>
             </objects>
             <point key="canvasLocation" x="2530" y="747"/>
         </scene>
@@ -845,7 +879,7 @@
                                                     <constraints>
                                                         <constraint firstAttribute="height" constant="20" id="VrU-TI-8My"/>
                                                     </constraints>
-                                                    <fontDescription key="fontDescription" type="system" pointSize="12"/>
+                                                    <fontDescription key="fontDescription" name="mplus-1p-light" family="M+ 1p" pointSize="12"/>
                                                     <color key="textColor" red="0.84705882352941175" green="0.84705882352941175" blue="0.84705882352941175" alpha="1" colorSpace="calibratedRGB"/>
                                                     <nil key="highlightedColor"/>
                                                 </label>
@@ -854,7 +888,7 @@
                                                     <constraints>
                                                         <constraint firstAttribute="height" constant="13" id="FzC-aH-iPm"/>
                                                     </constraints>
-                                                    <fontDescription key="fontDescription" type="system" pointSize="10"/>
+                                                    <fontDescription key="fontDescription" name="HelveticaNeue" family="Helvetica Neue" pointSize="10"/>
                                                     <color key="textColor" red="0.84705882352941175" green="0.84705882352941175" blue="0.84705882352941175" alpha="1" colorSpace="calibratedRGB"/>
                                                     <nil key="highlightedColor"/>
                                                 </label>
