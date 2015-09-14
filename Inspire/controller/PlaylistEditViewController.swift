@@ -1,5 +1,5 @@
-
 import UIKit
+import SDWebImage
 
 class PlaylistEditViewController: ISPViewController, UITableViewDataSource, UITableViewDelegate {
 
@@ -25,11 +25,14 @@ class PlaylistEditViewController: ISPViewController, UITableViewDataSource, UITa
     }
 
     func tableView(tableView: UITableView, viewForHeaderInSection section: Int) -> UIView? {
-        return tableView.dequeueReusableHeaderFooterViewWithIdentifier("Header") as! EditTableViewHeader
+        let headerView = tableView.dequeueReusableHeaderFooterViewWithIdentifier("Header") as! EditTableViewHeader
+        headerView.blurImageView.sd_setImageWithURL(NSURL(string: playlist?.musicTracks[0].artworkUrl ?? ""))
+        headerView.mainImageView.sd_setImageWithURL(NSURL(string: playlist?.musicTracks[0].artworkUrl ?? ""))
+        return headerView
     }
 
     func tableView(tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return 9
+        return playlist?.musicTracks.count ?? 0
     }
 
     func tableView(tableView: UITableView, heightForRowAtIndexPath indexPath: NSIndexPath) -> CGFloat {
@@ -38,6 +41,7 @@ class PlaylistEditViewController: ISPViewController, UITableViewDataSource, UITa
 
     func tableView(tableView: UITableView, cellForRowAtIndexPath indexPath: NSIndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCellWithIdentifier("MovableTrackCell", forIndexPath: indexPath) as? MovableTrackCell ?? MovableTrackCell()
+        cell.music = playlist?.musicTracks[indexPath.row]
         return cell
     }
 

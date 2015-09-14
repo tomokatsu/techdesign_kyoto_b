@@ -10,6 +10,11 @@ class PlaylistViewController: ISPViewController, UITableViewDelegate, UITableVie
         (self.navigationController?.navigationBar as? ISPNavigationBar)?.hide()
     }
 
+    override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?) {
+        let navigationController = segue.destinationViewController as! UINavigationController
+        (navigationController.childViewControllers[0] as! PlaylistEditViewController).playlist = playlist
+    }
+
     func numberOfSectionsInTableView(tableView: UITableView) -> Int {
         return 3
     }
@@ -48,10 +53,11 @@ class PlaylistViewController: ISPViewController, UITableViewDelegate, UITableVie
                 return cell
             case 1:
                 let cell = tableView.dequeueReusableCellWithIdentifier("PlaylistInfoCell", forIndexPath: indexPath) as? PlaylistInfoCell ?? PlaylistInfoCell()
-
+                cell.playlist = playlist
                 return cell
             case 2:
                 let cell = tableView.dequeueReusableCellWithIdentifier("MusicTrackCell", forIndexPath: indexPath) as? MusicTrackCell ?? MusicTrackCell()
+                cell.music = playlist?.musicTracks[indexPath.row]
                 return cell
             default:
                 return UITableViewCell()
