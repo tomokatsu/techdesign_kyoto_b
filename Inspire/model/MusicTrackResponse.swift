@@ -11,6 +11,13 @@ class MusicTrackResponse: Mappable {
         musics <- map["results"]
     }
 
+    func mappingToRealmObject() -> [MusicTrack] {
+        var realmMusicTracks: [MusicTrack] = []
+        for music in musics {
+            realmMusicTracks.append(music.mappingToRealmObject())
+        }
+        return realmMusicTracks
+    }
 
 }
 
@@ -31,4 +38,14 @@ class OMMusicTrack: Mappable {
         previewUrl <- map["previewUrl"]
         artworkUrl <- map["artworkUrl100"]
     }
+
+    func mappingToRealmObject() -> MusicTrack {
+        let music = MusicTrack()
+        music.title = name
+        music.artist = artistName
+        music.previewUrl = previewUrl
+        music.artworkUrl = artworkUrl
+        return music
+    }
+
 }
