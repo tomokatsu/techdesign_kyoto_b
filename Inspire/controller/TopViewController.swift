@@ -3,7 +3,7 @@ import RealmSwift
 
 class TopViewController: ISPViewController, UITableViewDelegate, UITableViewDataSource, UIScrollViewDelegate {
 
-    @IBOutlet weak var pageControl: UIPageControl!
+    @IBOutlet weak var segmentControl: UISegmentedControl!
     @IBOutlet weak var scrollView: ISPPagingScrollView!
     static let cellHeightWidthRatio = CGFloat(190.0 / 320.0)
     let realm = Realm()
@@ -14,6 +14,15 @@ class TopViewController: ISPViewController, UITableViewDelegate, UITableViewData
         playlists = realm.objects(Playlist)
         layoutViews()
 
+    }
+
+    override func viewWillAppear(animated: Bool) {
+        title = "Inspire"
+        (self.navigationController?.navigationBar as? ISPNavigationBar)?.show()
+    }
+
+    override func viewWillDisappear(animated: Bool) {
+        title = ""
     }
 
     func layoutViews() {
@@ -31,26 +40,18 @@ class TopViewController: ISPViewController, UITableViewDelegate, UITableViewData
             tableView.registerNib(UINib(nibName: "TopTableViewCell", bundle: nil), forCellReuseIdentifier: "Cell")
         }
     }
-    @IBAction func pageControlValueChanged(sender: UIPageControl) {
-        scrollView.setContentOffset(CGPoint(x: scrollView.bounds.size.width * CGFloat(sender.currentPage), y: 0.0), animated: true)
+
+    @IBAction func segmentControlValueChanged(sender: UISegmentedControl) {
+        scrollView.setContentOffset(CGPoint(x: scrollView.bounds.size.width * CGFloat(sender.selectedSegmentIndex), y: 0.0), animated: true)
     }
 
     func scrollViewDidScroll(scrollView: UIScrollView) {
         var pageWidth = self.scrollView.frame.size.width
-        pageControl.currentPage = lround(Double(self.scrollView.contentOffset.x / pageWidth))
+        segmentControl.selectedSegmentIndex = lround(Double(self.scrollView.contentOffset.x / pageWidth))
     }
 
     func tableView(tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         return 3
-    }
-
-    override func viewWillAppear(animated: Bool) {
-        title = "Inspire"
-        (self.navigationController?.navigationBar as? ISPNavigationBar)?.show()
-    }
-
-    override func viewWillDisappear(animated: Bool) {
-        title = ""
     }
 
     func tableView(tableView: UITableView, cellForRowAtIndexPath indexPath: NSIndexPath) -> UITableViewCell {
@@ -88,12 +89,8 @@ class TopViewController: ISPViewController, UITableViewDelegate, UITableViewData
         return TopViewController.cellHeightWidthRatio * UIScreen.mainScreen().bounds.width
     }
 
-
     func tableView(tableView: UITableView, didSelectRowAtIndexPath indexPath: NSIndexPath) {
         let playlistViewController = storyboard?.instantiateViewControllerWithIdentifier("PlaylistViewController") as! PlaylistViewController
         self.navigationController?.pushViewController(playlistViewController, animated: true)
     }
-
-
-
 }

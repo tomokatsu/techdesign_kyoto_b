@@ -41,35 +41,42 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="p3u-Bb-glg" customClass="ISPPagingScrollView" customModule="Inspire" customModuleProvider="target">
-                                <rect key="frame" x="0.0" y="0.0" width="320" height="524"/>
+                                <rect key="frame" x="0.0" y="29" width="320" height="495"/>
                                 <color key="backgroundColor" red="0.11372549019607843" green="0.11372549019607843" blue="0.12549019607843137" alpha="1" colorSpace="calibratedRGB"/>
                                 <connections>
                                     <outlet property="delegate" destination="mz7-35-jT4" id="eQG-Fz-xpz"/>
                                 </connections>
                             </scrollView>
+                            <segmentedControl opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="top" segmentControlStyle="plain" selectedSegmentIndex="0" translatesAutoresizingMaskIntoConstraints="NO" id="yeF-yk-Ef5">
+                                <rect key="frame" x="0.0" y="0.0" width="320" height="29"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="28" id="FqY-o9-edN"/>
+                                </constraints>
+                                <segments>
+                                    <segment title="MyPlaylist"/>
+                                    <segment title="Recomended"/>
+                                </segments>
+                                <color key="tintColor" white="0.54607971556886215" alpha="1" colorSpace="calibratedWhite"/>
+                                <connections>
+                                    <action selector="segmentControlValueChanged:" destination="mz7-35-jT4" eventType="valueChanged" id="N8E-Kv-RqC"/>
+                                </connections>
+                            </segmentedControl>
                         </subviews>
-                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <color key="backgroundColor" red="0.11372549019607843" green="0.11372549019607843" blue="0.12549019607843137" alpha="1" colorSpace="calibratedRGB"/>
                         <constraints>
                             <constraint firstItem="p3u-Bb-glg" firstAttribute="leading" secondItem="GS0-l8-gl8" secondAttribute="leading" id="7fo-1L-N0Q"/>
+                            <constraint firstItem="yeF-yk-Ef5" firstAttribute="top" secondItem="JWS-yf-aZT" secondAttribute="bottom" id="84M-v1-3Qt"/>
+                            <constraint firstItem="yeF-yk-Ef5" firstAttribute="leading" secondItem="GS0-l8-gl8" secondAttribute="leading" id="Df7-8A-cxe"/>
+                            <constraint firstAttribute="trailing" secondItem="yeF-yk-Ef5" secondAttribute="trailing" id="Dl1-nO-MOO"/>
                             <constraint firstItem="vhQ-KQ-n49" firstAttribute="top" secondItem="p3u-Bb-glg" secondAttribute="bottom" id="Emk-Yn-QqL"/>
                             <constraint firstAttribute="trailing" secondItem="p3u-Bb-glg" secondAttribute="trailing" id="LsB-d0-ILw"/>
-                            <constraint firstItem="p3u-Bb-glg" firstAttribute="top" secondItem="JWS-yf-aZT" secondAttribute="bottom" id="c7Z-mc-CjK"/>
+                            <constraint firstItem="p3u-Bb-glg" firstAttribute="top" secondItem="yeF-yk-Ef5" secondAttribute="bottom" constant="1" id="v42-Dr-N4L"/>
                         </constraints>
                     </view>
-                    <navigationItem key="navigationItem" title="I n s p i r e" id="wzP-6u-Twc">
-                        <barButtonItem key="leftBarButtonItem" style="plain" id="sS0-yT-Oga">
-                            <pageControl key="customView" opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" numberOfPages="2" id="2Pg-pT-3VB">
-                                <rect key="frame" x="16" y="3" width="25" height="37"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <connections>
-                                    <action selector="pageControlValueChanged:" destination="mz7-35-jT4" eventType="valueChanged" id="etI-Xv-qgS"/>
-                                </connections>
-                            </pageControl>
-                        </barButtonItem>
-                    </navigationItem>
+                    <navigationItem key="navigationItem" title="I n s p i r e" id="wzP-6u-Twc"/>
                     <connections>
-                        <outlet property="pageControl" destination="2Pg-pT-3VB" id="SId-R3-ZRw"/>
                         <outlet property="scrollView" destination="p3u-Bb-glg" id="NhN-Y6-D7e"/>
+                        <outlet property="segmentControl" destination="yeF-yk-Ef5" id="XKH-WG-BdU"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="7Jp-kN-mat" userLabel="First Responder" sceneMemberID="firstResponder"/>
