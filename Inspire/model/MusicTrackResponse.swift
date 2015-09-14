@@ -1,4 +1,5 @@
 import ObjectMapper
+import RealmSwift
 
 class MusicTrackResponse: Mappable {
     var musics: [OMMusicTrack] = []
@@ -11,8 +12,8 @@ class MusicTrackResponse: Mappable {
         musics <- map["results"]
     }
 
-    func mappingToRealmObject() -> [MusicTrack] {
-        var realmMusicTracks: [MusicTrack] = []
+    func mappingToRealmObject() -> List<MusicTrack> {
+        var realmMusicTracks: List<MusicTrack> = List<MusicTrack>()
         for music in musics {
             realmMusicTracks.append(music.mappingToRealmObject())
         }

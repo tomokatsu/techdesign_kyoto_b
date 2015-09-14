@@ -6,5 +6,6 @@ class Playlist: Object {
     dynamic var comment = ""
     dynamic var isInspire = false
     dynamic var inspiredNumber = 0
-    var musisTracks = List<MusicTrack>()
+    var musicTracks = List<MusicTrack>()
+    var additionalTracks = List<MusicTrack>()
 }
