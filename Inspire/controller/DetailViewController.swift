@@ -10,40 +10,37 @@ class DetailViewController:ISPViewController{
     @IBOutlet weak var playTime: UILabel!
     @IBOutlet weak var trackTitle: UILabel!
     @IBOutlet weak var artist: UILabel!
-    @IBOutlet weak var playTimeSlider: UISlider!
+    //@IBOutlet weak var playTimeSlider: UISlider!
 
-    var pManager: PlayerManager?
     var playingTimeTimer : NSTimer?
 
     override func viewDidLoad() {
         super.viewDidLoad()
-
-        //self.pManager = PlayerManager(playlist: playList)
         self.setupView()
     }
 
     @IBAction func playAndPauseButtonTouchUpInside(sender: UIButton) {
-        if pManager!.isPlaying() {
-            pManager?.pause()
+        if PlayerManager.sharedInstance.isPlaying() {
+            PlayerManager.sharedInstance.pause()
         }else{
-            pManager?.play()
+            PlayerManager.sharedInstance.play()
         }
     }
 
     @IBAction func nextButtonTouchUpInside(sender: UIButton) {
-        pManager?.playNextSong()
+        PlayerManager.sharedInstance.playNextSong()
     }
 
     @IBAction func backButtonTouchUpInside(sender: UIButton) {
-        pManager?.playPrevSong()
+        PlayerManager.sharedInstance.playPrevSong()
     }
 
     @IBAction func playTimeSliderAction(sender: AnyObject) {
-        pManager?.setProgress(self.playTimeSlider.value)
+        //PlayerManager.sharedInstance.setProgress(self.playTimeSlider.value)
     }
 
     func setupView(){
-        self.playTimeSlider.maximumValue = 1.0
+        //self.playTimeSlider.maximumValue = 1.0
 
         playingTimeTimer = NSTimer.scheduledTimerWithTimeInterval(
             1,
@@ -55,12 +52,12 @@ class DetailViewController:ISPViewController{
     }
 
     func updatePlayingInfo() {
-        self.trackTime.text = pManager?.playTime() ?? "00:00"
-        self.playTime.text = pManager?.playingTime() ?? "00:00"
+        self.trackTime.text = PlayerManager.sharedInstance.playTime() ?? "00:00"
+        self.playTime.text = PlayerManager.sharedInstance.playingTime() ?? "00:00"
 
-        self.playTimeSlider.value = pManager?.getProgress() ?? Float(0.0)
+        //self.playTimeSlider.value = PlayerManager.sharedInstance.getProgress() ?? Float(0.0)
 
-        self.trackTitle.text = pManager?.title() ?? "TITLE"
-        self.artist.text = pManager?.artist() ?? "ARTIST"
+        self.trackTitle.text = PlayerManager.sharedInstance.title() ?? "TITLE"
+        self.artist.text = PlayerManager.sharedInstance.artist() ?? "ARTIST"
     }
 }
