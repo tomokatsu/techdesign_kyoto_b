@@ -21,7 +21,7 @@ class PlaylistViewController: ISPViewController, UITableViewDelegate, UITableVie
             case 1:
                 return 1
             case 2:
-                return 7
+                return playlist?.musicTracks.count ?? 0
             default:
                 return 0
         }
@@ -44,11 +44,11 @@ class PlaylistViewController: ISPViewController, UITableViewDelegate, UITableVie
         switch indexPath.section {
             case 0:
                 let cell = tableView.dequeueReusableCellWithIdentifier("MainCell", forIndexPath: indexPath) as? PlaylistMainCell ?? PlaylistMainCell()
-                cell.contentView.bringSubviewToFront(cell.titleLabel)
-                cell.contentView.bringSubviewToFront(cell.inspiredNumberLabel)
+                cell.playlist = playlist
                 return cell
             case 1:
                 let cell = tableView.dequeueReusableCellWithIdentifier("PlaylistInfoCell", forIndexPath: indexPath) as? PlaylistInfoCell ?? PlaylistInfoCell()
+
                 return cell
             case 2:
                 let cell = tableView.dequeueReusableCellWithIdentifier("MusicTrackCell", forIndexPath: indexPath) as? MusicTrackCell ?? MusicTrackCell()
