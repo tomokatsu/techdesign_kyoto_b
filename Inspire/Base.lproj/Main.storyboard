@@ -690,15 +690,6 @@
                                     <outlet property="delegate" destination="n6B-dB-8uN" id="oj8-Pz-26l"/>
                                 </connections>
                             </textField>
-                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" text="test title" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="hxk-YQ-0cL">
-                                <rect key="frame" x="20" y="397" width="280" height="20"/>
-                                <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
-                                <fontDescription key="fontDescription" name="mplus-1p-light" family="M+ 1p" pointSize="14"/>
-                                <textInputTraits key="textInputTraits"/>
-                                <connections>
-                                    <outlet property="delegate" destination="n6B-dB-8uN" id="bcs-dW-rjq"/>
-                                </connections>
-                            </textField>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" buttonType="roundedRect" reversesTitleShadowWhenHighlighted="YES" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="71J-Qp-8Hi">
                                 <rect key="frame" x="20" y="457" width="280" height="15"/>
                                 <constraints>
@@ -726,6 +717,15 @@
                                     <outletCollection property="gestureRecognizers" destination="SpI-M4-IKa" appends="YES" id="kJR-ee-OTB"/>
                                 </connections>
                             </label>
+                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" text="test title" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="hxk-YQ-0cL">
+                                <rect key="frame" x="20" y="397" width="280" height="20"/>
+                                <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                <fontDescription key="fontDescription" name="mplus-1p-light" family="M+ 1p" pointSize="14"/>
+                                <textInputTraits key="textInputTraits"/>
+                                <connections>
+                                    <outlet property="delegate" destination="n6B-dB-8uN" id="bcs-dW-rjq"/>
+                                </connections>
+                            </textField>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <constraints>

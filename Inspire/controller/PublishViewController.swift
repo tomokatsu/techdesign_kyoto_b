@@ -1,6 +1,5 @@
 
 import UIKit
-import DOAlertController
 
 class PublishViewController: ISPViewController, UITextFieldDelegate {
 
@@ -73,7 +72,7 @@ class PublishViewController: ISPViewController, UITextFieldDelegate {
         let messageLabel = UILabel(frame: CGRectMake(20, y, UIScreen.mainScreen().bounds.width - 40, 60))
         messageLabel.text = "プレイリストの作成が完了しました\nさっそくAWAでチェックしてみましょう！"
         messageLabel.numberOfLines = 2
-        messageLabel.font = UIFont(name: "mplus-1p-regular", size: 16)
+        messageLabel.font = UIFont(name: "mplus-1p-regular", size: 14)
         messageLabel.textColor = UIColor.whiteColor()
         messageLabel.textAlignment = .Center
         publishedView.addSubview(messageLabel)
