@@ -16,7 +16,7 @@ class PlayerManager{
 
     func setPlaylist(playlist: Playlist) {
         self.playlist = playlist
-        self.players = [Player?](count: playlist.musisTracks.count, repeatedValue: nil)
+        self.players = [Player?](count: playlist.musicTracks.count, repeatedValue: nil)
     }
 
     func playNextSong() {
@@ -78,7 +78,7 @@ class PlayerManager{
     }
 
     private func selectNextSong() {
-        if(toPlayIndex < (playlist!.musisTracks.count - 1)) {
+        if(toPlayIndex < (playlist!.musicTracks.count - 1)) {
             toPlayIndex += 1
         } else {
             toPlayIndex = 0
@@ -89,7 +89,7 @@ class PlayerManager{
         if (toPlayIndex > 0) {
             toPlayIndex -= 1
         } else {
-            toPlayIndex = playlist!.musisTracks.count - 1
+            toPlayIndex = playlist!.musicTracks.count - 1
         }
     }
 
@@ -97,7 +97,7 @@ class PlayerManager{
         if let player = self.players[toPlayIndex] {
             return player
         } else {
-            let track = playlist?.musisTracks[toPlayIndex]
+            let track = playlist?.musicTracks[toPlayIndex]
             self.players[toPlayIndex] = Player(mTrack: track!)
             return players[toPlayIndex]!
         }

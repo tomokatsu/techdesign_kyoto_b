@@ -501,6 +501,9 @@
                                         </tableViewCellContentView>
                                         <color key="backgroundColor" red="0.11372549019607843" green="0.11372549019607843" blue="0.12549019607843137" alpha="1" colorSpace="calibratedRGB"/>
                                         <connections>
+                                            <outlet property="artistLabel" destination="ULb-1y-Xq9" id="1g8-Tm-sqq"/>
+                                            <outlet property="thumbnailImageView" destination="9KS-Wh-JBC" id="doj-7T-Soa"/>
+                                            <outlet property="titleLabel" destination="Ioa-bT-sDB" id="J2Y-Y2-DFd"/>
                                             <segue destination="nIy-hu-8vQ" kind="push" id="H7P-d4-p6R"/>
                                         </connections>
                                     </tableViewCell>
