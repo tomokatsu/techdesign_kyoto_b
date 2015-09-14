@@ -3,7 +3,7 @@ import SDWebImage
 
 class PlaylistEditViewController: ISPViewController, UITableViewDataSource, UITableViewDelegate {
 
-    @IBOutlet weak var tableView: UITableView!
+    @IBOutlet weak private var tableView: UITableView!
 
     var playlist: Playlist?
 

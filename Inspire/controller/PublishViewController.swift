@@ -3,7 +3,7 @@ import UIKit
 
 class PublishViewController: ISPViewController, UITextFieldDelegate {
 
-    @IBOutlet weak var backBlurImageView: UIImageView!
+    @IBOutlet weak private var backBlurImageView: UIImageView!
 
     private let blurView = UIVisualEffectView(effect: UIBlurEffect(style: .Dark))
     @IBOutlet weak var moodLabel: UILabel!

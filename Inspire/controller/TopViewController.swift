@@ -3,8 +3,8 @@ import RealmSwift
 
 class TopViewController: ISPViewController, UITableViewDelegate, UITableViewDataSource, UIScrollViewDelegate {
 
-    @IBOutlet weak var segmentControl: UISegmentedControl!
-    @IBOutlet weak var scrollView: ISPPagingScrollView!
+    @IBOutlet weak private var segmentControl: UISegmentedControl!
+    @IBOutlet weak private var scrollView: ISPPagingScrollView!
     static let cellHeightWidthRatio = CGFloat(190.0 / 320.0)
     let realm = Realm()
     var myPlaylists: Results<Playlist>?

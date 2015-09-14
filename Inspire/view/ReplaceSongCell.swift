@@ -2,7 +2,7 @@
 import UIKit
 
 class ReplaceSongCell: ISPTableViewCell {
-    @IBOutlet weak var thumbnailImageView: UIImageView!
-    @IBOutlet weak var titleLabel: UILabel!
-    @IBOutlet weak var artistLabel: UILabel!
+    @IBOutlet weak private var thumbnailImageView: UIImageView!
+    @IBOutlet weak private var titleLabel: UILabel!
+    @IBOutlet weak private var artistLabel: UILabel!
 }

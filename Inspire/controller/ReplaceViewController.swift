@@ -2,10 +2,10 @@ import UIKit
 
 class ReplaceViewController: ISPViewController, UITableViewDelegate, UITableViewDataSource {
 
-    @IBOutlet weak var blurImageView: UIImageView!
-    @IBOutlet weak var thumbnailImageView: UIImageView!
-    @IBOutlet weak var replacedSongTitleLabel: UILabel!
-    @IBOutlet weak var replacedSongArtistLabel: UILabel!
+    @IBOutlet weak private var blurImageView: UIImageView!
+    @IBOutlet weak private var thumbnailImageView: UIImageView!
+    @IBOutlet weak private var replacedSongTitleLabel: UILabel!
+    @IBOutlet weak private var replacedSongArtistLabel: UILabel!
     private let blurView = UIVisualEffectView(effect: UIBlurEffect(style: .Dark))
 
     override func viewDidLoad() {
