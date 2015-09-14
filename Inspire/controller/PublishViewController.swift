@@ -61,18 +61,50 @@ class PublishViewController: ISPViewController, UITextFieldDelegate {
     @IBAction func publishButtonTouchUpInside(sender: UIBarButtonItem) {
         let publishedView = UIView(frame: CGRectMake(0, 0, UIScreen.mainScreen().bounds.width, UIScreen.mainScreen().bounds.height))
         publishedView.backgroundColor = UIColor(red: 0, green: 0, blue: 0, alpha: 0.7)
-        let messageLabel = UILabel(frame: CGRectMake(20, 200, UIScreen.mainScreen().bounds.width - 40, 40))
-        messageLabel.text = "プレイリストの作成が完了しました"
+
+        var y = CGFloat(100)
+
+        let checkImageView = UIImageView(frame: CGRectMake((UIScreen.mainScreen().bounds.width / 2) - 40, y, 80, 80))
+        checkImageView.image = UIImage(named: "check")
+        publishedView.addSubview(checkImageView)
+
+        y = y + checkImageView.frame.height + 10
+
+        let messageLabel = UILabel(frame: CGRectMake(20, y, UIScreen.mainScreen().bounds.width - 40, 60))
+        messageLabel.text = "プレイリストの作成が完了しました\nさっそくAWAでチェックしてみましょう！"
+        messageLabel.numberOfLines = 2
         messageLabel.font = UIFont(name: "mplus-1p-regular", size: 16)
         messageLabel.textColor = UIColor.whiteColor()
         messageLabel.textAlignment = .Center
         publishedView.addSubview(messageLabel)
 
-        let checkButton = UIButton(frame: CGRectMake((UIScreen.mainScreen().bounds.width / 2) - 40, 260, 80, 80))
-        checkButton.setBackgroundImage(UIImage(named: "check"), forState: .Normal)
-        checkButton.addTarget(self, action: Selector("moveTop"), forControlEvents: .TouchUpInside)
-        publishedView.addSubview(checkButton)
+        y = y + messageLabel.frame.height + 80
+
+        let awaOpenButton = UIButton(frame: CGRectMake(0, y, 91, 32))
+        awaOpenButton.center = CGPointMake(UIScreen.mainScreen().bounds.width / 2, y + 16)
+        awaOpenButton.setTitle("AWAを開く", forState: .Normal)
+        publishedView.addSubview(awaOpenButton)
+        awaOpenButton.backgroundColor = UIColor(red: 0.501960784, green: 0.501960784, blue: 0.890196078, alpha: 1)
+        awaOpenButton.setTitleColor(UIColor.whiteColor(), forState: .Normal)
+        awaOpenButton.layer.cornerRadius = 12
+        awaOpenButton.titleLabel?.font = UIFont(name: "mplus-1p-light", size: 12)
+        publishedView.addSubview(awaOpenButton)
+
+        y = y + awaOpenButton.frame.height + 10
+
+        let moveTopButton = UIButton(frame: CGRectMake(0, y, 91, 32))
+        moveTopButton.center = CGPointMake(UIScreen.mainScreen().bounds.width / 2, y + 16)
+        moveTopButton.setTitle("後で", forState: .Normal)
+        publishedView.addSubview(awaOpenButton)
+
+        moveTopButton.setTitleColor(UIColor.whiteColor(), forState: .Normal)
+        moveTopButton.layer.cornerRadius = 12
+        moveTopButton.titleLabel?.font = UIFont(name: "mplus-1p-light", size: 12)
+        moveTopButton.addTarget(self, action: Selector("moveTop"), forControlEvents: .TouchUpInside)
+        publishedView.addSubview(moveTopButton)
+
         self.navigationController?.navigationBarHidden = true
+
         self.view.addSubview(publishedView)
     }
 
