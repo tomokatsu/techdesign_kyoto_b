@@ -555,21 +555,21 @@
                         <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <view contentMode="scaleToFill" misplaced="YES" translatesAutoresizingMaskIntoConstraints="NO" id="22u-0Y-d2A">
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="22u-0Y-d2A">
                                 <rect key="frame" x="15" y="474" width="290" height="0.5"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="1" id="FJu-6u-4f7"/>
                                 </constraints>
                             </view>
-                            <view contentMode="scaleToFill" misplaced="YES" translatesAutoresizingMaskIntoConstraints="NO" id="18H-4o-mvI">
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="18H-4o-mvI">
                                 <rect key="frame" x="15" y="383" width="290" height="1"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="1" id="pCW-2w-Ag7"/>
                                 </constraints>
                             </view>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" text="プレイリストの説明" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="gjz-fX-eEg">
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="プレイリストの説明" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="gjz-fX-eEg">
                                 <rect key="frame" x="20" y="368" width="108" height="13"/>
                                 <constraints>
                                     <constraint firstAttribute="width" constant="108" id="IgL-X8-NYa"/>
@@ -613,7 +613,7 @@
                                 <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" text="test title" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="OZ2-ij-asr">
+                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" text="test title" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="OZ2-ij-asr">
                                 <rect key="frame" x="20" y="308" width="180" height="20"/>
                                 <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                                 <fontDescription key="fontDescription" name="mplus-1p-light" family="M+ 1p" pointSize="14"/>
@@ -622,7 +622,7 @@
                                     <outlet property="delegate" destination="n6B-dB-8uN" id="oj8-Pz-26l"/>
                                 </connections>
                             </textField>
-                            <button opaque="NO" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" buttonType="roundedRect" reversesTitleShadowWhenHighlighted="YES" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="71J-Qp-8Hi">
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" buttonType="roundedRect" reversesTitleShadowWhenHighlighted="YES" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="71J-Qp-8Hi">
                                 <rect key="frame" x="20" y="457" width="280" height="15"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="15" id="4hp-61-wor"/>
@@ -636,7 +636,7 @@
                                     <action selector="moodSelectButtonTouchUpInside:" destination="n6B-dB-8uN" eventType="touchUpInside" id="KlN-gY-Tis"/>
                                 </connections>
                             </button>
-                            <label opaque="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" text="Label" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="c55-fw-tR8">
+                            <label opaque="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="c55-fw-tR8">
                                 <rect key="frame" x="20" y="487" width="280" height="20"/>
                                 <gestureRecognizers/>
                                 <constraints>
@@ -649,7 +649,7 @@
                                     <outletCollection property="gestureRecognizers" destination="SpI-M4-IKa" appends="YES" id="kJR-ee-OTB"/>
                                 </connections>
                             </label>
-                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" text="test title" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="hxk-YQ-0cL">
+                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" text="test title" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="hxk-YQ-0cL">
                                 <rect key="frame" x="20" y="397" width="280" height="20"/>
                                 <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                                 <fontDescription key="fontDescription" name="mplus-1p-light" family="M+ 1p" pointSize="14"/>
