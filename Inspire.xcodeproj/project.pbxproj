@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		023B7BC81BA6B70400B6F226 /* Seeds.swift in Sources */ = {isa = PBXBuildFile; fileRef = 023B7BC71BA6B70400B6F226 /* Seeds.swift */; };
 		153BE10CEACB064F2A28EBB3 /* Pods.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A905C659755439296FD27D7E /* Pods.framework */; settings = {ATTRIBUTES = (Weak, ); }; };
 		490B45DF1BA26B3100093DA7 /* Playlist.swift in Sources */ = {isa = PBXBuildFile; fileRef = 490B45DE1BA26B3100093DA7 /* Playlist.swift */; };
 		490B45E11BA26D6600093DA7 /* APIClient.swift in Sources */ = {isa = PBXBuildFile; fileRef = 490B45E01BA26D6600093DA7 /* APIClient.swift */; };
@@ -94,6 +95,7 @@
 
 /* Begin PBXFileReference section */
 		023A452FAB889A56FC854F17 /* Pods.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = Pods.debug.xcconfig; path = "Pods/Target Support Files/Pods/Pods.debug.xcconfig"; sourceTree = "<group>"; };
+		023B7BC71BA6B70400B6F226 /* Seeds.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Seeds.swift; sourceTree = "<group>"; };
 		490B45DE1BA26B3100093DA7 /* Playlist.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Playlist.swift; sourceTree = "<group>"; };
 		490B45E01BA26D6600093DA7 /* APIClient.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = APIClient.swift; sourceTree = "<group>"; };
 		490B45E41BA2796F00093DA7 /* TopViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TopViewController.swift; sourceTree = "<group>"; };
@@ -206,6 +208,7 @@
 			children = (
 				490B45E01BA26D6600093DA7 /* APIClient.swift */,
 				49C1B5881BA2BC5C00B52C7F /* PlayerManager.swift */,
+				023B7BC71BA6B70400B6F226 /* Seeds.swift */,
 			);
 			name = Util;
 			sourceTree = "<group>";
@@ -589,6 +592,7 @@
 				492DEB011BA5BE3F00B6F232 /* DOAlertController.swift in Sources */,
 				49C1B5891BA2BC5C00B52C7F /* PlayerManager.swift in Sources */,
 				4956CCEE1BA54D4D003254D2 /* EditTableViewHeader.swift in Sources */,
+				023B7BC81BA6B70400B6F226 /* Seeds.swift in Sources */,
 				49C1B5931BA32F9700B52C7F /* MusicTrackCell.swift in Sources */,
 				490B45E51BA2796F00093DA7 /* TopViewController.swift in Sources */,
 				4956CCF21BA55BFB003254D2 /* PublishViewController.swift in Sources */,
