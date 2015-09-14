@@ -87,6 +87,13 @@ class TopViewController: ISPViewController, UITableViewDelegate, UITableViewData
 
     func tableView(tableView: UITableView, didSelectRowAtIndexPath indexPath: NSIndexPath) {
         let playlistViewController = storyboard?.instantiateViewControllerWithIdentifier("PlaylistViewController") as! PlaylistViewController
+        let playlist: Playlist
+        if tableView.tag == 0 {
+            playlist = myPlaylists![indexPath.row]
+        } else {
+            playlist = inspirablePlaylists![indexPath.row]
+        }
+        playlistViewController.playlist = playlist
         self.navigationController?.pushViewController(playlistViewController, animated: true)
     }
 }

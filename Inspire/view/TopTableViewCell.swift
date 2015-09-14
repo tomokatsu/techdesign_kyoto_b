@@ -7,13 +7,14 @@ class TopTableViewCell: UITableViewCell {
     @IBOutlet weak private var playlisterLabel: UILabel!
     @IBOutlet weak private var playlistJacketImagesView: PlaylistJacketImagesView!
     @IBOutlet weak private var userImageView: UIImageView!
+    private var _playlist: Playlist?
 
     var playlist: Playlist? {
         get {
-            return self.playlist
+            return _playlist
         }
         set(playlist) {
-            self.playlist = playlist
+            _playlist = playlist
             layoutIfNeeded()
         }
     }

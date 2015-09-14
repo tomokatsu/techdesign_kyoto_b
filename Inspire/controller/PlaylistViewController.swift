@@ -48,10 +48,11 @@ class PlaylistViewController: ISPViewController, UITableViewDelegate, UITableVie
                 return cell
             case 1:
                 let cell = tableView.dequeueReusableCellWithIdentifier("PlaylistInfoCell", forIndexPath: indexPath) as? PlaylistInfoCell ?? PlaylistInfoCell()
-
+                cell.playlist = playlist
                 return cell
             case 2:
                 let cell = tableView.dequeueReusableCellWithIdentifier("MusicTrackCell", forIndexPath: indexPath) as? MusicTrackCell ?? MusicTrackCell()
+                cell.music = playlist?.musicTracks[indexPath.row]
                 return cell
             default:
                 return UITableViewCell()

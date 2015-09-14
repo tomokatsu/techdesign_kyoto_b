@@ -6,21 +6,17 @@ class MusicTrackCell: ISPTableViewCell {
     @IBOutlet weak private var titleLabel: UILabel!
     @IBOutlet weak private var artistLabel: UILabel!
     @IBOutlet weak private var timeLabel: UILabel!
-
+    private var _music: MusicTrack?
     var music: MusicTrack? {
         get {
-            return self.music
+            return _music
         }
         set(music) {
-            self.music = music
-            layoutIfNeeded()
+            _music = music
+            thumbnailImageView.sd_setImageWithURL(NSURL(string: music?.artworkUrl ?? ""))
+            titleLabel.text = music?.title
+            artistLabel.text = music?.artist
+            timeLabel.text = "0:29"
         }
-    }
-
-    override func layoutSubviews() {
-        thumbnailImageView.sd_setImageWithURL(NSURL(string: music?.artworkUrl ?? ""))
-        titleLabel.text = music?.title
-        artistLabel.text = music?.artist
-        timeLabel.text = "29"
     }
 }

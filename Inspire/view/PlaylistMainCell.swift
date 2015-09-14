@@ -7,14 +7,18 @@ class PlaylistMainCell: ISPTableViewCell {
     @IBOutlet weak private var inspiredNumberLabel: UILabel!
 
     private var gradientView = UIView()
-
+    private var _playlist: Playlist?
     var playlist: Playlist? {
         get {
-            return self.playlist
+            return _playlist
         }
         set(playlist) {
-            self.playlist = playlist
-            layoutIfNeeded()
+            _playlist = playlist
+            mainImageView.sd_setImageWithURL(NSURL(string: playlist?.musicTracks[0].artworkUrl ?? ""))
+            titleLabel.text = playlist?.title
+            inspiredNumberLabel.text = "inspired \(playlist!.inspiredNumber)"
+            contentView.bringSubviewToFront(titleLabel)
+            contentView.bringSubviewToFront(inspiredNumberLabel)
         }
     }
 
@@ -33,13 +37,5 @@ class PlaylistMainCell: ISPTableViewCell {
         gradientView.layer.insertSublayer(gradient, atIndex: 0)
         mainImageView.addSubview(gradientView)
         bringSubviewToFront(gradientView)
-    }
-
-    override func layoutSubviews() {
-        mainImageView.sd_setImageWithURL(NSURL(string: playlist?.musicTracks[0].artworkUrl ?? ""))
-        titleLabel.text = playlist?.title
-        inspiredNumberLabel.text = "inspired \(playlist?.inspiredNumber)"
-        contentView.bringSubviewToFront(titleLabel)
-        contentView.bringSubviewToFront(inspiredNumberLabel)
     }
 }

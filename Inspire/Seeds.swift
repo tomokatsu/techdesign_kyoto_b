@@ -2,7 +2,7 @@ import Foundation
 import RealmSwift
 
 class Seeds {
-    private init(){
+    init(){
         if !NSUserDefaults.standardUserDefaults().boolForKey("IsSeedAdded") {
             createRecommendPlaylists()
             createFavoriteMusicTracks()
