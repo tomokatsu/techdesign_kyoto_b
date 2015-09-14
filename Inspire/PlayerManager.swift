@@ -2,15 +2,19 @@ import Foundation
 import AVFoundation
 
 class PlayerManager{
-    //static let sharedInstance = PlayerManager()
+    static let sharedInstance = PlayerManager()
 
-    var playlist: Playlist?
+    private var playlist: Playlist?
+    private var players: [Player?]
     var toPlayIndex: Int
-    var players: [Player?]
 
-    internal init(playlist: Playlist) {
+    private init() {
         toPlayIndex = 0
+        playlist = nil
+        players = []
+    }
 
+    func setPlaylist(playlist: Playlist) {
         self.playlist = playlist
         self.players = [Player?](count: playlist.musisTracks.count, repeatedValue: nil)
     }
@@ -192,5 +196,6 @@ class Player: NSObject {
 
     func playerDidFinishPlaying(note: NSNotification) {
         self.reset()
+        PlayerManager.sharedInstance.playNextSong()
     }
 }
