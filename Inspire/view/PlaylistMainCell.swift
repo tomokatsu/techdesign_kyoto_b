@@ -1,11 +1,22 @@
 import UIKit
+import SDWebImage
 
 class PlaylistMainCell: ISPTableViewCell {
-    @IBOutlet weak var mainImageView: UIImageView!
-    @IBOutlet weak var titleLabel: UILabel!
-    @IBOutlet weak var inspiredNumberLabel: UILabel!
+    @IBOutlet weak private var mainImageView: UIImageView!
+    @IBOutlet weak private var titleLabel: UILabel!
+    @IBOutlet weak private var inspiredNumberLabel: UILabel!
 
     private var gradientView = UIView()
+
+    var playlist: Playlist? {
+        get {
+            return self.playlist
+        }
+        set(playlist) {
+            self.playlist = playlist
+            layoutIfNeeded()
+        }
+    }
 
     override func awakeFromNib() {
         let screenWidth = UIScreen.mainScreen().bounds.width
@@ -22,5 +33,13 @@ class PlaylistMainCell: ISPTableViewCell {
         gradientView.layer.insertSublayer(gradient, atIndex: 0)
         mainImageView.addSubview(gradientView)
         bringSubviewToFront(gradientView)
+    }
+
+    override func layoutSubviews() {
+        mainImageView.sd_setImageWithURL(NSURL(string: playlist?.musicTracks[0].artworkUrl ?? ""))
+        titleLabel.text = playlist?.title
+        inspiredNumberLabel.text = "inspired \(playlist?.inspiredNumber)"
+        contentView.bringSubviewToFront(titleLabel)
+        contentView.bringSubviewToFront(inspiredNumberLabel)
     }
 }
