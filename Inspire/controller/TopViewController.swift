@@ -71,13 +71,13 @@ class TopViewController: ISPViewController, UITableViewDelegate, UITableViewData
             track.artist = "test artist"
             tracks.append(track)
         }
-        playlist.musisTracks = tracks
+        playlist.musicTracks = tracks
 
         cell.titleLabel.text = playlist.title
         cell.playlisterLabel.text = playlist.playlister
 
         var artWorkURLs: [String] = []
-        for (index, musicTrack) in enumerate(playlist.musisTracks) {
+        for (index, musicTrack) in enumerate(playlist.musicTracks) {
             if index > 5 { break }
             artWorkURLs.append(musicTrack.artworkUrl)
         }
