@@ -1,13 +1,34 @@
 import UIKit
+import SDWebImage
 
 class TopTableViewCell: UITableViewCell {
-    @IBOutlet weak var commentLabel: UILabel!
-    @IBOutlet weak var titleLabel: UILabel!
-    @IBOutlet weak var playlisterLabel: UILabel!
-    @IBOutlet weak var playlistJacketImagesView: PlaylistJacketImagesView!
-    @IBOutlet weak var userImageView: UIImageView!
+    @IBOutlet weak private var commentLabel: UILabel!
+    @IBOutlet weak private var titleLabel: UILabel!
+    @IBOutlet weak private var playlisterLabel: UILabel!
+    @IBOutlet weak private var playlistJacketImagesView: PlaylistJacketImagesView!
+    @IBOutlet weak private var userImageView: UIImageView!
+
+    var playlist: Playlist? {
+        get {
+            return self.playlist
+        }
+        set(playlist) {
+            self.playlist = playlist
+            layoutIfNeeded()
+        }
+    }
 
     override func layoutSubviews() {
+        titleLabel.text = playlist?.title
+        commentLabel.text = playlist?.comment
+        playlisterLabel.text = playlist?.playlister
+        userImageView.sd_setImageWithURL(NSURL(string: playlist!.userImageURL))
+        var artWorkURLs: [String] = []
+        for track in playlist!.musicTracks {
+            artWorkURLs.append(track.artworkUrl)
+        }
+        playlistJacketImagesView.artWorkURLs = artWorkURLs
+
         playlistJacketImagesView.bringSubviewToFront(titleLabel)
         playlistJacketImagesView.bringSubviewToFront(playlisterLabel)
         playlistJacketImagesView.bringSubviewToFront(userImageView)

@@ -7,11 +7,13 @@ class TopViewController: ISPViewController, UITableViewDelegate, UITableViewData
     @IBOutlet weak var scrollView: ISPPagingScrollView!
     static let cellHeightWidthRatio = CGFloat(190.0 / 320.0)
     let realm = Realm()
-    var playlists: Results<Playlist>?
+    var myPlaylists: Results<Playlist>?
+    var inspirablePlaylists: Results<Playlist>?
 
     override func viewDidLoad() {
         super.viewDidLoad()
-        playlists = realm.objects(Playlist)
+        myPlaylists = realm.objects(Playlist).filter("isInspire = true")
+        inspirablePlaylists = realm.objects(Playlist).filter("isInspire = false")
         layoutViews()
 
     }
@@ -37,6 +39,7 @@ class TopViewController: ISPViewController, UITableViewDelegate, UITableViewData
             tableView.dataSource = self
             tableView.backgroundColor = UIColor(red: 29/255, green: 29/255, blue: 32/255, alpha: 1)
             tableView.separatorStyle = .None
+            tableView.tag = i
             tableView.registerNib(UINib(nibName: "TopTableViewCell", bundle: nil), forCellReuseIdentifier: "Cell")
         }
     }
@@ -51,37 +54,30 @@ class TopViewController: ISPViewController, UITableViewDelegate, UITableViewData
     }
 
     func tableView(tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return 3
+        switch tableView.tag {
+            case 0:
+                return myPlaylists?.count ?? 0
+            case 1:
+                return inspirablePlaylists?.count ?? 0
+            default:
+                return 0
+        }
     }
 
     func tableView(tableView: UITableView, cellForRowAtIndexPath indexPath: NSIndexPath) -> UITableViewCell {
-        //let cell = tableView.dequeueReusableCellWithIdentifier("Cell", forIndexPath: indexPath) as? TopTableViewCell ?? TopTableViewCell()
         let cell = tableView.dequeueReusableCellWithIdentifier("Cell") as? TopTableViewCell ?? TopTableViewCell()
         cell.backgroundColor = UIColor(red: 0.11372549, green: 0.11372549, blue: 0.125490196, alpha: 1)
         cell.selectionStyle = .None
-        let playlist = Playlist()
-        playlist.title = "test test testあ"
-        playlist.playlister = "テストユーザー"
 
-        var tracks = List<MusicTrack>()
-        for i in 0...7 {
-            let track = MusicTrack()
-            track.title = "test song"
-            track.artworkUrl = "http://vector-sozai.up.seesaa.net/image/HumanSkulls.png"
-            track.artist = "test artist"
-            tracks.append(track)
+        let playlist: Playlist
+        if tableView.tag == 0 {
+            playlist = myPlaylists![indexPath.row]
+        } else {
+            playlist = inspirablePlaylists![indexPath.row]
         }
-        playlist.musicTracks = tracks
 
-        cell.titleLabel.text = playlist.title
-        cell.playlisterLabel.text = playlist.playlister
+        cell.playlist = playlist
 
-        var artWorkURLs: [String] = []
-        for (index, musicTrack) in enumerate(playlist.musicTracks) {
-            if index > 5 { break }
-            artWorkURLs.append(musicTrack.artworkUrl)
-        }
-        cell.playlistJacketImagesView.artWorkURLs = artWorkURLs
         return cell
     }
 
