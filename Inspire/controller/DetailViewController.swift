@@ -10,7 +10,7 @@ class DetailViewController:ISPViewController{
     @IBOutlet weak private var playTime: UILabel!
     @IBOutlet weak private var trackTitle: UILabel!
     @IBOutlet weak private var artist: UILabel!
-    //@IBOutlet weak var playTimeSlider: UISlider!
+    @IBOutlet weak var playTimeSlider: UISlider!
 
     var playingTimeTimer : NSTimer?
 
@@ -36,11 +36,11 @@ class DetailViewController:ISPViewController{
     }
 
     @IBAction func playTimeSliderAction(sender: AnyObject) {
-        //PlayerManager.sharedInstance.setProgress(self.playTimeSlider.value)
+        PlayerManager.sharedInstance.setProgress(self.playTimeSlider.value)
     }
 
     func setupView(){
-        //self.playTimeSlider.maximumValue = 1.0
+        self.playTimeSlider.maximumValue = 1.0
 
         playingTimeTimer = NSTimer.scheduledTimerWithTimeInterval(
             1,
@@ -55,7 +55,7 @@ class DetailViewController:ISPViewController{
         self.trackTime.text = PlayerManager.sharedInstance.playTime() ?? "00:00"
         self.playTime.text = PlayerManager.sharedInstance.playingTime() ?? "00:00"
 
-        //self.playTimeSlider.value = PlayerManager.sharedInstance.getProgress() ?? Float(0.0)
+        self.playTimeSlider.value = PlayerManager.sharedInstance.getProgress() ?? Float(0.0)
 
         self.trackTitle.text = PlayerManager.sharedInstance.title() ?? "TITLE"
         self.artist.text = PlayerManager.sharedInstance.artist() ?? "ARTIST"
