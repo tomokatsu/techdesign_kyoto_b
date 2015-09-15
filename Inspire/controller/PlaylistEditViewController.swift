@@ -4,7 +4,6 @@ import SDWebImage
 class PlaylistEditViewController: ISPViewController, UITableViewDataSource, UITableViewDelegate, EditTableViewHeaderDelegate, EditAddMusicHeaderDelegate {
 
     @IBOutlet weak private var tableView: UITableView!
-
     var playlist: Playlist?
 
     override func viewDidLoad() {
@@ -22,7 +21,8 @@ class PlaylistEditViewController: ISPViewController, UITableViewDataSource, UITa
     }
 
     func touchUpInside(view: EditAddMusicHeader) {
-        print("hogehgoe")
+        let addMusicViewController = storyboard?.instantiateViewControllerWithIdentifier("AddMusic") as! AddMusicViewController
+        self.navigationController?.pushViewController(addMusicViewController, animated: true)
     }
 
     func moodSelectButtonTouchUpInsideOnView(view: EditTableViewHeader) {
@@ -68,7 +68,7 @@ class PlaylistEditViewController: ISPViewController, UITableViewDataSource, UITa
     func tableView(tableView: UITableView, heightForHeaderInSection section: Int) -> CGFloat {
         switch section {
             case 0:
-                return UIScreen.mainScreen().bounds.width
+                return 397
             case 1:
                 return 40
             default:
