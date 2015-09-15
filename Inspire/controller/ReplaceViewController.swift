@@ -13,7 +13,16 @@ class ReplaceViewController: ISPViewController, UITableViewDelegate, UITableView
 
     override func viewDidLoad() {
         super.viewDidLoad()
-        favoriteMusicTracks = realm.objects(MusicTrack)
+
+        var predicates: [NSPredicate] = []
+        var playlists = realm.objects(Playlist)
+        for playlist in playlists{
+            for mTrack in playlist.musicTracks{
+                predicates.append(NSPredicate(format: "trackId != \(mTrack.trackId)"))
+            }
+        }
+
+        favoriteMusicTracks = realm.objects(MusicTrack).filter(NSCompoundPredicate.andPredicateWithSubpredicates(predicates))
         layoutView()
     }
 
