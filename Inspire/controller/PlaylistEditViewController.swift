@@ -16,6 +16,23 @@ class PlaylistEditViewController: ISPViewController, UITableViewDataSource, UITa
         title = ""
     }
 
+    override func viewWillAppear(animated: Bool) {
+        tableView.reloadData()
+    }
+
+    override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?) {
+        switch segue.identifier! {
+            case "Publish":
+                return
+            case "Replace":
+                let replaceViewController = segue.destinationViewController as! ReplaceViewController
+                replaceViewController.playlist = playlist
+                replaceViewController.music = playlist?.musicTracks[tableView.indexPathForCell(sender as! UITableViewCell)!.row]
+            default:
+                return
+        }
+    }
+
     @IBAction func closeButtonTouchUpInside(sender: UIBarButtonItem) {
         dismissViewControllerAnimated(true, completion: nil)
     }
@@ -24,6 +41,7 @@ class PlaylistEditViewController: ISPViewController, UITableViewDataSource, UITa
         let addMusicViewController = storyboard?.instantiateViewControllerWithIdentifier("AddMusic") as! AddMusicViewController
         self.navigationController?.pushViewController(addMusicViewController, animated: true)
         addMusicViewController.recomendSongs = playlist?.additionalTracks
+        addMusicViewController.playlist = playlist
     }
 
     func moodSelectButtonTouchUpInsideOnView(view: EditTableViewHeader) {
@@ -131,8 +149,4 @@ class PlaylistEditViewController: ISPViewController, UITableViewDataSource, UITa
     func tableView(tableView: UITableView, shouldIndentWhileEditingRowAtIndexPath indexPath: NSIndexPath) -> Bool {
         return false
     }
-
-    func tableView(tableView: UITableView, didSelectRowAtIndexPath indexPath: NSIndexPath) {
-    }
-
 }

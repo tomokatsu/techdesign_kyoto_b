@@ -4,21 +4,19 @@ import RealmSwift
 class AddMusicViewController: ISPViewController, UITableViewDelegate, UITableViewDataSource, AddFavoriteTrackCellDelegate, RecomendSongViewDelegate {
 
     @IBOutlet weak var tableView: UITableView!
+    var playlist: Playlist?
     var recomendSongs: List<MusicTrack>?
     var favoriteSongs: Results<MusicTrack>?
     let realm = Realm()
     var checked: [Bool] = []
+    private var additionalSongs = List<MusicTrack>()
 
     override func viewDidLoad() {
         super.viewDidLoad()
         tableView.contentInset.top = 30
         var predicates: [NSPredicate] = []
-        var playlists = realm.objects(Playlist)
-
-        for playlist in playlists{
-            for mTrack in playlist.musicTracks{
-                predicates.append(NSPredicate(format: "trackId != \(mTrack.trackId)"))
-            }
+        for mTrack in playlist!.musicTracks {
+            predicates.append(NSPredicate(format: "trackId != \(mTrack.trackId)"))
         }
         favoriteSongs = realm.objects(MusicTrack).filter(NSCompoundPredicate.andPredicateWithSubpredicates(predicates))
         checked = Array(count: favoriteSongs?.count ?? 0, repeatedValue: false)
@@ -27,30 +25,64 @@ class AddMusicViewController: ISPViewController, UITableViewDelegate, UITableVie
             recomendSongs?.append(music)
         }
 
+        navigationItem.rightBarButtonItem = UIBarButtonItem(title: "完了", style: .Plain, target: self, action: Selector("completeButtonTouchUpInside"))
+
         tableView.reloadData()
     }
 
     func checkBoxValueChangedOnCell(cell: AddFavoriteTrackCell) {
         checked[favoriteSongs!.indexOf(cell.music!)!] = cell.checkbox.checked
+        if (cell.checkbox.checked) {
+            additionalSongs.append(cell.music!)
+        } else {
+            for (i, music) in enumerate(additionalSongs) {
+                if cell.music?.trackId ?? 0 == music.trackId {
+                    additionalSongs.removeAtIndex(i)
+                }
+            }
+        }
         tableView.reloadData()
     }
 
     func checkBoxValueChangedOnView(view: RecomendSongView) {
+        if !view.checkbox.selected {
+            additionalSongs.append(view.music!)
+        } else {
+            for (i, music) in enumerate(additionalSongs) {
+                if view.music?.trackId ?? 0 == music.trackId {
+                    additionalSongs.removeAtIndex(i)
+                }
+            }
+        }
+    }
+
+    func completeButtonTouchUpInside() {
+        for music in additionalSongs {
+            playlist?.musicTracks.insert(music, atIndex: 0)
+        }
+        navigationController?.popViewControllerAnimated(true)
     }
 
     func numberOfSectionsInTableView(tableView: UITableView) -> Int {
         return 2
     }
 
-    func tableView(tableView: UITableView, titleForHeaderInSection section: Int) -> String? {
+    func tableView(tableView: UITableView, viewForHeaderInSection section: Int) -> UIView? {
+        let header = UIView(frame: CGRectMake(0, 0, UIScreen.mainScreen().bounds.width, 40))
+        let label = UILabel(frame: CGRectMake(0, 0, UIScreen.mainScreen().bounds.width - 30, 20))
+        label.center = header.center
+        label.font = UIFont(name: "mplus-1p-regular", size: 12)
         switch section {
             case 0:
-                return "このプレイリストによく追加されている曲"
+                label.text = "このプレイリストによく追加されている曲"
             case 1:
-                return "Favorite Tracks"
+                label.text = "FAVORITE TRACKS"
             default:
-                return ""
+                label.text = ""
         }
+        label.textColor = UIColor.whiteColor()
+        header.addSubview(label)
+        return header
     }
 
     func tableView(tableView: UITableView, cellForRowAtIndexPath indexPath: NSIndexPath) -> UITableViewCell {
@@ -95,6 +127,10 @@ class AddMusicViewController: ISPViewController, UITableViewDelegate, UITableVie
             default:
                 return 0
         }
+    }
+
+    func tableView(tableView: UITableView, heightForHeaderInSection section: Int) -> CGFloat {
+        return 40
     }
 
 }
