@@ -82,7 +82,10 @@ class PlaylistEditViewController: ISPViewController, UITableViewDataSource, UITa
     }
 
     func tableView(tableView: UITableView, moveRowAtIndexPath sourceIndexPath: NSIndexPath, toIndexPath destinationIndexPath: NSIndexPath) {
-        
+        let tmp = playlist?.musicTracks[sourceIndexPath.row]
+        playlist?.musicTracks.removeAtIndex(sourceIndexPath.row)
+        playlist?.musicTracks.insert(tmp!, atIndex: destinationIndexPath.row)
+        tableView.reloadData()
     }
 
     func tableView(tableView: UITableView, editingStyleForRowAtIndexPath indexPath: NSIndexPath) -> UITableViewCellEditingStyle {
