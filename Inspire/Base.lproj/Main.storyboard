@@ -924,7 +924,7 @@
                         <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <tableView clipsSubviews="YES" contentMode="scaleToFill" fixedFrame="YES" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="44" sectionHeaderHeight="22" sectionFooterHeight="22" translatesAutoresizingMaskIntoConstraints="NO" id="0Zn-LR-dm1">
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="44" sectionHeaderHeight="22" sectionFooterHeight="22" translatesAutoresizingMaskIntoConstraints="NO" id="0Zn-LR-dm1">
                                 <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
                                 <color key="backgroundColor" red="0.14901960784313725" green="0.14901960784313725" blue="0.16470588235294117" alpha="1" colorSpace="calibratedRGB"/>
                                 <inset key="separatorInset" minX="0.0" minY="0.0" maxX="0.0" maxY="0.0"/>
@@ -948,7 +948,7 @@
                                         </tableViewCellContentView>
                                         <color key="backgroundColor" red="0.14901960784313725" green="0.14901960784313725" blue="0.16470588235294117" alpha="1" colorSpace="calibratedRGB"/>
                                     </tableViewCell>
-                                    <tableViewCell contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="Favorite" rowHeight="80" id="Ph6-0V-KeL" customClass="AddFavoriteTrackCell" customModule="Inspire" customModuleProvider="target">
+                                    <tableViewCell contentMode="scaleToFill" selectionStyle="none" indentationWidth="10" reuseIdentifier="Favorite" rowHeight="80" id="Ph6-0V-KeL" customClass="AddFavoriteTrackCell" customModule="Inspire" customModuleProvider="target">
                                         <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="Ph6-0V-KeL" id="xz0-eq-EKb">
@@ -970,7 +970,7 @@
                                                     <color key="textColor" red="0.84705882352941175" green="0.84705882352941175" blue="0.84705882352941175" alpha="1" colorSpace="calibratedRGB"/>
                                                     <nil key="highlightedColor"/>
                                                 </label>
-                                                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="bsi-ot-ohN">
+                                                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="bsi-ot-ohN" customClass="ISPCheckBox" customModule="Inspire" customModuleProvider="target">
                                                     <rect key="frame" x="284" y="28" width="24" height="24"/>
                                                     <constraints>
                                                         <constraint firstAttribute="height" constant="24" id="nbi-6h-9a9"/>
@@ -1011,9 +1011,19 @@
                                         </connections>
                                     </tableViewCell>
                                 </prototypes>
+                                <connections>
+                                    <outlet property="dataSource" destination="6Xf-Py-IDi" id="sko-I9-XMk"/>
+                                    <outlet property="delegate" destination="6Xf-Py-IDi" id="qUW-FX-YqG"/>
+                                </connections>
                             </tableView>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="0Zn-LR-dm1" firstAttribute="top" secondItem="KsU-VR-qps" secondAttribute="top" id="1BC-fb-He6"/>
+                            <constraint firstItem="0Zn-LR-dm1" firstAttribute="leading" secondItem="KsU-VR-qps" secondAttribute="leading" id="fdI-t3-Ec8"/>
+                            <constraint firstItem="sGB-gE-rmB" firstAttribute="top" secondItem="0Zn-LR-dm1" secondAttribute="bottom" id="reT-GL-6Fn"/>
+                            <constraint firstAttribute="trailing" secondItem="0Zn-LR-dm1" secondAttribute="trailing" id="tur-dg-roP"/>
+                        </constraints>
                     </view>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Jet-vj-oWy" userLabel="First Responder" sceneMemberID="firstResponder"/>

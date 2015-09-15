@@ -21,7 +21,8 @@ class PlaylistEditViewController: ISPViewController, UITableViewDataSource, UITa
     }
 
     func touchUpInside(view: EditAddMusicHeader) {
-        print("hogehgoe")
+        let addMusicViewController = storyboard?.instantiateViewControllerWithIdentifier("AddMusic") as! AddMusicViewController
+        self.navigationController?.pushViewController(addMusicViewController, animated: true)
     }
 
     func moodSelectButtonTouchUpInsideOnView(view: EditTableViewHeader) {
