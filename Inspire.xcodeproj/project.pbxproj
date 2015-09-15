@@ -17,6 +17,7 @@
 		492DEB071BA6AAD900B6F232 /* ISPPagingScrollView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 492DEB061BA6AAD900B6F232 /* ISPPagingScrollView.swift */; };
 		492DEB221BA7D7E300B6F232 /* EditAddMusicHeader.xib in Resources */ = {isa = PBXBuildFile; fileRef = 492DEB211BA7D7E300B6F232 /* EditAddMusicHeader.xib */; };
 		492DEB241BA7D8B000B6F232 /* EditAddMusicHeader.swift in Sources */ = {isa = PBXBuildFile; fileRef = 492DEB231BA7D8B000B6F232 /* EditAddMusicHeader.swift */; };
+		492DEB261BA7E0C200B6F232 /* AddMusicViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 492DEB251BA7E0C200B6F232 /* AddMusicViewController.swift */; };
 		4956CC641BA50914003254D2 /* DetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4956CC631BA50914003254D2 /* DetailViewController.swift */; };
 		4956CCBC1BA519E9003254D2 /* mplus-1c-black.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 4956CC651BA50C0F003254D2 /* mplus-1c-black.ttf */; };
 		4956CCBD1BA519E9003254D2 /* mplus-1c-bold.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 4956CC661BA50C0F003254D2 /* mplus-1c-bold.ttf */; };
@@ -108,6 +109,7 @@
 		492DEB061BA6AAD900B6F232 /* ISPPagingScrollView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = ISPPagingScrollView.swift; path = ../controller/ISPPagingScrollView.swift; sourceTree = "<group>"; };
 		492DEB211BA7D7E300B6F232 /* EditAddMusicHeader.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = EditAddMusicHeader.xib; sourceTree = "<group>"; };
 		492DEB231BA7D8B000B6F232 /* EditAddMusicHeader.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = EditAddMusicHeader.swift; sourceTree = "<group>"; };
+		492DEB251BA7E0C200B6F232 /* AddMusicViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AddMusicViewController.swift; sourceTree = "<group>"; };
 		4956CC631BA50914003254D2 /* DetailViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DetailViewController.swift; sourceTree = "<group>"; };
 		4956CC651BA50C0F003254D2 /* mplus-1c-black.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "mplus-1c-black.ttf"; sourceTree = "<group>"; };
 		4956CC661BA50C0F003254D2 /* mplus-1c-bold.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "mplus-1c-bold.ttf"; sourceTree = "<group>"; };
@@ -384,6 +386,7 @@
 				4956CCF11BA55BFB003254D2 /* PublishViewController.swift */,
 				4956CCF31BA55C09003254D2 /* ReplaceViewController.swift */,
 				492DEB001BA5BE3F00B6F232 /* DOAlertController.swift */,
+				492DEB251BA7E0C200B6F232 /* AddMusicViewController.swift */,
 			);
 			path = controller;
 			sourceTree = "<group>";
@@ -610,6 +613,7 @@
 				49C1B5931BA32F9700B52C7F /* MusicTrackCell.swift in Sources */,
 				490B45E51BA2796F00093DA7 /* TopViewController.swift in Sources */,
 				492DEB071BA6AAD900B6F232 /* ISPPagingScrollView.swift in Sources */,
+				492DEB261BA7E0C200B6F232 /* AddMusicViewController.swift in Sources */,
 				4956CCF21BA55BFB003254D2 /* PublishViewController.swift in Sources */,
 				497B68981BA2642100613715 /* MusicTrackResponse.swift in Sources */,
 				4956CCF41BA55C09003254D2 /* ReplaceViewController.swift in Sources */,
