@@ -68,6 +68,9 @@
 		4956CCF01BA550B4003254D2 /* EditTableViewHeader.xib in Resources */ = {isa = PBXBuildFile; fileRef = 4956CCEF1BA550B4003254D2 /* EditTableViewHeader.xib */; };
 		4956CCF21BA55BFB003254D2 /* PublishViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4956CCF11BA55BFB003254D2 /* PublishViewController.swift */; };
 		4956CCF41BA55C09003254D2 /* ReplaceViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4956CCF31BA55C09003254D2 /* ReplaceViewController.swift */; };
+		496FF1621BA8092200B3F24A /* ISPFilledCheckBox.swift in Sources */ = {isa = PBXBuildFile; fileRef = 496FF1611BA8092200B3F24A /* ISPFilledCheckBox.swift */; };
+		496FF1641BA80A1A00B3F24A /* RecomendSongView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 496FF1631BA80A1A00B3F24A /* RecomendSongView.swift */; };
+		496FF1661BA81F6100B3F24A /* RecomendSongsCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 496FF1651BA81F6100B3F24A /* RecomendSongsCell.swift */; };
 		497B68981BA2642100613715 /* MusicTrackResponse.swift in Sources */ = {isa = PBXBuildFile; fileRef = 497B68971BA2642100613715 /* MusicTrackResponse.swift */; };
 		497B689B1BA269E800613715 /* MusicTrack.swift in Sources */ = {isa = PBXBuildFile; fileRef = 497B689A1BA269E800613715 /* MusicTrack.swift */; };
 		4995D5F11BA7F1420071A7A6 /* AddFavoriteTrackCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4995D5F01BA7F1420071A7A6 /* AddFavoriteTrackCell.swift */; };
@@ -164,6 +167,9 @@
 		4956CCEF1BA550B4003254D2 /* EditTableViewHeader.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = EditTableViewHeader.xib; sourceTree = "<group>"; };
 		4956CCF11BA55BFB003254D2 /* PublishViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PublishViewController.swift; sourceTree = "<group>"; };
 		4956CCF31BA55C09003254D2 /* ReplaceViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ReplaceViewController.swift; sourceTree = "<group>"; };
+		496FF1611BA8092200B3F24A /* ISPFilledCheckBox.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ISPFilledCheckBox.swift; sourceTree = "<group>"; };
+		496FF1631BA80A1A00B3F24A /* RecomendSongView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RecomendSongView.swift; sourceTree = "<group>"; };
+		496FF1651BA81F6100B3F24A /* RecomendSongsCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RecomendSongsCell.swift; sourceTree = "<group>"; };
 		497B68971BA2642100613715 /* MusicTrackResponse.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MusicTrackResponse.swift; sourceTree = "<group>"; };
 		497B689A1BA269E800613715 /* MusicTrack.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MusicTrack.swift; sourceTree = "<group>"; };
 		4995D5F01BA7F1420071A7A6 /* AddFavoriteTrackCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AddFavoriteTrackCell.swift; sourceTree = "<group>"; };
@@ -383,6 +389,9 @@
 				4995D5F01BA7F1420071A7A6 /* AddFavoriteTrackCell.swift */,
 				4995D5F21BA7F2320071A7A6 /* RecomendTracksScrollView.swift */,
 				4995D5F71BA7F43C0071A7A6 /* ISPCheckBox.swift */,
+				496FF1611BA8092200B3F24A /* ISPFilledCheckBox.swift */,
+				496FF1631BA80A1A00B3F24A /* RecomendSongView.swift */,
+				496FF1651BA81F6100B3F24A /* RecomendSongsCell.swift */,
 			);
 			path = view;
 			sourceTree = "<group>";
@@ -626,6 +635,7 @@
 				023B7BC81BA6B70400B6F226 /* Seeds.swift in Sources */,
 				49C1B5931BA32F9700B52C7F /* MusicTrackCell.swift in Sources */,
 				4995D5F11BA7F1420071A7A6 /* AddFavoriteTrackCell.swift in Sources */,
+				496FF1661BA81F6100B3F24A /* RecomendSongsCell.swift in Sources */,
 				490B45E51BA2796F00093DA7 /* TopViewController.swift in Sources */,
 				492DEB071BA6AAD900B6F232 /* ISPPagingScrollView.swift in Sources */,
 				492DEB261BA7E0C200B6F232 /* AddMusicViewController.swift in Sources */,
@@ -638,8 +648,10 @@
 				49C1B5871BA2A03300B52C7F /* PlaylistJacketImagesView.swift in Sources */,
 				49C1B58F1BA31CC300B52C7F /* ISPNavigationBar.swift in Sources */,
 				49AFD48B1BA56B7900A3B9D7 /* ReplaceSongCell.swift in Sources */,
+				496FF1641BA80A1A00B3F24A /* RecomendSongView.swift in Sources */,
 				490B45E11BA26D6600093DA7 /* APIClient.swift in Sources */,
 				492DEB241BA7D8B000B6F232 /* EditAddMusicHeader.swift in Sources */,
+				496FF1621BA8092200B3F24A /* ISPFilledCheckBox.swift in Sources */,
 				49C1B58B1BA31A5B00B52C7F /* PlaylistViewController.swift in Sources */,
 				490B45DF1BA26B3100093DA7 /* Playlist.swift in Sources */,
 				49C1B57E1BA2815500B52C7F /* ISPViewController.swift in Sources */,
