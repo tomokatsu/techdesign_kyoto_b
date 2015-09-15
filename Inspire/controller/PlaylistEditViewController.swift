@@ -1,7 +1,7 @@
 import UIKit
 import SDWebImage
 
-class PlaylistEditViewController: ISPViewController, UITableViewDataSource, UITableViewDelegate, EditTableViewHeaderDelegate {
+class PlaylistEditViewController: ISPViewController, UITableViewDataSource, UITableViewDelegate, EditTableViewHeaderDelegate, EditAddMusicHeaderDelegate {
 
     @IBOutlet weak private var tableView: UITableView!
 
@@ -12,12 +12,17 @@ class PlaylistEditViewController: ISPViewController, UITableViewDataSource, UITa
         (self.navigationController?.navigationBar as? ISPNavigationBar)?.hide()
         tableView.editing = true
         tableView.registerNib(UINib(nibName: "EditTableViewHeader", bundle: nil), forHeaderFooterViewReuseIdentifier: "Header")
+        tableView.registerNib(UINib(nibName: "EditAddMusicHeader", bundle: nil), forHeaderFooterViewReuseIdentifier: "Add")
         tableView.allowsSelectionDuringEditing = true
         title = ""
     }
 
     @IBAction func closeButtonTouchUpInside(sender: UIBarButtonItem) {
         dismissViewControllerAnimated(true, completion: nil)
+    }
+
+    func touchUpInside(view: EditAddMusicHeader) {
+        print("hogehgoe")
     }
 
     func moodSelectButtonTouchUpInsideOnView(view: EditTableViewHeader) {
@@ -56,18 +61,41 @@ class PlaylistEditViewController: ISPViewController, UITableViewDataSource, UITa
         }
     }
 
+    func numberOfSectionsInTableView(tableView: UITableView) -> Int {
+        return 2
+    }
+
     func tableView(tableView: UITableView, heightForHeaderInSection section: Int) -> CGFloat {
-        return UIScreen.mainScreen().bounds.width
+        switch section {
+            case 0:
+                return UIScreen.mainScreen().bounds.width
+            case 1:
+                return 40
+            default:
+                return 0
+        }
     }
 
     func tableView(tableView: UITableView, viewForHeaderInSection section: Int) -> UIView? {
-        let headerView = tableView.dequeueReusableHeaderFooterViewWithIdentifier("Header") as! EditTableViewHeader
-        headerView.playlist = playlist
-        headerView.delegate = self
-        return headerView
+        switch section {
+            case 0:
+                let headerView = tableView.dequeueReusableHeaderFooterViewWithIdentifier("Header") as! EditTableViewHeader
+                headerView.playlist = playlist
+                headerView.delegate = self
+                return headerView
+            case 1:
+                let headerView = tableView.dequeueReusableHeaderFooterViewWithIdentifier("Add") as! EditAddMusicHeader
+                headerView.delegate = self
+                return headerView
+            default:
+                return UIView()
+        }
     }
 
     func tableView(tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
+        if section == 0 {
+            return 0
+        }
         return playlist?.musicTracks.count ?? 0
     }
 
