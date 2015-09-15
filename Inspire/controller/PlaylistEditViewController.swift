@@ -23,7 +23,8 @@ class PlaylistEditViewController: ISPViewController, UITableViewDataSource, UITa
     override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?) {
         switch segue.identifier! {
             case "Publish":
-                return
+                let publishViewController = segue.destinationViewController as! PublishViewController
+                publishViewController.playlist = playlist
             case "Replace":
                 let replaceViewController = segue.destinationViewController as! ReplaceViewController
                 replaceViewController.playlist = playlist
