@@ -2,7 +2,7 @@ import UIKit
 
 class PlaylistViewController: ISPViewController, UITableViewDelegate, UITableViewDataSource {
 
-    @IBOutlet weak var tableView: UITableView!
+    @IBOutlet weak private var tableView: UITableView!
     var playlist: Playlist?
 
     override func viewDidLoad() {

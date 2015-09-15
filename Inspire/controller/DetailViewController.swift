@@ -5,11 +5,11 @@ import CoreMedia
 
 class DetailViewController:ISPViewController{
 
-    @IBOutlet weak var artwork: UIImageView!
-    @IBOutlet weak var trackTime: UILabel!
-    @IBOutlet weak var playTime: UILabel!
-    @IBOutlet weak var trackTitle: UILabel!
-    @IBOutlet weak var artist: UILabel!
+    @IBOutlet weak private var artwork: UIImageView!
+    @IBOutlet weak private var trackTime: UILabel!
+    @IBOutlet weak private var playTime: UILabel!
+    @IBOutlet weak private var trackTitle: UILabel!
+    @IBOutlet weak private var artist: UILabel!
     //@IBOutlet weak var playTimeSlider: UISlider!
 
     var playingTimeTimer : NSTimer?

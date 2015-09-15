@@ -3,9 +3,9 @@ import SDWebImage
 
 class PlaylistInfoCell: ISPTableViewCell {
 
-    @IBOutlet weak var userImageView: UIImageView!
-    @IBOutlet weak var inspireButton: UIButton!
-    @IBOutlet weak var userNameLabel: UILabel!
+    @IBOutlet weak private var userImageView: UIImageView!
+    @IBOutlet weak private var inspireButton: UIButton!
+    @IBOutlet weak private var userNameLabel: UILabel!
 
     private var _playlist: Playlist?
     var playlist: Playlist? {
