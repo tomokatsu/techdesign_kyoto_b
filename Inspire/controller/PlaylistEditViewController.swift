@@ -1,7 +1,7 @@
 import UIKit
 import SDWebImage
 
-class PlaylistEditViewController: ISPViewController, UITableViewDataSource, UITableViewDelegate {
+class PlaylistEditViewController: ISPViewController, UITableViewDataSource, UITableViewDelegate, EditTableViewHeaderDelegate {
 
     @IBOutlet weak private var tableView: UITableView!
 
@@ -20,14 +20,50 @@ class PlaylistEditViewController: ISPViewController, UITableViewDataSource, UITa
         dismissViewControllerAnimated(true, completion: nil)
     }
 
+    func moodSelectButtonTouchUpInsideOnView(view: EditTableViewHeader) {
+        let alertController = DOAlertController(title: nil, message: nil, preferredStyle: .ActionSheet)
+        alertController.alertViewBgColor = UIColor(red: 0.149019608, green: 0.149019608, blue: 0.164705882, alpha: 1)
+        alertController.buttonFont[.Default] = UIFont(name: "mplus-1p-light", size: 12.0)
+        alertController.buttonTextColor[.Default] = UIColor.whiteColor()
+        alertController.buttonBgColor[.Default] = UIColor(red: 0.149019608, green: 0.149019608, blue: 0.164705882, alpha: 1)
+        alertController.buttonBgColorHighlighted[.Default] = UIColor(red: 0.149019608, green: 0.149019608, blue: 0.164705882, alpha: 1)
+
+        alertController.addAction(DOAlertAction(title: "Happy", style: .Default) { action in
+
+        })
+        alertController.addAction(DOAlertAction(title: "Excited", style: .Default) { action in
+
+        })
+        alertController.addAction(DOAlertAction(title: "Relax", style: .Default) { action in
+
+        })
+        alertController.addAction(DOAlertAction(title: "Love", style: .Default) { action in
+
+        })
+
+        alertController.addAction(DOAlertAction(title: "Cancel", style: .Default) { action in
+
+        })
+
+        presentViewController(alertController, animated: true, completion: {
+
+        })
+        dispatch_after(dispatch_time(DISPATCH_TIME_NOW, Int64(0.1 * Double(NSEC_PER_SEC))), dispatch_get_main_queue()) {
+            let separatorView = UIView(frame: CGRectMake(0, alertController.buttonAreaScrollView.frame.height - 55, UIScreen.mainScreen().bounds.width, 0.5))
+            separatorView.backgroundColor = UIColor.whiteColor()
+            alertController.buttonAreaScrollView.addSubview(separatorView)
+            alertController.buttonAreaScrollView.bringSubviewToFront(separatorView)
+        }
+    }
+
     func tableView(tableView: UITableView, heightForHeaderInSection section: Int) -> CGFloat {
         return UIScreen.mainScreen().bounds.width
     }
 
     func tableView(tableView: UITableView, viewForHeaderInSection section: Int) -> UIView? {
         let headerView = tableView.dequeueReusableHeaderFooterViewWithIdentifier("Header") as! EditTableViewHeader
-        headerView.blurImageView.sd_setImageWithURL(NSURL(string: playlist?.musicTracks[0].artworkUrl ?? ""))
-        headerView.mainImageView.sd_setImageWithURL(NSURL(string: playlist?.musicTracks[0].artworkUrl ?? ""))
+        headerView.playlist = playlist
+        headerView.delegate = self
         return headerView
     }
 
