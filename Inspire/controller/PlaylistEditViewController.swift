@@ -69,12 +69,16 @@ class PlaylistEditViewController: ISPViewController, UITableViewDataSource, UITa
     func tableView(tableView: UITableView, heightForHeaderInSection section: Int) -> CGFloat {
         switch section {
             case 0:
-                return 397
+                return 425
             case 1:
                 return 40
             default:
                 return 0
         }
+    }
+
+    func tableView(tableView: UITableView, heightForFooterInSection section: Int) -> CGFloat {
+        return CGFloat.min
     }
 
     func tableView(tableView: UITableView, viewForHeaderInSection section: Int) -> UIView? {
@@ -101,6 +105,9 @@ class PlaylistEditViewController: ISPViewController, UITableViewDataSource, UITa
     }
 
     func tableView(tableView: UITableView, heightForRowAtIndexPath indexPath: NSIndexPath) -> CGFloat {
+        if indexPath.section == 0 {
+            return 0
+        }
         return 80
     }
 

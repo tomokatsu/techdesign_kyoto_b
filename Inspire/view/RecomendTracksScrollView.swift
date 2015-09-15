@@ -11,26 +11,25 @@ class RecomendTracksScrollView: UIScrollView {
         }
         set(musics) {
             _musics = musics
-            layoutIfNeeded()
+            for subview in subviews {
+                subview.removeFromSuperview()
+            }
+            contentSize = CGSizeMake(CGFloat(musics?.count ?? 0) * 140, 160)
+            var x = CGFloat(30)
+            for music in musics ?? List<MusicTrack>() {
+                let recomendSongView = RecomendSongView.view()
+                recomendSongView.music = music
+                recomendSongView.delegate = recomendSongViewDelegate
+                var frame = recomendSongView.frame
+                frame.origin.x = x
+                x += frame.size.width
+                recomendSongView.frame = frame
+                addSubview(recomendSongView)
+            }
         }
     }
 
     override func layoutSubviews() {
         super.layoutSubviews()
-        for subview in subviews {
-            subview.removeFromSuperview()
-        }
-        contentSize = CGSizeMake(CGFloat(musics?.count ?? 0) * 140, 160)
-        var x = CGFloat(30)
-        for music in musics ?? List<MusicTrack>() {
-            let recomendSongView = RecomendSongView.view()
-            recomendSongView.music = music
-            recomendSongView.delegate = recomendSongViewDelegate
-            var frame = recomendSongView.frame
-            frame.origin.x = x
-            x += frame.size.width
-            recomendSongView.frame = frame
-            addSubview(recomendSongView)
-        }
     }
 }
