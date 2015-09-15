@@ -12,13 +12,23 @@ class PlaylistViewController: ISPViewController, UITableViewDelegate, UITableVie
     }
 
     override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?) {
-        let navigationController = segue.destinationViewController as! UINavigationController
-        let copyPlaylist = Playlist()
-        copyPlaylist.musicTracks = List<MusicTrack>()
-        for music in playlist!.musicTracks {
-            copyPlaylist.musicTracks.append(music)
+        let identifier: String = segue.identifier!
+        switch identifier {
+            case "DetailPlayer":
+                let viewController = segue.destinationViewController as! DetailViewController
+                viewController.playlist = playlist
+                
+            case "Inspire":
+                let navigationController = segue.destinationViewController as! UINavigationController
+                let copyPlaylist = Playlist()
+                copyPlaylist.musicTracks = List<MusicTrack>()
+                for music in playlist!.musicTracks {
+                    copyPlaylist.musicTracks.append(music)
+                }
+                (navigationController.childViewControllers[0] as! PlaylistEditViewController).playlist = copyPlaylist
+
+            default: break
         }
-        (navigationController.childViewControllers[0] as! PlaylistEditViewController).playlist = copyPlaylist
     }
 
     func numberOfSectionsInTableView(tableView: UITableView) -> Int {
