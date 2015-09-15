@@ -70,6 +70,10 @@
 		4956CCF41BA55C09003254D2 /* ReplaceViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4956CCF31BA55C09003254D2 /* ReplaceViewController.swift */; };
 		497B68981BA2642100613715 /* MusicTrackResponse.swift in Sources */ = {isa = PBXBuildFile; fileRef = 497B68971BA2642100613715 /* MusicTrackResponse.swift */; };
 		497B689B1BA269E800613715 /* MusicTrack.swift in Sources */ = {isa = PBXBuildFile; fileRef = 497B689A1BA269E800613715 /* MusicTrack.swift */; };
+		4995D5F11BA7F1420071A7A6 /* AddFavoriteTrackCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4995D5F01BA7F1420071A7A6 /* AddFavoriteTrackCell.swift */; };
+		4995D5F31BA7F2320071A7A6 /* RecomendTracksScrollView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4995D5F21BA7F2320071A7A6 /* RecomendTracksScrollView.swift */; };
+		4995D5F61BA7F26F0071A7A6 /* RecomendTrackView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 4995D5F51BA7F26F0071A7A6 /* RecomendTrackView.xib */; };
+		4995D5F81BA7F43C0071A7A6 /* ISPCheckBox.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4995D5F71BA7F43C0071A7A6 /* ISPCheckBox.swift */; };
 		49AFD48B1BA56B7900A3B9D7 /* ReplaceSongCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 49AFD48A1BA56B7900A3B9D7 /* ReplaceSongCell.swift */; };
 		49C1B57E1BA2815500B52C7F /* ISPViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 49C1B57D1BA2815500B52C7F /* ISPViewController.swift */; };
 		49C1B5851BA29B7300B52C7F /* TopTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 49C1B5841BA29B7300B52C7F /* TopTableViewCell.swift */; };
@@ -162,6 +166,10 @@
 		4956CCF31BA55C09003254D2 /* ReplaceViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ReplaceViewController.swift; sourceTree = "<group>"; };
 		497B68971BA2642100613715 /* MusicTrackResponse.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MusicTrackResponse.swift; sourceTree = "<group>"; };
 		497B689A1BA269E800613715 /* MusicTrack.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MusicTrack.swift; sourceTree = "<group>"; };
+		4995D5F01BA7F1420071A7A6 /* AddFavoriteTrackCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AddFavoriteTrackCell.swift; sourceTree = "<group>"; };
+		4995D5F21BA7F2320071A7A6 /* RecomendTracksScrollView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RecomendTracksScrollView.swift; sourceTree = "<group>"; };
+		4995D5F51BA7F26F0071A7A6 /* RecomendTrackView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = RecomendTrackView.xib; sourceTree = "<group>"; };
+		4995D5F71BA7F43C0071A7A6 /* ISPCheckBox.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ISPCheckBox.swift; sourceTree = "<group>"; };
 		49AFD48A1BA56B7900A3B9D7 /* ReplaceSongCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ReplaceSongCell.swift; sourceTree = "<group>"; };
 		49C1B57D1BA2815500B52C7F /* ISPViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ISPViewController.swift; sourceTree = "<group>"; };
 		49C1B5841BA29B7300B52C7F /* TopTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TopTableViewCell.swift; sourceTree = "<group>"; };
@@ -238,6 +246,7 @@
 				4956CCEF1BA550B4003254D2 /* EditTableViewHeader.xib */,
 				492DEB211BA7D7E300B6F232 /* EditAddMusicHeader.xib */,
 				492DEB041BA6A59F00B6F232 /* TopTableViewCell.xib */,
+				4995D5F51BA7F26F0071A7A6 /* RecomendTrackView.xib */,
 				4956CC651BA50C0F003254D2 /* mplus-1c-black.ttf */,
 				4956CC661BA50C0F003254D2 /* mplus-1c-bold.ttf */,
 				4956CC671BA50C0F003254D2 /* mplus-1c-heavy.ttf */,
@@ -371,6 +380,9 @@
 				4956CCED1BA54D4D003254D2 /* EditTableViewHeader.swift */,
 				49AFD48A1BA56B7900A3B9D7 /* ReplaceSongCell.swift */,
 				492DEB231BA7D8B000B6F232 /* EditAddMusicHeader.swift */,
+				4995D5F01BA7F1420071A7A6 /* AddFavoriteTrackCell.swift */,
+				4995D5F21BA7F2320071A7A6 /* RecomendTracksScrollView.swift */,
+				4995D5F71BA7F43C0071A7A6 /* ISPCheckBox.swift */,
 			);
 			path = view;
 			sourceTree = "<group>";
@@ -460,6 +472,7 @@
 				TargetAttributes = {
 					49E67D311BA180B200AC8108 = {
 						CreatedOnToolsVersion = 6.4;
+						DevelopmentTeam = S2QVPRJ4JH;
 					};
 					49E67D461BA180B200AC8108 = {
 						CreatedOnToolsVersion = 6.4;
@@ -494,6 +507,7 @@
 				4956CCBC1BA519E9003254D2 /* mplus-1c-black.ttf in Resources */,
 				4956CCBD1BA519E9003254D2 /* mplus-1c-bold.ttf in Resources */,
 				4956CCBE1BA519E9003254D2 /* mplus-1c-heavy.ttf in Resources */,
+				4995D5F61BA7F26F0071A7A6 /* RecomendTrackView.xib in Resources */,
 				4956CCBF1BA519E9003254D2 /* mplus-1c-light.ttf in Resources */,
 				4956CCC01BA519E9003254D2 /* mplus-1c-medium.ttf in Resources */,
 				4956CCC11BA519E9003254D2 /* mplus-1c-regular.ttf in Resources */,
@@ -611,6 +625,7 @@
 				4956CCEE1BA54D4D003254D2 /* EditTableViewHeader.swift in Sources */,
 				023B7BC81BA6B70400B6F226 /* Seeds.swift in Sources */,
 				49C1B5931BA32F9700B52C7F /* MusicTrackCell.swift in Sources */,
+				4995D5F11BA7F1420071A7A6 /* AddFavoriteTrackCell.swift in Sources */,
 				490B45E51BA2796F00093DA7 /* TopViewController.swift in Sources */,
 				492DEB071BA6AAD900B6F232 /* ISPPagingScrollView.swift in Sources */,
 				492DEB261BA7E0C200B6F232 /* AddMusicViewController.swift in Sources */,
@@ -629,7 +644,9 @@
 				490B45DF1BA26B3100093DA7 /* Playlist.swift in Sources */,
 				49C1B57E1BA2815500B52C7F /* ISPViewController.swift in Sources */,
 				4956CC641BA50914003254D2 /* DetailViewController.swift in Sources */,
+				4995D5F81BA7F43C0071A7A6 /* ISPCheckBox.swift in Sources */,
 				49C1B5911BA32F6B00B52C7F /* PlaylistMainCell.swift in Sources */,
+				4995D5F31BA7F2320071A7A6 /* RecomendTracksScrollView.swift in Sources */,
 				49C1B5951BA4666900B52C7F /* PlaylistInfoCell.swift in Sources */,
 				4956CCE81BA535DE003254D2 /* PlaylistEditViewController.swift in Sources */,
 				49C1B5851BA29B7300B52C7F /* TopTableViewCell.swift in Sources */,
@@ -691,6 +708,7 @@
 				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
 				CLANG_WARN_UNREACHABLE_CODE = YES;
 				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				CODE_SIGN_IDENTITY = "iPhone Developer: Yuta Matsuyama (L99358E5B5)";
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				COPY_PHASE_STRIP = NO;
 				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
@@ -713,6 +731,7 @@
 				IPHONEOS_DEPLOYMENT_TARGET = 8.4;
 				MTL_ENABLE_DEBUG_INFO = YES;
 				ONLY_ACTIVE_ARCH = YES;
+				PROVISIONING_PROFILE = "2c4aedfc-6a7f-4755-8943-e95b6227a159";
 				SDKROOT = iphoneos;
 				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
 			};
@@ -735,6 +754,7 @@
 				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
 				CLANG_WARN_UNREACHABLE_CODE = YES;
 				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				CODE_SIGN_IDENTITY = "iPhone Developer: Yuta Matsuyama (L99358E5B5)";
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				COPY_PHASE_STRIP = NO;
 				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
@@ -750,6 +770,7 @@
 				GCC_WARN_UNUSED_VARIABLE = YES;
 				IPHONEOS_DEPLOYMENT_TARGET = 8.4;
 				MTL_ENABLE_DEBUG_INFO = NO;
+				PROVISIONING_PROFILE = "2c4aedfc-6a7f-4755-8943-e95b6227a159";
 				SDKROOT = iphoneos;
 				VALIDATE_PRODUCT = YES;
 			};
@@ -760,7 +781,7 @@
 			baseConfigurationReference = 023A452FAB889A56FC854F17 /* Pods.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
-				CODE_SIGN_IDENTITY = "iPhone Developer";
+				CODE_SIGN_IDENTITY = "iPhone Developer: Yuta Matsuyama (L99358E5B5)";
 				INFOPLIST_FILE = Inspire/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 8.4;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
@@ -773,7 +794,7 @@
 			baseConfigurationReference = 9089C333A6D59CB0355FD351 /* Pods.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
-				CODE_SIGN_IDENTITY = "iPhone Developer";
+				CODE_SIGN_IDENTITY = "iPhone Developer: Yuta Matsuyama (L99358E5B5)";
 				INFOPLIST_FILE = Inspire/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 8.4;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";

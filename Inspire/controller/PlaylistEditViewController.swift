@@ -4,7 +4,6 @@ import SDWebImage
 class PlaylistEditViewController: ISPViewController, UITableViewDataSource, UITableViewDelegate, EditTableViewHeaderDelegate, EditAddMusicHeaderDelegate {
 
     @IBOutlet weak private var tableView: UITableView!
-
     var playlist: Playlist?
 
     override func viewDidLoad() {
@@ -68,7 +67,7 @@ class PlaylistEditViewController: ISPViewController, UITableViewDataSource, UITa
     func tableView(tableView: UITableView, heightForHeaderInSection section: Int) -> CGFloat {
         switch section {
             case 0:
-                return UIScreen.mainScreen().bounds.width
+                return 397
             case 1:
                 return 40
             default:

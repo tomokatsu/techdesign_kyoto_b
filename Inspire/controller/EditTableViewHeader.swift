@@ -27,7 +27,7 @@ class EditTableViewHeader: UITableViewHeaderFooterView, UITextFieldDelegate {
 
     override func awakeFromNib() {
         var fixedFrame = frame
-        fixedFrame.size.height = UIScreen.mainScreen().bounds.width
+        fixedFrame.size.height = self.frame.height
         fixedFrame.size.width = UIScreen.mainScreen().bounds.width
         frame = fixedFrame
         blurView.frame = fixedFrame
