@@ -5,6 +5,8 @@ class AddFavoriteTrackCell: ISPTableViewCell {
     @IBOutlet weak private var thumbnailImageView: UIImageView!
     @IBOutlet weak private var titleLabel: UILabel!
     @IBOutlet weak private var artistLabel: UILabel!
+    @IBOutlet weak var checkbox: ISPClearCheckBox!
+    var delegate: AddFavoriteTrackCellDelegate?
 
     private var _music: MusicTrack?
     var music: MusicTrack? {
@@ -19,4 +21,16 @@ class AddFavoriteTrackCell: ISPTableViewCell {
         }
     }
 
+    @IBAction func checkBoxChangeValue(sender: ISPClearCheckBox) {
+        checkbox.touchUpInside(sender)
+        if delegate?.respondsToSelector(Selector("checkBoxValueChangedOnCell:")) ?? false {
+            delegate?.checkBoxValueChangedOnCell(self)
+        }
+    }
+
+
+}
+
+protocol AddFavoriteTrackCellDelegate: NSObjectProtocol {
+    func checkBoxValueChangedOnCell(cell: AddFavoriteTrackCell)
 }

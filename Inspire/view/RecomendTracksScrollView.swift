@@ -1,21 +1,36 @@
-//
-//  RecomendTracksScrollView.swift
-//  Inspire
-//
-//  Created by IllyasvielVonEinzbern on 9/15/15.
-//  Copyright (c) 2015 KazuyaMIURA. All rights reserved.
-//
-
 import UIKit
+import RealmSwift
 
 class RecomendTracksScrollView: UIScrollView {
+    private var _musics: List<MusicTrack>?
+    var recomendSongViewDelegate: RecomendSongViewDelegate?
 
-    /*
-    // Only override drawRect: if you perform custom drawing.
-    // An empty implementation adversely affects performance during animation.
-    override func drawRect(rect: CGRect) {
-        // Drawing code
+    var musics: List<MusicTrack>? {
+        get {
+            return _musics
+        }
+        set(musics) {
+            _musics = musics
+            layoutIfNeeded()
+        }
     }
-    */
 
+    override func layoutSubviews() {
+        super.layoutSubviews()
+        for subview in subviews {
+            subview.removeFromSuperview()
+        }
+        contentSize = CGSizeMake(CGFloat(musics?.count ?? 0) * 140, 160)
+        var x = CGFloat(30)
+        for music in musics ?? List<MusicTrack>() {
+            let recomendSongView = RecomendSongView.view()
+            recomendSongView.music = music
+            recomendSongView.delegate = recomendSongViewDelegate
+            var frame = recomendSongView.frame
+            frame.origin.x = x
+            x += frame.size.width
+            recomendSongView.frame = frame
+            addSubview(recomendSongView)
+        }
+    }
 }
