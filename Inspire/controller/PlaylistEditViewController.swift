@@ -53,22 +53,24 @@ class PlaylistEditViewController: ISPViewController, UITableViewDataSource, UITa
         alertController.buttonBgColorHighlighted[.Default] = UIColor(red: 0.149019608, green: 0.149019608, blue: 0.164705882, alpha: 1)
 
         alertController.addAction(DOAlertAction(title: "Happy", style: .Default) { action in
-
+            view.moodSelectButton.setTitle("Happy", forState: .Normal)
+            view.pulldownImageView.hidden = true
         })
         alertController.addAction(DOAlertAction(title: "Excited", style: .Default) { action in
-
+            view.moodSelectButton.setTitle("Excited", forState: .Normal)
+            view.pulldownImageView.hidden = true
         })
         alertController.addAction(DOAlertAction(title: "Relax", style: .Default) { action in
-
+            view.moodSelectButton.setTitle("Relax", forState: .Normal)
+            view.pulldownImageView.hidden = true
         })
         alertController.addAction(DOAlertAction(title: "Love", style: .Default) { action in
-
+            view.moodSelectButton.setTitle("Love", forState: .Normal)
+            view.pulldownImageView.hidden = true
         })
-
         alertController.addAction(DOAlertAction(title: "Cancel", style: .Default) { action in
-
+            view.moodSelectButton.setTitle("", forState: .Normal)
         })
-
         presentViewController(alertController, animated: true, completion: {
 
         })

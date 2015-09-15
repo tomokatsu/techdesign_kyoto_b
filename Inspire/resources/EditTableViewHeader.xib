@@ -158,6 +158,7 @@
                 <outlet property="commentTextField" destination="x1T-3R-VXG" id="9ek-pq-Mhv"/>
                 <outlet property="mainImageView" destination="qwe-16-7Nf" id="k4R-UH-vXC"/>
                 <outlet property="moodSelectButton" destination="Okq-bi-etn" id="jL6-tG-28S"/>
+                <outlet property="pulldownImageView" destination="gxZ-Dg-kqt" id="YNy-g2-ePO"/>
                 <outlet property="secondImageView" destination="6fv-cI-Ddr" id="Lfq-Mt-wkz"/>
                 <outlet property="thirdImageView" destination="CbC-z8-10m" id="Uyq-cu-9m2"/>
                 <outlet property="titleTextField" destination="Yyr-JD-GlO" id="Ma3-uQ-53n"/>
