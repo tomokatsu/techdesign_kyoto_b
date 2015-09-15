@@ -13,10 +13,13 @@ class DetailViewController:ISPViewController{
     @IBOutlet weak var playTimeSlider: UISlider!
 
     var playingTimeTimer : NSTimer?
+    var playlist: Playlist?
 
     override func viewDidLoad() {
         super.viewDidLoad()
         self.setupView()
+        PlayerManager.sharedInstance.setPlaylist(playlist!)
+        self.updatePlayingInfo()
     }
 
     @IBAction func playAndPauseButtonTouchUpInside(sender: UIButton) {
@@ -54,10 +57,10 @@ class DetailViewController:ISPViewController{
     func updatePlayingInfo() {
         self.trackTime.text = PlayerManager.sharedInstance.playTime() ?? "00:00"
         self.playTime.text = PlayerManager.sharedInstance.playingTime() ?? "00:00"
-
         self.playTimeSlider.value = PlayerManager.sharedInstance.getProgress() ?? Float(0.0)
 
         self.trackTitle.text = PlayerManager.sharedInstance.title() ?? "TITLE"
         self.artist.text = PlayerManager.sharedInstance.artist() ?? "ARTIST"
+        self.artwork.sd_setImageWithURL(PlayerManager.sharedInstance.artworkUrl())
     }
 }
