@@ -1,4 +1,5 @@
 import UIKit
+import RealmSwift
 
 class PlaylistViewController: ISPViewController, UITableViewDelegate, UITableViewDataSource {
 
@@ -12,7 +13,12 @@ class PlaylistViewController: ISPViewController, UITableViewDelegate, UITableVie
 
     override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?) {
         let navigationController = segue.destinationViewController as! UINavigationController
-        (navigationController.childViewControllers[0] as! PlaylistEditViewController).playlist = playlist
+        let copyPlaylist = Playlist()
+        copyPlaylist.musicTracks = List<MusicTrack>()
+        for music in playlist!.musicTracks {
+            copyPlaylist.musicTracks.append(music)
+        }
+        (navigationController.childViewControllers[0] as! PlaylistEditViewController).playlist = copyPlaylist
     }
 
     func numberOfSectionsInTableView(tableView: UITableView) -> Int {
