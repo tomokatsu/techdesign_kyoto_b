@@ -1,7 +1,7 @@
 import UIKit
 import SDWebImage
 
-class PlaylistEditViewController: ISPViewController, UITableViewDataSource, UITableViewDelegate, EditTableViewHeaderDelegate, EditAddMusicHeaderDelegate {
+class PlaylistEditViewController: ISPViewController, UITextFieldDelegate, UITableViewDataSource, UITableViewDelegate, EditTableViewHeaderDelegate, EditAddMusicHeaderDelegate {
 
     @IBOutlet weak private var tableView: UITableView!
     var playlist: Playlist?
@@ -9,6 +9,7 @@ class PlaylistEditViewController: ISPViewController, UITableViewDataSource, UITa
     override func viewDidLoad() {
         super.viewDidLoad()
         (self.navigationController?.navigationBar as? ISPNavigationBar)?.hide()
+        navigationItem.rightBarButtonItem?.enabled = false
         tableView.editing = true
         tableView.registerNib(UINib(nibName: "EditTableViewHeader", bundle: nil), forHeaderFooterViewReuseIdentifier: "Header")
         tableView.registerNib(UINib(nibName: "EditAddMusicHeader", bundle: nil), forHeaderFooterViewReuseIdentifier: "Add")
@@ -55,26 +56,27 @@ class PlaylistEditViewController: ISPViewController, UITableViewDataSource, UITa
 
         alertController.addAction(DOAlertAction(title: "Happy", style: .Default) { action in
             view.moodSelectButton.setTitle("Happy", forState: .Normal)
+            self.playlist?.mood = "Happy"
             view.pulldownImageView.hidden = true
         })
         alertController.addAction(DOAlertAction(title: "Excited", style: .Default) { action in
             view.moodSelectButton.setTitle("Excited", forState: .Normal)
+            self.playlist?.mood = "Excited"
             view.pulldownImageView.hidden = true
         })
         alertController.addAction(DOAlertAction(title: "Relax", style: .Default) { action in
             view.moodSelectButton.setTitle("Relax", forState: .Normal)
+            self.playlist?.mood = "Relax"
             view.pulldownImageView.hidden = true
         })
         alertController.addAction(DOAlertAction(title: "Love", style: .Default) { action in
             view.moodSelectButton.setTitle("Love", forState: .Normal)
+            self.playlist?.mood = "Love"
             view.pulldownImageView.hidden = true
         })
         alertController.addAction(DOAlertAction(title: "Cancel", style: .Default) { action in
-            view.moodSelectButton.setTitle("", forState: .Normal)
         })
-        presentViewController(alertController, animated: true, completion: {
-
-        })
+        presentViewController(alertController, animated: true, completion: nil)
         dispatch_after(dispatch_time(DISPATCH_TIME_NOW, Int64(0.1 * Double(NSEC_PER_SEC))), dispatch_get_main_queue()) {
             let separatorView = UIView(frame: CGRectMake(0, alertController.buttonAreaScrollView.frame.height - 55, UIScreen.mainScreen().bounds.width, 0.5))
             separatorView.backgroundColor = UIColor.whiteColor()
@@ -108,6 +110,18 @@ class PlaylistEditViewController: ISPViewController, UITableViewDataSource, UITa
                 let headerView = tableView.dequeueReusableHeaderFooterViewWithIdentifier("Header") as! EditTableViewHeader
                 headerView.playlist = playlist
                 headerView.delegate = self
+                headerView.titleTextField.delegate = self
+                headerView.titleTextField.addTarget(self, action: "textFieldDidChange:", forControlEvents: UIControlEvents.EditingChanged)
+                headerView.commentTextField.addTarget(self, action: "textFieldDidChange:", forControlEvents: UIControlEvents.EditingChanged)
+                headerView.titleTextField.tag = 1
+                headerView.commentTextField.delegate = self
+                headerView.commentTextField.tag = 2
+                headerView.titleTextField.text = playlist?.title
+                headerView.commentTextField.text = playlist?.comment
+                if playlist!.mood != "" {
+                    headerView.moodSelectButton.setTitle(playlist!.mood, forState: .Normal)
+                    headerView.pulldownImageView.hidden = true
+                }
                 return headerView
             case 1:
                 let headerView = tableView.dequeueReusableHeaderFooterViewWithIdentifier("Add") as! EditAddMusicHeader
@@ -151,5 +165,26 @@ class PlaylistEditViewController: ISPViewController, UITableViewDataSource, UITa
 
     func tableView(tableView: UITableView, shouldIndentWhileEditingRowAtIndexPath indexPath: NSIndexPath) -> Bool {
         return false
+    }
+
+    func textFieldDidChange(textField: UITextField) {
+        if textField.tag == 2 {
+            playlist?.comment = textField.text
+            print(1)
+            return
+        }
+
+        if textField.text.lengthOfBytesUsingEncoding(NSUTF8StringEncoding) == 0 {
+            navigationItem.rightBarButtonItem?.enabled = false
+        } else {
+            playlist?.title = textField.text
+            navigationItem.rightBarButtonItem?.enabled = true
+        }
+        return
+    }
+
+    func textFieldShouldReturn(textField: UITextField) -> Bool {
+        textField.resignFirstResponder()
+        return true
     }
 }

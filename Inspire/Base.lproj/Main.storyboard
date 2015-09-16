@@ -684,11 +684,11 @@
                                 <color key="backgroundColor" red="0.11372549019607843" green="0.11372549019607843" blue="0.12549019607843137" alpha="1" colorSpace="calibratedRGB"/>
                                 <inset key="separatorInset" minX="0.0" minY="0.0" maxX="0.0" maxY="0.0"/>
                                 <view key="tableHeaderView" clipsSubviews="YES" contentMode="scaleToFill" id="C1L-ni-CSl">
-                                    <rect key="frame" x="0.0" y="0.0" width="320" height="425"/>
+                                    <rect key="frame" x="0.0" y="0.0" width="320" height="441"/>
                                     <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                     <subviews>
                                         <imageView userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="dammy" translatesAutoresizingMaskIntoConstraints="NO" id="sSK-h3-lsF">
-                                            <rect key="frame" x="0.0" y="0.0" width="320" height="425"/>
+                                            <rect key="frame" x="0.0" y="0.0" width="320" height="441"/>
                                         </imageView>
                                         <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="brZ-wm-ziu">
                                             <rect key="frame" x="15" y="65" width="298" height="194"/>
@@ -863,10 +863,13 @@
                     </navigationItem>
                     <connections>
                         <outlet property="backgroundImageView" destination="sSK-h3-lsF" id="QQv-zF-drN"/>
+                        <outlet property="commentLabel" destination="hGw-4q-XsB" id="Iph-sL-U1V"/>
                         <outlet property="firstImageView" destination="8rz-P1-w0H" id="9Yr-AT-xWJ"/>
+                        <outlet property="moodLabel" destination="Pcl-Xc-RjG" id="74r-5j-Vxm"/>
                         <outlet property="secondImageView" destination="ufr-35-X9T" id="xiO-df-D5p"/>
                         <outlet property="tableView" destination="ZnR-vf-9nP" id="z8f-ZI-GJH"/>
                         <outlet property="thirdImageView" destination="50S-Dp-adI" id="GFZ-0Q-jIf"/>
+                        <outlet property="titleLabel" destination="4Ik-3Z-Kiv" id="ec5-w7-2iv"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="fJH-ma-MGn" userLabel="First Responder" sceneMemberID="firstResponder"/>
