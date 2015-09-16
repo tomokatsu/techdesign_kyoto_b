@@ -24,12 +24,12 @@ class TopTableViewCell: UITableViewCell {
         commentLabel.text = playlist?.comment
         playlisterLabel.text = playlist?.playlister
         userImageView.sd_setImageWithURL(NSURL(string: playlist!.userImageURL))
+
         var artWorkURLs: [String] = []
         for track in playlist!.musicTracks {
             artWorkURLs.append(track.artworkUrl)
         }
         playlistJacketImagesView.artWorkURLs = artWorkURLs
-
         playlistJacketImagesView.bringSubviewToFront(titleLabel)
         playlistJacketImagesView.bringSubviewToFront(playlisterLabel)
         playlistJacketImagesView.bringSubviewToFront(userImageView)
