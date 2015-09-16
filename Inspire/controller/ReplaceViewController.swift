@@ -1,5 +1,6 @@
 import UIKit
 import RealmSwift
+import SDWebImage
 
 class ReplaceViewController: ISPViewController, UITableViewDelegate, UITableViewDataSource {
 
@@ -10,6 +11,10 @@ class ReplaceViewController: ISPViewController, UITableViewDelegate, UITableView
     private let blurView = UIVisualEffectView(effect: UIBlurEffect(style: .Dark))
     let realm = Realm()
     var favoriteMusicTracks: Results<MusicTrack>?
+    var playlist: Playlist?
+
+    var music: MusicTrack?
+
 
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -21,7 +26,6 @@ class ReplaceViewController: ISPViewController, UITableViewDelegate, UITableView
                 predicates.append(NSPredicate(format: "trackId != \(mTrack.trackId)"))
             }
         }
-
         favoriteMusicTracks = realm.objects(MusicTrack).filter(NSCompoundPredicate.andPredicateWithSubpredicates(predicates))
         layoutView()
     }
@@ -29,6 +33,10 @@ class ReplaceViewController: ISPViewController, UITableViewDelegate, UITableView
     func layoutView() {
         blurView.frame = UIScreen.mainScreen().bounds
         blurImageView.addSubview(blurView)
+        blurImageView.sd_setImageWithURL(NSURL(string: music?.artworkUrl ?? ""))
+        thumbnailImageView.sd_setImageWithURL(NSURL(string: music?.artworkUrl ?? ""))
+        replacedSongTitleLabel.text = music?.title
+        replacedSongArtistLabel.text = music?.artist
     }
 
     func tableView(tableView: UITableView, cellForRowAtIndexPath indexPath: NSIndexPath) -> UITableViewCell {
@@ -46,6 +54,8 @@ class ReplaceViewController: ISPViewController, UITableViewDelegate, UITableView
     }
 
     func tableView(tableView: UITableView, didSelectRowAtIndexPath indexPath: NSIndexPath) {
+        let index = playlist?.musicTracks.indexOf(music!)
+        playlist?.musicTracks.replace(index!, object: (tableView.cellForRowAtIndexPath(indexPath) as! ReplaceSongCell).music!)
         self.navigationController?.popViewControllerAnimated(true)
     }
 

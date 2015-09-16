@@ -14,11 +14,11 @@
         <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
         <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
         <view clipsSubviews="YES" contentMode="scaleToFill" id="iN0-l3-epB" customClass="EditTableViewHeader" customModule="Inspire" customModuleProvider="target">
-            <rect key="frame" x="0.0" y="0.0" width="320" height="397"/>
+            <rect key="frame" x="0.0" y="0.0" width="320" height="425"/>
             <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
             <subviews>
                 <imageView userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="dammy" translatesAutoresizingMaskIntoConstraints="NO" id="EGB-DR-pJm">
-                    <rect key="frame" x="0.0" y="0.0" width="320" height="397"/>
+                    <rect key="frame" x="0.0" y="0.0" width="320" height="425"/>
                 </imageView>
                 <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="dammy" translatesAutoresizingMaskIntoConstraints="NO" id="CbC-z8-10m">
                     <rect key="frame" x="94" y="59" width="132" height="132"/>
@@ -62,7 +62,7 @@
                     </constraints>
                 </view>
                 <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="プレイリストの説明" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="x1T-3R-VXG">
-                    <rect key="frame" x="15" y="309" width="290" height="20"/>
+                    <rect key="frame" x="15" y="316" width="290" height="20"/>
                     <constraints>
                         <constraint firstAttribute="height" constant="20" id="TUU-Ih-UMy"/>
                     </constraints>
@@ -74,15 +74,22 @@
                     </connections>
                 </textField>
                 <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="53u-t9-GWE">
-                    <rect key="frame" x="15" y="331" width="290" height="0.5"/>
+                    <rect key="frame" x="15" y="338" width="290" height="0.5"/>
                     <color key="backgroundColor" white="0.80461732784431139" alpha="0.75" colorSpace="calibratedWhite"/>
                     <color key="tintColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                     <constraints>
                         <constraint firstAttribute="height" constant="1" id="zCt-7W-MvF"/>
                     </constraints>
                 </view>
+                <imageView userInteractionEnabled="NO" contentMode="center" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Pulldown" translatesAutoresizingMaskIntoConstraints="NO" id="gxZ-Dg-kqt">
+                    <rect key="frame" x="98" y="375" width="12" height="12"/>
+                    <constraints>
+                        <constraint firstAttribute="width" constant="12" id="C6h-5a-2I2"/>
+                        <constraint firstAttribute="height" constant="12" id="LKB-nr-8fR"/>
+                    </constraints>
+                </imageView>
                 <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Okq-bi-etn">
-                    <rect key="frame" x="15" y="356" width="290" height="20"/>
+                    <rect key="frame" x="15" y="369" width="290" height="20"/>
                     <constraints>
                         <constraint firstAttribute="height" constant="20" id="tBf-o8-bT6"/>
                     </constraints>
@@ -96,7 +103,7 @@
                     </connections>
                 </button>
                 <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Uxd-ku-kg3">
-                    <rect key="frame" x="15" y="378" width="290" height="0.5"/>
+                    <rect key="frame" x="15" y="391" width="290" height="0.5"/>
                     <color key="backgroundColor" white="0.79867608532934131" alpha="0.75" colorSpace="calibratedWhite"/>
                     <constraints>
                         <constraint firstAttribute="height" constant="1" id="VCp-XY-bRx"/>
@@ -106,13 +113,15 @@
             <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
             <constraints>
                 <constraint firstAttribute="centerX" secondItem="Okq-bi-etn" secondAttribute="centerX" id="5O0-cT-lLB"/>
+                <constraint firstItem="Uxd-ku-kg3" firstAttribute="top" secondItem="gxZ-Dg-kqt" secondAttribute="bottom" constant="4" id="6TI-6i-pB0"/>
                 <constraint firstAttribute="trailing" secondItem="Yyr-JD-GlO" secondAttribute="trailing" constant="15" id="6q4-Uw-NMb"/>
-                <constraint firstItem="x1T-3R-VXG" firstAttribute="top" secondItem="YNs-38-UaM" secondAttribute="bottom" constant="23" id="8Hn-H1-IbG"/>
+                <constraint firstItem="x1T-3R-VXG" firstAttribute="top" secondItem="YNs-38-UaM" secondAttribute="bottom" constant="30" id="8Hn-H1-IbG"/>
                 <constraint firstAttribute="trailing" secondItem="53u-t9-GWE" secondAttribute="trailing" constant="15" id="8gS-MS-bgb"/>
                 <constraint firstItem="Okq-bi-etn" firstAttribute="leading" secondItem="iN0-l3-epB" secondAttribute="leading" constant="15" id="8s1-2r-yPg"/>
                 <constraint firstItem="qwe-16-7Nf" firstAttribute="top" secondItem="iN0-l3-epB" secondAttribute="top" constant="72" id="DbE-4l-iJS"/>
                 <constraint firstAttribute="trailing" secondItem="Okq-bi-etn" secondAttribute="trailing" constant="15" id="DmG-wX-mU8"/>
                 <constraint firstItem="Uxd-ku-kg3" firstAttribute="top" secondItem="Okq-bi-etn" secondAttribute="bottom" constant="2" id="ERT-ST-BPY"/>
+                <constraint firstItem="gxZ-Dg-kqt" firstAttribute="leading" secondItem="iN0-l3-epB" secondAttribute="leading" constant="98" id="Ffb-fr-Vyc"/>
                 <constraint firstItem="YNs-38-UaM" firstAttribute="top" secondItem="Yyr-JD-GlO" secondAttribute="bottom" constant="2" id="LEV-pM-OI6"/>
                 <constraint firstItem="Yyr-JD-GlO" firstAttribute="leading" secondItem="iN0-l3-epB" secondAttribute="leading" constant="15" id="MV2-I6-dza"/>
                 <constraint firstAttribute="centerX" secondItem="Yyr-JD-GlO" secondAttribute="centerX" id="NQb-I7-fja"/>
@@ -137,7 +146,7 @@
                 <constraint firstItem="53u-t9-GWE" firstAttribute="leading" secondItem="iN0-l3-epB" secondAttribute="leading" constant="15" id="qQv-zP-oYM"/>
                 <constraint firstItem="53u-t9-GWE" firstAttribute="top" secondItem="x1T-3R-VXG" secondAttribute="bottom" constant="2" id="uCM-y9-SMT"/>
                 <constraint firstAttribute="centerX" secondItem="CbC-z8-10m" secondAttribute="centerX" id="x2s-cx-y9r"/>
-                <constraint firstItem="Okq-bi-etn" firstAttribute="top" secondItem="53u-t9-GWE" secondAttribute="bottom" constant="24" id="ygl-DS-MnO"/>
+                <constraint firstItem="Okq-bi-etn" firstAttribute="top" secondItem="53u-t9-GWE" secondAttribute="bottom" constant="30" id="ygl-DS-MnO"/>
                 <constraint firstAttribute="trailing" secondItem="EGB-DR-pJm" secondAttribute="trailing" id="z6q-tY-Fnh"/>
             </constraints>
             <nil key="simulatedStatusBarMetrics"/>
@@ -149,6 +158,7 @@
                 <outlet property="commentTextField" destination="x1T-3R-VXG" id="9ek-pq-Mhv"/>
                 <outlet property="mainImageView" destination="qwe-16-7Nf" id="k4R-UH-vXC"/>
                 <outlet property="moodSelectButton" destination="Okq-bi-etn" id="jL6-tG-28S"/>
+                <outlet property="pulldownImageView" destination="gxZ-Dg-kqt" id="YNy-g2-ePO"/>
                 <outlet property="secondImageView" destination="6fv-cI-Ddr" id="Lfq-Mt-wkz"/>
                 <outlet property="thirdImageView" destination="CbC-z8-10m" id="Uyq-cu-9m2"/>
                 <outlet property="titleTextField" destination="Yyr-JD-GlO" id="Ma3-uQ-53n"/>
@@ -157,6 +167,7 @@
         </view>
     </objects>
     <resources>
+        <image name="Pulldown" width="8" height="6"/>
         <image name="dammy" width="100" height="100"/>
     </resources>
 </document>

@@ -77,6 +77,7 @@
             <freeformSimulatedSizeMetrics key="simulatedDestinationMetrics"/>
             <connections>
                 <outlet property="artistLabel" destination="zGt-T2-dVb" id="GK9-Ab-fr9"/>
+                <outlet property="checkbox" destination="rkw-FG-tP2" id="ghV-fW-Tlh"/>
                 <outlet property="imageView" destination="i0b-Q1-Pbz" id="nWy-jq-v3f"/>
                 <outlet property="titleLabel" destination="tW2-kn-r1R" id="r96-xx-uPF"/>
             </connections>

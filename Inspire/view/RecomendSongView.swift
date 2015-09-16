@@ -5,6 +5,7 @@ class RecomendSongView: UIView {
     @IBOutlet weak private var imageView: UIImageView!
     @IBOutlet weak private var titleLabel: UILabel!
     @IBOutlet weak private var artistLabel: UILabel!
+    @IBOutlet weak var checkbox: ISPFilledCheckBox!
     var delegate: RecomendSongViewDelegate?
     private var _music: MusicTrack?
     var music: MusicTrack? {

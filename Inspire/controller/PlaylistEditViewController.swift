@@ -16,6 +16,24 @@ class PlaylistEditViewController: ISPViewController, UITableViewDataSource, UITa
         title = ""
     }
 
+    override func viewWillAppear(animated: Bool) {
+        tableView.reloadData()
+    }
+
+    override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?) {
+        switch segue.identifier! {
+            case "Publish":
+                let publishViewController = segue.destinationViewController as! PublishViewController
+                publishViewController.playlist = playlist
+            case "Replace":
+                let replaceViewController = segue.destinationViewController as! ReplaceViewController
+                replaceViewController.playlist = playlist
+                replaceViewController.music = playlist?.musicTracks[tableView.indexPathForCell(sender as! UITableViewCell)!.row]
+            default:
+                return
+        }
+    }
+
     @IBAction func closeButtonTouchUpInside(sender: UIBarButtonItem) {
         dismissViewControllerAnimated(true, completion: nil)
     }
@@ -24,6 +42,7 @@ class PlaylistEditViewController: ISPViewController, UITableViewDataSource, UITa
         let addMusicViewController = storyboard?.instantiateViewControllerWithIdentifier("AddMusic") as! AddMusicViewController
         self.navigationController?.pushViewController(addMusicViewController, animated: true)
         addMusicViewController.recomendSongs = playlist?.additionalTracks
+        addMusicViewController.playlist = playlist
     }
 
     func moodSelectButtonTouchUpInsideOnView(view: EditTableViewHeader) {
@@ -35,22 +54,24 @@ class PlaylistEditViewController: ISPViewController, UITableViewDataSource, UITa
         alertController.buttonBgColorHighlighted[.Default] = UIColor(red: 0.149019608, green: 0.149019608, blue: 0.164705882, alpha: 1)
 
         alertController.addAction(DOAlertAction(title: "Happy", style: .Default) { action in
-
+            view.moodSelectButton.setTitle("Happy", forState: .Normal)
+            view.pulldownImageView.hidden = true
         })
         alertController.addAction(DOAlertAction(title: "Excited", style: .Default) { action in
-
+            view.moodSelectButton.setTitle("Excited", forState: .Normal)
+            view.pulldownImageView.hidden = true
         })
         alertController.addAction(DOAlertAction(title: "Relax", style: .Default) { action in
-
+            view.moodSelectButton.setTitle("Relax", forState: .Normal)
+            view.pulldownImageView.hidden = true
         })
         alertController.addAction(DOAlertAction(title: "Love", style: .Default) { action in
-
+            view.moodSelectButton.setTitle("Love", forState: .Normal)
+            view.pulldownImageView.hidden = true
         })
-
         alertController.addAction(DOAlertAction(title: "Cancel", style: .Default) { action in
-
+            view.moodSelectButton.setTitle("", forState: .Normal)
         })
-
         presentViewController(alertController, animated: true, completion: {
 
         })
@@ -69,12 +90,16 @@ class PlaylistEditViewController: ISPViewController, UITableViewDataSource, UITa
     func tableView(tableView: UITableView, heightForHeaderInSection section: Int) -> CGFloat {
         switch section {
             case 0:
-                return 397
+                return 425
             case 1:
                 return 40
             default:
                 return 0
         }
+    }
+
+    func tableView(tableView: UITableView, heightForFooterInSection section: Int) -> CGFloat {
+        return CGFloat.min
     }
 
     func tableView(tableView: UITableView, viewForHeaderInSection section: Int) -> UIView? {
@@ -101,6 +126,9 @@ class PlaylistEditViewController: ISPViewController, UITableViewDataSource, UITa
     }
 
     func tableView(tableView: UITableView, heightForRowAtIndexPath indexPath: NSIndexPath) -> CGFloat {
+        if indexPath.section == 0 {
+            return 0
+        }
         return 80
     }
 
@@ -124,8 +152,4 @@ class PlaylistEditViewController: ISPViewController, UITableViewDataSource, UITa
     func tableView(tableView: UITableView, shouldIndentWhileEditingRowAtIndexPath indexPath: NSIndexPath) -> Bool {
         return false
     }
-
-    func tableView(tableView: UITableView, didSelectRowAtIndexPath indexPath: NSIndexPath) {
-    }
-
 }

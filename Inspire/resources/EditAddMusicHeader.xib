@@ -15,31 +15,42 @@
             <rect key="frame" x="0.0" y="0.0" width="320" height="40"/>
             <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
             <subviews>
-                <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Add" translatesAutoresizingMaskIntoConstraints="NO" id="eq5-RM-qz2">
-                    <rect key="frame" x="15" y="12" width="15" height="15"/>
+                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="7M4-PV-yOa">
+                    <rect key="frame" x="0.0" y="0.0" width="320" height="40"/>
+                    <subviews>
+                        <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Add" translatesAutoresizingMaskIntoConstraints="NO" id="eq5-RM-qz2">
+                            <rect key="frame" x="15" y="12" width="15" height="15"/>
+                            <constraints>
+                                <constraint firstAttribute="width" constant="15" id="Rl6-fu-m8W"/>
+                                <constraint firstAttribute="height" constant="15" id="ihm-Ev-CiR"/>
+                            </constraints>
+                        </imageView>
+                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="新規で曲を追加" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="xLe-WG-HvC">
+                            <rect key="frame" x="40" y="10" width="84" height="20"/>
+                            <constraints>
+                                <constraint firstAttribute="height" constant="20" id="l5w-HS-NZs"/>
+                            </constraints>
+                            <fontDescription key="fontDescription" name="mplus-1p-light" family="M+ 1p" pointSize="12"/>
+                            <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="calibratedRGB"/>
+                            <nil key="highlightedColor"/>
+                        </label>
+                    </subviews>
+                    <color key="backgroundColor" red="0.14901960784313725" green="0.14901960784313725" blue="0.16470588235294117" alpha="1" colorSpace="calibratedRGB"/>
                     <constraints>
-                        <constraint firstAttribute="width" constant="15" id="Rl6-fu-m8W"/>
-                        <constraint firstAttribute="height" constant="15" id="ihm-Ev-CiR"/>
+                        <constraint firstItem="xLe-WG-HvC" firstAttribute="leading" secondItem="eq5-RM-qz2" secondAttribute="trailing" constant="10" id="90E-Dj-lxF"/>
+                        <constraint firstAttribute="centerY" secondItem="eq5-RM-qz2" secondAttribute="centerY" id="FhX-W1-P3h"/>
+                        <constraint firstItem="eq5-RM-qz2" firstAttribute="leading" secondItem="7M4-PV-yOa" secondAttribute="leading" constant="15" id="iu3-Hg-eeL"/>
+                        <constraint firstAttribute="centerY" secondItem="xLe-WG-HvC" secondAttribute="centerY" id="zYN-Cn-fNo"/>
                     </constraints>
-                </imageView>
-                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="新規で曲を追加" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="xLe-WG-HvC">
-                    <rect key="frame" x="40" y="10" width="250" height="20"/>
-                    <constraints>
-                        <constraint firstAttribute="height" constant="20" id="l5w-HS-NZs"/>
-                    </constraints>
-                    <fontDescription key="fontDescription" name="mplus-1p-light" family="M+ 1p" pointSize="12"/>
-                    <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="calibratedRGB"/>
-                    <nil key="highlightedColor"/>
-                </label>
+                </view>
             </subviews>
-            <color key="backgroundColor" red="0.14901960784313725" green="0.14901960784313725" blue="0.16470588235294117" alpha="1" colorSpace="calibratedRGB"/>
+            <color key="backgroundColor" red="0.14881628787878787" green="0.14901960784313725" blue="0.16470588235294117" alpha="1" colorSpace="calibratedRGB"/>
             <gestureRecognizers/>
             <constraints>
-                <constraint firstItem="eq5-RM-qz2" firstAttribute="leading" secondItem="iN0-l3-epB" secondAttribute="leading" constant="15" id="Asu-ni-i4S"/>
-                <constraint firstAttribute="centerY" secondItem="eq5-RM-qz2" secondAttribute="centerY" id="Sdb-FA-Vdg"/>
-                <constraint firstAttribute="trailing" secondItem="xLe-WG-HvC" secondAttribute="trailing" constant="30" id="URQ-by-by5"/>
-                <constraint firstAttribute="centerY" secondItem="xLe-WG-HvC" secondAttribute="centerY" id="dIZ-Zx-3xc"/>
-                <constraint firstItem="xLe-WG-HvC" firstAttribute="leading" secondItem="eq5-RM-qz2" secondAttribute="trailing" constant="10" id="fwq-NP-sCM"/>
+                <constraint firstItem="7M4-PV-yOa" firstAttribute="leading" secondItem="iN0-l3-epB" secondAttribute="leading" id="1j5-TX-DNg"/>
+                <constraint firstAttribute="trailing" secondItem="7M4-PV-yOa" secondAttribute="trailing" id="SfZ-VH-PEF"/>
+                <constraint firstAttribute="bottom" secondItem="7M4-PV-yOa" secondAttribute="bottom" id="eCR-o4-w3F"/>
+                <constraint firstItem="7M4-PV-yOa" firstAttribute="top" secondItem="iN0-l3-epB" secondAttribute="top" id="izT-N6-MRz"/>
             </constraints>
             <nil key="simulatedStatusBarMetrics"/>
             <nil key="simulatedTopBarMetrics"/>
