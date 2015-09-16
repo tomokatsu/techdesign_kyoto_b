@@ -3,7 +3,7 @@ import RealmSwift
 import AVFoundation
 import CoreMedia
 
-class DetailViewController:ISPViewController{
+class DetailViewController: ISPViewController {
 
     @IBOutlet weak private var blurImageView: UIImageView!
     @IBOutlet weak private var secondImageView: UIImageView!
@@ -13,7 +13,10 @@ class DetailViewController:ISPViewController{
     @IBOutlet weak private var playTime: UILabel!
     @IBOutlet weak private var trackTitle: UILabel!
     @IBOutlet weak private var artist: UILabel!
+    @IBOutlet weak var playButton: UIButton!
     @IBOutlet weak private var playTimeSlider: UISlider!
+    @IBOutlet weak var shuffleButton: UIButton!
+    @IBOutlet weak var repeatButton: UIButton!
     private let blurView = UIVisualEffectView(effect: UIBlurEffect(style: .Dark))
 
     private var playingTimeTimer : NSTimer?
@@ -22,9 +25,20 @@ class DetailViewController:ISPViewController{
     override func viewDidLoad() {
         super.viewDidLoad()
         setupView()
-        PlayerManager.sharedInstance.setPlaylist(playlist!)
-        updatePlayingInfo()
         title = ""
+        if PlayerManager.sharedInstance.players.count == 0 {
+            PlayerManager.sharedInstance.setPlaylist(playlist!)
+            PlayerManager.sharedInstance.play()
+            playButton.selected = true
+        }
+        if PlayerManager.sharedInstance.playlist != playlist {
+            PlayerManager.sharedInstance.setPlaylist(playlist!)
+            PlayerManager.sharedInstance.toPlayIndex = 0
+            PlayerManager.sharedInstance.play()
+            playButton.selected = true
+        }
+
+        updatePlayingInfo()
     }
 
     override func viewDidDisappear(animated: Bool) {
@@ -34,8 +48,10 @@ class DetailViewController:ISPViewController{
     @IBAction func playAndPauseButtonTouchUpInside(sender: UIButton) {
         if PlayerManager.sharedInstance.isPlaying() {
             PlayerManager.sharedInstance.pause()
+            playButton.selected = false
         }else{
             PlayerManager.sharedInstance.play()
+            playButton.selected = true
         }
     }
 
@@ -49,6 +65,14 @@ class DetailViewController:ISPViewController{
 
     @IBAction func playTimeSliderAction(sender: AnyObject) {
         playingTimeTimer?.invalidate()
+    }
+
+    @IBAction func shuffleButtonTouchUpInside(sender: UIButton) {
+        sender.selected = !sender.selected
+    }
+
+    @IBAction func repeatButtonTouchUpInside(sender: UIButton) {
+        sender.selected = !sender.selected
     }
 
 

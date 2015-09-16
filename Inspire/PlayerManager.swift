@@ -4,8 +4,8 @@ import AVFoundation
 class PlayerManager{
     static let sharedInstance = PlayerManager()
 
-    private var playlist: Playlist?
-    private var players: [Player?]
+    var playlist: Playlist?
+    var players: [Player?]
     var toPlayIndex: Int
 
     private init() {
@@ -45,7 +45,7 @@ class PlayerManager{
         player().play()
     }
 
-    func isPlaying()->Bool{
+    func isPlaying()->Bool {
         return player().isPlaying
     }
 

@@ -20,7 +20,7 @@ class PublishViewController: ISPViewController, UITableViewDataSource, UITableVi
     }
 
     func layoutViews() {
-        blurView.frame = CGRectMake(0, 0, UIScreen.mainScreen().bounds.width, 441)
+        blurView.frame = CGRectMake(0, 0, UIScreen.mainScreen().bounds.width, 457)
         backgroundImageView.addSubview(blurView)
         backgroundImageView.sd_setImageWithURL(NSURL(string: playlist!.musicTracks.first?.artworkUrl ?? ""))
         firstImageView.sd_setImageWithURL(NSURL(string: playlist!.musicTracks.first?.artworkUrl ?? ""))

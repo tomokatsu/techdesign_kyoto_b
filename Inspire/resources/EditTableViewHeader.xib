@@ -14,11 +14,11 @@
         <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
         <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
         <view clipsSubviews="YES" contentMode="scaleToFill" id="iN0-l3-epB" customClass="EditTableViewHeader" customModule="Inspire" customModuleProvider="target">
-            <rect key="frame" x="0.0" y="0.0" width="320" height="449"/>
+            <rect key="frame" x="0.0" y="0.0" width="320" height="461"/>
             <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
             <subviews>
                 <imageView userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="dammy" translatesAutoresizingMaskIntoConstraints="NO" id="EGB-DR-pJm">
-                    <rect key="frame" x="0.0" y="0.0" width="320" height="449"/>
+                    <rect key="frame" x="0.0" y="0.0" width="320" height="461"/>
                 </imageView>
                 <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="dammy" translatesAutoresizingMaskIntoConstraints="NO" id="CbC-z8-10m">
                     <rect key="frame" x="94" y="85" width="132" height="132"/>

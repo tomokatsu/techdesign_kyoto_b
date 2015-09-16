@@ -97,7 +97,7 @@ class PlaylistEditViewController: ISPViewController, UITextFieldDelegate, UITabl
     func tableView(tableView: UITableView, heightForHeaderInSection section: Int) -> CGFloat {
         switch section {
             case 0:
-                return 449
+                return 461
             case 1:
                 return 40
             default:
