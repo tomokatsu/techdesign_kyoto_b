@@ -16,17 +16,17 @@
         <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
         <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
         <view contentMode="scaleToFill" id="iN0-l3-epB" customClass="RecomendSongView" customModule="Inspire" customModuleProvider="target">
-            <rect key="frame" x="0.0" y="0.0" width="140" height="160"/>
+            <rect key="frame" x="0.0" y="0.0" width="110" height="176"/>
             <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
             <subviews>
                 <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="i0b-Q1-Pbz">
-                    <rect key="frame" x="15" y="0.0" width="110" height="110"/>
+                    <rect key="frame" x="0.0" y="0.0" width="110" height="110"/>
                     <constraints>
                         <constraint firstAttribute="width" secondItem="i0b-Q1-Pbz" secondAttribute="height" multiplier="1:1" id="oPV-bW-nlG"/>
                     </constraints>
                 </imageView>
                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="tW2-kn-r1R">
-                    <rect key="frame" x="15" y="120" width="110" height="20"/>
+                    <rect key="frame" x="0.0" y="120" width="110" height="20"/>
                     <constraints>
                         <constraint firstAttribute="height" constant="20" id="7Qc-2q-qMB"/>
                     </constraints>
@@ -34,17 +34,8 @@
                     <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                     <nil key="highlightedColor"/>
                 </label>
-                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="zGt-T2-dVb">
-                    <rect key="frame" x="15" y="141" width="110" height="13"/>
-                    <constraints>
-                        <constraint firstAttribute="height" constant="13" id="XdU-L8-loN"/>
-                    </constraints>
-                    <fontDescription key="fontDescription" name="mplus-1p-light" family="M+ 1p" pointSize="12"/>
-                    <color key="textColor" red="1" green="1" blue="1" alpha="0.70000000000000007" colorSpace="calibratedRGB"/>
-                    <nil key="highlightedColor"/>
-                </label>
                 <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="rkw-FG-tP2" customClass="ISPFilledCheckBox" customModule="Inspire" customModuleProvider="target">
-                    <rect key="frame" x="15" y="0.0" width="24" height="24"/>
+                    <rect key="frame" x="5" y="5" width="24" height="24"/>
                     <constraints>
                         <constraint firstAttribute="width" constant="24" id="Pn3-UQ-u0k"/>
                         <constraint firstAttribute="height" constant="24" id="iHD-3l-UVP"/>
@@ -58,17 +49,28 @@
                         <action selector="checkBoxValueChanged:" destination="iN0-l3-epB" eventType="touchUpInside" id="ucZ-oK-7xj"/>
                     </connections>
                 </button>
+                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="zGt-T2-dVb">
+                    <rect key="frame" x="0.0" y="141" width="110" height="13"/>
+                    <constraints>
+                        <constraint firstAttribute="height" constant="13" id="XdU-L8-loN"/>
+                    </constraints>
+                    <fontDescription key="fontDescription" name="mplus-1p-light" family="M+ 1p" pointSize="12"/>
+                    <color key="textColor" red="1" green="1" blue="1" alpha="0.70000000000000007" colorSpace="calibratedRGB"/>
+                    <nil key="highlightedColor"/>
+                </label>
             </subviews>
-            <color key="backgroundColor" red="0.14901960784313725" green="0.14901960784313725" blue="0.16470588235294117" alpha="1" colorSpace="calibratedRGB"/>
+            <color key="backgroundColor" red="0.11372549019607843" green="0.11372549019607843" blue="0.12549019607843137" alpha="1" colorSpace="calibratedRGB"/>
             <constraints>
-                <constraint firstItem="i0b-Q1-Pbz" firstAttribute="leading" secondItem="iN0-l3-epB" secondAttribute="leading" constant="15" id="4ra-Kr-i4a"/>
-                <constraint firstAttribute="trailing" secondItem="i0b-Q1-Pbz" secondAttribute="trailing" constant="15" id="8uV-yA-MjX"/>
-                <constraint firstAttribute="trailing" secondItem="tW2-kn-r1R" secondAttribute="trailing" constant="15" id="Itf-Dl-xBH"/>
+                <constraint firstItem="i0b-Q1-Pbz" firstAttribute="leading" secondItem="iN0-l3-epB" secondAttribute="leading" id="4ra-Kr-i4a"/>
+                <constraint firstItem="rkw-FG-tP2" firstAttribute="top" secondItem="iN0-l3-epB" secondAttribute="top" constant="5" id="5wG-ab-JGd"/>
+                <constraint firstAttribute="trailing" secondItem="i0b-Q1-Pbz" secondAttribute="trailing" id="8uV-yA-MjX"/>
+                <constraint firstAttribute="trailing" secondItem="tW2-kn-r1R" secondAttribute="trailing" id="Itf-Dl-xBH"/>
                 <constraint firstItem="i0b-Q1-Pbz" firstAttribute="top" secondItem="iN0-l3-epB" secondAttribute="top" id="N3I-va-15j"/>
                 <constraint firstItem="i0b-Q1-Pbz" firstAttribute="top" secondItem="rkw-FG-tP2" secondAttribute="top" id="OFW-bo-ELa"/>
                 <constraint firstItem="tW2-kn-r1R" firstAttribute="top" secondItem="i0b-Q1-Pbz" secondAttribute="bottom" constant="10" id="S4B-Es-1Oy"/>
                 <constraint firstItem="zGt-T2-dVb" firstAttribute="top" secondItem="tW2-kn-r1R" secondAttribute="bottom" constant="1" id="ehL-Us-KdR"/>
                 <constraint firstItem="i0b-Q1-Pbz" firstAttribute="leading" secondItem="tW2-kn-r1R" secondAttribute="leading" id="fUZ-x1-hk9"/>
+                <constraint firstItem="rkw-FG-tP2" firstAttribute="leading" secondItem="iN0-l3-epB" secondAttribute="leading" constant="5" id="mvU-Dn-BOs"/>
                 <constraint firstItem="zGt-T2-dVb" firstAttribute="trailing" secondItem="tW2-kn-r1R" secondAttribute="trailing" id="sTt-9r-MRO"/>
                 <constraint firstItem="zGt-T2-dVb" firstAttribute="leading" secondItem="tW2-kn-r1R" secondAttribute="leading" id="vFa-ZJ-ofd"/>
                 <constraint firstItem="i0b-Q1-Pbz" firstAttribute="leading" secondItem="rkw-FG-tP2" secondAttribute="leading" id="vdu-ST-FQ2"/>
@@ -77,13 +79,19 @@
             <nil key="simulatedTopBarMetrics"/>
             <nil key="simulatedBottomBarMetrics"/>
             <freeformSimulatedSizeMetrics key="simulatedDestinationMetrics"/>
+            <variation key="default">
+                <mask key="constraints">
+                    <exclude reference="OFW-bo-ELa"/>
+                    <exclude reference="vdu-ST-FQ2"/>
+                </mask>
+            </variation>
             <connections>
                 <outlet property="artistLabel" destination="zGt-T2-dVb" id="GK9-Ab-fr9"/>
                 <outlet property="checkbox" destination="rkw-FG-tP2" id="ghV-fW-Tlh"/>
                 <outlet property="imageView" destination="i0b-Q1-Pbz" id="nWy-jq-v3f"/>
                 <outlet property="titleLabel" destination="tW2-kn-r1R" id="r96-xx-uPF"/>
             </connections>
-            <point key="canvasLocation" x="325" y="349"/>
+            <point key="canvasLocation" x="317" y="349"/>
         </view>
     </objects>
 </document>

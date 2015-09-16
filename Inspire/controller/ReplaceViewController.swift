@@ -67,7 +67,7 @@ class ReplaceViewController: ISPViewController, UITableViewDelegate, UITableView
     func tableView(tableView: UITableView, viewForHeaderInSection section: Int) -> UIView? {
         let header = UIView(frame: CGRectMake(0, 0, UIScreen.mainScreen().bounds.width, 40))
         header.backgroundColor = UIColor(red: 29/255, green: 29/255, blue: 32/255, alpha: 1)
-        let titleLabel = UILabel(frame: CGRectMake(0, 0, UIScreen.mainScreen().bounds.width - CGFloat(60), 18))
+        let titleLabel = UILabel(frame: CGRectMake(0, 0, UIScreen.mainScreen().bounds.width - CGFloat(30), 18))
         titleLabel.font = UIFont(name: "mplus-1p-regular", size: 12)
         titleLabel.textColor = UIColor.whiteColor()
         titleLabel.center = header.center

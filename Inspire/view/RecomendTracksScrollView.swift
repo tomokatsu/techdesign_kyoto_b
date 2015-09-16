@@ -15,15 +15,15 @@ class RecomendTracksScrollView: UIScrollView {
             for subview in subviews {
                 subview.removeFromSuperview()
             }
-            contentSize = CGSizeMake(CGFloat(musics?.count ?? 0) * 140 + 60, 160)
-            var x = CGFloat(30)
+            contentSize = CGSizeMake(CGFloat(musics?.count ?? 0) * 130 + 10, 176)
+            var x = CGFloat(15)
             for music in musics ?? List<MusicTrack>() {
                 let recomendSongView = RecomendSongView.view()
                 recomendSongView.music = music
                 recomendSongView.delegate = recomendSongViewDelegate
                 var frame = recomendSongView.frame
                 frame.origin.x = x
-                x += frame.size.width
+                x += frame.size.width + 20
                 frame.origin.y = CGFloat(5)
                 recomendSongView.frame = frame
                 addSubview(recomendSongView)

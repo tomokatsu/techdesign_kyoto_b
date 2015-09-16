@@ -8,19 +8,12 @@ class TopViewController: ISPViewController, UITableViewDelegate, UITableViewData
         case MyPlaylist
     }
 
-    enum ILScrollViewDirection: Int {
-        case None = 0
-        case Horizontal = 1
-        case Vertical = 2
-    }
-
     @IBOutlet weak var segmentView: UIView!
     @IBOutlet weak private var scrollView: ISPPagingScrollView!
     static let cellHeightWidthRatio = CGFloat(218.0 / 320.0)
     let realm = Realm()
     var myPlaylists: Results<Playlist>?
     var inspirablePlaylists: Results<Playlist>?
-    var direction: ILScrollViewDirection = .None
     var beganPoint = CGPointZero
 
     @IBOutlet weak var myPlaylistButton: UIButton!
@@ -91,6 +84,7 @@ class TopViewController: ISPViewController, UITableViewDelegate, UITableViewData
 
     var previousPage = 0
     func scrollViewDidScroll(scrollView: UIScrollView) {
+        if scrollView.isKindOfClass(UITableView) { return }
         let pageWidth = scrollView.frame.size.width
         let fractionalPage = scrollView.contentOffset.x / pageWidth
         let page = lround(Double(fractionalPage))

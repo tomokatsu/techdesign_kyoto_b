@@ -13,7 +13,7 @@ class AddMusicViewController: ISPViewController, UITableViewDelegate, UITableVie
 
     override func viewDidLoad() {
         super.viewDidLoad()
-        tableView.contentInset.top = 60
+        tableView.contentInset.top = 66
         var predicates: [NSPredicate] = []
         for mTrack in playlist!.musicTracks {
             predicates.append(NSPredicate(format: "trackId != \(mTrack.trackId)"))
@@ -25,8 +25,13 @@ class AddMusicViewController: ISPViewController, UITableViewDelegate, UITableVie
             recomendSongs?.append(music)
         }
 
-        navigationItem.rightBarButtonItem = UIBarButtonItem(title: "完了", style: .Plain, target: self, action: Selector("completeButtonTouchUpInside"))
+        navigationItem.rightBarButtonItem = UIBarButtonItem(title: "追加", style: .Plain, target: self, action: Selector("completeButtonTouchUpInside"))
         tableView.reloadData()
+        navigationController!.interactivePopGestureRecognizer.enabled = false
+    }
+
+    override func viewWillDisappear(animated: Bool) {
+        navigationController!.interactivePopGestureRecognizer.enabled = true
     }
 
     func checkBoxValueChangedOnCell(cell: AddFavoriteTrackCell) {
@@ -70,7 +75,7 @@ class AddMusicViewController: ISPViewController, UITableViewDelegate, UITableVie
         let header = UIView(frame: CGRectMake(0, 0, UIScreen.mainScreen().bounds.width, 40))
         let label = UILabel(frame: CGRectMake(0, 0, UIScreen.mainScreen().bounds.width - 30, 20))
         label.center = header.center
-        label.font = UIFont(name: "mplus-1p-regular", size: 24*0.625)
+        label.font = UIFont(name: "mplus-1p-regular", size: 12)
         switch section {
             case 0:
                 label.text = "このプレイリストによく追加されている曲"
@@ -96,6 +101,8 @@ class AddMusicViewController: ISPViewController, UITableViewDelegate, UITableVie
                 cell.music = favoriteSongs?[indexPath.row]
                 cell.checkbox.checked = checked[indexPath.row]
                 cell.delegate = self
+                cell.contentView.layer.borderWidth = 0.3
+                cell.contentView.layer.borderColor = UIColor(red: 71/255, green: 71/255, blue: 75/255, alpha: 1).CGColor
                 return cell
             default:
                 return UITableViewCell()
@@ -105,7 +112,7 @@ class AddMusicViewController: ISPViewController, UITableViewDelegate, UITableVie
     func tableView(tableView: UITableView, heightForRowAtIndexPath indexPath: NSIndexPath) -> CGFloat {
         switch indexPath.section {
             case 0:
-                return 162
+                return 184
             case 1:
                 return 80
             default:
