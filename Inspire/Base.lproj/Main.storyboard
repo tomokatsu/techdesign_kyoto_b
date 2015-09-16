@@ -26,6 +26,7 @@
             <string>mplus-1p-light</string>
             <string>mplus-1p-light</string>
             <string>mplus-1p-light</string>
+            <string>mplus-1p-light</string>
         </mutableArray>
         <mutableArray key="mplus-1p-regular.ttf">
             <string>mplus-1p-regular</string>
@@ -54,14 +55,14 @@
                                     <outlet property="delegate" destination="mz7-35-jT4" id="eQG-Fz-xpz"/>
                                 </connections>
                             </scrollView>
-                            <segmentedControl opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="top" segmentControlStyle="plain" selectedSegmentIndex="0" translatesAutoresizingMaskIntoConstraints="NO" id="yeF-yk-Ef5">
+                            <segmentedControl opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="top" segmentControlStyle="bar" selectedSegmentIndex="0" translatesAutoresizingMaskIntoConstraints="NO" id="yeF-yk-Ef5">
                                 <rect key="frame" x="0.0" y="0.0" width="320" height="29"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="28" id="FqY-o9-edN"/>
                                 </constraints>
                                 <segments>
+                                    <segment title="MyFeed"/>
                                     <segment title="MyPlaylist"/>
-                                    <segment title="Recomended"/>
                                 </segments>
                                 <color key="tintColor" white="0.54607971556886215" alpha="1" colorSpace="calibratedWhite"/>
                                 <connections>
@@ -1055,7 +1056,7 @@
                                                     <nil key="highlightedColor"/>
                                                 </label>
                                             </subviews>
-                                            <color key="backgroundColor" red="0.11400817934081527" green="0.11372549019607843" blue="0.12549019607843137" alpha="1" colorSpace="calibratedRGB"/>
+                                            <color key="backgroundColor" red="0.14901960784313725" green="0.14901960784313725" blue="0.16470588235294117" alpha="1" colorSpace="calibratedRGB"/>
                                             <constraints>
                                                 <constraint firstAttribute="trailing" secondItem="ISk-Pw-xnU" secondAttribute="trailing" constant="8" id="244-Z8-5oh"/>
                                                 <constraint firstItem="ISk-Pw-xnU" firstAttribute="top" secondItem="hkC-7W-lj6" secondAttribute="top" constant="19" id="Aep-Wx-r8T"/>
@@ -1067,10 +1068,39 @@
                                                 <constraint firstItem="vXD-1O-FIB" firstAttribute="trailing" secondItem="ISk-Pw-xnU" secondAttribute="trailing" id="xpe-O5-puy"/>
                                             </constraints>
                                         </tableViewCellContentView>
+                                        <color key="backgroundColor" red="0.14901960784313725" green="0.14901960784313725" blue="0.16470588235294117" alpha="1" colorSpace="calibratedRGB"/>
                                         <connections>
                                             <outlet property="artistLabel" destination="vXD-1O-FIB" id="zoM-AZ-EGP"/>
                                             <outlet property="thumbnailImageView" destination="WBl-9O-EnD" id="5f2-bI-bzD"/>
                                             <outlet property="titleLabel" destination="ISk-Pw-xnU" id="Psm-eF-lau"/>
+                                        </connections>
+                                    </tableViewCell>
+                                    <tableViewCell contentMode="scaleToFill" selectionStyle="none" indentationWidth="10" reuseIdentifier="More" rowHeight="50" id="nRT-Op-VQ6" customClass="MoreTableViewCell" customModule="Inspire" customModuleProvider="target">
+                                        <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
+                                        <autoresizingMask key="autoresizingMask"/>
+                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="nRT-Op-VQ6" id="g0v-Kh-BiE">
+                                            <autoresizingMask key="autoresizingMask"/>
+                                            <subviews>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="もっと見る" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="KxI-e5-5MQ">
+                                                    <rect key="frame" x="130" y="15.5" width="60" height="18"/>
+                                                    <constraints>
+                                                        <constraint firstAttribute="height" constant="18" id="8Hp-sn-vOZ"/>
+                                                        <constraint firstAttribute="width" constant="60" id="fqo-C0-1Ts"/>
+                                                    </constraints>
+                                                    <fontDescription key="fontDescription" name="mplus-1p-light" family="M+ 1p" pointSize="12"/>
+                                                    <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
+                                            </subviews>
+                                            <color key="backgroundColor" red="0.14901960784313725" green="0.14901960784313725" blue="0.16470588235294117" alpha="1" colorSpace="calibratedRGB"/>
+                                            <constraints>
+                                                <constraint firstAttribute="centerY" secondItem="KxI-e5-5MQ" secondAttribute="centerY" id="DCM-Qp-EtA"/>
+                                                <constraint firstAttribute="centerX" secondItem="KxI-e5-5MQ" secondAttribute="centerX" id="mFb-Uf-lWp"/>
+                                            </constraints>
+                                        </tableViewCellContentView>
+                                        <color key="backgroundColor" red="0.14901960784313725" green="0.14901960784313725" blue="0.16470588235294117" alpha="1" colorSpace="calibratedRGB"/>
+                                        <connections>
+                                            <outlet property="titleLabel" destination="KxI-e5-5MQ" id="Y2K-d6-j9q"/>
                                         </connections>
                                     </tableViewCell>
                                 </prototypes>
