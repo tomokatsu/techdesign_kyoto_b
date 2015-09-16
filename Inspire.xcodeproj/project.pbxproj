@@ -801,12 +801,12 @@
 			baseConfigurationReference = 023A452FAB889A56FC854F17 /* Pods.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
-				CODE_SIGN_IDENTITY = "iPhone Developer";
+				CODE_SIGN_IDENTITY = "iPhone Developer: Kazuya MIURA (23A9VH76TH)";
 				INFOPLIST_FILE = Inspire/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 8.4;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				PROVISIONING_PROFILE = "3fee3147-cbe4-4500-af10-5781aa4d58e3";
+				PROVISIONING_PROFILE = "e5a40573-2698-4970-ad56-fb012cf056fd";
 			};
 			name = Debug;
 		};
@@ -815,12 +815,12 @@
 			baseConfigurationReference = 9089C333A6D59CB0355FD351 /* Pods.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
-				CODE_SIGN_IDENTITY = "iPhone Developer";
+				CODE_SIGN_IDENTITY = "iPhone Developer: Kazuya MIURA (23A9VH76TH)";
 				INFOPLIST_FILE = Inspire/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 8.4;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				PROVISIONING_PROFILE = "3fee3147-cbe4-4500-af10-5781aa4d58e3";
+				PROVISIONING_PROFILE = "e5a40573-2698-4970-ad56-fb012cf056fd";
 			};
 			name = Release;
 		};

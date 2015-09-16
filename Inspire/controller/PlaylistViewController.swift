@@ -8,6 +8,9 @@ class PlaylistViewController: ISPViewController, UITableViewDelegate, UITableVie
 
     override func viewDidLoad() {
         super.viewDidLoad()
+    }
+
+    override func viewWillAppear(animated: Bool) {
         (self.navigationController?.navigationBar as? ISPNavigationBar)?.hide()
     }
 
@@ -54,7 +57,7 @@ class PlaylistViewController: ISPViewController, UITableViewDelegate, UITableVie
             case 0:
                 return UIScreen.mainScreen().bounds.width
             case 1:
-                return 66
+                return 58
             case 2:
                 return 80
             default:
