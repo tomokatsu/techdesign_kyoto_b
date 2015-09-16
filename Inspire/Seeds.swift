@@ -15,110 +15,6 @@ class Seeds {
 
         musicTracks.append(
             createMusicTrack(
-                925252943,
-                title: "Dragon Night",
-                artist: "SEKAI NO OWARI",
-                previewUrl: "http://a407.phobos.apple.com/us/r20/Music3/v4/e6/2e/19/e62e1987-3add-ceed-37ba-beadc84aa16c/mzaf_8316994434485171788.plus.aac.p.m4a",
-                artworkUrl: "http://is4.mzstatic.com/image/thumb/Music3/v4/ff/39/b5/ff39b596-441c-fa6a-049b-951fa24c09d2/Dragon_Night_iT.jpg/100x100bb-85.jpg"
-            ))
-        musicTracks.append(
-            createMusicTrack(
-                1020113529,
-                title: "ANTI-HERO",
-                artist: "SEKAI NO OWARI",
-                previewUrl: "http://a1844.phobos.apple.com/us/r20/Music5/v4/0e/09/4d/0e094dd0-7026-56e5-f153-e6130bad67eb/mzaf_5107267766003380287.plus.aac.p.m4a",
-                artworkUrl: "http://is2.mzstatic.com/image/thumb/Music7/v4/aa/39/f9/aa39f93c-e04c-d43a-8bc5-2e8fcb7f352b/TFCC-89564WW.jpg/100x100bb-85.jpg"
-            ))
-        musicTracks.append(
-            createMusicTrack(
-                984442915,
-                title: "RPG",
-                artist: "SEKAI NO OWARI",
-                previewUrl: "http://a359.phobos.apple.com/us/r20/Music5/v4/e2/f9/bb/e2f9bb18-bb42-5a44-23ab-1b5e920a9c67/mzaf_3872724280287880021.plus.aac.p.m4a",
-                artworkUrl: "http://is3.mzstatic.com/image/thumb/Music5/v4/70/60/ab/7060abcc-5e52-1a97-4736-fa48c59dbaab/TFCC-89428.jpg/100x100bb-85.jpg"
-            ))
-        musicTracks.append(
-            createMusicTrack(
-                978940532,
-                title: "私以外私じゃないの",
-                artist: "ゲスの極み乙女。",
-                previewUrl: "http://a1521.phobos.apple.com/us/r1000/020/Music3/v4/74/fe/76/74fe76eb-23bc-a903-0b6f-7565697224b6/mzaf_5880383470871666845.plus.aac.p.m4a",
-                artworkUrl: "http://is4.mzstatic.com/image/thumb/Music3/v4/bd/00/a0/bd00a01a-9631-a60a-2cd2-81db0a49576f/825646114719.jpg/100x100bb-85.jpg"
-            ))
-        musicTracks.append(
-            createMusicTrack(
-                897763755,
-                title: "猟奇的なキスを私にして",
-                artist: "ゲスの極み乙女。",
-                previewUrl: "http://a1451.phobos.apple.com/us/r1000/002/Music/v4/e1/eb/f1/e1ebf1fc-fffc-04f6-6100-0c74572b1def/mzaf_5544171775392494515.plus.aac.p.m4a",
-                artworkUrl: "http://is5.mzstatic.com/image/thumb/Music6/v4/26/fe/f0/26fef093-6287-5ca0-82c5-47916049d69b/825646233649.jpg/100x100bb-85.jpg"
-            ))
-        musicTracks.append(
-            createMusicTrack(
-                894102341,
-                title: "Break Free (feat. Zedd)",
-                artist: "Ariana Grande",
-                previewUrl: "http://a932.phobos.apple.com/us/r1000/007/Music4/v4/07/bf/61/07bf611d-98ee-e543-6471-d8297d323bff/mzaf_3525907358363476631.plus.aac.p.m4a",
-                artworkUrl: "http://is1.mzstatic.com/image/thumb/Music4/v4/52/1b/90/521b904e-6fe1-e54d-97dc-b515983f4f21/UMG_cvrart_00602537939497_01_RGB72_1500x1500_14UMGIM28138.jpg/100x100bb-85.jpg"
-            ))
-        musicTracks.append(
-            createMusicTrack(
-                570624455,
-                title: "君に届け",
-                artist: "flumpool",
-                previewUrl: "http://a1477.phobos.apple.com/us/r30/Music/v4/25/47/48/25474867-2d34-8e37-f212-739cc285d4d1/mzaf_2677170788674384581.aac.m4a",
-                artworkUrl: "http://is4.mzstatic.com/image/thumb/Music/v4/5e/c6/a8/5ec6a8b2-78b5-af62-3e9c-56542b266ffb/1M.jpg/100x100bb-85.jpg"
-            ))
-        musicTracks.append(
-            createMusicTrack(
-                570402075,
-                title: "花になれ",
-                artist: "flumpool",
-                previewUrl: "http://a607.phobos.apple.com/us/r30/Music/v4/4b/29/94/4b299434-c98c-b20c-620d-1218c5904184/mzaf_608953649448185311.aac.m4a",
-                artworkUrl: "http://is5.mzstatic.com/image/thumb/Music/v4/0f/1b/58/0f1b5882-27e1-1f75-a746-b348ccd5bd87/unrealJ.jpg/100x100bb-85.jpg"
-            ))
-        musicTracks.append(
-            createMusicTrack(
-                1021822438,
-                title: "夏よ止めないで ~You're Romantic~",
-                artist: "flumpool",
-                previewUrl: "http://a651.phobos.apple.com/us/r30/Music5/v4/7f/02/9f/7f029f23-8d25-9d09-d8c7-74e639586033/mzaf_2984557020493265979.plus.aac.p.m4a",
-                artworkUrl: "http://is2.mzstatic.com/image/thumb/Music7/v4/72/5b/52/725b52f3-5016-11fc-778c-f123d40a926a/fp_natsu_yo_tomenaide_tsujyo_JK.jpg/100x100bb-85.jpg"
-            ))
-        musicTracks.append(
-            createMusicTrack(
-                580518244,
-                title: "Someday",
-                artist: "EXILE",
-                previewUrl: "http://a490.phobos.apple.com/us/r20/Music/v4/4d/45/af/4d45af18-c3eb-6bc1-c3ee-003d66fe2f8a/mzaf_4560706282197704755.aac.m4a",
-                artworkUrl: "http://is3.mzstatic.com/image/thumb/Music/v4/7d/71/66/7d716672-11e4-369d-fa6a-f3f3658f1fd7/RZCD-59275.jpg/100x100bb-85.jpg"
-            ))
-        musicTracks.append(
-            createMusicTrack(
-                296503508,
-                title: "Ti Amo",
-                artist: "EXILE",
-                previewUrl: "http://a1821.phobos.apple.com/us/r20/Music/v4/8e/b5/4a/8eb54a13-4675-6d57-a456-83159d0757d4/mzaf_2537153531431199123.aac.m4a",
-                artworkUrl: "http://is2.mzstatic.com/image/thumb/Music/6d/ee/d5/mzi.nkfrsdzs.jpg/100x100bb-85.jpg"
-            ))
-        musicTracks.append(
-            createMusicTrack(
-                551555154,
-                title: "ギンガムチェック",
-                artist: "AKB48",
-                previewUrl: "http://a1329.phobos.apple.com/us/r20/Music/33/44/a8/mzi.nrfacryh.aac.p.m4a",
-                artworkUrl: "http://is3.mzstatic.com/image/thumb/Music/v4/30/13/aa/3013aa8a-3de4-8ff7-a2e3-5f9a84551c98/Type-B_JK_KIZM169-70.jpg/100x100bb-85.jpg"
-            ))
-        musicTracks.append(
-            createMusicTrack(
-                365242901,
-                title: "大声ダイヤモンド",
-                artist: "AKB48",
-                previewUrl: "http://a1541.phobos.apple.com/us/r20/Music/v4/5b/6c/5a/5b6c5a28-fb61-feb7-8739-738e93b5b49f/mzaf_6751855159434674581.aac.m4a",
-                artworkUrl: "http://is4.mzstatic.com/image/thumb/Music/c6/c2/ec/mzi.mlabexlx.jpg/100x100bb-85.jpg"
-            ))
-        musicTracks.append(
-            createMusicTrack(
                 894102379,
                 title: "Love Me Harder",
                 artist: "Ariana Grande & The Weeknd",
@@ -216,155 +112,9 @@ class Seeds {
 
     func createRecommendPlaylists(){
         var recommendPlaylists: [Playlist] = []
-
         var playlist: Playlist = Playlist()
-        playlist.title = "AKB48有名曲まとめ"
-        playlist.comment = "AKB48の有名な曲をまとめてみました！"
-        playlist.playlister = "YASUSHI"
-        playlist.inspiredNumber = 57
-        playlist.musicTracks.append(
-            createMusicTrack(
-                1029291701,
-                title: "ハロウィン・ナイト",
-                artist: "AKB48",
-                previewUrl: "http://a594.phobos.apple.com/us/r30/Music6/v4/55/be/cd/55becdb8-8426-f301-4d45-71843320368e/mzaf_8702226010469567801.plus.aac.p.m4a",
-                artworkUrl: "http://is1.mzstatic.com/image/thumb/Music1/v4/40/bc/27/40bc27a5-64ea-448a-bbd5-efd274d8cd53/KIZM-393-1400.jpg/100x100bb-85.jpg"
-            ))
-        playlist.musicTracks.append(
-            createMusicTrack(
-                681020904,
-                title: "恋するフォーチュンクッキー",
-                artist: "AKB48",
-                previewUrl: "http://a624.phobos.apple.com/us/r20/Music/v4/92/bb/8f/92bb8fcd-d8db-fd68-7b81-a542bc2a70ed/mzaf_391836415160581738.plus.aac.p.m4a",
-                artworkUrl: "http://is1.mzstatic.com/image/thumb/Music4/v4/a6/4c/d5/a64cd540-bc15-37c2-74ed-ed51a0b013e4/32nd_Type-A.jpg/100x100bb-85.jpg"
-            ))
-        playlist.musicTracks.append(
-            createMusicTrack(
-                385919648,
-                title: "ヘビーローテーション",
-                artist: "AKB48",
-                previewUrl: "http://a998.phobos.apple.com/us/r20/Music2/v4/83/50/1f/83501f1c-d92b-63fb-fa77-11c7cb9d1028/mzaf_1582262840040872210.aac.m4a",
-                artworkUrl: "http://is3.mzstatic.com/image/thumb/Music/84/15/32/mzi.eenpnigo.jpg/100x100bb-85.jpg"
-            ))
-        playlist.musicTracks.append(
-            createMusicTrack(
-                454109457,
-                title: "フライングゲット",
-                artist: "AKB48",
-                previewUrl: "http://a872.phobos.apple.com/us/r20/Music2/v4/42/0d/cb/420dcba8-1d6e-7884-b9be-09fcc5558467/mzaf_5618895492947598200.aac.m4a",
-                artworkUrl: "http://is4.mzstatic.com/image/thumb/Music/45/6c/e8/mzi.yurbzdru.jpg/100x100bb-85.jpg"
-            ))
-        playlist.musicTracks.append(
-            createMusicTrack(
-                435459290,
-                title: "Everyday、カチューシャ",
-                artist: "AKB48",
-                previewUrl: "http://a1580.phobos.apple.com/us/r20/Music/v4/bd/94/7d/bd947d62-6891-80db-c52b-1406a2e2e7cc/mzaf_3796936062084215286.aac.m4a",
-                artworkUrl: "http://is2.mzstatic.com/image/thumb/Music/d6/7f/97/mzi.ntmvljrh.jpg/100x100bb-85.jpg"
-            ))
-        playlist.musicTracks.append(
-            createMusicTrack(
-                372367684,
-                title: "ポニーテールとシュシュ",
-                artist: "AKB48",
-                previewUrl: "http://a1054.phobos.apple.com/us/r20/Music2/v4/8f/87/0f/8f870fd6-03a9-2eda-64c8-9c11becc7966/mzaf_4553962118531681933.aac.m4a",
-                artworkUrl: "http://is2.mzstatic.com/image/thumb/Music/24/29/c5/mzi.qpahdoza.jpg/100x100bb-85.jpg"
-            ))
-        playlist.musicTracks.append(
-            createMusicTrack(
-                525361169,
-                title: "真夏のSounds good !",
-                artist: "AKB48",
-                previewUrl: "http://a1490.phobos.apple.com/us/r20/Music/78/b7/9a/mzi.ttpfnoos.aac.p.m4a",
-                artworkUrl: "http://is1.mzstatic.com/image/thumb/Music/v4/99/0f/99/990f9977-cc4f-216c-9f1f-4736a41a5d25/KIZM-151-600.jpg/100x100bb-85.jpg"
-            ))
-        playlist.musicTracks.append(
-            createMusicTrack(
-                397971666,
-                title: "Beginner",
-                artist: "AKB48",
-                previewUrl: "http://a455.phobos.apple.com/us/r20/Music/v4/5c/d1/c4/5cd1c402-8d23-7ca0-ddb7-830033650eb7/mzaf_557086412903685094.aac.m4a",
-                artworkUrl: "http://is4.mzstatic.com/image/thumb/Music/9a/e6/aa/mzi.cstpiuqw.jpg/100x100bb-85.jpg"
-            ))
-        recommendPlaylists.append(playlist)
 
-        playlist = Playlist()
-        playlist.title = "EXILE有名曲まとめ"
-        playlist.comment = "EXILEの有名な曲をまとめてみました！"
-        playlist.playlister = "HIRO"
-        playlist.inspiredNumber = 174
-        playlist.musicTracks.append(
-            createMusicTrack(
-                580518204,
-                title: "Rising Sun",
-                artist: "EXILE",
-                previewUrl: "http://a1258.phobos.apple.com/us/r20/Music/v4/38/2c/1b/382c1bd3-18cc-88ad-9d43-5c87a1f1ac6a/mzaf_689946147304499788.aac.m4a",
-                artworkUrl: "http://is3.mzstatic.com/image/thumb/Music/v4/7d/71/66/7d716672-11e4-369d-fa6a-f3f3658f1fd7/RZCD-59275.jpg/100x100bb-85.jpg"
-            ))
-        playlist.musicTracks.append(
-            createMusicTrack(
-                210621961,
-                title: "Lovers Again",
-                artist: "EXILE",
-                previewUrl: "http://a1837.phobos.apple.com/us/r20/Music/v4/ef/93/d5/ef93d592-b6b8-5bcd-9776-294acab2f271/mzaf_6294600659490670183.aac.m4a",
-                artworkUrl: "http://is1.mzstatic.com/image/thumb/Music/50/6f/7e/mzi.fsjbavke.jpg/100x100bb-85.jpg"
-            ))
-        playlist.musicTracks.append(
-            createMusicTrack(
-                1027248348,
-                title: "24karats GOLD SOUL",
-                artist: "EXILE",
-                previewUrl: "http://a1253.phobos.apple.com/us/r20/Music4/v4/c4/9a/48/c49a48d1-5607-76a3-1db6-e2ca09c09356/mzaf_7994261838214960180.plus.aac.p.m4a",
-                artworkUrl: "http://is4.mzstatic.com/image/thumb/Music69/v4/c6/7e/59/c67e59eb-5160-0418-0adc-44f9f484ba74/ANTCD-15708.jpg/100x100bb-85.jpg"
-            ))
-        playlist.musicTracks.append(
-            createMusicTrack(
-                215603533,
-                title: "道",
-                artist: "EXILE",
-                previewUrl: "http://a1680.phobos.apple.com/us/r20/Music/v4/63/40/9c/63409ca3-8b4f-f691-a16c-adce677b9d94/mzaf_1983412360699568110.aac.m4a",
-                artworkUrl: "http://is3.mzstatic.com/image/thumb/Music/7b/f4/60/mzi.bbsvotlb.jpg/100x100bb-85.jpg"
-            ))
-        playlist.musicTracks.append(
-            createMusicTrack(
-                205718745,
-                title: "Choo Choo TRAIN",
-                artist: "EXILE",
-                previewUrl: "http://a207.phobos.apple.com/us/r20/Music2/v4/ec/60/e4/ec60e4af-9635-0ccc-59f7-34b1c3c5bf93/mzaf_3907709362736336517.aac.m4a",
-                artworkUrl: "http://is1.mzstatic.com/image/thumb/Music/da/b7/57/mzi.fdgrhxoz.jpg/100x100bb-85.jpg"
-            ))
-        playlist.musicTracks.append(
-            createMusicTrack(
-                206088208,
-                title: "ただ…逢いたくて",
-                artist: "EXILE",
-                previewUrl: "http://a201.phobos.apple.com/us/r20/Music/v4/02/84/bb/0284bba5-00eb-b75b-d6d4-dfac43ebb662/mzaf_8528920062462453633.aac.m4a",
-                artworkUrl: "http://is4.mzstatic.com/image/thumb/Music/a8/7a/3a/mzi.lknxequn.jpg/100x100bb-85.jpg"
-            ))
-        playlist.musicTracks.append(
-            createMusicTrack(
-                337707322,
-                title: "ふたつの唇",
-                artist: "EXILE",
-                previewUrl: "http://a1562.phobos.apple.com/us/r20/Music/v4/3e/75/19/3e7519ca-3679-c41d-3239-367a88fd65d1/mzaf_6406315736634827578.aac.m4a",
-                artworkUrl: "http://is5.mzstatic.com/image/thumb/Music/01/04/f2/mzi.urlcffdh.jpg/100x100bb-85.jpg"
-            ))
-        playlist.musicTracks.append(
-            createMusicTrack(
-                394048446,
-                title: "I Wish For You",
-                artist: "EXILE",
-                previewUrl: "http://a1843.phobos.apple.com/us/r20/Music2/v4/be/df/cd/bedfcdd9-eb25-a5fd-1856-9734defc14bc/mzaf_530961967493900486.aac.m4a",
-                artworkUrl: "http://is1.mzstatic.com/image/thumb/Music/ab/0e/8d/mzi.mjlbkxhc.jpg/100x100bb-85.jpg"
-            ))
-        recommendPlaylists.append(playlist)
-
-        playlist = createPlaylist(
-            "おすすめ HOUSE MUSIC",
-            comment: "EXILEの有名な曲をまとめてみました！",
-            playlister: "お嬢様",
-            inspireNumber: 55)
-
+        playlist = createPlaylist("TITLE", comment: "COMMENT", playlister: "PLAYLISTER", inspireNumber: 0)
         playlist.musicTracks.append(
             createMusicTrack(
                 826860759,
@@ -431,21 +181,13 @@ class Seeds {
             ))
         recommendPlaylists.append(playlist)
 
-        playlist = createPlaylist("洋楽で好きな女性シンガー", comment: "洋楽の中でも女性シンガーだけを集めました！", playlister: "僕", inspireNumber: 24)
+        playlist = createPlaylist("TITLE", comment: "COMMENT", playlister: "PLAYLISTER", inspireNumber: 0)
         playlist.musicTracks.append(
             createMusicTrack(
                 894102341,
                 title: "Break Free (feat. Zedd)",
                 artist: "Ariana Grande",
                 previewUrl: "http://a932.phobos.apple.com/us/r1000/007/Music4/v4/07/bf/61/07bf611d-98ee-e543-6471-d8297d323bff/mzaf_3525907358363476631.plus.aac.p.m4a",
-                artworkUrl: "http://is1.mzstatic.com/image/thumb/Music4/v4/52/1b/90/521b904e-6fe1-e54d-97dc-b515983f4f21/UMG_cvrart_00602537939497_01_RGB72_1500x1500_14UMGIM28138.jpg/100x100bb-85.jpg"
-            ))
-        playlist.musicTracks.append(
-            createMusicTrack(
-                894102336,
-                title: "Problem (feat. Iggy Azalea)",
-                artist: "Ariana Grande",
-                previewUrl: "http://a1119.phobos.apple.com/us/r1000/159/Music3/v4/d8/32/23/d832232e-ecda-db63-4aa6-5fc135e290d9/mzaf_4084389937804403765.plus.aac.p.m4a",
                 artworkUrl: "http://is1.mzstatic.com/image/thumb/Music4/v4/52/1b/90/521b904e-6fe1-e54d-97dc-b515983f4f21/UMG_cvrart_00602537939497_01_RGB72_1500x1500_14UMGIM28138.jpg/100x100bb-85.jpg"
             ))
         playlist.musicTracks.append(
@@ -466,28 +208,27 @@ class Seeds {
             ))
         playlist.musicTracks.append(
             createMusicTrack(
-                947648623,
-                title: "Only (feat. Drake, Lil Wayne & Chris Brown)",
-                artist: "Nicki Minaj",
-                previewUrl: "http://a1104.phobos.apple.com/us/r1000/167/Music5/v4/5c/fa/50/5cfa50ac-541b-7449-c664-d3dcd6e90be6/mzaf_5037250707673819328.plus.aac.p.m4a",
-                artworkUrl: "http://is4.mzstatic.com/image/thumb/Music3/v4/c3/5c/3c/c35c3c0a-c9d8-f7ca-72a6-b0302be8f5d2/UMG_cvrart_00602547175663_01_RGB72_1500x1500_14UMGIM59293.jpg/100x100bb-85.jpg"
-            ))
-        playlist.musicTracks.append(
-            createMusicTrack(
                 315025823,
                 title: "Complicated",
                 artist: "Avril Lavigne",
                 previewUrl: "http://a1657.phobos.apple.com/us/r1000/105/Music/15/d9/48/mzm.cjhohfuf.aac.p.m4a",
                 artworkUrl: "http://is4.mzstatic.com/image/thumb/Music/3b/19/57/mzi.ocuvsuca.jpg/100x100bb-85.jpg"
             ))
-
         playlist.musicTracks.append(
             createMusicTrack(
-                315025826,
-                title: "Sk8er Boi",
+                878802275,
+                title: "What the Hell",
                 artist: "Avril Lavigne",
-                previewUrl: "http://a34.phobos.apple.com/us/r1000/104/Music/8d/ce/4b/mzm.yivphsri.aac.p.m4a",
-                artworkUrl: "http://is4.mzstatic.com/image/thumb/Music/3b/19/57/mzi.ocuvsuca.jpg/100x100bb-85.jpg"
+                previewUrl: "http://a760.phobos.apple.com/us/r1000/118/Music/ea/22/34/mzm.ejuvnzfx.aac.p.m4a",
+                artworkUrl: "http://is5.mzstatic.com/image/thumb/Music/6a/20/d9/mzi.ggggjiqc.jpg/100x100bb-85.jpg"
+            ))
+        playlist.musicTracks.append(
+            createMusicTrack(
+                947648623,
+                title: "Only (feat. Drake, Lil Wayne & Chris Brown)",
+                artist: "Nicki Minaj",
+                previewUrl: "http://a1104.phobos.apple.com/us/r1000/167/Music5/v4/5c/fa/50/5cfa50ac-541b-7449-c664-d3dcd6e90be6/mzaf_5037250707673819328.plus.aac.p.m4a",
+                artworkUrl: "http://is4.mzstatic.com/image/thumb/Music3/v4/c3/5c/3c/c35c3c0a-c9d8-f7ca-72a6-b0302be8f5d2/UMG_cvrart_00602547175663_01_RGB72_1500x1500_14UMGIM59293.jpg/100x100bb-85.jpg"
             ))
         playlist.musicTracks.append(
             createMusicTrack(
@@ -497,7 +238,552 @@ class Seeds {
                 previewUrl: "http://a532.phobos.apple.com/us/r1000/090/Music/b0/2a/0e/mzm.rsqnxqhi.aac.p.m4a",
                 artworkUrl: "http://is2.mzstatic.com/image/thumb/Music/fa/81/d5/mzi.zoeulxey.jpg/100x100bb-85.jpg"
             ))
+        playlist.musicTracks.append(
+            createMusicTrack(
+                894102336,
+                title: "Problem (feat. Iggy Azalea)",
+                artist: "Ariana Grande",
+                previewUrl: "http://a1119.phobos.apple.com/us/r1000/159/Music3/v4/d8/32/23/d832232e-ecda-db63-4aa6-5fc135e290d9/mzaf_4084389937804403765.plus.aac.p.m4a",
+                artworkUrl: "http://is1.mzstatic.com/image/thumb/Music4/v4/52/1b/90/521b904e-6fe1-e54d-97dc-b515983f4f21/UMG_cvrart_00602537939497_01_RGB72_1500x1500_14UMGIM28138.jpg/100x100bb-85.jpg"
+            ))
         recommendPlaylists.append(playlist)
+
+        playlist = createPlaylist("TITLE", comment: "COMMENT", playlister: "PLAYLISTER", inspireNumber: 0)
+        playlist.musicTracks.append(
+            createMusicTrack(
+                565825199,
+                title: "Clarity (feat. Foxes)",
+                artist: "Zedd",
+                previewUrl: "http://a941.phobos.apple.com/us/r1000/090/Music/43/3a/f7/mzi.oazcabkj.aac.p.m4a",
+                artworkUrl: "http://is3.mzstatic.com/image/thumb/Music/v4/f3/ff/e0/f3ffe00d-cef9-99a1-2cf8-f22b07bf7c04/UMG_cvrart_00602537173204_01_RGB72_1200x1200_12UMGIM52120.jpg/100x100bb-85.jpg"
+            ))
+        playlist.musicTracks.append(
+            createMusicTrack(
+                669200554,
+                title: "Titanium (feat. Sia)",
+                artist: "David Guetta",
+                previewUrl: "http://a70.phobos.apple.com/us/r1000/053/Music3/v4/61/0b/cc/610bcca2-af06-a760-60d9-7d223c3e1f03/mzaf_1420637825422114821.plus.aac.p.m4a",
+                artworkUrl: "http://is4.mzstatic.com/image/thumb/Music4/v4/05/8c/e5/058ce5a6-b091-18fe-adbb-7356d5ab3e42/dj.thrvmjqj.jpg/100x100bb-85.jpg"
+            ))
+        playlist.musicTracks.append(
+            createMusicTrack(
+                613185021,
+                title: "Diane Young",
+                artist: "Vampire Weekend",
+                previewUrl: "http://a91.phobos.apple.com/us/r1000/075/Music2/v4/0d/67/97/0d679755-8179-0457-84e6-caa664ae89fe/mzaf_6328299204474856517.aac.m4a",
+                artworkUrl: "http://is2.mzstatic.com/image/thumb/Music2/v4/1e/44/17/1e441710-625e-4cf4-f6f4-8d721b737f7d/Vamprie_Weekend_-_Modern_Vampires.jpg/100x100bb-85.jpg"
+            ))
+        playlist.musicTracks.append(
+            createMusicTrack(
+                1498912,
+                title: "Ten Feet Tall (feat. Wrabel)",
+                artist: "Afrojack",
+                previewUrl: "http://a549.phobos.apple.com/us/r1000/017/Music4/v4/14/9c/eb/149ceb26-b487-6b63-f5ea-486757bc7302/mzaf_7699120119172273034.plus.aac.p.m4a",
+                artworkUrl: "http://is4.mzstatic.com/image/thumb/Music4/v4/c4/10/19/c41019cf-622e-d4f0-edb9-09509adc9b3e/UMG_cvrart_00602537818792_01_RGB72_1500x1500_14UMGIM11384.jpg/100x100bb-85.jpg"
+            ))
+        playlist.musicTracks.append(
+            createMusicTrack(
+                322447692,
+                title: "Don't You Worry Child (feat. John Martin)",
+                artist: "Swedish House Mafia",
+                previewUrl: "http://a1305.phobos.apple.com/us/r30/Music/v4/e3/9b/7b/e39b7bec-466b-8ed3-6b90-4bf15e4ec82d/mzaf_1294172699871782380.plus.aac.p.m4a",
+                artworkUrl: "http://is1.mzstatic.com/image/thumb/Music/v4/5a/17/a2/5a17a21d-1401-596c-d522-e27850b78ce4/05099923236356.jpg/100x100bb-85.jpg"
+            ))
+        playlist.musicTracks.append(
+            createMusicTrack(
+                984317041,
+                title: "Beautiful Now (feat. Jon Bellion)",
+                artist: "Zedd",
+                previewUrl: "http://a1202.phobos.apple.com/us/r1000/018/Music1/v4/be/30/89/be308939-e1c1-da3b-3874-174f5616ed49/mzaf_6304857368530244341.plus.aac.p.m4a",
+                artworkUrl: "http://is2.mzstatic.com/image/thumb/Music3/v4/a2/1a/21/a21a21dd-5e56-cbce-0424-daf9b85eb60e/UMG_cvrart_00602547351814_01_RGB72_1500x1500_15UMGIM20773.jpg/100x100bb-85.jpg"
+            ))
+        playlist.musicTracks.append(
+            createMusicTrack(
+                696510598,
+                title: "Stay the Night (feat. Hayley Williams of Paramore)",
+                artist: "Zedd",
+                previewUrl: "http://a1608.phobos.apple.com/us/r1000/035/Music/v4/2e/66/be/2e66be14-8ef3-74d5-1fcf-0252ed6d84cf/mzaf_4598470213594623350.plus.aac.p.m4a",
+                artworkUrl: "http://is2.mzstatic.com/image/thumb/Music4/v4/07/61/6d/07616deb-3166-0a53-7496-6ffb931b22eb/UMG_cvrart_00602537458318_01_RGB72_1800x1800_13UAAIM75149.jpg/100x100bb-85.jpg"
+            ))
+        playlist.musicTracks.append(
+            createMusicTrack(
+                984317031,
+                title: "I Want You to Know (feat. Selena Gomez)",
+                artist: "Zedd",
+                previewUrl: "http://a653.phobos.apple.com/us/r1000/177/Music7/v4/f2/83/d4/f283d45c-5bd3-cec6-609d-657af6ec81e1/mzaf_1270101351839710.plus.aac.p.m4a",
+                artworkUrl: "http://is2.mzstatic.com/image/thumb/Music3/v4/a2/1a/21/a21a21dd-5e56-cbce-0424-daf9b85eb60e/UMG_cvrart_00602547351814_01_RGB72_1500x1500_15UMGIM20773.jpg/100x100bb-85.jpg"
+            ))
+        recommendPlaylists.append(playlist)
+
+        playlist = createPlaylist("TITLE", comment: "COMMENT", playlister: "PLAYLISTER", inspireNumber: 0)
+        playlist.musicTracks.append(
+            createMusicTrack(
+                933984166,
+                title: "Time of Our Lives",
+                artist: "Pitbull & Ne-Yo",
+                previewUrl: "http://a912.phobos.apple.com/us/r1000/058/Music1/v4/31/7c/c5/317cc5a6-aff3-7a01-2563-bcd564f2d87d/mzaf_2316343798964667052.plus.aac.p.m4a",
+                artworkUrl: "http://is1.mzstatic.com/image/thumb/Music5/v4/a2/e7/f2/a2e7f233-7407-609a-3cac-115046332f16/886444753852.jpg/100x100bb-85.jpg"
+            ))
+        playlist.musicTracks.append(
+            createMusicTrack(
+                737053283,
+                title: "Timber (feat. Ke$ha)",
+                artist: "Pitbull",
+                previewUrl: "http://a128.phobos.apple.com/us/r1000/044/Music6/v4/a5/5b/6c/a55b6c6c-4ff7-ddeb-53af-8ff9c5064d3e/mzaf_8149591756865852525.plus.aac.p.m4a",
+                artworkUrl: "http://is1.mzstatic.com/image/thumb/Music6/v4/a2/ca/19/a2ca198d-4277-13ae-834d-ea6bed0b6083/886444305686.jpg/100x100bb-85.jpg"
+            ))
+        playlist.musicTracks.append(
+            createMusicTrack(
+                451476251,
+                title: "Encoded (Original Mix)",
+                artist: "Hardwell",
+                previewUrl: "http://a180.phobos.apple.com/us/r1000/078/Music/v4/bf/b2/eb/bfb2ebc3-1952-901a-b647-900ead4406d4/mzaf_8189491155969250753.aac.m4a",
+                artworkUrl: "http://is1.mzstatic.com/image/thumb/Music/cd/14/b1/mzi.pmaqddkk.jpg/100x100bb-85.jpg"
+            ))
+        playlist.musicTracks.append(
+            createMusicTrack(
+                658602106,
+                title: "Apollo (feat. Amba Shepherd)",
+                artist: "Hardwell",
+                previewUrl: "http://a1032.phobos.apple.com/us/r30/Music4/v4/55/b9/c8/55b9c88e-18f2-a7d6-4b24-ce9ab8b8d7f6/mzaf_3005698206581632048.plus.aac.p.m4a",
+                artworkUrl: "http://is2.mzstatic.com/image/thumb/Music2/v4/94/9d/68/949d680c-2b2b-434f-8549-9ff4017c3404/5060312619333.jpg/100x100bb-85.jpg"
+            ))
+        playlist.musicTracks.append(
+            createMusicTrack(
+                964603354,
+                title: "Young Again (feat. Chris Jones)",
+                artist: "Hardwell",
+                previewUrl: "http://a974.phobos.apple.com/us/r1000/131/Music3/v4/46/8f/92/468f9234-1d12-a142-9ef7-5890ceb3c955/mzaf_6721617467299562188.plus.aac.p.m4a",
+                artworkUrl: "http://is4.mzstatic.com/image/thumb/Music3/v4/db/32/7e/db327e3a-ccee-3259-1810-7eefdaa6e819/0617465587559.jpg/100x100bb-85.jpg"
+            ))
+        playlist.musicTracks.append(
+            createMusicTrack(
+                742014425,
+                title: "Apollo (feat. Amba Shepherd)",
+                artist: "Hardwell",
+                previewUrl: "http://a442.phobos.apple.com/us/r1000/002/Music/v4/b8/76/f4/b876f423-40d6-7954-911b-086700449e07/mzaf_4277455245815627830.plus.aac.p.m4a",
+                artworkUrl: "http://is4.mzstatic.com/image/thumb/Music6/v4/f7/a0/c5/f7a0c591-8b18-4dda-5cce-2a5154545f92/8718521021733.jpg/100x100bb-85.jpg"
+            ))
+        playlist.musicTracks.append(
+            createMusicTrack(
+                440733073,
+                title: "My Kinda Girl (feat. Nelly)",
+                artist: "Pitbull",
+                previewUrl: "http://a886.phobos.apple.com/us/r1000/110/Music/60/76/35/mzm.qikfvzex.aac.p.m4a",
+                artworkUrl: "http://is3.mzstatic.com/image/thumb/Music/d8/0a/fe/mzi.titldtwy.jpg/100x100bb-85.jpg"
+            ))
+        playlist.musicTracks.append(
+            createMusicTrack(
+                933984097,
+                title: "Fireball (feat. John Ryan)",
+                artist: "Pitbull",
+                previewUrl: "http://a742.phobos.apple.com/us/r1000/055/Music3/v4/d6/fc/95/d6fc95ad-0a81-129b-b0d8-91c0d9462365/mzaf_3154331375211884726.plus.aac.p.m4a",
+                artworkUrl: "http://is1.mzstatic.com/image/thumb/Music5/v4/a2/e7/f2/a2e7f233-7407-609a-3cac-115046332f16/886444753852.jpg/100x100bb-85.jpg"
+            ))
+        recommendPlaylists.append(playlist)
+
+        playlist = createPlaylist("TITLE", comment: "COMMENT", playlister: "PLAYLISTER", inspireNumber: 0)
+        playlist.musicTracks.append(
+            createMusicTrack(
+                482734113,
+                title: "What Makes You Beautiful",
+                artist: "One Direction",
+                previewUrl: "http://a725.phobos.apple.com/us/r1000/071/Music/60/31/bb/mzm.jdguvcvo.aac.p.m4a",
+                artworkUrl: "http://is4.mzstatic.com/image/thumb/Music5/v4/e3/02/f7/e302f73b-95e4-6f32-7ec5-a74f60be7c11/dj.dqbxwvpe.jpg/100x100bb-85.jpg"
+            ))
+        playlist.musicTracks.append(
+            createMusicTrack(
+                1024077721,
+                title: "Drag Me Down",
+                artist: "One Direction",
+                previewUrl: "http://a1905.phobos.apple.com/us/r1000/166/Music7/v4/4e/f6/99/4ef69941-2035-be9e-2b5e-57120997274a/mzaf_1698488009618091795.plus.aac.p.m4a",
+                artworkUrl: "http://is4.mzstatic.com/image/thumb/Music69/v4/cd/ab/ed/cdabede1-729b-a1bf-43be-c30d6cf73948/dj.rnfimcca.jpg/100x100bb-85.jpg"
+            ))
+        playlist.musicTracks.append(
+            createMusicTrack(
+                563475531,
+                title: "Live While We're Young",
+                artist: "One Direction",
+                previewUrl: "http://a56.phobos.apple.com/us/r1000/104/Music/03/b3/25/mzi.hrkcaamf.aac.p.m4a",
+                artworkUrl: "http://is3.mzstatic.com/image/thumb/Music/v4/38/56/63/385663c9-c2c5-65d3-f65a-56c1d443537a/886443625815.jpg/100x100bb-85.jpg"
+            ))
+        playlist.musicTracks.append(
+            createMusicTrack(
+                574406658,
+                title: "Kiss You",
+                artist: "One Direction",
+                previewUrl: "http://a1262.phobos.apple.com/us/r1000/089/Music/v4/d9/99/62/d999620c-3efe-f14d-cb6e-e31648dd68c0/mzaf_4449797957425274315.aac.m4a",
+                artworkUrl: "http://is1.mzstatic.com/image/thumb/Music/v4/4d/df/20/4ddf20ea-9628-ef38-ce5c-cd45aa0d9404/886443503175.jpg/100x100bb-85.jpg"
+            ))
+        playlist.musicTracks.append(
+            createMusicTrack(
+                695318302,
+                title: "Story of My Life",
+                artist: "One Direction",
+                previewUrl: "http://a10.phobos.apple.com/us/r1000/001/Music4/v4/e2/d1/13/e2d1130a-ad4f-c90f-7af6-5d8f3d1114b8/mzaf_1424600187937384144.plus.aac.p.m4a",
+                artworkUrl: "http://is4.mzstatic.com/image/thumb/Features6/v4/67/6b/b3/676bb348-7291-7b89-0149-4ad6f7befa28/dj.fuklqvvg.jpg/100x100bb-85.jpg"
+            ))
+        playlist.musicTracks.append(
+            createMusicTrack(
+                914556579,
+                title: "Night Changes",
+                artist: "One Direction",
+                previewUrl: "http://a1837.phobos.apple.com/us/r1000/156/Music3/v4/ea/67/b9/ea67b916-e23e-789d-6592-52ea9e2cb361/mzaf_8083725630267975729.plus.aac.p.m4a",
+                artworkUrl: "http://is4.mzstatic.com/image/thumb/Music5/v4/64/56/c8/6456c847-7afc-5d1f-4c7f-f3b7ee6b23d2/dj.ljogvxod.jpg/100x100bb-85.jpg"
+            ))
+        playlist.musicTracks.append(
+            createMusicTrack(
+                914556572,
+                title: "Steal My Girl",
+                artist: "One Direction",
+                previewUrl: "http://a1895.phobos.apple.com/us/r1000/002/Music3/v4/a7/8e/68/a78e6843-8cc2-5be0-3900-bbf95e62a0bc/mzaf_7403043370196925683.plus.aac.p.m4a",
+                artworkUrl: "http://is4.mzstatic.com/image/thumb/Music5/v4/64/56/c8/6456c847-7afc-5d1f-4c7f-f3b7ee6b23d2/dj.ljogvxod.jpg/100x100bb-85.jpg"
+            ))
+        playlist.musicTracks.append(
+            createMusicTrack(
+                482734115,
+                title: "One Thing",
+                artist: "One Direction",
+                previewUrl: "http://a446.phobos.apple.com/us/r1000/060/Music/3c/92/f7/mzm.ajckwzji.aac.p.m4a",
+                artworkUrl: "http://is4.mzstatic.com/image/thumb/Music5/v4/e3/02/f7/e302f73b-95e4-6f32-7ec5-a74f60be7c11/dj.dqbxwvpe.jpg/100x100bb-85.jpg"
+            ))
+        recommendPlaylists.append(playlist)
+
+        playlist = createPlaylist("TITLE", comment: "COMMENT", playlister: "PLAYLISTER", inspireNumber: 0)
+        playlist.musicTracks.append(
+            createMusicTrack(
+                480054438,
+                title: "Levels",
+                artist: "Avicii",
+                previewUrl: "http://a805.phobos.apple.com/us/r1000/071/Music/3b/2d/ac/mzm.wtdviygy.aac.p.m4a",
+                artworkUrl: "http://is1.mzstatic.com/image/thumb/Music/e6/09/04/mzi.ybhssean.jpg/100x100bb-85.jpg"
+            ))
+        playlist.musicTracks.append(
+            createMusicTrack(
+                943278975,
+                title: "The Nights",
+                artist: "Avicii",
+                previewUrl: "http://a1227.phobos.apple.com/us/r1000/038/Music1/v4/be/f7/3b/bef73bd4-353c-96d5-190c-79ce57a352ed/mzaf_6859011514517975855.plus.aac.p.m4a",
+                artworkUrl: "http://is4.mzstatic.com/image/thumb/Music3/v4/f4/d3/fe/f4d3fedf-0e1b-7778-f96f-00246df5f521/UMG_cvrart_00602547155696_01_RGB72_1500x1500_14UMGIM56567.jpg/100x100bb-85.jpg"
+            ))
+        playlist.musicTracks.append(
+            createMusicTrack(
+                677376027,
+                title: "Addicted To You",
+                artist: "Avicii",
+                previewUrl: "http://a455.phobos.apple.com/us/r1000/054/Music6/v4/fc/42/ac/fc42acac-299a-2ae9-08e6-51da57582865/mzaf_6016534246351768212.plus.aac.p.m4a",
+                artworkUrl: "http://is5.mzstatic.com/image/thumb/Features/v4/9b/3c/ba/9b3cbacd-f7c2-13d0-0a97-af273a5560fb/dj.lmslhwto.jpg/100x100bb-85.jpg"
+            ))
+        playlist.musicTracks.append(
+            createMusicTrack(
+                638521124,
+                title: "I Could Be the One (Avicii vs Nicky Romero)",
+                artist: "Avicii & Nicky Romero",
+                previewUrl: "http://a1912.phobos.apple.com/us/r1000/078/Music2/v4/d9/77/49/d9774925-5be2-f0f0-44f1-39e3cc196d36/mzaf_7273581115841784365.aac.m4a",
+                artworkUrl: "http://is3.mzstatic.com/image/thumb/Music/v4/f6/d6/5e/f6d65e06-304b-df44-3437-14f26c869bcd/UMG_cvrart_00602537278398_01_RGB72_1500x1500_12UMGIM64887.jpg/100x100bb-85.jpg"
+            ))
+        playlist.musicTracks.append(
+            createMusicTrack(
+                878802275,
+                title: "Fade Into Darkness (Vocal Club Mix)",
+                artist: "Avicii",
+                previewUrl: "http://a1601.phobos.apple.com/us/r1000/087/Music/8c/12/85/mzm.gcfpywqm.aac.p.m4a",
+                artworkUrl: "http://is5.mzstatic.com/image/thumb/Music/33/55/f3/mzi.suamolgm.jpg/100x100bb-85.jpg"
+            ))
+        playlist.musicTracks.append(
+            createMusicTrack(
+                677376026,
+                title: "Hey Brother",
+                artist: "Avicii",
+                previewUrl: "http://a353.phobos.apple.com/us/r1000/000/Music/v4/a4/46/52/a44652f6-0812-144b-b303-44cb3186dcde/mzaf_6548361306007274789.plus.aac.p.m4a",
+                artworkUrl: "http://is5.mzstatic.com/image/thumb/Features/v4/9b/3c/ba/9b3cbacd-f7c2-13d0-0a97-af273a5560fb/dj.lmslhwto.jpg/100x100bb-85.jpg"
+            ))
+        playlist.musicTracks.append(
+            createMusicTrack(
+                487946086,
+                title: "Levels",
+                artist: "Avicii",
+                previewUrl: "http://a9.phobos.apple.com/us/r1000/063/Music/99/59/8a/mzm.rblgliqa.aac.p.m4a",
+                artworkUrl: "http://is5.mzstatic.com/image/thumb/Music/b7/92/84/mzi.xfmsjidp.jpg/100x100bb-85.jpg"
+            ))
+        playlist.musicTracks.append(
+            createMusicTrack(
+                677376025,
+                title: "You Make Me",
+                artist: "Avicii",
+                previewUrl: "http://a914.phobos.apple.com/us/r1000/053/Music/v4/5a/37/68/5a3768b8-a4a2-f934-63e1-9424c63b2c72/mzaf_542549507245392673.plus.aac.p.m4a",
+                artworkUrl: "http://is5.mzstatic.com/image/thumb/Features/v4/9b/3c/ba/9b3cbacd-f7c2-13d0-0a97-af273a5560fb/dj.lmslhwto.jpg/100x100bb-85.jpg"
+            ))
+        recommendPlaylists.append(playlist)
+
+        playlist = createPlaylist("TITLE", comment: "COMMENT", playlister: "PLAYLISTER", inspireNumber: 0)
+        playlist.musicTracks.append(
+            createMusicTrack(
+                542469000,
+                title: "Love Somebody",
+                artist: "Maroon 5",
+                previewUrl: "http://a387.phobos.apple.com/us/r1000/101/Music/56/53/b2/mzi.nogsektx.aac.p.m4a",
+                artworkUrl: "http://is5.mzstatic.com/image/thumb/Music/v4/db/8c/c8/db8cc841-47a0-2845-5116-e1762dbd711e/UMG_cvrart_00602537109692_01_RGB72_1200x1200_12UMGIM26178.jpg/100x100bb-85.jpg"
+            ))
+        playlist.musicTracks.append(
+            createMusicTrack(
+                902147882,
+                title: "She Will Be Loved",
+                artist: "Maroon 5",
+                previewUrl: "http://a663.phobos.apple.com/us/r1000/124/Music5/v4/74/b6/43/74b6433c-103a-de1f-407f-61944289131c/mzaf_6071438917600161334.plus.aac.p.m4a",
+                artworkUrl: "http://is5.mzstatic.com/image/thumb/Music3/v4/bc/0a/b3/bc0ab3da-9d18-aa63-9db9-4f8d9276b543/UMG_cvrart_00602537943869_01_RGB72_1500x1500_14UMGIM27076.jpg/100x100bb-85.jpg"
+            ))
+        playlist.musicTracks.append(
+            createMusicTrack(
+                902149699,
+                title: "Makes Me Wonder",
+                artist: "Maroon 5",
+                previewUrl: "http://a637.phobos.apple.com/us/r1000/128/Music3/v4/a9/60/ea/a960eac1-515d-d625-485d-b73975219e3a/mzaf_5925012465926639536.plus.aac.p.m4a",
+                artworkUrl: "http://is1.mzstatic.com/image/thumb/Music5/v4/24/5d/ce/245dce12-6bab-8d06-4c39-3c65326a8964/UMG_cvrart_00602537943791_01_RGB72_1500x1500_07UMGIM06094.jpg/100x100bb-85.jpg"
+            ))
+        playlist.musicTracks.append(
+            createMusicTrack(
+                536292498,
+                title: "If I Never See Your Face Again (feat. Rihanna)",
+                artist: "Maroon 5 feat. Rihanna",
+                previewUrl: "http://a1662.phobos.apple.com/us/r1000/117/Music/41/89/08/mzm.ssvsbpls.aac.p.m4a",
+                artworkUrl: "http://is5.mzstatic.com/image/thumb/Features/ae/10/7e/dj.ugxeeiml.jpg/100x100bb-85.jpg"
+            ))
+        playlist.musicTracks.append(
+            createMusicTrack(
+                902111717,
+                title: "Moves Like Jagger (feat. Christina Aguilera)",
+                artist: "Maroon 5",
+                previewUrl: "http://a902.phobos.apple.com/us/r1000/122/Music5/v4/25/5d/ef/255def7e-b41e-d551-a141-f75e142a7c7a/mzaf_824783162342211917.plus.aac.p.m4a",
+                artworkUrl: "http://is5.mzstatic.com/image/thumb/Music3/v4/e3/61/25/e361251b-3ca7-8878-fc9c-3b53c8f674dc/UMG_cvrart_00602537943937_01_RGB72_1406x1406_14UMGIM27067.jpg/100x100bb-85.jpg"
+            ))
+        playlist.musicTracks.append(
+            createMusicTrack(
+                993352744,
+                title: "Sugar",
+                artist: "Maroon 5",
+                previewUrl: "http://a896.phobos.apple.com/us/r1000/001/Music5/v4/b5/5d/8b/b55d8bca-78b8-ed19-d241-ba725f89de50/mzaf_3660745207759028150.plus.aac.p.m4a",
+                artworkUrl: "http://is1.mzstatic.com/image/thumb/Music7/v4/4a/da/53/4ada5368-ab4b-6cca-e877-95e0dccdf9b3/UMG_cvrart_00602547380272_01_RGB72_1500x1500_14UMGIM31675.jpg/100x100bb-85.jpg"
+            ))
+        playlist.musicTracks.append(
+            createMusicTrack(
+                542468974,
+                title: "Daylight",
+                artist: "Maroon 5",
+                previewUrl: "http://a1852.phobos.apple.com/us/r1000/117/Music/72/28/8d/mzi.rjwrbxee.aac.p.m4a",
+                artworkUrl: "http://is5.mzstatic.com/image/thumb/Music/v4/db/8c/c8/db8cc841-47a0-2845-5116-e1762dbd711e/UMG_cvrart_00602537109692_01_RGB72_1200x1200_12UMGIM26178.jpg/100x100bb-85.jpg"
+            ))
+        playlist.musicTracks.append(
+            createMusicTrack(
+                542468961,
+                title: "Payphone (feat. Wiz Khalifa)",
+                artist: "Maroon 5",
+                previewUrl: "http://a333.phobos.apple.com/us/r1000/082/Music/ea/be/fd/mzi.zaujodbn.aac.p.m4a",
+                artworkUrl: "http://is5.mzstatic.com/image/thumb/Music/v4/db/8c/c8/db8cc841-47a0-2845-5116-e1762dbd711e/UMG_cvrart_00602537109692_01_RGB72_1200x1200_12UMGIM26178.jpg/100x100bb-85.jpg"
+            ))
+        recommendPlaylists.append(playlist)
+
+        playlist = createPlaylist("TITLE", comment: "COMMENT", playlister: "PLAYLISTER", inspireNumber: 0)
+        playlist.musicTracks.append(
+            createMusicTrack(
+                699729587,
+                title: "Days Go By (Acoustic)",
+                artist: "Dirty Vegas",
+                previewUrl: "http://a333.phobos.apple.com/us/r1000/130/Music3/v4/d6/f3/e4/d6f3e4da-fea5-6b2e-9233-5a87a895078b/mzaf_1107842953333490643.plus.aac.p.m4a",
+                artworkUrl: "http://is3.mzstatic.com/image/thumb/Music6/v4/42/77/22/427722e3-5875-c60c-0125-5a9f25b8cd72/dj.pcgelofg.jpg/100x100bb-85.jpg"
+            ))
+        playlist.musicTracks.append(
+            createMusicTrack(
+                307201729,
+                title: "Pressure (Sultan & Ned Shepard Mix)",
+                artist: "Dirty Vegas",
+                previewUrl: "http://a1376.phobos.apple.com/us/r1000/060/Music2/v4/b5/ee/1e/b5ee1e64-b474-9d13-e930-20310731337c/mzaf_2379422896259328986.aac.m4a",
+                artworkUrl: "http://is5.mzstatic.com/image/thumb/Music/b5/af/77/mzi.awoywbym.tif/100x100bb-85.jpg"
+            ))
+        playlist.musicTracks.append(
+            createMusicTrack(
+                322180998,
+                title: "Tonight (IMS Anthem 2009, Pt. 1) [Above & Beyond Remix]",
+                artist: "Dirty Vegas",
+                previewUrl: "http://a1780.phobos.apple.com/us/r30/Music/v4/49/b2/5e/49b25eea-9150-d62d-9674-a6ba7d5205a8/mzaf_5418926586052035271.m4a",
+                artworkUrl: "http://is4.mzstatic.com/image/thumb/Music/a4/75/36/mzi.ljxynrkg.jpg/100x100bb-85.jpg"
+            ))
+        playlist.musicTracks.append(
+            createMusicTrack(
+                1023688417,
+                title: "Photograph",
+                artist: "Dirty Vegas",
+                previewUrl: "http://a1419.phobos.apple.com/us/r1000/125/Music7/v4/b9/ed/ee/b9edee8b-dff1-843d-7364-913591456f3b/mzaf_9189618746803100209.plus.aac.p.m4a",
+                artworkUrl: "http://is1.mzstatic.com/image/thumb/Music7/v4/b7/e2/cd/b7e2cde6-b430-47b9-60c3-82f0f9662fa6/8014090075819.jpg/100x100bb-85.jpg"
+            ))
+        playlist.musicTracks.append(
+            createMusicTrack(
+                207539898,
+                title: "Late Nights and Street Fights (Main Title Theme from Standoff)",
+                artist: "Dirty Vegas",
+                previewUrl: "http://a1973.phobos.apple.com/us/r1000/073/Music/v4/c4/aa/8e/c4aa8e22-c9da-dd0a-afd6-42b3cf89d3b5/mzaf_7731706612355389533.m4a",
+                artworkUrl: "http://is4.mzstatic.com/image/thumb/Music/c1/d5/51/mzi.edtcwhfr.jpg/100x100bb-85.jpg"
+            ))
+        playlist.musicTracks.append(
+            createMusicTrack(
+                699729005,
+                title: "Days Go By",
+                artist: "Dirty Vegas",
+                previewUrl: "http://a266.phobos.apple.com/us/r1000/177/Music3/v4/95/83/de/9583de30-255c-cc56-a9f9-fa7a7830b455/mzaf_5114018111612632875.plus.aac.p.m4a",
+                artworkUrl: "http://is3.mzstatic.com/image/thumb/Music6/v4/42/77/22/427722e3-5875-c60c-0125-5a9f25b8cd72/dj.pcgelofg.jpg/100x100bb-85.jpg"
+            ))
+        playlist.musicTracks.append(
+            createMusicTrack(
+                429520728,
+                title: "Little White Doves",
+                artist: "Dirty Vegas",
+                previewUrl: "http://a1042.phobos.apple.com/us/r30/Music/d1/32/b1/mzm.yefckcow.aac.p.m4a",
+                artworkUrl: "http://is2.mzstatic.com/image/thumb/Music/cd/4c/82/mzi.pvlazjcn.jpg/100x100bb-85.jpg"
+            ))
+        playlist.musicTracks.append(
+            createMusicTrack(
+                699729503,
+                title: "Simple Things, Pt. 2",
+                artist: "Dirty Vegas",
+                previewUrl: "http://a60.phobos.apple.com/us/r1000/168/Music69/v4/f0/ea/ab/f0eaab35-481b-dd7e-e214-81deb5282d41/mzaf_1191874371790944372.plus.aac.p.m4a",
+                artworkUrl: "http://is3.mzstatic.com/image/thumb/Music6/v4/42/77/22/427722e3-5875-c60c-0125-5a9f25b8cd72/dj.pcgelofg.jpg/100x100bb-85.jpg"
+            ))
+        recommendPlaylists.append(playlist)
+
+        playlist = createPlaylist("TITLE", comment: "COMMENT", playlister: "PLAYLISTER", inspireNumber: 0)
+        playlist.musicTracks.append(
+            createMusicTrack(
+                331340577,
+                title: "Bulletproof",
+                artist: "La Roux",
+                previewUrl: "http://a516.phobos.apple.com/us/r1000/106/Music/c6/72/58/mzm.iiudobyf.aac.p.m4a",
+                artworkUrl: "http://is4.mzstatic.com/image/thumb/Music/23/03/33/mzi.zwkjaqnl.jpg/100x100bb-85.jpg"
+            ))
+        playlist.musicTracks.append(
+            createMusicTrack(
+                587763849,
+                title: "Bulletproof",
+                artist: "La Roux",
+                previewUrl: "http://a704.phobos.apple.com/us/r1000/118/Music/d1/18/ca/mzm.ndfrcsyz.aac.p.m4a",
+                artworkUrl: "http://is3.mzstatic.com/image/thumb/Music/7b/aa/1a/mzi.elevieve.jpg/100x100bb-85.jpg"
+            ))
+        playlist.musicTracks.append(
+            createMusicTrack(
+                391569892,
+                title: "In for the Kill",
+                artist: "La Roux",
+                previewUrl: "http://a289.phobos.apple.com/us/r1000/087/Music/b0/51/07/mzm.bojqvwkx.aac.p.m4a",
+                artworkUrl: "http://is2.mzstatic.com/image/thumb/Music/8e/d6/a7/mzi.zozinerc.jpg/100x100bb-85.jpg"
+            ))
+        playlist.musicTracks.append(
+            createMusicTrack(
+                311213337,
+                title: "In for the Kill",
+                artist: "La Roux",
+                previewUrl: "http://a310.phobos.apple.com/us/r1000/103/Music/12/73/58/mzm.auhpzmfh.aac.p.m4a",
+                artworkUrl: "http://is1.mzstatic.com/image/thumb/Music/8d/69/70/mzi.qcukialc.jpg/100x100bb-85.jpg"
+            ))
+        playlist.musicTracks.append(
+            createMusicTrack(
+                876563622,
+                title: "Uptight Downtown",
+                artist: "La Roux",
+                previewUrl: "http://a417.phobos.apple.com/us/r1000/006/Music6/v4/1c/3f/36/1c3f36aa-348c-de70-f59c-74dc37f0f9a0/mzaf_2218076515900107862.plus.aac.p.m4a",
+                artworkUrl: "http://is2.mzstatic.com/image/thumb/Music2/v4/6d/8c/35/6d8c358c-f2a2-d9dc-aabe-2e1057e497e2/UMG_cvrart_00602537864058_01_RGB72_1500x1500_14UMGIM17774.jpg/100x100bb-85.jpg"
+            ))
+        playlist.musicTracks.append(
+            createMusicTrack(
+                331340589,
+                title: "Cover My Eyes",
+                artist: "La Roux",
+                previewUrl: "http://a1481.phobos.apple.com/us/r1000/099/Music/34/ae/6a/mzm.gbcmwvcg.aac.p.m4a",
+                artworkUrl: "http://is4.mzstatic.com/image/thumb/Music/23/03/33/mzi.zwkjaqnl.jpg/100x100bb-85.jpg"
+            ))
+        playlist.musicTracks.append(
+            createMusicTrack(
+                331340608,
+                title: "Fascination",
+                artist: "La Roux",
+                previewUrl: "http://a1049.phobos.apple.com/us/r1000/102/Music/e0/26/26/mzm.eyruvyvt.aac.p.m4a",
+                artworkUrl: "http://is4.mzstatic.com/image/thumb/Music/23/03/33/mzi.zwkjaqnl.jpg/100x100bb-85.jpg"
+            ))
+        playlist.musicTracks.append(
+            createMusicTrack(
+                331340658,
+                title: "Armour Love",
+                artist: "La Roux",
+                previewUrl: "http://a1619.phobos.apple.com/us/r1000/099/Music/ca/58/18/mzm.svettafs.aac.p.m4a",
+                artworkUrl: "http://is4.mzstatic.com/image/thumb/Music/23/03/33/mzi.zwkjaqnl.jpg/100x100bb-85.jpg"
+            ))
+        recommendPlaylists.append(playlist)
+
+        playlist = createPlaylist("TITLE", comment: "COMMENT", playlister: "PLAYLISTER", inspireNumber: 0)
+        playlist.musicTracks.append(
+            createMusicTrack(
+                1008393092,
+                title: "Pusher (feat. Anna Lunoe)",
+                artist: "Sleepy Tom",
+                previewUrl: "http://a354.phobos.apple.com/us/r1000/000/Music7/v4/7b/3e/6e/7b3e6ed1-3143-5117-9295-31abe6608072/mzaf_8240233671600320266.plus.aac.p.m4a",
+                artworkUrl: "http://is3.mzstatic.com/image/thumb/Music7/v4/9f/6c/5a/9f6c5ab0-af3d-b23e-9062-a099ebb0b0e2/851004006389.jpg/100x100bb-85.jpg"
+            ))
+        playlist.musicTracks.append(
+            createMusicTrack(
+                1013837342,
+                title: "I Want Your Soul",
+                artist: "Sleepy Tom",
+                previewUrl: "http://a740.phobos.apple.com/us/r20/Music5/v4/1e/03/68/1e0368a7-8619-169a-312b-a7dcd694a88c/mzaf_3305022332464781397.plus.aac.p.m4a",
+                artworkUrl: "http://is5.mzstatic.com/image/thumb/Music7/v4/cc/d4/79/ccd47924-4003-cfcd-a09a-bb0795f24dd6/8712944477979.png/100x100bb-85.jpg"
+            ))
+        playlist.musicTracks.append(
+            createMusicTrack(
+                1033707950,
+                title: "Be Right There",
+                artist: "Diplo & Sleepy Tom",
+                previewUrl: "http://a232.phobos.apple.com/us/r1000/166/Music49/v4/37/77/2e/37772ec7-5638-ba2c-3440-60fac27354b7/mzaf_4425157510400095443.plus.aac.p.m4a",
+                artworkUrl: "http://is2.mzstatic.com/image/thumb/Music69/v4/36/c3/7b/36c37b94-fdd6-ff17-c7da-1d0bd40f8d27/Be-right-there-final_1800px_2.jpg/100x100bb-85.jpg"
+            ))
+        playlist.musicTracks.append(
+            createMusicTrack(
+                649549387,
+                title: "Let It Go",
+                artist: "Sleepy Tom",
+                previewUrl: "http://a1760.phobos.apple.com/us/r1000/030/Music6/v4/b7/5e/3a/b75e3a1e-a0e9-0c3b-2937-308ec4ee805f/mzaf_1739444675904233299.plus.aac.p.m4a",
+                artworkUrl: "http://is1.mzstatic.com/image/thumb/Music/v4/64/6f/57/646f57da-aef9-9507-0cb7-88951eba5a50/856730003930.jpg/100x100bb-85.jpg"
+            ))
+        playlist.musicTracks.append(
+            createMusicTrack(
+                698636010,
+                title: "Champions",
+                artist: "Sleepy Tom",
+                previewUrl: "http://a1112.phobos.apple.com/us/r1000/043/Music7/v4/7d/55/92/7d5592df-aefc-aed4-26d7-d7506e687157/mzaf_7787549482869368246.plus.aac.p.m4a",
+                artworkUrl: "http://is2.mzstatic.com/image/thumb/Music7/v4/1e/d1/5b/1ed15bcf-6ce4-f6ec-7c21-32dcb84eb9f1/889176912948.jpg/100x100bb-85.jpg"
+            ))
+        playlist.musicTracks.append(
+            createMusicTrack(
+                649549429,
+                title: "The Currency",
+                artist: "Sleepy Tom",
+                previewUrl: "http://a935.phobos.apple.com/us/r1000/047/Music6/v4/c9/f8/5d/c9f85d79-8d3e-e8ea-7ad5-9ce192a81dbf/mzaf_9130387742879414563.plus.aac.p.m4a",
+                artworkUrl: "http://is1.mzstatic.com/image/thumb/Music/v4/64/6f/57/646f57da-aef9-9507-0cb7-88951eba5a50/856730003930.jpg/100x100bb-85.jpg"
+            ))
+        playlist.musicTracks.append(
+            createMusicTrack(
+                649549430,
+                title: "Throwing Plates",
+                artist: "Sleepy Tom",
+                previewUrl: "http://a1038.phobos.apple.com/us/r1000/053/Music4/v4/4c/fe/8e/4cfe8e8d-4fdf-87e7-4294-7d8778513c8c/mzaf_3137488239081851250.plus.aac.p.m4a",
+                artworkUrl: "http://is1.mzstatic.com/image/thumb/Music/v4/64/6f/57/646f57da-aef9-9507-0cb7-88951eba5a50/856730003930.jpg/100x100bb-85.jpg"
+            ))
+        playlist.musicTracks.append(
+            createMusicTrack(
+                1008393093,
+                title: "Pusher (feat. Anna Lunoe) [Branchez Remix]",
+                artist: "Sleepy Tom",
+                previewUrl: "http://a1740.phobos.apple.com/us/r1000/145/Music1/v4/65/fe/11/65fe1162-e4f1-31a7-660f-4f8115f06de1/mzaf_4164327155421126802.plus.aac.p.m4a",
+                artworkUrl: "http://is3.mzstatic.com/image/thumb/Music7/v4/9f/6c/5a/9f6c5ab0-af3d-b23e-9062-a099ebb0b0e2/851004006389.jpg/100x100bb-85.jpg"
+            ))
+        recommendPlaylists.append(playlist)
+
 
         let realm = Realm()
         realm.write(){
@@ -507,7 +793,7 @@ class Seeds {
         }
     }
 
-    
+
 
     func createPlaylist(title: String, comment: String, playlister: String, inspireNumber: Int) -> Playlist{
         var playlist = Playlist()
