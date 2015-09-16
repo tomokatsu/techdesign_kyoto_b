@@ -26,6 +26,14 @@ class PublishViewController: ISPViewController, UITableViewDataSource, UITableVi
 
     }
 
+    @IBAction func publishButtonTouchUpInside(sender: UIBarButtonItem) {
+        let publishedViewController: PublishedViewController = self.storyboard!.instantiateViewControllerWithIdentifier("Published") as! PublishedViewController
+
+        publishedViewController.modalPresentationStyle = .OverFullScreen
+        publishedViewController.modalTransitionStyle = .CrossDissolve
+        presentViewController(publishedViewController, animated: true, completion:nil)
+    }
+
     func tableView(tableView: UITableView, cellForRowAtIndexPath indexPath: NSIndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCellWithIdentifier("MusicTrackCell", forIndexPath: indexPath) as? MusicTrackCell ?? MusicTrackCell()
         cell.music = playlist?.musicTracks[indexPath.row]
