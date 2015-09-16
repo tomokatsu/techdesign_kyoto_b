@@ -8,6 +8,9 @@ class PlaylistViewController: ISPViewController, UITableViewDelegate, UITableVie
 
     override func viewDidLoad() {
         super.viewDidLoad()
+    }
+
+    override func viewWillAppear(animated: Bool) {
         (self.navigationController?.navigationBar as? ISPNavigationBar)?.hide()
     }
 

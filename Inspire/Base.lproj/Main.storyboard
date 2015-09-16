@@ -27,6 +27,8 @@
             <string>mplus-1p-light</string>
             <string>mplus-1p-light</string>
             <string>mplus-1p-light</string>
+            <string>mplus-1p-light</string>
+            <string>mplus-1p-light</string>
         </mutableArray>
         <mutableArray key="mplus-1p-regular.ttf">
             <string>mplus-1p-regular</string>
@@ -36,7 +38,7 @@
         </mutableArray>
     </customFonts>
     <scenes>
-        <!--I n s p i r e-->
+        <!--Top View Controller-->
         <scene sceneID="Z4X-GM-ilZ">
             <objects>
                 <viewController id="mz7-35-jT4" customClass="TopViewController" customModule="Inspire" customModuleProvider="target" sceneMemberID="viewController">
@@ -48,43 +50,79 @@
                         <rect key="frame" x="0.0" y="64" width="320" height="524"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="p3u-Bb-glg" customClass="ISPPagingScrollView" customModule="Inspire" customModuleProvider="target">
-                                <rect key="frame" x="0.0" y="29" width="320" height="495"/>
-                                <color key="backgroundColor" red="0.11372549019607843" green="0.11372549019607843" blue="0.12549019607843137" alpha="1" colorSpace="calibratedRGB"/>
+                            <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" pagingEnabled="YES" translatesAutoresizingMaskIntoConstraints="NO" id="p3u-Bb-glg" customClass="ISPPagingScrollView" customModule="Inspire" customModuleProvider="target">
+                                <rect key="frame" x="0.0" y="51" width="320" height="473"/>
+                                <color key="backgroundColor" red="0.098039215686274508" green="0.098039215686274508" blue="0.10196078431372549" alpha="1" colorSpace="calibratedRGB"/>
                                 <connections>
                                     <outlet property="delegate" destination="mz7-35-jT4" id="eQG-Fz-xpz"/>
                                 </connections>
                             </scrollView>
-                            <segmentedControl opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="top" segmentControlStyle="bar" selectedSegmentIndex="0" translatesAutoresizingMaskIntoConstraints="NO" id="yeF-yk-Ef5">
-                                <rect key="frame" x="0.0" y="0.0" width="320" height="29"/>
+                            <view clipsSubviews="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="XNa-h0-4NG">
+                                <rect key="frame" x="15" y="8" width="290" height="35"/>
+                                <subviews>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" adjustsImageWhenHighlighted="NO" lineBreakMode="clip" translatesAutoresizingMaskIntoConstraints="NO" id="UBg-4c-2on">
+                                        <rect key="frame" x="0.0" y="0.0" width="145" height="35"/>
+                                        <fontDescription key="fontDescription" name="mplus-1p-light" family="M+ 1p" pointSize="14"/>
+                                        <color key="tintColor" red="0.0" green="0.0" blue="0.0" alpha="0.0" colorSpace="calibratedRGB"/>
+                                        <state key="normal" title="MyFeed">
+                                            <color key="titleColor" red="0.84705882352941175" green="0.84705882352941175" blue="0.84705882352941175" alpha="1" colorSpace="calibratedRGB"/>
+                                            <color key="titleShadowColor" red="0.84705882352941175" green="0.84705882352941175" blue="0.84705882352941175" alpha="1" colorSpace="calibratedRGB"/>
+                                        </state>
+                                        <connections>
+                                            <action selector="myFeedButtonTouchUpInside:" destination="mz7-35-jT4" eventType="touchUpInside" id="5kf-Lk-5iq"/>
+                                        </connections>
+                                    </button>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" adjustsImageWhenHighlighted="NO" lineBreakMode="clip" translatesAutoresizingMaskIntoConstraints="NO" id="I0x-mw-IlY">
+                                        <rect key="frame" x="145" y="0.0" width="145" height="35"/>
+                                        <fontDescription key="fontDescription" name="mplus-1p-light" family="M+ 1p" pointSize="14"/>
+                                        <state key="normal" title="MyPlaylist">
+                                            <color key="titleColor" red="0.84705882352941175" green="0.84705882352941175" blue="0.84705882352941175" alpha="1" colorSpace="calibratedRGB"/>
+                                            <color key="titleShadowColor" red="0.84705882352941175" green="0.84705882352941175" blue="0.84705882352941175" alpha="1" colorSpace="calibratedRGB"/>
+                                        </state>
+                                        <connections>
+                                            <action selector="myPlaylistButtonTouchUpInside:" destination="mz7-35-jT4" eventType="touchUpInside" id="DHL-Ow-TKt"/>
+                                        </connections>
+                                    </button>
+                                </subviews>
+                                <color key="backgroundColor" white="1" alpha="0.0" colorSpace="calibratedWhite"/>
                                 <constraints>
-                                    <constraint firstAttribute="height" constant="28" id="FqY-o9-edN"/>
+                                    <constraint firstItem="I0x-mw-IlY" firstAttribute="leading" secondItem="UBg-4c-2on" secondAttribute="trailing" id="1rG-Ya-CVP"/>
+                                    <constraint firstItem="I0x-mw-IlY" firstAttribute="top" secondItem="XNa-h0-4NG" secondAttribute="top" id="Hni-ed-zhe"/>
+                                    <constraint firstItem="UBg-4c-2on" firstAttribute="top" secondItem="XNa-h0-4NG" secondAttribute="top" id="ODc-mM-vJZ"/>
+                                    <constraint firstItem="UBg-4c-2on" firstAttribute="width" secondItem="I0x-mw-IlY" secondAttribute="width" id="RD0-4q-7ap"/>
+                                    <constraint firstAttribute="bottom" secondItem="UBg-4c-2on" secondAttribute="bottom" id="Wtb-8c-v7Z"/>
+                                    <constraint firstItem="UBg-4c-2on" firstAttribute="leading" secondItem="XNa-h0-4NG" secondAttribute="leading" id="dXl-9O-8PF"/>
+                                    <constraint firstAttribute="height" constant="35" id="m3P-Lz-5cf"/>
+                                    <constraint firstAttribute="trailing" secondItem="I0x-mw-IlY" secondAttribute="trailing" id="pZt-bU-kcV"/>
+                                    <constraint firstAttribute="bottom" secondItem="I0x-mw-IlY" secondAttribute="bottom" id="yu6-i4-BaE"/>
                                 </constraints>
-                                <segments>
-                                    <segment title="MyFeed"/>
-                                    <segment title="MyPlaylist"/>
-                                </segments>
-                                <color key="tintColor" white="0.54607971556886215" alpha="1" colorSpace="calibratedWhite"/>
-                                <connections>
-                                    <action selector="segmentControlValueChanged:" destination="mz7-35-jT4" eventType="valueChanged" id="N8E-Kv-RqC"/>
-                                </connections>
-                            </segmentedControl>
+                                <userDefinedRuntimeAttributes>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="layer.cornerRadius">
+                                        <integer key="value" value="3"/>
+                                    </userDefinedRuntimeAttribute>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="layer.borderWidth">
+                                        <real key="value" value="0.5"/>
+                                    </userDefinedRuntimeAttribute>
+                                </userDefinedRuntimeAttributes>
+                            </view>
                         </subviews>
-                        <color key="backgroundColor" red="0.11372549019607843" green="0.11372549019607843" blue="0.12549019607843137" alpha="1" colorSpace="calibratedRGB"/>
+                        <color key="backgroundColor" red="0.1764705882352941" green="0.1764705882352941" blue="0.19607843137254902" alpha="1" colorSpace="calibratedRGB"/>
                         <constraints>
                             <constraint firstItem="p3u-Bb-glg" firstAttribute="leading" secondItem="GS0-l8-gl8" secondAttribute="leading" id="7fo-1L-N0Q"/>
-                            <constraint firstItem="yeF-yk-Ef5" firstAttribute="top" secondItem="JWS-yf-aZT" secondAttribute="bottom" id="84M-v1-3Qt"/>
-                            <constraint firstItem="yeF-yk-Ef5" firstAttribute="leading" secondItem="GS0-l8-gl8" secondAttribute="leading" id="Df7-8A-cxe"/>
-                            <constraint firstAttribute="trailing" secondItem="yeF-yk-Ef5" secondAttribute="trailing" id="Dl1-nO-MOO"/>
                             <constraint firstItem="vhQ-KQ-n49" firstAttribute="top" secondItem="p3u-Bb-glg" secondAttribute="bottom" id="Emk-Yn-QqL"/>
                             <constraint firstAttribute="trailing" secondItem="p3u-Bb-glg" secondAttribute="trailing" id="LsB-d0-ILw"/>
-                            <constraint firstItem="p3u-Bb-glg" firstAttribute="top" secondItem="yeF-yk-Ef5" secondAttribute="bottom" constant="1" id="v42-Dr-N4L"/>
+                            <constraint firstItem="XNa-h0-4NG" firstAttribute="top" secondItem="JWS-yf-aZT" secondAttribute="bottom" constant="8" id="TDr-DP-vyP"/>
+                            <constraint firstItem="XNa-h0-4NG" firstAttribute="leading" secondItem="GS0-l8-gl8" secondAttribute="leading" constant="15" id="U34-JB-PDE"/>
+                            <constraint firstAttribute="trailing" secondItem="XNa-h0-4NG" secondAttribute="trailing" constant="15" id="Ymh-FN-sbT"/>
+                            <constraint firstItem="p3u-Bb-glg" firstAttribute="top" secondItem="XNa-h0-4NG" secondAttribute="bottom" constant="8" id="aPO-uf-VRc"/>
                         </constraints>
                     </view>
-                    <navigationItem key="navigationItem" title="I n s p i r e" id="wzP-6u-Twc"/>
+                    <navigationItem key="navigationItem" id="wzP-6u-Twc"/>
                     <connections>
+                        <outlet property="myFeedButton" destination="UBg-4c-2on" id="MY3-rQ-UaI"/>
+                        <outlet property="myPlaylistButton" destination="I0x-mw-IlY" id="VAQ-uc-pGd"/>
                         <outlet property="scrollView" destination="p3u-Bb-glg" id="NhN-Y6-D7e"/>
-                        <outlet property="segmentControl" destination="yeF-yk-Ef5" id="XKH-WG-BdU"/>
+                        <outlet property="segmentView" destination="XNa-h0-4NG" id="U2v-X3-6z6"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="7Jp-kN-mat" userLabel="First Responder" sceneMemberID="firstResponder"/>
@@ -104,7 +142,7 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" showsSelectionImmediatelyOnTouchBegin="NO" rowHeight="320" sectionHeaderHeight="22" sectionFooterHeight="22" translatesAutoresizingMaskIntoConstraints="NO" id="MYv-2l-3kb">
-                                <rect key="frame" x="0.0" y="-24" width="320" height="592"/>
+                                <rect key="frame" x="0.0" y="-44" width="320" height="612"/>
                                 <color key="backgroundColor" red="0.11372549019607843" green="0.11372549019607843" blue="0.12549019607843137" alpha="1" colorSpace="calibratedRGB"/>
                                 <color key="separatorColor" red="0.74599567252380161" green="0.73814250998237374" blue="0.81618621880570408" alpha="1" colorSpace="calibratedRGB"/>
                                 <inset key="separatorInset" minX="0.0" minY="0.0" maxX="0.0" maxY="0.0"/>
@@ -117,9 +155,6 @@
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="WPT-a8-bO5" id="c8o-ZF-kSk">
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
-                                                <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="dammy" translatesAutoresizingMaskIntoConstraints="NO" id="rys-UU-c6n">
-                                                    <rect key="frame" x="0.0" y="0.0" width="320" height="320"/>
-                                                </imageView>
                                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="V5u-wl-bqk">
                                                     <rect key="frame" x="53" y="235" width="213" height="30"/>
                                                     <constraints>
@@ -159,6 +194,9 @@
                                                         <segue destination="VR8-Ww-JCv" kind="push" identifier="DetailPlayer" id="vCA-Dc-hDV"/>
                                                     </connections>
                                                 </button>
+                                                <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="dammy" translatesAutoresizingMaskIntoConstraints="NO" id="rys-UU-c6n">
+                                                    <rect key="frame" x="0.0" y="0.0" width="320" height="320"/>
+                                                </imageView>
                                             </subviews>
                                             <constraints>
                                                 <constraint firstAttribute="centerX" secondItem="lF4-Vj-YI2" secondAttribute="centerX" id="2Da-Hw-ZgO"/>
@@ -324,7 +362,7 @@
                             <constraint firstAttribute="trailing" secondItem="MYv-2l-3kb" secondAttribute="trailing" id="2gZ-o1-HMj"/>
                             <constraint firstItem="MYv-2l-3kb" firstAttribute="leading" secondItem="In2-VN-czq" secondAttribute="leading" id="a0g-vl-c9T"/>
                             <constraint firstItem="bfU-ye-LPm" firstAttribute="top" secondItem="MYv-2l-3kb" secondAttribute="bottom" id="lde-cq-apx"/>
-                            <constraint firstItem="MYv-2l-3kb" firstAttribute="top" secondItem="8mT-GG-533" secondAttribute="bottom" constant="-44" id="pId-tu-SbI"/>
+                            <constraint firstItem="MYv-2l-3kb" firstAttribute="top" secondItem="8mT-GG-533" secondAttribute="bottom" constant="-64" id="pId-tu-SbI"/>
                         </constraints>
                     </view>
                     <extendedEdge key="edgesForExtendedLayout" top="YES"/>
@@ -346,8 +384,9 @@
                     <navigationBar key="navigationBar" contentMode="scaleToFill" translucent="NO" id="KE0-Zj-1ak" customClass="ISPNavigationBar" customModule="Inspire" customModuleProvider="target">
                         <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
                         <autoresizingMask key="autoresizingMask"/>
+                        <color key="backgroundColor" red="0.1764705882352941" green="0.1764705882352941" blue="0.19607843137254902" alpha="1" colorSpace="calibratedRGB"/>
                         <color key="tintColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
-                        <color key="barTintColor" red="0.11490028782894737" green="0.11372549019607843" blue="0.12549019607843137" alpha="1" colorSpace="calibratedRGB"/>
+                        <color key="barTintColor" red="0.1764705882352941" green="0.1764705882352941" blue="0.19607843137254902" alpha="1" colorSpace="calibratedRGB"/>
                         <textAttributes key="titleTextAttributes">
                             <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                         </textAttributes>
@@ -1299,7 +1338,7 @@
         <image name="DetailRepeat" width="16" height="14"/>
         <image name="DetailShuffle" width="17" height="14"/>
         <image name="PlayButtonImage" width="30" height="36"/>
-        <image name="check" width="80" height="80"/>
+        <image name="check" width="60" height="60"/>
         <image name="dammy" width="100" height="100"/>
     </resources>
     <simulatedMetricsContainer key="defaultSimulatedMetrics">

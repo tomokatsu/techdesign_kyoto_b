@@ -4,12 +4,10 @@ import UIKit
 class ISPNavigationBar: UINavigationBar {
 
     override func awakeFromNib() {
-        titleTextAttributes = [
-            NSFontAttributeName: UIFont(name: "Gill Sans", size: 18)!,
-            NSForegroundColorAttributeName: UIColor.whiteColor(),
-        ]
-        barTintColor = UIColor(red: 0.11372549, green: 0.11372549, blue: 0.125490196, alpha: 1)
         tintColor = UIColor.whiteColor()
+        barStyle = UIBarStyle.BlackTranslucent
+        layer.borderColor = UIColor(red: 45/255, green: 45/255, blue: 50/255, alpha: 1).CGColor
+        layer.borderWidth = 2
     }
 
     func show() {
@@ -21,5 +19,4 @@ class ISPNavigationBar: UINavigationBar {
         shadowImage = UIImage()
         translucent = true
     }
-
 }

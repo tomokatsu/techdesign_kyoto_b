@@ -1,0 +1,22 @@
+{
+  "images" : [
+    {
+      "idiom" : "universal",
+      "scale" : "1x"
+    },
+    {
+      "idiom" : "universal",
+      "scale" : "2x",
+      "filename" : "Find Location Copy + Rectangle 96 Copy 5 + Rectangle 96 Copy 4 + Oval 77.png"
+    },
+    {
+      "idiom" : "universal",
+      "scale" : "3x",
+      "filename" : "Find Location Copy + Rectangle 96 Copy 5 + Rectangle 96 Copy 4 + Oval 77x1.5.png"
+    }
+  ],
+  "info" : {
+    "version" : 1,
+    "author" : "xcode"
+  }
+}

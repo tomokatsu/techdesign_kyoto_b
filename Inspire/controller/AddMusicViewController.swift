@@ -13,7 +13,7 @@ class AddMusicViewController: ISPViewController, UITableViewDelegate, UITableVie
 
     override func viewDidLoad() {
         super.viewDidLoad()
-        tableView.contentInset.top = 30
+        tableView.contentInset.top = 60
         var predicates: [NSPredicate] = []
         for mTrack in playlist!.musicTracks {
             predicates.append(NSPredicate(format: "trackId != \(mTrack.trackId)"))
@@ -26,7 +26,6 @@ class AddMusicViewController: ISPViewController, UITableViewDelegate, UITableVie
         }
 
         navigationItem.rightBarButtonItem = UIBarButtonItem(title: "完了", style: .Plain, target: self, action: Selector("completeButtonTouchUpInside"))
-
         tableView.reloadData()
     }
 
@@ -71,7 +70,7 @@ class AddMusicViewController: ISPViewController, UITableViewDelegate, UITableVie
         let header = UIView(frame: CGRectMake(0, 0, UIScreen.mainScreen().bounds.width, 40))
         let label = UILabel(frame: CGRectMake(0, 0, UIScreen.mainScreen().bounds.width - 30, 20))
         label.center = header.center
-        label.font = UIFont(name: "mplus-1p-regular", size: 12)
+        label.font = UIFont(name: "mplus-1p-regular", size: 24*0.625)
         switch section {
             case 0:
                 label.text = "このプレイリストによく追加されている曲"
