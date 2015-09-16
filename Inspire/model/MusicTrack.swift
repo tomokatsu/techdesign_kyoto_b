@@ -6,8 +6,4 @@ class MusicTrack: Object {
     dynamic var artist = ""
     dynamic var previewUrl = ""
     dynamic var artworkUrl = ""
-
-    override static func primaryKey() -> String? {
-        return "trackId"
-    }
 }
