@@ -6,6 +6,7 @@ class MusicTrackCell: ISPTableViewCell {
     @IBOutlet weak private var titleLabel: UILabel!
     @IBOutlet weak private var artistLabel: UILabel!
     @IBOutlet weak private var timeLabel: UILabel!
+    @IBOutlet weak var playingImageView: UIImageView!
     private var _music: MusicTrack?
     var music: MusicTrack? {
         get {

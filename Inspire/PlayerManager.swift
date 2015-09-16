@@ -197,5 +197,6 @@ class Player: NSObject {
     func playerDidFinishPlaying(note: NSNotification) {
         self.reset()
         PlayerManager.sharedInstance.playNextSong()
+        NSNotificationCenter.defaultCenter().postNotificationName("EndPlaying", object: nil)
     }
 }

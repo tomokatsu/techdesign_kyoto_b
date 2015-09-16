@@ -36,6 +36,8 @@ class DetailViewController: ISPViewController {
             PlayerManager.sharedInstance.toPlayIndex = 0
             PlayerManager.sharedInstance.play()
             playButton.selected = true
+        } else if PlayerManager.sharedInstance.isPlaying() {
+            playButton.selected = true
         }
 
         updatePlayingInfo()

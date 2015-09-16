@@ -333,6 +333,13 @@
                                                     <color key="textColor" red="1" green="1" blue="1" alpha="0.70000000000000007" colorSpace="calibratedRGB"/>
                                                     <nil key="highlightedColor"/>
                                                 </label>
+                                                <imageView hidden="YES" userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Playing" translatesAutoresizingMaskIntoConstraints="NO" id="nu3-mc-Yuu">
+                                                    <rect key="frame" x="230" y="32.5" width="20" height="15"/>
+                                                    <constraints>
+                                                        <constraint firstAttribute="height" constant="15" id="HG2-ec-ZPF"/>
+                                                        <constraint firstAttribute="width" constant="20" id="TMv-YG-kKW"/>
+                                                    </constraints>
+                                                </imageView>
                                             </subviews>
                                             <color key="backgroundColor" red="0.14901960784313725" green="0.14901960784313725" blue="0.16470588235294117" alpha="0.70000000000000007" colorSpace="calibratedRGB"/>
                                             <constraints>
@@ -340,9 +347,11 @@
                                                 <constraint firstItem="Mh2-gM-Zbf" firstAttribute="leading" secondItem="O8h-c5-DvE" secondAttribute="trailing" constant="8" id="422-Is-dkt"/>
                                                 <constraint firstItem="O8h-c5-DvE" firstAttribute="top" secondItem="fjf-Gj-bFS" secondAttribute="top" constant="22" id="8HD-JW-r82"/>
                                                 <constraint firstAttribute="trailing" secondItem="Mh2-gM-Zbf" secondAttribute="trailing" constant="15" id="CHh-Cm-JTF"/>
+                                                <constraint firstAttribute="centerY" secondItem="nu3-mc-Yuu" secondAttribute="centerY" id="D4H-aF-pWa"/>
                                                 <constraint firstAttribute="centerY" secondItem="Mh2-gM-Zbf" secondAttribute="centerY" id="J6E-Vp-eik"/>
                                                 <constraint firstItem="tij-aj-8Xl" firstAttribute="top" secondItem="fjf-Gj-bFS" secondAttribute="top" constant="14" id="JLP-3s-8a2"/>
                                                 <constraint firstItem="O8h-c5-DvE" firstAttribute="leading" secondItem="DAo-Ei-Ggw" secondAttribute="leading" id="UbR-RW-GJO"/>
+                                                <constraint firstItem="Mh2-gM-Zbf" firstAttribute="leading" secondItem="nu3-mc-Yuu" secondAttribute="trailing" constant="25" id="Xzh-Eu-hUV"/>
                                                 <constraint firstItem="O8h-c5-DvE" firstAttribute="leading" secondItem="tij-aj-8Xl" secondAttribute="trailing" constant="10" id="ZUL-0i-YP9"/>
                                                 <constraint firstItem="tij-aj-8Xl" firstAttribute="leading" secondItem="fjf-Gj-bFS" secondAttribute="leading" constant="15" id="uJY-rg-LGD"/>
                                                 <constraint firstItem="O8h-c5-DvE" firstAttribute="width" secondItem="DAo-Ei-Ggw" secondAttribute="width" constant="1" id="ugO-HS-EAr"/>
@@ -351,6 +360,7 @@
                                         <color key="backgroundColor" red="0.11372549019607843" green="0.11372549019607843" blue="0.12156862745098039" alpha="1" colorSpace="calibratedRGB"/>
                                         <connections>
                                             <outlet property="artistLabel" destination="DAo-Ei-Ggw" id="s5e-6s-ROw"/>
+                                            <outlet property="playingImageView" destination="nu3-mc-Yuu" id="7lT-ny-kPy"/>
                                             <outlet property="thumbnailImageView" destination="tij-aj-8Xl" id="otG-mS-T3I"/>
                                             <outlet property="timeLabel" destination="Mh2-gM-Zbf" id="w4T-ir-PsD"/>
                                             <outlet property="titleLabel" destination="O8h-c5-DvE" id="TZm-ke-JpO"/>
@@ -1357,6 +1367,7 @@
         <image name="DetailRepeat" width="16" height="14"/>
         <image name="DetailShuffle" width="17" height="14"/>
         <image name="PlayButtonImage" width="80" height="80"/>
+        <image name="Playing" width="20" height="16"/>
         <image name="PlaylistPlay" width="60" height="60"/>
         <image name="RepeatSelected" width="16" height="14"/>
         <image name="ShuffleSelected" width="17" height="14"/>

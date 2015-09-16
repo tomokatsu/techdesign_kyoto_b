@@ -1,17 +1,35 @@
 import UIKit
 import RealmSwift
+import AVFoundation
 
 class PlaylistViewController: ISPViewController, UITableViewDelegate, UITableViewDataSource {
 
     @IBOutlet weak private var tableView: UITableView!
     var playlist: Playlist?
 
+    deinit {
+        NSNotificationCenter.defaultCenter().removeObserver(self, name: "EndPlaying", object: nil)
+    }
+
     override func viewDidLoad() {
         super.viewDidLoad()
+        if PlayerManager.sharedInstance.playlist == nil {
+            PlayerManager.sharedInstance.setPlaylist(playlist!)
+        }
+        NSNotificationCenter.defaultCenter().addObserver(self, selector: Selector("endPlaying"), name: "EndPlaying", object: nil)
+    }
+
+    func endPlaying() {
+        tableView.reloadData()
+    }
+
+    override func viewWillDisappear(animated: Bool) {
+        title = ""
     }
 
     override func viewWillAppear(animated: Bool) {
         (self.navigationController?.navigationBar as? ISPNavigationBar)?.hide()
+        tableView.reloadData()
     }
 
     override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?) {
@@ -78,9 +96,34 @@ class PlaylistViewController: ISPViewController, UITableViewDelegate, UITableVie
             case 2:
                 let cell = tableView.dequeueReusableCellWithIdentifier("MusicTrackCell", forIndexPath: indexPath) as? MusicTrackCell ?? MusicTrackCell()
                 cell.music = playlist?.musicTracks[indexPath.row]
+                cell.playingImageView.hidden = true
+                if PlayerManager.sharedInstance.playlist == playlist {
+                    if PlayerManager.sharedInstance.isPlaying() {
+                        if PlayerManager.sharedInstance.toPlayIndex == indexPath.row {
+                            cell.playingImageView.hidden = false
+                        }
+                    }
+                }
                 return cell
             default:
                 return UITableViewCell()
         }
+    }
+
+    func tableView(tableView: UITableView, didSelectRowAtIndexPath indexPath: NSIndexPath) {
+        if indexPath.section != 2 { return }
+        if playlist == PlayerManager.sharedInstance.playlist {
+            PlayerManager.sharedInstance.reset()
+            PlayerManager.sharedInstance.pause()
+            PlayerManager.sharedInstance.toPlayIndex = indexPath.row
+            PlayerManager.sharedInstance.play()
+        } else {
+            PlayerManager.sharedInstance.reset()
+            PlayerManager.sharedInstance.pause()
+            PlayerManager.sharedInstance.setPlaylist(playlist!)
+            PlayerManager.sharedInstance.toPlayIndex = indexPath.row
+            PlayerManager.sharedInstance.play()
+        }
+        tableView.reloadData()
     }
 }
