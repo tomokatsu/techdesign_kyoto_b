@@ -21,10 +21,9 @@ class ReplaceViewController: ISPViewController, UITableViewDelegate, UITableView
 
         var predicates: [NSPredicate] = []
         var playlists = realm.objects(Playlist)
-        for playlist in playlists{
-            for mTrack in playlist.musicTracks{
-                predicates.append(NSPredicate(format: "trackId != \(mTrack.trackId)"))
-            }
+
+        for music in playlist!.musicTracks {
+                predicates.append(NSPredicate(format: "trackId != \(music.trackId)"))
         }
         favoriteMusicTracks = realm.objects(MusicTrack).filter(NSCompoundPredicate.andPredicateWithSubpredicates(predicates))
         layoutView()
