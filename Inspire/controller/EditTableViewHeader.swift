@@ -6,8 +6,8 @@ class EditTableViewHeader: UITableViewHeaderFooterView, UITextFieldDelegate {
     @IBOutlet weak private var mainImageView: UIImageView!
     @IBOutlet weak private var secondImageView: UIImageView!
     @IBOutlet weak private var thirdImageView: UIImageView!
-    @IBOutlet weak private var titleTextField: UITextField!
-    @IBOutlet weak private var commentTextField: UITextField!
+    @IBOutlet weak var titleTextField: UITextField!
+    @IBOutlet weak var commentTextField: UITextField!
     @IBOutlet weak var pulldownImageView: UIImageView!
     @IBOutlet weak var moodSelectButton: UIButton!
     private let blurView = UIVisualEffectView(effect: UIBlurEffect(style: .Dark))

@@ -22,6 +22,7 @@ class PlaylistViewController: ISPViewController, UITableViewDelegate, UITableVie
                 let navigationController = segue.destinationViewController as! UINavigationController
                 let copyPlaylist = Playlist()
                 copyPlaylist.musicTracks = List<MusicTrack>()
+                copyPlaylist.playlister = playlist!.playlister
                 for music in playlist!.musicTracks {
                     copyPlaylist.musicTracks.append(music)
                 }
