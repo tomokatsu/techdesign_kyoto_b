@@ -30,6 +30,8 @@
         <mutableArray key="mplus-1p-regular.ttf">
             <string>mplus-1p-regular</string>
             <string>mplus-1p-regular</string>
+            <string>mplus-1p-regular</string>
+            <string>mplus-1p-regular</string>
         </mutableArray>
     </customFonts>
     <scenes>
@@ -852,7 +854,11 @@
                         </constraints>
                     </view>
                     <navigationItem key="navigationItem" id="Cos-kO-OVM">
-                        <barButtonItem key="rightBarButtonItem" title="完了" id="Ruj-b9-cE4"/>
+                        <barButtonItem key="rightBarButtonItem" title="完了" id="Ruj-b9-cE4">
+                            <connections>
+                                <action selector="publishButtonTouchUpInside:" destination="n6B-dB-8uN" id="w7d-bS-w1g"/>
+                            </connections>
+                        </barButtonItem>
                     </navigationItem>
                     <connections>
                         <outlet property="backgroundImageView" destination="sSK-h3-lsF" id="QQv-zF-drN"/>
@@ -870,6 +876,72 @@
                 </tapGestureRecognizer>
             </objects>
             <point key="canvasLocation" x="2530" y="747"/>
+        </scene>
+        <!--Published View Controller-->
+        <scene sceneID="dbm-Lc-8L2">
+            <objects>
+                <viewController storyboardIdentifier="Published" id="LDq-mv-OvV" customClass="PublishedViewController" customModule="Inspire" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="wMI-5L-sVp"/>
+                        <viewControllerLayoutGuide type="bottom" id="68p-0p-cJ2"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="hAq-VH-xIs">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="check" translatesAutoresizingMaskIntoConstraints="NO" id="hrr-gk-Op8">
+                                <rect key="frame" x="125" y="163" width="70" height="70"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="70" id="6ds-QT-IWp"/>
+                                    <constraint firstAttribute="width" constant="70" id="elE-2o-n9H"/>
+                                </constraints>
+                            </imageView>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="プレイリストの作成が完了しました。" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="YrD-sw-FaC">
+                                <rect key="frame" x="41" y="269" width="238" height="23"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="23" id="rWC-4l-ecM"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" name="mplus-1p-regular" family="M+ 1p" pointSize="14"/>
+                                <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="rDk-Y8-62U">
+                                <rect key="frame" x="117" y="372" width="86" height="32"/>
+                                <color key="backgroundColor" red="0.50196078431372548" green="0.50196078431372548" blue="0.8901960784313725" alpha="1" colorSpace="calibratedRGB"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="32" id="JqF-qi-WRy"/>
+                                    <constraint firstAttribute="width" constant="86" id="ryq-KP-Z1e"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" name="mplus-1p-regular" family="M+ 1p" pointSize="12"/>
+                                <state key="normal" title="トップへ">
+                                    <color key="titleColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <userDefinedRuntimeAttributes>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="layer.cornerRadius">
+                                        <integer key="value" value="16"/>
+                                    </userDefinedRuntimeAttribute>
+                                </userDefinedRuntimeAttributes>
+                                <connections>
+                                    <action selector="moveToTopButtonTouchUpInside:" destination="LDq-mv-OvV" eventType="touchUpInside" id="tTs-p2-m28"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <color key="backgroundColor" red="0.0" green="0.0" blue="0.0" alpha="0.80000000000000004" colorSpace="calibratedRGB"/>
+                        <constraints>
+                            <constraint firstAttribute="trailing" secondItem="YrD-sw-FaC" secondAttribute="trailing" constant="41" id="4u0-qy-27q"/>
+                            <constraint firstAttribute="centerX" secondItem="hrr-gk-Op8" secondAttribute="centerX" id="Bhq-Ym-7yu"/>
+                            <constraint firstAttribute="centerX" secondItem="rDk-Y8-62U" secondAttribute="centerX" id="C2X-Do-AqP"/>
+                            <constraint firstItem="hrr-gk-Op8" firstAttribute="top" secondItem="hAq-VH-xIs" secondAttribute="top" constant="163" id="QHX-PW-0xF"/>
+                            <constraint firstItem="YrD-sw-FaC" firstAttribute="top" secondItem="hrr-gk-Op8" secondAttribute="bottom" constant="36" id="V5w-mT-wXJ"/>
+                            <constraint firstItem="YrD-sw-FaC" firstAttribute="leading" secondItem="hAq-VH-xIs" secondAttribute="leading" constant="41" id="a2V-p3-k7t"/>
+                            <constraint firstItem="rDk-Y8-62U" firstAttribute="top" secondItem="YrD-sw-FaC" secondAttribute="bottom" constant="80" id="rcH-Zp-1mQ"/>
+                        </constraints>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="73N-Xs-RMy" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="2902" y="749"/>
         </scene>
         <!--Replace View Controller-->
         <scene sceneID="Bfy-L0-1zo">
@@ -1194,6 +1266,7 @@
         <image name="DetailRepeat" width="16" height="14"/>
         <image name="DetailShuffle" width="17" height="14"/>
         <image name="PlayButtonImage" width="30" height="36"/>
+        <image name="check" width="80" height="80"/>
         <image name="dammy" width="100" height="100"/>
     </resources>
     <simulatedMetricsContainer key="defaultSimulatedMetrics">

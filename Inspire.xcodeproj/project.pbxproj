@@ -71,6 +71,7 @@
 		496FF1621BA8092200B3F24A /* ISPFilledCheckBox.swift in Sources */ = {isa = PBXBuildFile; fileRef = 496FF1611BA8092200B3F24A /* ISPFilledCheckBox.swift */; };
 		496FF1641BA80A1A00B3F24A /* RecomendSongView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 496FF1631BA80A1A00B3F24A /* RecomendSongView.swift */; };
 		496FF1661BA81F6100B3F24A /* RecomendSongsCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 496FF1651BA81F6100B3F24A /* RecomendSongsCell.swift */; };
+		496FF1681BA9116700B3F24A /* PublishedViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 496FF1671BA9116700B3F24A /* PublishedViewController.swift */; };
 		497B68981BA2642100613715 /* MusicTrackResponse.swift in Sources */ = {isa = PBXBuildFile; fileRef = 497B68971BA2642100613715 /* MusicTrackResponse.swift */; };
 		497B689B1BA269E800613715 /* MusicTrack.swift in Sources */ = {isa = PBXBuildFile; fileRef = 497B689A1BA269E800613715 /* MusicTrack.swift */; };
 		4995D5F11BA7F1420071A7A6 /* AddFavoriteTrackCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4995D5F01BA7F1420071A7A6 /* AddFavoriteTrackCell.swift */; };
@@ -170,6 +171,7 @@
 		496FF1611BA8092200B3F24A /* ISPFilledCheckBox.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ISPFilledCheckBox.swift; sourceTree = "<group>"; };
 		496FF1631BA80A1A00B3F24A /* RecomendSongView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RecomendSongView.swift; sourceTree = "<group>"; };
 		496FF1651BA81F6100B3F24A /* RecomendSongsCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RecomendSongsCell.swift; sourceTree = "<group>"; };
+		496FF1671BA9116700B3F24A /* PublishedViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PublishedViewController.swift; sourceTree = "<group>"; };
 		497B68971BA2642100613715 /* MusicTrackResponse.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MusicTrackResponse.swift; sourceTree = "<group>"; };
 		497B689A1BA269E800613715 /* MusicTrack.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MusicTrack.swift; sourceTree = "<group>"; };
 		4995D5F01BA7F1420071A7A6 /* AddFavoriteTrackCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AddFavoriteTrackCell.swift; sourceTree = "<group>"; };
@@ -405,6 +407,7 @@
 				4956CC631BA50914003254D2 /* DetailViewController.swift */,
 				4956CCE71BA535DE003254D2 /* PlaylistEditViewController.swift */,
 				4956CCF11BA55BFB003254D2 /* PublishViewController.swift */,
+				496FF1671BA9116700B3F24A /* PublishedViewController.swift */,
 				4956CCF31BA55C09003254D2 /* ReplaceViewController.swift */,
 				492DEB001BA5BE3F00B6F232 /* DOAlertController.swift */,
 				492DEB251BA7E0C200B6F232 /* AddMusicViewController.swift */,
@@ -644,6 +647,7 @@
 				4956CCF41BA55C09003254D2 /* ReplaceViewController.swift in Sources */,
 				4956CCEA1BA53E4D003254D2 /* MovableTrackCell.swift in Sources */,
 				49E67D381BA180B200AC8108 /* AppDelegate.swift in Sources */,
+				496FF1681BA9116700B3F24A /* PublishedViewController.swift in Sources */,
 				497B689B1BA269E800613715 /* MusicTrack.swift in Sources */,
 				49C1B5871BA2A03300B52C7F /* PlaylistJacketImagesView.swift in Sources */,
 				49C1B58F1BA31CC300B52C7F /* ISPNavigationBar.swift in Sources */,
