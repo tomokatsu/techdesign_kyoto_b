@@ -53,33 +53,38 @@ class PlaylistEditViewController: ISPViewController, UITextFieldDelegate, UITabl
         alertController.buttonTextColor[.Default] = UIColor.whiteColor()
         alertController.buttonBgColor[.Default] = UIColor(red: 0.149019608, green: 0.149019608, blue: 0.164705882, alpha: 1)
         alertController.buttonBgColorHighlighted[.Default] = UIColor(red: 0.149019608, green: 0.149019608, blue: 0.164705882, alpha: 1)
-
+        view.titleTextField.resignFirstResponder()
+        view.commentTextField.resignFirstResponder()
         alertController.addAction(DOAlertAction(title: "Happy", style: .Default) { action in
             view.moodSelectButton.setTitle("Happy", forState: .Normal)
             self.playlist?.mood = "Happy"
+            view.moodSelectButton.setTitleColor(UIColor.whiteColor(), forState: .Normal)
             view.pulldownImageView.hidden = true
         })
         alertController.addAction(DOAlertAction(title: "Excited", style: .Default) { action in
             view.moodSelectButton.setTitle("Excited", forState: .Normal)
             self.playlist?.mood = "Excited"
+            view.moodSelectButton.setTitleColor(UIColor.whiteColor(), forState: .Normal)
             view.pulldownImageView.hidden = true
         })
         alertController.addAction(DOAlertAction(title: "Relax", style: .Default) { action in
             view.moodSelectButton.setTitle("Relax", forState: .Normal)
             self.playlist?.mood = "Relax"
+            view.moodSelectButton.setTitleColor(UIColor.whiteColor(), forState: .Normal)
             view.pulldownImageView.hidden = true
         })
         alertController.addAction(DOAlertAction(title: "Love", style: .Default) { action in
             view.moodSelectButton.setTitle("Love", forState: .Normal)
             self.playlist?.mood = "Love"
+            view.moodSelectButton.setTitleColor(UIColor.whiteColor(), forState: .Normal)
             view.pulldownImageView.hidden = true
         })
         alertController.addAction(DOAlertAction(title: "Cancel", style: .Default) { action in
         })
         presentViewController(alertController, animated: true, completion: nil)
         dispatch_after(dispatch_time(DISPATCH_TIME_NOW, Int64(0.1 * Double(NSEC_PER_SEC))), dispatch_get_main_queue()) {
-            let separatorView = UIView(frame: CGRectMake(0, alertController.buttonAreaScrollView.frame.height - 55, UIScreen.mainScreen().bounds.width, 0.5))
-            separatorView.backgroundColor = UIColor.whiteColor()
+            let separatorView = UIView(frame: CGRectMake(0, alertController.buttonAreaScrollView.frame.height - 55, UIScreen.mainScreen().bounds.width, 0.3))
+            separatorView.backgroundColor = UIColor(red: 71/255, green: 71/255, blue: 75/255, alpha: 1)
             alertController.buttonAreaScrollView.addSubview(separatorView)
             alertController.buttonAreaScrollView.bringSubviewToFront(separatorView)
         }
@@ -92,7 +97,7 @@ class PlaylistEditViewController: ISPViewController, UITextFieldDelegate, UITabl
     func tableView(tableView: UITableView, heightForHeaderInSection section: Int) -> CGFloat {
         switch section {
             case 0:
-                return 425
+                return 449
             case 1:
                 return 40
             default:

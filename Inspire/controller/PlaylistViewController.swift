@@ -57,7 +57,7 @@ class PlaylistViewController: ISPViewController, UITableViewDelegate, UITableVie
             case 0:
                 return UIScreen.mainScreen().bounds.width
             case 1:
-                return 66
+                return 58
             case 2:
                 return 80
             default:

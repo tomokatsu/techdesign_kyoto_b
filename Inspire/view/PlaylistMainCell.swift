@@ -16,7 +16,7 @@ class PlaylistMainCell: ISPTableViewCell {
             _playlist = playlist
             mainImageView.sd_setImageWithURL(NSURL(string: playlist?.musicTracks[0].artworkUrl ?? ""))
             titleLabel.text = playlist?.title
-            inspiredNumberLabel.text = "inspired \(playlist!.inspiredNumber)"
+            inspiredNumberLabel.text = "Inspired \(playlist!.inspiredNumber)"
             contentView.bringSubviewToFront(titleLabel)
             contentView.bringSubviewToFront(inspiredNumberLabel)
         }

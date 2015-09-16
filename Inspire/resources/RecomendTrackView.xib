@@ -7,7 +7,9 @@
     <customFonts key="customFonts">
         <mutableArray key="mplus-1p-light.ttf">
             <string>mplus-1p-light</string>
-            <string>mplus-1p-light</string>
+        </mutableArray>
+        <mutableArray key="mplus-1p-regular.ttf">
+            <string>mplus-1p-regular</string>
         </mutableArray>
     </customFonts>
     <objects>
@@ -28,17 +30,17 @@
                     <constraints>
                         <constraint firstAttribute="height" constant="20" id="7Qc-2q-qMB"/>
                     </constraints>
-                    <fontDescription key="fontDescription" name="mplus-1p-light" family="M+ 1p" pointSize="12"/>
+                    <fontDescription key="fontDescription" name="mplus-1p-regular" family="M+ 1p" pointSize="13"/>
                     <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                     <nil key="highlightedColor"/>
                 </label>
                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="zGt-T2-dVb">
-                    <rect key="frame" x="15" y="140" width="110" height="13"/>
+                    <rect key="frame" x="15" y="141" width="110" height="13"/>
                     <constraints>
                         <constraint firstAttribute="height" constant="13" id="XdU-L8-loN"/>
                     </constraints>
-                    <fontDescription key="fontDescription" name="mplus-1p-light" family="M+ 1p" pointSize="10"/>
-                    <color key="textColor" red="0.84705882352941175" green="0.84705882352941175" blue="0.84705882352941175" alpha="1" colorSpace="calibratedRGB"/>
+                    <fontDescription key="fontDescription" name="mplus-1p-light" family="M+ 1p" pointSize="12"/>
+                    <color key="textColor" red="1" green="1" blue="1" alpha="0.70000000000000007" colorSpace="calibratedRGB"/>
                     <nil key="highlightedColor"/>
                 </label>
                 <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="rkw-FG-tP2" customClass="ISPFilledCheckBox" customModule="Inspire" customModuleProvider="target">
@@ -65,7 +67,7 @@
                 <constraint firstItem="i0b-Q1-Pbz" firstAttribute="top" secondItem="iN0-l3-epB" secondAttribute="top" id="N3I-va-15j"/>
                 <constraint firstItem="i0b-Q1-Pbz" firstAttribute="top" secondItem="rkw-FG-tP2" secondAttribute="top" id="OFW-bo-ELa"/>
                 <constraint firstItem="tW2-kn-r1R" firstAttribute="top" secondItem="i0b-Q1-Pbz" secondAttribute="bottom" constant="10" id="S4B-Es-1Oy"/>
-                <constraint firstItem="zGt-T2-dVb" firstAttribute="top" secondItem="tW2-kn-r1R" secondAttribute="bottom" id="ehL-Us-KdR"/>
+                <constraint firstItem="zGt-T2-dVb" firstAttribute="top" secondItem="tW2-kn-r1R" secondAttribute="bottom" constant="1" id="ehL-Us-KdR"/>
                 <constraint firstItem="i0b-Q1-Pbz" firstAttribute="leading" secondItem="tW2-kn-r1R" secondAttribute="leading" id="fUZ-x1-hk9"/>
                 <constraint firstItem="zGt-T2-dVb" firstAttribute="trailing" secondItem="tW2-kn-r1R" secondAttribute="trailing" id="sTt-9r-MRO"/>
                 <constraint firstItem="zGt-T2-dVb" firstAttribute="leading" secondItem="tW2-kn-r1R" secondAttribute="leading" id="vFa-ZJ-ofd"/>

@@ -14,11 +14,7 @@ class RecomendSongView: UIView {
         }
         set(music) {
             _music = music
-            SDWebImageManager.sharedManager().downloadImageWithURL(NSURL(string: _music?.artworkUrl ?? ""), options: nil
-                , progress: { (a: Int, b:Int) -> Void in
-                }, completed: { (image: UIImage!, b: NSError!, c: SDImageCacheType, d: Bool, e:NSURL!) -> Void in
-                    self.imageView.image = RecomendSongView.nonCompressImage(image)
-            })
+            imageView.sd_setImageWithURL(NSURL(string: _music?.artworkUrl ?? ""))
             titleLabel.text = _music?.title
             artistLabel.text = _music?.artist
         }

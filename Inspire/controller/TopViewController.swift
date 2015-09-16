@@ -16,7 +16,7 @@ class TopViewController: ISPViewController, UITableViewDelegate, UITableViewData
 
     @IBOutlet weak var segmentView: UIView!
     @IBOutlet weak private var scrollView: ISPPagingScrollView!
-    static let cellHeightWidthRatio = CGFloat(190.0 / 320.0)
+    static let cellHeightWidthRatio = CGFloat(218.0 / 320.0)
     let realm = Realm()
     var myPlaylists: Results<Playlist>?
     var inspirablePlaylists: Results<Playlist>?
@@ -125,7 +125,7 @@ class TopViewController: ISPViewController, UITableViewDelegate, UITableViewData
     }
 
     func tableView(tableView: UITableView, heightForRowAtIndexPath indexPath: NSIndexPath) -> CGFloat {
-        return TopViewController.cellHeightWidthRatio * UIScreen.mainScreen().bounds.width
+        return UIScreen.mainScreen().bounds.width / 2 + 58
     }
 
     func tableView(tableView: UITableView, didSelectRowAtIndexPath indexPath: NSIndexPath) {
