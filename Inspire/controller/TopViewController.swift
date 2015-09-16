@@ -15,7 +15,6 @@ class TopViewController: ISPViewController, UITableViewDelegate, UITableViewData
         myPlaylists = realm.objects(Playlist).filter("isInspire = true")
         inspirablePlaylists = realm.objects(Playlist).filter("isInspire = false")
         layoutViews()
-
     }
 
     override func viewWillAppear(animated: Bool) {
@@ -28,7 +27,8 @@ class TopViewController: ISPViewController, UITableViewDelegate, UITableViewData
     }
 
     func layoutViews() {
-        var tableViewFrame = UIScreen.mainScreen().applicationFrame
+        var tableViewFrame = CGRectMake(0, 0, UIScreen.mainScreen().bounds.width, UIScreen.mainScreen().bounds.height - 44 - 28)
+
         scrollView.contentSize = CGSizeMake(tableViewFrame.size.width * 2, scrollView.frame.height)
         scrollView.pagingEnabled = true
         for i in 0...1 {
@@ -56,9 +56,9 @@ class TopViewController: ISPViewController, UITableViewDelegate, UITableViewData
     func tableView(tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         switch tableView.tag {
             case 0:
-                return myPlaylists?.count ?? 0
-            case 1:
                 return inspirablePlaylists?.count ?? 0
+            case 1:
+                return myPlaylists?.count ?? 0
             default:
                 return 0
         }
@@ -71,9 +71,9 @@ class TopViewController: ISPViewController, UITableViewDelegate, UITableViewData
 
         let playlist: Playlist
         if tableView.tag == 0 {
-            playlist = myPlaylists![indexPath.row]
-        } else {
             playlist = inspirablePlaylists![indexPath.row]
+        } else {
+            playlist = myPlaylists![indexPath.row]
         }
 
         cell.playlist = playlist
@@ -89,9 +89,9 @@ class TopViewController: ISPViewController, UITableViewDelegate, UITableViewData
         let playlistViewController = storyboard?.instantiateViewControllerWithIdentifier("PlaylistViewController") as! PlaylistViewController
         let playlist: Playlist
         if tableView.tag == 0 {
-            playlist = myPlaylists![indexPath.row]
-        } else {
             playlist = inspirablePlaylists![indexPath.row]
+        } else {
+            playlist = myPlaylists![indexPath.row]
         }
         playlistViewController.playlist = playlist
         self.navigationController?.pushViewController(playlistViewController, animated: true)

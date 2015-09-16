@@ -55,14 +55,14 @@
                                     <outlet property="delegate" destination="mz7-35-jT4" id="eQG-Fz-xpz"/>
                                 </connections>
                             </scrollView>
-                            <segmentedControl opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="top" segmentControlStyle="plain" selectedSegmentIndex="0" translatesAutoresizingMaskIntoConstraints="NO" id="yeF-yk-Ef5">
+                            <segmentedControl opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="top" segmentControlStyle="bar" selectedSegmentIndex="0" translatesAutoresizingMaskIntoConstraints="NO" id="yeF-yk-Ef5">
                                 <rect key="frame" x="0.0" y="0.0" width="320" height="29"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="28" id="FqY-o9-edN"/>
                                 </constraints>
                                 <segments>
+                                    <segment title="MyFeed"/>
                                     <segment title="MyPlaylist"/>
-                                    <segment title="Recomended"/>
                                 </segments>
                                 <color key="tintColor" white="0.54607971556886215" alpha="1" colorSpace="calibratedWhite"/>
                                 <connections>
