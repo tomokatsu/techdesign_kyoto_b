@@ -4,31 +4,108 @@ import RealmSwift
 class Seeds {
     init(){
         if !NSUserDefaults.standardUserDefaults().boolForKey("IsSeedAdded") {
+            createRecommendMusicTracks()
             createRecommendPlaylists()
             createFavoriteMusicTracks()
             NSUserDefaults.standardUserDefaults().setBool(true, forKey: "IsSeedAdded")
         }
     }
+    func createRecommendMusicTracks(){
+        var musicTracks: [MusicTrack] = []
+        musicTracks.append(
+            createMusicTrack(
+                902149700,
+                title: "Little of Your Time",
+                artist: "Maroon 5",
+                previewUrl: "http://a732.phobos.apple.com/us/r1000/051/Music5/v4/d8/2a/97/d82a9719-c46f-1fd9-e146-878e105bc25d/mzaf_505585141284023317.plus.aac.p.m4a",
+                artworkUrl: "http://is1.mzstatic.com/image/thumb/Music5/v4/24/5d/ce/245dce12-6bab-8d06-4c39-3c65326a8964/UMG_cvrart_00602537943791_01_RGB72_1500x1500_07UMGIM06094.jpg/100x100bb-85.jpg"
+            ))
+        musicTracks.append(
+            createMusicTrack(
+                536292489,
+                title: "One More Night",
+                artist: "Maroon 5",
+                previewUrl: "http://a400.phobos.apple.com/us/r1000/105/Music/73/d6/9f/mzi.atpuiqko.aac.p.m4a",
+                artworkUrl: "http://is5.mzstatic.com/image/thumb/Music/v4/71/77/11/7177118a-7cff-d5a9-430d-87f7292ce758/UMG_cvrart_00602537027064_01_RGB72_1200x1200_12UMGIM26178.jpg/100x100bb-85.jpg"
+            ))
+        musicTracks.append(
+            createMusicTrack(
+                993351351,
+                title: "Sugar",
+                artist: "Maroon 5",
+                previewUrl: "http://a738.phobos.apple.com/us/r1000/170/Music1/v4/4c/4b/5b/4c4b5bca-1cd9-5847-b36f-7b69d4ef7b31/mzaf_7242500619051641174.plus.aac.p.m4a",
+                artworkUrl: "http://is4.mzstatic.com/image/thumb/Music1/v4/a7/34/be/a734be62-3c4f-84d5-880c-64a8e54113a5/UMG_cvrart_00602547380265_01_RGB72_1500x1500_14UMGIM31673.jpg/100x100bb-85.jpg"
+            ))
+        musicTracks.append(
+            createMusicTrack(
+                521551806,
+                title: "Language",
+                artist: "Porter Robinson",
+                previewUrl: "http://a1245.phobos.apple.com/us/r1000/076/Music/0c/b1/5e/mzm.pcusjkkb.aac.p.m4a",
+                artworkUrl: "http://is1.mzstatic.com/image/thumb/Music/v4/f5/85/10/f58510eb-cbd0-f1c0-6155-f44423562da2/075679961655.jpg/100x100bb-85.jpg"
+            ))
+        musicTracks.append(
+            createMusicTrack(
+                886319475,
+                title: "Sad Machine",
+                artist: "Porter Robinson",
+                previewUrl: "http://a1382.phobos.apple.com/us/r1000/017/Music/v4/36/83/85/368385bf-a0db-b5e8-8f53-f832687f6c82/mzaf_1392545196903625587.plus.aac.p.m4a",
+                artworkUrl: "http://is4.mzstatic.com/image/thumb/Music6/v4/de/2b/f9/de2bf92f-b265-bff9-2338-c439e82507ec/UMG_cvrart_00602537707331_01_RGB72_1500x1500_14UMGIM24283.jpg/100x100bb-85.jpg"
+            ))
+        musicTracks.append(
+            createMusicTrack(
+                974822173,
+                title: "Spitfire",
+                artist: "Porter Robinson",
+                previewUrl: "http://a365.phobos.apple.com/us/r1000/136/Music3/v4/25/e7/11/25e7116b-297f-81c4-f36c-093bebaedaa9/mzaf_329617224738583989.plus.aac.p.m4a",
+                artworkUrl: "http://is1.mzstatic.com/image/thumb/Music1/v4/fa/f0/bc/faf0bccc-7b9d-0e90-9a69-1aaabf747c64/075679930309.jpg/100x100bb-85.jpg"
+            ))
+        musicTracks.append(
+            createMusicTrack(
+                1008306572,
+                title: "I Really Like You",
+                artist: "Carly Rae Jepsen",
+                previewUrl: "http://a1115.phobos.apple.com/us/r1000/052/Music1/v4/c0/54/39/c05439d3-ef52-bc20-ba1b-fd317fff902a/mzaf_2304959405349033865.plus.aac.p.m4a",
+                artworkUrl: "http://is1.mzstatic.com/image/thumb/Music5/v4/df/73/06/df73067e-a48a-c615-fe63-dde6dbcbd87d/UMG_cvrart_00602547455109_01_RGB72_1500x1500_15UMGIM31529.jpg/100x100bb-85.jpg"
+            ))
+
+        musicTracks.append(
+            createMusicTrack(
+                536592205,
+                title: "Good Time",
+                artist: "Owl City & Carly Rae Jepsen",
+                previewUrl: "http://a1728.phobos.apple.com/us/r1000/092/Music/d9/e3/84/mzi.ddrgyryh.aac.p.m4a",
+                artworkUrl: "http://is5.mzstatic.com/image/thumb/Music/v4/dd/df/f3/dddff3d3-431c-e58d-358a-62fe58b264a3/UMG_cvrart_00602537098514_01_RGB72_1200x1200_12UMGIM34863.jpg/100x100bb-85.jpg"
+            ))
+        musicTracks.append(
+            createMusicTrack(
+                907242704,
+                title: "Style",
+                artist: "Taylor Swift",
+                previewUrl: "http://a147.phobos.apple.com/us/r1000/137/Music5/v4/4f/6e/ba/4f6eba13-0b76-6b33-3ee8-48cf4606712d/mzaf_8264677660824429098.plus.aac.p.m4a",
+                artworkUrl: "http://is2.mzstatic.com/image/thumb/Music3/v4/2c/b1/87/2cb187fa-2da2-839e-436a-8997561c0493/UMG_cvrart_00843930013562_01_RGB72_1400x1400_14UMDIM03405.jpg/100x100bb-85.jpg"
+            ))
+        musicTracks.append(
+            createMusicTrack(
+                571445453,
+                title: "I Knew You Were Trouble",
+                artist: "Taylor Swift",
+                previewUrl: "http://a1689.phobos.apple.com/us/r1000/120/Music/v4/b3/b1/01/b3b101c5-0afd-a536-394d-962b7012e8e1/mzaf_2968645385761922805.aac.m4a",
+                artworkUrl: "http://is1.mzstatic.com/image/thumb/Music/v4/eb/bc/02/ebbc0219-a3a1-7c77-42ed-706251b98136/UMG_cvrart_00843930007134_01_RGB72_1200x1200_12UMDIM01007.jpg/100x100bb-85.jpg"
+            ))
+        println(NSBundle.mainBundle().bundlePath)
+
+        let realm = Realm(path: NSBundle.mainBundle().bundlePath + "/recommend.realm")
+        realm.write(){
+            for music in musicTracks {
+                realm.add(music)
+            }
+        }
+
+    }
 
     func createFavoriteMusicTracks(){
         var musicTracks: [MusicTrack] = []
-
-        musicTracks.append(
-            createMusicTrack(
-                894102379,
-                title: "Love Me Harder",
-                artist: "Ariana Grande & The Weeknd",
-                previewUrl: "http://a1842.phobos.apple.com/us/r1000/024/Music5/v4/86/b6/77/86b67750-3463-1c89-af5f-c21ae2434ac4/mzaf_5531833939915077095.plus.aac.p.m4a",
-                artworkUrl: "http://is1.mzstatic.com/image/thumb/Music4/v4/52/1b/90/521b904e-6fe1-e54d-97dc-b515983f4f21/UMG_cvrart_00602537939497_01_RGB72_1500x1500_14UMGIM28138.jpg/100x100bb-85.jpg"
-            ))
-        musicTracks.append(
-            createMusicTrack(
-                894102337,
-                title: "One Last Time",
-                artist: "Ariana Grande",
-                previewUrl: "http://a1769.phobos.apple.com/us/r1000/017/Music4/v4/3f/23/57/3f235795-e926-cd0c-365b-688154eb965f/mzaf_520111575490676065.plus.aac.p.m4a",
-                artworkUrl: "http://is1.mzstatic.com/image/thumb/Music4/v4/52/1b/90/521b904e-6fe1-e54d-97dc-b515983f4f21/UMG_cvrart_00602537939497_01_RGB72_1500x1500_14UMGIM28138.jpg/100x100bb-85.jpg"
-            ))
         musicTracks.append(
             createMusicTrack(
                 826860759,
@@ -47,11 +124,11 @@ class Seeds {
             ))
         musicTracks.append(
             createMusicTrack(
-                677376024,
-                title: "Wake Me Up",
-                artist: "Avicii",
-                previewUrl: "http://a93.phobos.apple.com/us/r1000/016/Music4/v4/41/50/bd/4150bd63-78ab-89bf-5bb5-0408cac1755a/mzaf_967038708454301735.plus.aac.p.m4a",
-                artworkUrl: "http://is5.mzstatic.com/image/thumb/Features/v4/9b/3c/ba/9b3cbacd-f7c2-13d0-0a97-af273a5560fb/dj.lmslhwto.jpg/100x100bb-85.jpg"
+                894102337,
+                title: "One Last Time",
+                artist: "Ariana Grande",
+                previewUrl: "http://a1769.phobos.apple.com/us/r1000/017/Music4/v4/3f/23/57/3f235795-e926-cd0c-365b-688154eb965f/mzaf_520111575490676065.plus.aac.p.m4a",
+                artworkUrl: "http://is1.mzstatic.com/image/thumb/Music4/v4/52/1b/90/521b904e-6fe1-e54d-97dc-b515983f4f21/UMG_cvrart_00602537939497_01_RGB72_1500x1500_14UMGIM28138.jpg/100x100bb-85.jpg"
             ))
         musicTracks.append(
             createMusicTrack(
@@ -63,18 +140,68 @@ class Seeds {
             ))
         musicTracks.append(
             createMusicTrack(
+                922876187,
+                title: "Outside (feat. Ellie Goulding)",
+                artist: "Calvin Harris",
+                previewUrl: "http://a1087.phobos.apple.com/us/r1000/132/Music3/v4/39/96/b1/3996b194-8e3b-b753-095c-796c3763bc5f/mzaf_5108150314547213074.plus.aac.p.m4a",
+                artworkUrl: "http://is1.mzstatic.com/image/thumb/Music4/v4/a1/b9/c3/a1b9c3e1-3933-cd28-1838-5b4d3d454c43/886444820448.jpg/100x100bb-85.jpg"
+            ))
+
+        musicTracks.append(
+            createMusicTrack(
+                1001677305,
+                title: "How Deep Is Your Love",
+                artist: "Calvin Harris & Disciples",
+                previewUrl: "http://a881.phobos.apple.com/us/r1000/175/Music7/v4/6b/2b/5a/6b2b5a84-1353-470e-e968-b35edbc0e83b/mzaf_1339229786837628269.plus.aac.p.m4a",
+                artworkUrl: "http://is2.mzstatic.com/image/thumb/Music1/v4/b0/2d/f9/b02df9d7-b92c-04fc-2c43-57bed17b2f59/dj.dkdebfmh.jpg/100x100bb-85.jpg"
+            ))
+
+        musicTracks.append(
+            createMusicTrack(
+                570039354,
+                title: "Sweet Nothing (feat. Florence Welch)",
+                artist: "Calvin Harris",
+                previewUrl: "http://a387.phobos.apple.com/us/r1000/078/Music/v4/e1/27/f1/e127f172-b241-a595-5219-38e7b3ac1e2c/mzaf_2946654874177535874.aac.m4a",
+                artworkUrl: "http://is2.mzstatic.com/image/thumb/Music/v4/2c/00/73/2c0073bb-ba59-2de8-fc23-55230fcfde07/0617465356858.jpg/100x100bb-85.jpg"
+            ))
+        musicTracks.append(
+            createMusicTrack(
+                922876184,
+                title: "Blame (feat. John Newman)",
+                artist: "Calvin Harris",
+                previewUrl: "http://a10.phobos.apple.com/us/r1000/139/Music3/v4/69/fd/7c/69fd7c44-2540-e49b-0950-b8b2702a0daa/mzaf_2213525356454631945.plus.aac.p.m4a",
+                artworkUrl: "http://is1.mzstatic.com/image/thumb/Music4/v4/a1/b9/c3/a1b9c3e1-3933-cd28-1838-5b4d3d454c43/886444820448.jpg/100x100bb-85.jpg"
+            ))
+        musicTracks.append(
+            createMusicTrack(
+                902149884,
+                title: "The Sun",
+                artist: "Maroon 5",
+                previewUrl: "http://a1170.phobos.apple.com/us/r1000/177/Music1/v4/40/00/81/400081cf-7981-2092-9d4d-07b3267fa4d9/mzaf_1049914443254554908.plus.aac.p.m4a",
+                artworkUrl: "http://is5.mzstatic.com/image/thumb/Music3/v4/bc/0a/b3/bc0ab3da-9d18-aa63-9db9-4f8d9276b543/UMG_cvrart_00602537943869_01_RGB72_1500x1500_14UMGIM27076.jpg/100x100bb-85.jpg"
+            ))
+        musicTracks.append(
+            createMusicTrack(
+                1008306569,
+                title: "Run Away with Me",
+                artist: "Carly Rae Jepsen",
+                previewUrl: "http://a1488.phobos.apple.com/us/r1000/001/Music5/v4/22/53/d3/2253d3de-0b47-c062-697f-2d9c0f284666/mzaf_3847292705466994958.plus.aac.p.m4a",
+                artworkUrl: "http://is1.mzstatic.com/image/thumb/Music5/v4/df/73/06/df73067e-a48a-c615-fe63-dde6dbcbd87d/UMG_cvrart_00602547455109_01_RGB72_1500x1500_15UMGIM31529.jpg/100x100bb-85.jpg"
+            ))
+        musicTracks.append(
+            createMusicTrack(
+                557469386,
+                title: "Call Me Maybe",
+                artist: "Carly Rae Jepsen",
+                previewUrl: "http://a1083.phobos.apple.com/us/r1000/069/Music/1d/2c/52/mzi.vwfptlpg.aac.p.m4a",
+                artworkUrl: "http://is3.mzstatic.com/image/thumb/Music/v4/8f/a7/85/8fa7852d-2020-f2f8-7d0d-9884cbfe47be/UMG_cvrart_00602537164585_01_RGB72_1200x1200_12UMGIM48176.jpg/100x100bb-85.jpg"
+            ))
+        musicTracks.append(
+            createMusicTrack(
                 690928331,
                 title: "Roar",
                 artist: "Katy Perry",
                 previewUrl: "http://a941.phobos.apple.com/us/r1000/053/Music6/v4/80/ca/98/80ca98ff-1778-db3e-9c02-4290128a2533/mzaf_5034984133495252182.plus.aac.p.m4a",
-                artworkUrl: "http://is4.mzstatic.com/image/thumb/Features4/v4/f7/3e/40/f73e4011-5ed3-fc65-9107-2438acd70509/dj.hbxrueel.jpg/100x100bb-85.jpg"
-            ))
-        musicTracks.append(
-            createMusicTrack(
-                690928460,
-                title: "Dark Horse (feat. Juicy J)",
-                artist: "Katy Perry",
-                previewUrl: "http://a1930.phobos.apple.com/us/r1000/022/Music/v4/a4/ac/63/a4ac6341-59e3-bcfe-b7f5-370100eea063/mzaf_4835051646631223146.plus.aac.p.m4a",
                 artworkUrl: "http://is4.mzstatic.com/image/thumb/Features4/v4/f7/3e/40/f73e4011-5ed3-fc65-9107-2438acd70509/dj.hbxrueel.jpg/100x100bb-85.jpg"
             ))
         musicTracks.append(
@@ -101,8 +228,99 @@ class Seeds {
                 previewUrl: "http://a1999.phobos.apple.com/us/r1000/077/Music/83/ba/23/mzm.tvcylyrp.aac.p.m4a",
                 artworkUrl: "http://is2.mzstatic.com/image/thumb/Features/v4/90/29/d8/9029d8e5-75d8-7990-a795-cf7e82a75f71/V4HttpAssetRepositoryClient-ticket.ptkewlhu.jpg-2831533314535594341.jpg/100x100bb-85.jpg"
             ))
+        musicTracks.append(
+            createMusicTrack(
+                581997309,
+                title: "F**kin' Problems (feat. Drake, 2 Chainz & Kendrick Lamar)",
+                artist: "A$AP Rocky",
+                previewUrl: "http://a1164.phobos.apple.com/us/r1000/102/Music/v4/13/a0/00/13a000ce-9102-5294-2f8f-96af412adb74/mzaf_1270222311776007837.aac.m4a",
+                artworkUrl: "http://is2.mzstatic.com/image/thumb/Music/v4/91/ef/2e/91ef2eb9-d19c-6c95-9b34-ddcc86fbc4ea/886443746398.jpg/100x100bb-85.jpg"
+            ))
+        musicTracks.append(
+            createMusicTrack(
+                101729512,
+                title: "Alle Jahre wieder",
+                artist: "2 Chains",
+                previewUrl: "http://a1329.phobos.apple.com/us/r1000/104/Music/d3/e6/14/mzm.jfshjwsy.aac.p.m4a",
+                artworkUrl: "http://is5.mzstatic.com/image/thumb/Music/36/39/f0/mzi.vmgdymjr.jpg/100x100bb-85.jpg"
+            ))
+        musicTracks.append(
+            createMusicTrack(
+                574203655,
+                title: "Buy the Cases",
+                artist: "Yo Gotti & 2 Chains",
+                previewUrl: "http://a1784.phobos.apple.com/us/r30/Music7/v4/bc/c5/02/bcc50278-e7b9-e5c6-d8f3-bc4bb9632686/mzaf_1635069022858916864.plus.aac.p.m4a",
+                artworkUrl: "http://is2.mzstatic.com/image/thumb/Music/v4/4d/c9/fa/4dc9fa3f-eac5-233f-da3d-8b5ae845f77e/Cover.jpg/100x100bb-85.jpg"
+            ))
+        musicTracks.append(
+            createMusicTrack(
+                469591400,
+                title: "Think About It",
+                artist: "2 Chains",
+                previewUrl: "http://a1442.phobos.apple.com/us/r1000/175/Music/83/d3/5b/mzm.lielbklb.aac.p.m4a",
+                artworkUrl: "http://is1.mzstatic.com/image/thumb/Music/7e/87/70/mzi.mlcofyac.tif/100x100bb-85.jpg"
+            ))
 
-        let realm = Realm()
+        musicTracks.append(
+            createMusicTrack(
+                620477616,
+                title: "Rich As Fuck (feat. 2 Chainz)",
+                artist: "Lil Wayne",
+                previewUrl: "http://a464.phobos.apple.com/us/r1000/086/Music/v4/bf/25/79/bf257908-1cad-fee2-f999-cbeb349905d9/mzaf_8102014064216293679.aac.m4a",
+                artworkUrl: "http://is5.mzstatic.com/image/thumb/Music/v4/b8/cb/66/b8cb66b0-31a4-1394-2577-e2a3403ebb9c/UMG_cvrart_00602537366392_01_RGB72_1500x1500_13UMGIM25908.jpg/100x100bb-85.jpg"
+            ))
+        musicTracks.append(
+            createMusicTrack(
+                705503646,
+                title: "All Me (feat. 2 Chainz & Big Sean)",
+                artist: "Drake",
+                previewUrl: "http://a1502.phobos.apple.com/us/r1000/039/Music/v4/07/97/20/079720df-6f13-86fd-5167-bed169dd5bc0/mzaf_8011488420315591484.plus.aac.p.m4a",
+                artworkUrl: "http://is1.mzstatic.com/image/thumb/Music/v4/1f/e2/ca/1fe2cac4-ef84-c01b-0025-9c9635eadd6d/UMG_cvrart_00602537542338_01_RGB72_1500x1500_13UAAIM79861.jpg/100x100bb-85.jpg"
+            ))
+        musicTracks.append(
+            createMusicTrack(
+                683600763,
+                title: "Bandz a Make Her Dance (feat. 2 Chainz & Lil Wayne)",
+                artist: "Juicy J",
+                previewUrl: "http://a929.phobos.apple.com/us/r1000/008/Music/v4/21/60/73/216073d8-0ceb-ba96-6337-bcdfaf398750/mzaf_1445119870399739965.plus.aac.p.m4a",
+                artworkUrl: "http://is5.mzstatic.com/image/thumb/Music6/v4/8f/f4/27/8ff4270b-3f53-2a4b-19e6-1600b494843a/886444152013.jpg/100x100bb-85.jpg"
+            ))
+        musicTracks.append(
+            createMusicTrack(
+                840381890,
+                title: "Talk Dirty (feat. 2 Chainz)",
+                artist: "Jason Derulo",
+                previewUrl: "http://a301.phobos.apple.com/us/r1000/047/Music/v4/07/38/8c/07388c27-d878-5dcd-41b9-bca1b2d776d2/mzaf_8873167061179187812.plus.aac.p.m4a",
+                artworkUrl: "http://is2.mzstatic.com/image/thumb/Music/v4/e1/a6/0d/e1a60d60-3932-660d-c8a4-3e96fd6082df/093624938699.jpg/100x100bb-85.jpg"
+            ))
+        musicTracks.append(
+            createMusicTrack(
+                907242709,
+                title: "Bad Blood",
+                artist: "Taylor Swift",
+                previewUrl: "http://a1968.phobos.apple.com/us/r1000/026/Music3/v4/1b/30/04/1b300454-1cec-b50d-29dd-60ad351c1b3b/mzaf_3536997228152797622.plus.aac.p.m4a",
+                artworkUrl: "http://is2.mzstatic.com/image/thumb/Music3/v4/2c/b1/87/2cb187fa-2da2-839e-436a-8997561c0493/UMG_cvrart_00843930013562_01_RGB72_1400x1400_14UMDIM03405.jpg/100x100bb-85.jpg"
+            ))
+        musicTracks.append(
+            createMusicTrack(
+                295757256,
+                title: "You Belong With Me",
+                artist: "Taylor Swift",
+                previewUrl: "http://a955.phobos.apple.com/us/r1000/105/Music/c0/77/58/mzm.mwxzkcck.aac.p.m4a",
+                artworkUrl: "http://is5.mzstatic.com/image/thumb/Features/aa/57/c7/dj.fmlajvtr.jpg/100x100bb-85.jpg"
+            ))
+        musicTracks.append(
+            createMusicTrack(
+                512360314,
+                title: "Beez In the Trap (feat. 2 Chainz)",
+                artist: "Nicki Minaj",
+                previewUrl: "http://a1181.phobos.apple.com/us/r1000/076/Music/7d/4b/6e/mzm.tiadbvvm.aac.p.m4a",
+                artworkUrl: "http://is3.mzstatic.com/image/thumb/Music/v4/34/13/02/341302ce-99ff-c788-c1b4-44d9358e53c0/UMG_cvrart_00602537011018_01_RGB72_1200x1200_12UMGIM12514.jpg/100x100bb-85.jpg"
+            ))
+
+        println(NSBundle.mainBundle().bundlePath)
+
+        let realm = Realm(path: NSBundle.mainBundle().bundlePath + "/favorite.realm")
         realm.write(){
             for music in musicTracks {
                 realm.add(music)
@@ -114,7 +332,7 @@ class Seeds {
         var recommendPlaylists: [Playlist] = []
         var playlist: Playlist = Playlist()
 
-        playlist = createPlaylist("TITLE", comment: "COMMENT", playlister: "PLAYLISTER", inspireNumber: 0)
+        playlist = createPlaylist("My Best HOUSE MUSICを聴いてほしい", comment: "とりあえず聴いてくれ、これだけは。", playlister: "DJ TAMURA", inspireNumber: 127)
         playlist.musicTracks.append(
             createMusicTrack(
                 826860759,
@@ -181,7 +399,7 @@ class Seeds {
             ))
         recommendPlaylists.append(playlist)
 
-        playlist = createPlaylist("TITLE", comment: "COMMENT", playlister: "PLAYLISTER", inspireNumber: 0)
+        playlist = createPlaylist("センチメンタルな気分をぶち壊したい時に聴いて", comment: "これ以上良い8曲は選べないよ", playlister: "DJ MIURA", inspireNumber: 324)
         playlist.musicTracks.append(
             createMusicTrack(
                 894102341,
@@ -248,7 +466,7 @@ class Seeds {
             ))
         recommendPlaylists.append(playlist)
 
-        playlist = createPlaylist("TITLE", comment: "COMMENT", playlister: "PLAYLISTER", inspireNumber: 0)
+        playlist = createPlaylist("クラブに行く前におすすめの曲達", comment: "予習くらいしていけよな！", playlister: "DJ SHIMBO", inspireNumber: 154)
         playlist.musicTracks.append(
             createMusicTrack(
                 565825199,
@@ -315,7 +533,7 @@ class Seeds {
             ))
         recommendPlaylists.append(playlist)
 
-        playlist = createPlaylist("TITLE", comment: "COMMENT", playlister: "PLAYLISTER", inspireNumber: 0)
+        playlist = createPlaylist("洋楽 ~Best Of The Mix", comment: "Pitbull & Ne-Yo / Pitbull / Hardwell / Apollo / Hardwell / Hardwell /Pitbull / Pitbull", playlister: "mikematas", inspireNumber: 45)
         playlist.musicTracks.append(
             createMusicTrack(
                 933984166,
@@ -382,7 +600,7 @@ class Seeds {
             ))
         recommendPlaylists.append(playlist)
 
-        playlist = createPlaylist("TITLE", comment: "COMMENT", playlister: "PLAYLISTER", inspireNumber: 0)
+        playlist = createPlaylist("クラブが嫌いな人でも聴いてほしい", comment: "本当にオススメの曲だけを集めたよ！", playlister: "Alex", inspireNumber: 67)
         playlist.musicTracks.append(
             createMusicTrack(
                 482734113,
@@ -449,7 +667,7 @@ class Seeds {
             ))
         recommendPlaylists.append(playlist)
 
-        playlist = createPlaylist("TITLE", comment: "COMMENT", playlister: "PLAYLISTER", inspireNumber: 0)
+        playlist = createPlaylist("運転中にオススメなEDM集", comment: "テンション上がってスピード出し過ぎるなよな！", playlister: "Saori", inspireNumber: 83)
         playlist.musicTracks.append(
             createMusicTrack(
                 480054438,
@@ -516,7 +734,7 @@ class Seeds {
             ))
         recommendPlaylists.append(playlist)
 
-        playlist = createPlaylist("TITLE", comment: "COMMENT", playlister: "PLAYLISTER", inspireNumber: 0)
+        playlist = createPlaylist("Maroon 5を中心におしゃれな曲を集めてみた", comment: "シャレオツや", playlister: "PLAYLISTER", inspireNumber: 293)
         playlist.musicTracks.append(
             createMusicTrack(
                 542469000,
@@ -583,7 +801,7 @@ class Seeds {
             ))
         recommendPlaylists.append(playlist)
 
-        playlist = createPlaylist("TITLE", comment: "COMMENT", playlister: "PLAYLISTER", inspireNumber: 0)
+        playlist = createPlaylist("Dirty Vegas", comment: "Dirty Vegasいいね", playlister: "george", inspireNumber: 78)
         playlist.musicTracks.append(
             createMusicTrack(
                 699729587,
@@ -650,7 +868,7 @@ class Seeds {
             ))
         recommendPlaylists.append(playlist)
 
-        playlist = createPlaylist("TITLE", comment: "COMMENT", playlister: "PLAYLISTER", inspireNumber: 0)
+        playlist = createPlaylist("La Rouxって懐かしいよね", comment: "La Rouxの曲を集めたよ", playlister: "ケン", inspireNumber: 124)
         playlist.musicTracks.append(
             createMusicTrack(
                 331340577,
@@ -717,7 +935,7 @@ class Seeds {
             ))
         recommendPlaylists.append(playlist)
 
-        playlist = createPlaylist("TITLE", comment: "COMMENT", playlister: "PLAYLISTER", inspireNumber: 0)
+        playlist = createPlaylist("Sleepy Tomって知ってる？", comment: "本当にいい曲ばかりだから聴いてみて！", playlister: "John", inspireNumber: 23)
         playlist.musicTracks.append(
             createMusicTrack(
                 1008393092,
@@ -792,7 +1010,6 @@ class Seeds {
             }
         }
     }
-
 
 
     func createPlaylist(title: String, comment: String, playlister: String, inspireNumber: Int) -> Playlist{

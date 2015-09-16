@@ -7,7 +7,8 @@ class AddMusicViewController: ISPViewController, UITableViewDelegate, UITableVie
     var playlist: Playlist?
     var recomendSongs: List<MusicTrack>?
     var favoriteSongs: Results<MusicTrack>?
-    let realm = Realm()
+    let realm_fav = Realm(path: NSBundle.mainBundle().bundlePath + "/favorite.realm")
+    let realm_rec = Realm(path: NSBundle.mainBundle().bundlePath + "/recommend.realm")
     var checked: [Bool] = []
     private var additionalSongs = List<MusicTrack>()
 
@@ -18,10 +19,10 @@ class AddMusicViewController: ISPViewController, UITableViewDelegate, UITableVie
         for mTrack in playlist!.musicTracks {
             predicates.append(NSPredicate(format: "trackId != \(mTrack.trackId)"))
         }
-        favoriteSongs = realm.objects(MusicTrack).filter(NSCompoundPredicate.andPredicateWithSubpredicates(predicates))
+        favoriteSongs = realm_fav.objects(MusicTrack).filter(NSCompoundPredicate.andPredicateWithSubpredicates(predicates))
         checked = Array(count: favoriteSongs?.count ?? 0, repeatedValue: false)
 
-        for music in favoriteSongs! {
+        for music in realm_rec.objects(MusicTrack).filter(NSCompoundPredicate.andPredicateWithSubpredicates(predicates)) {
             recomendSongs?.append(music)
         }
 

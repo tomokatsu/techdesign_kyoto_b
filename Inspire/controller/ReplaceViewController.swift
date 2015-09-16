@@ -9,9 +9,10 @@ class ReplaceViewController: ISPViewController, UITableViewDelegate, UITableView
     @IBOutlet weak private var replacedSongTitleLabel: UILabel!
     @IBOutlet weak private var replacedSongArtistLabel: UILabel!
     private let blurView = UIVisualEffectView(effect: UIBlurEffect(style: .Dark))
-    let realm = Realm()
+    let realm_fav = Realm(path: NSBundle.mainBundle().bundlePath + "/favorite.realm")
+    let realm_rec = Realm(path: NSBundle.mainBundle().bundlePath + "/recommend.realm")
     var favoriteMusicTracks: Results<MusicTrack>?
-    var recomendMusicTracks: List<MusicTrack>?
+    var recomendMusicTracks: Results<MusicTrack>?
     var playlist: Playlist?
 
     private var isOpenRecomend = false
@@ -22,12 +23,14 @@ class ReplaceViewController: ISPViewController, UITableViewDelegate, UITableView
     override func viewDidLoad() {
         super.viewDidLoad()
         var predicates: [NSPredicate] = []
-        var playlists = realm.objects(Playlist)
 
         for music in playlist!.musicTracks {
                 predicates.append(NSPredicate(format: "trackId != \(music.trackId)"))
         }
-        favoriteMusicTracks = realm.objects(MusicTrack).filter(NSCompoundPredicate.andPredicateWithSubpredicates(predicates))
+        favoriteMusicTracks = realm_fav.objects(MusicTrack).filter(NSCompoundPredicate.andPredicateWithSubpredicates(predicates))
+
+        recomendMusicTracks = realm_rec.objects(MusicTrack).filter(NSCompoundPredicate.andPredicateWithSubpredicates(predicates))
+
         layoutView()
     }
 
