@@ -24,8 +24,8 @@ class ReplaceViewController: ISPViewController, UITableViewDelegate, UITableView
         super.viewDidLoad()
         var predicates: [NSPredicate] = []
 
-        for music in playlist!.musicTracks {
-                predicates.append(NSPredicate(format: "trackId != \(music.trackId)"))
+        for mTrack in playlist!.musicTracks {
+            predicates.append(NSPredicate(format: "trackId != \(mTrack.trackId)"))
         }
         favoriteMusicTracks = realm_fav.objects(MusicTrack).filter(NSCompoundPredicate.andPredicateWithSubpredicates(predicates))
 
@@ -55,7 +55,11 @@ class ReplaceViewController: ISPViewController, UITableViewDelegate, UITableView
             return cell
         }
         let cell = tableView.dequeueReusableCellWithIdentifier("ReplaceSongCell", forIndexPath: indexPath) as? ReplaceSongCell ?? ReplaceSongCell()
-        cell.music = favoriteMusicTracks![indexPath.row]
+        if indexPath.section == 0 {
+            cell.music = recomendMusicTracks![indexPath.row]
+        } else {
+            cell.music = favoriteMusicTracks![indexPath.row]
+        }
         return cell
     }
 

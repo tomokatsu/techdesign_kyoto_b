@@ -332,7 +332,7 @@ class Seeds {
         var recommendPlaylists: [Playlist] = []
         var playlist: Playlist = Playlist()
 
-        playlist = createPlaylist("My Best HOUSE MUSICを聴いてほしい", comment: "とりあえず聴いてくれ、これだけは。", playlister: "DJ TAMURA", inspireNumber: 127, userImageUrl: "https://s3.amazonaws.com/uifaces/faces/twitter/jsa/48.jpg")
+        playlist = createPlaylist("俺のBest HOUSE MUSIC", comment: "とりあえず聴いてくれ、これだけは。", playlister: "DJ TAMURA", inspireNumber: 127, userImageUrl: "https://s3.amazonaws.com/uifaces/faces/twitter/jsa/48.jpg")
         playlist.musicTracks.append(
             createMusicTrack(
                 826860759,
@@ -399,7 +399,7 @@ class Seeds {
             ))
         recommendPlaylists.append(playlist)
 
-        playlist = createPlaylist("センチメンタルな気分をぶち壊したい時に聴いて", comment: "これ以上良い8曲は選べないよ", playlister: "DJ MIURA", inspireNumber: 324, userImageUrl: "https://s3.amazonaws.com/uifaces/faces/twitter/minipunk/48.jpg")
+        playlist = createPlaylist("センチメンタルな気分をぶち壊したい時に", comment: "これ以上良い8曲は選べないよ", playlister: "DJ MIURA", inspireNumber: 324, userImageUrl: "https://s3.amazonaws.com/uifaces/faces/twitter/minipunk/48.jpg")
         playlist.musicTracks.append(
             createMusicTrack(
                 894102341,

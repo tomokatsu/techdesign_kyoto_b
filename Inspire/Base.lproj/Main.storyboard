@@ -55,7 +55,7 @@
                         <subviews>
                             <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" pagingEnabled="YES" translatesAutoresizingMaskIntoConstraints="NO" id="p3u-Bb-glg" customClass="ISPPagingScrollView" customModule="Inspire" customModuleProvider="target">
                                 <rect key="frame" x="0.0" y="51" width="320" height="473"/>
-                                <color key="backgroundColor" red="0.098039215686274508" green="0.098039215686274508" blue="0.10196078431372549" alpha="1" colorSpace="calibratedRGB"/>
+                                <color key="backgroundColor" red="0.15294117647058825" green="0.15294117647058825" blue="0.16470588235294117" alpha="1" colorSpace="calibratedRGB"/>
                                 <connections>
                                     <outlet property="delegate" destination="mz7-35-jT4" id="eQG-Fz-xpz"/>
                                 </connections>
