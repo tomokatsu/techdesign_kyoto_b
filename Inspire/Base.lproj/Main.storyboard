@@ -55,7 +55,7 @@
                         <subviews>
                             <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" pagingEnabled="YES" translatesAutoresizingMaskIntoConstraints="NO" id="p3u-Bb-glg" customClass="ISPPagingScrollView" customModule="Inspire" customModuleProvider="target">
                                 <rect key="frame" x="0.0" y="51" width="320" height="473"/>
-                                <color key="backgroundColor" red="0.15294117647058825" green="0.15294117647058825" blue="0.16470588235294117" alpha="1" colorSpace="calibratedRGB"/>
+                                <color key="backgroundColor" red="0.14901960784313725" green="0.14901960784313725" blue="0.16470588235294117" alpha="1" colorSpace="calibratedRGB"/>
                                 <connections>
                                     <outlet property="delegate" destination="mz7-35-jT4" id="eQG-Fz-xpz"/>
                                 </connections>
@@ -109,7 +109,7 @@
                                 </userDefinedRuntimeAttributes>
                             </view>
                         </subviews>
-                        <color key="backgroundColor" red="0.1764705882352941" green="0.1764705882352941" blue="0.19607843137254902" alpha="1" colorSpace="calibratedRGB"/>
+                        <color key="backgroundColor" red="0.14901960784313725" green="0.14901960784313725" blue="0.16470588235294117" alpha="1" colorSpace="calibratedRGB"/>
                         <constraints>
                             <constraint firstItem="p3u-Bb-glg" firstAttribute="leading" secondItem="GS0-l8-gl8" secondAttribute="leading" id="7fo-1L-N0Q"/>
                             <constraint firstItem="vhQ-KQ-n49" firstAttribute="top" secondItem="p3u-Bb-glg" secondAttribute="bottom" id="Emk-Yn-QqL"/>
@@ -287,7 +287,7 @@
                                                 <constraint firstAttribute="centerY" secondItem="A1F-5p-EQz" secondAttribute="centerY" id="yTf-GG-FKM"/>
                                             </constraints>
                                         </tableViewCellContentView>
-                                        <color key="backgroundColor" red="0.11372549019607843" green="0.11372549019607843" blue="0.12156862745098039" alpha="1" colorSpace="calibratedRGB"/>
+                                        <color key="backgroundColor" red="0.14901960784313725" green="0.14901960784313725" blue="0.16470588235294117" alpha="1" colorSpace="calibratedRGB"/>
                                         <connections>
                                             <outlet property="inspireButton" destination="A1F-5p-EQz" id="UT4-uZ-Kig"/>
                                             <outlet property="userImageView" destination="cQb-Dl-N9p" id="xB4-Vz-K6I"/>
@@ -359,7 +359,7 @@
                                                 <constraint firstItem="O8h-c5-DvE" firstAttribute="width" secondItem="DAo-Ei-Ggw" secondAttribute="width" constant="1" id="ugO-HS-EAr"/>
                                             </constraints>
                                         </tableViewCellContentView>
-                                        <color key="backgroundColor" red="0.11372549019607843" green="0.11372549019607843" blue="0.12156862745098039" alpha="1" colorSpace="calibratedRGB"/>
+                                        <color key="backgroundColor" red="0.14901960784313725" green="0.14901960784313725" blue="0.16470588235294117" alpha="1" colorSpace="calibratedRGB"/>
                                         <connections>
                                             <outlet property="artistLabel" destination="DAo-Ei-Ggw" id="s5e-6s-ROw"/>
                                             <outlet property="playingImageView" destination="nu3-mc-Yuu" id="7lT-ny-kPy"/>
@@ -404,7 +404,7 @@
                         <autoresizingMask key="autoresizingMask"/>
                         <color key="backgroundColor" red="0.1764705882352941" green="0.1764705882352941" blue="0.19607843137254902" alpha="0.0" colorSpace="calibratedRGB"/>
                         <color key="tintColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
-                        <color key="barTintColor" red="0.1764705882352941" green="0.1764705882352941" blue="0.19607843137254902" alpha="1" colorSpace="calibratedRGB"/>
+                        <color key="barTintColor" red="0.14901960784313725" green="0.14901960784313725" blue="0.16470588235294117" alpha="1" colorSpace="calibratedRGB"/>
                         <textAttributes key="titleTextAttributes">
                             <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                         </textAttributes>
@@ -902,7 +902,7 @@
                                                 <constraint firstItem="7Wc-m8-F9q" firstAttribute="top" secondItem="iZd-wO-c6h" secondAttribute="top" constant="14" id="xQa-Aj-NVn"/>
                                             </constraints>
                                         </tableViewCellContentView>
-                                        <color key="backgroundColor" red="0.1137254902" green="0.1137254902" blue="0.1215686275" alpha="1" colorSpace="calibratedRGB"/>
+                                        <color key="backgroundColor" red="0.14901960784313725" green="0.14901960784313725" blue="0.16470588235294117" alpha="1" colorSpace="calibratedRGB"/>
                                         <connections>
                                             <outlet property="artistLabel" destination="Orn-je-Bsy" id="coY-DZ-dRw"/>
                                             <outlet property="thumbnailImageView" destination="7Wc-m8-F9q" id="e3x-fi-bum"/>

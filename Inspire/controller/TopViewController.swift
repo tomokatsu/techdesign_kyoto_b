@@ -56,7 +56,7 @@ class TopViewController: ISPViewController, UITableViewDelegate, UITableViewData
             tableViewFrame.origin.x = tableViewFrame.origin.x + tableViewFrame.width
             tableView.delegate = self
             tableView.dataSource = self
-            tableView.backgroundColor = UIColor(red: 25/255, green: 25/255, blue: 26/255, alpha: 1)
+            tableView.backgroundColor = UIColor(red: 38/255, green: 38/255, blue: 42/255, alpha: 1)
             tableView.separatorStyle = .None
             tableView.tag = i
             tableView.registerNib(UINib(nibName: "TopTableViewCell", bundle: nil), forCellReuseIdentifier: "Cell")
@@ -103,7 +103,7 @@ class TopViewController: ISPViewController, UITableViewDelegate, UITableViewData
 
     func tableView(tableView: UITableView, cellForRowAtIndexPath indexPath: NSIndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCellWithIdentifier("Cell") as? TopTableViewCell ?? TopTableViewCell()
-        cell.backgroundColor = UIColor(red: 0.11372549, green: 0.11372549, blue: 0.125490196, alpha: 1)
+        cell.backgroundColor = UIColor(red: 38/255, green: 38/255, blue: 42/255, alpha: 1)
         cell.selectionStyle = .None
 
         let playlist: Playlist
