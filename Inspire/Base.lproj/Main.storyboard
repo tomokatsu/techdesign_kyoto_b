@@ -191,6 +191,7 @@
                                                     <state key="normal" image="PlayButtonImage">
                                                         <color key="titleShadowColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                                                     </state>
+                                                    <state key="selected" image="Pause"/>
                                                     <userDefinedRuntimeAttributes>
                                                         <userDefinedRuntimeAttribute type="number" keyPath="layer.cornerRadius">
                                                             <integer key="value" value="40"/>
@@ -220,6 +221,7 @@
                                         <connections>
                                             <outlet property="inspiredNumberLabel" destination="nVf-eY-Vpd" id="AMR-aw-lZR"/>
                                             <outlet property="mainImageView" destination="rys-UU-c6n" id="GyQ-sM-93L"/>
+                                            <outlet property="playButton" destination="lF4-Vj-YI2" id="QbK-as-HOi"/>
                                             <outlet property="titleLabel" destination="V5u-wl-bqk" id="fk9-C6-ULb"/>
                                         </connections>
                                     </tableViewCell>
@@ -1366,6 +1368,7 @@
         <image name="DetailPrevious" width="23" height="23"/>
         <image name="DetailRepeat" width="16" height="14"/>
         <image name="DetailShuffle" width="17" height="14"/>
+        <image name="Pause" width="79" height="80"/>
         <image name="PlayButtonImage" width="80" height="80"/>
         <image name="Playing" width="20" height="16"/>
         <image name="PlaylistPlay" width="60" height="60"/>

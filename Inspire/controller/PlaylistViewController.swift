@@ -38,7 +38,6 @@ class PlaylistViewController: ISPViewController, UITableViewDelegate, UITableVie
             case "DetailPlayer":
                 let viewController = segue.destinationViewController as! DetailViewController
                 viewController.playlist = playlist
-                
             case "Inspire":
                 let navigationController = segue.destinationViewController as! UINavigationController
                 let copyPlaylist = Playlist()
@@ -51,6 +50,20 @@ class PlaylistViewController: ISPViewController, UITableViewDelegate, UITableVie
 
             default: break
         }
+    }
+
+    override func shouldPerformSegueWithIdentifier(identifier: String?, sender: AnyObject?) -> Bool {
+        if identifier == "DetailPlayer" {
+            if PlayerManager.sharedInstance.playlist == nil {
+                return true
+            }
+            if PlayerManager.sharedInstance.isPlaying() && PlayerManager.sharedInstance.playlist == playlist {
+                PlayerManager.sharedInstance.pause()
+                tableView.reloadData()
+                return false
+            }
+        }
+        return true
     }
 
     func numberOfSectionsInTableView(tableView: UITableView) -> Int {
@@ -88,6 +101,11 @@ class PlaylistViewController: ISPViewController, UITableViewDelegate, UITableVie
             case 0:
                 let cell = tableView.dequeueReusableCellWithIdentifier("MainCell", forIndexPath: indexPath) as? PlaylistMainCell ?? PlaylistMainCell()
                 cell.playlist = playlist
+                if PlayerManager.sharedInstance.isPlaying() && PlayerManager.sharedInstance.playlist == playlist {
+                    cell.playButton.selected = true
+                } else {
+                    cell.playButton.selected = false
+                }
                 return cell
             case 1:
                 let cell = tableView.dequeueReusableCellWithIdentifier("PlaylistInfoCell", forIndexPath: indexPath) as? PlaylistInfoCell ?? PlaylistInfoCell()

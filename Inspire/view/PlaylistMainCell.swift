@@ -5,6 +5,7 @@ class PlaylistMainCell: ISPTableViewCell {
     @IBOutlet weak private var mainImageView: UIImageView!
     @IBOutlet weak private var titleLabel: UILabel!
     @IBOutlet weak private var inspiredNumberLabel: UILabel!
+    @IBOutlet weak var playButton: UIButton!
 
     private var gradientView = UIView()
     private var _playlist: Playlist?
