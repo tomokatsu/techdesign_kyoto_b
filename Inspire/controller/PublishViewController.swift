@@ -53,8 +53,8 @@ class PublishViewController: ISPViewController, UITableViewDataSource, UITableVi
     }
 
     @IBAction func publishButtonTouchUpInside(sender: UIBarButtonItem) {
-        playlist?.playlister = "TAKESHI"
-        playlist?.userImageURL = "http://affexceed.art.coocan.jp/water/unit_01/data/aff_data009.jpg"
+        playlist?.playlister = "DJ MUROHASHI"
+        playlist?.userImageURL = "https://s3.amazonaws.com/uifaces/faces/twitter/rem/48.jpg"
         playlist?.isInspire = true
         realm.write {
             self.realm.add(self.playlist!, update: false)
