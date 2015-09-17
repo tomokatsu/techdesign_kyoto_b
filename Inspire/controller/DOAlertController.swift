@@ -207,7 +207,7 @@ class DOAlertController : ISPViewController, UITextFieldDelegate, UIViewControll
     // ButtonContainer
     private var buttonContainer = UIView()
     private var buttonContainerHeightConstraint: NSLayoutConstraint!
-    private let buttonHeight: CGFloat = 44.0
+    private let buttonHeight: CGFloat = 60.0
     private var buttonMargin: CGFloat = 10.0
     
     // Actions
