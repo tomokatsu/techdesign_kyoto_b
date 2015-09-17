@@ -17,6 +17,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         window = UIWindow(frame: UIScreen.mainScreen().bounds)
         let storyBoard = UIStoryboard(name: "Main", bundle: nil)
         let rootViewController = storyBoard.instantiateViewControllerWithIdentifier("Initial") as! UINavigationController
+        (rootViewController.childViewControllers[0] as! TopViewController).isOpenMyPlaylist = true
         self.window?.rootViewController = rootViewController
         window?.makeKeyAndVisible()
     }

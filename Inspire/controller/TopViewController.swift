@@ -15,6 +15,7 @@ class TopViewController: ISPViewController, UITableViewDelegate, UITableViewData
     var myPlaylists: Results<Playlist>?
     var inspirablePlaylists: Results<Playlist>?
     var beganPoint = CGPointZero
+    var isOpenMyPlaylist: Bool = false
 
     @IBOutlet weak var myPlaylistButton: UIButton!
     @IBOutlet weak var myFeedButton: UIButton!
@@ -40,6 +41,11 @@ class TopViewController: ISPViewController, UITableViewDelegate, UITableViewData
 
     override func viewWillAppear(animated: Bool) {
         (self.navigationController?.navigationBar as? ISPNavigationBar)?.show()
+        if isOpenMyPlaylist {
+            currentPage = .MyPlaylist
+            scrollView.setContentOffset(CGPoint(x: self.view.bounds.width * CGFloat(1), y: 0.0), animated: true)
+        }
+        isOpenMyPlaylist = false
     }
 
     override func viewWillDisappear(animated: Bool) {
