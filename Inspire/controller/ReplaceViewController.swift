@@ -128,7 +128,15 @@ class ReplaceViewController: ISPViewController, UITableViewDelegate, UITableView
         }
 
         let index = playlist?.musicTracks.indexOf(music!)
-        playlist?.musicTracks.replace(index!, object: (tableView.cellForRowAtIndexPath(indexPath) as! ReplaceSongCell).music!)
+        var aMusic = (tableView.cellForRowAtIndexPath(indexPath) as! ReplaceSongCell).music!
+        var  copyMusic = MusicTrack()
+        copyMusic.title = aMusic.title
+        copyMusic.trackId = aMusic.trackId
+        copyMusic.artist = aMusic.artist
+        copyMusic.artworkUrl = aMusic.artworkUrl
+        copyMusic.previewUrl = aMusic.previewUrl
+
+        playlist?.musicTracks.replace(index!, object: copyMusic)
         self.navigationController?.popViewControllerAnimated(true)
     }
 }

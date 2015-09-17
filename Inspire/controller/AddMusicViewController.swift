@@ -12,6 +12,7 @@ class AddMusicViewController: ISPViewController, UITableViewDelegate, UITableVie
     var checked: [Bool] = []
     private var additionalSongs = List<MusicTrack>()
 
+
     override func viewDidLoad() {
         super.viewDidLoad()
         tableView.contentInset.top = 66
@@ -63,7 +64,13 @@ class AddMusicViewController: ISPViewController, UITableViewDelegate, UITableVie
 
     func completeButtonTouchUpInside() {
         for music in additionalSongs {
-            playlist?.musicTracks.insert(music, atIndex: 0)
+            var  copyMusic = MusicTrack()
+            copyMusic.title = music.title
+            copyMusic.trackId = music.trackId
+            copyMusic.artist = music.artist
+            copyMusic.artworkUrl = music.artworkUrl
+            copyMusic.previewUrl = music.previewUrl
+            playlist?.musicTracks.insert(copyMusic, atIndex: 0)
         }
         navigationController?.popViewControllerAnimated(true)
     }
