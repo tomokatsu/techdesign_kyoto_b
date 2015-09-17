@@ -9,8 +9,8 @@ class ReplaceViewController: ISPViewController, UITableViewDelegate, UITableView
     @IBOutlet weak private var replacedSongTitleLabel: UILabel!
     @IBOutlet weak private var replacedSongArtistLabel: UILabel!
     private let blurView = UIVisualEffectView(effect: UIBlurEffect(style: .Dark))
-    let realm_fav = Realm(path: NSBundle.mainBundle().bundlePath + "/favorite.realm")
-    let realm_rec = Realm(path: NSBundle.mainBundle().bundlePath + "/recommend.realm")
+    let realm_fav = Realm(path: "\(NSSearchPathForDirectoriesInDomains(.DocumentDirectory, .UserDomainMask, true)[0] as! String)/favorite.realm")
+    let realm_rec = Realm(path: "\(NSSearchPathForDirectoriesInDomains(.DocumentDirectory, .UserDomainMask, true)[0] as! String)/recommend.realm")
     var favoriteMusicTracks: Results<MusicTrack>?
     var recomendMusicTracks: Results<MusicTrack>?
     var playlist: Playlist?

@@ -2,6 +2,8 @@ import Foundation
 import RealmSwift
 
 class Seeds {
+    let documentsPath = NSSearchPathForDirectoriesInDomains(.DocumentDirectory, .UserDomainMask, true)[0] as! String
+
     init(){
         if !NSUserDefaults.standardUserDefaults().boolForKey("IsSeedAdded") {
             createRecommendMusicTracks()
@@ -93,9 +95,8 @@ class Seeds {
                 previewUrl: "http://a1689.phobos.apple.com/us/r1000/120/Music/v4/b3/b1/01/b3b101c5-0afd-a536-394d-962b7012e8e1/mzaf_2968645385761922805.aac.m4a",
                 artworkUrl: "http://is1.mzstatic.com/image/thumb/Music/v4/eb/bc/02/ebbc0219-a3a1-7c77-42ed-706251b98136/UMG_cvrart_00843930007134_01_RGB72_1200x1200_12UMDIM01007.jpg/100x100bb-85.jpg"
             ))
-        println(NSBundle.mainBundle().bundlePath)
 
-        let realm = Realm(path: NSBundle.mainBundle().bundlePath + "/recommend.realm")
+        let realm = Realm(path: "\(documentsPath)/recommend.realm")
         realm.write(){
             for music in musicTracks {
                 realm.add(music)
@@ -318,9 +319,8 @@ class Seeds {
                 artworkUrl: "http://is3.mzstatic.com/image/thumb/Music/v4/34/13/02/341302ce-99ff-c788-c1b4-44d9358e53c0/UMG_cvrart_00602537011018_01_RGB72_1200x1200_12UMGIM12514.jpg/100x100bb-85.jpg"
             ))
 
-        println(NSBundle.mainBundle().bundlePath)
 
-        let realm = Realm(path: NSBundle.mainBundle().bundlePath + "/favorite.realm")
+        let realm = Realm(path: "\(documentsPath)/favorite.realm")
         realm.write(){
             for music in musicTracks {
                 realm.add(music)
@@ -332,7 +332,7 @@ class Seeds {
         var recommendPlaylists: [Playlist] = []
         var playlist: Playlist = Playlist()
 
-        playlist = createPlaylist("My Best HOUSE MUSICを聴いてほしい", comment: "とりあえず聴いてくれ、これだけは。", playlister: "DJ TAMURA", inspireNumber: 127)
+        playlist = createPlaylist("My Best HOUSE MUSICを聴いてほしい", comment: "とりあえず聴いてくれ、これだけは。", playlister: "DJ TAMURA", inspireNumber: 127, userImageUrl: "https://s3.amazonaws.com/uifaces/faces/twitter/jsa/48.jpg")
         playlist.musicTracks.append(
             createMusicTrack(
                 826860759,
@@ -399,7 +399,7 @@ class Seeds {
             ))
         recommendPlaylists.append(playlist)
 
-        playlist = createPlaylist("センチメンタルな気分をぶち壊したい時に聴いて", comment: "これ以上良い8曲は選べないよ", playlister: "DJ MIURA", inspireNumber: 324)
+        playlist = createPlaylist("センチメンタルな気分をぶち壊したい時に聴いて", comment: "これ以上良い8曲は選べないよ", playlister: "DJ MIURA", inspireNumber: 324, userImageUrl: "https://s3.amazonaws.com/uifaces/faces/twitter/minipunk/48.jpg")
         playlist.musicTracks.append(
             createMusicTrack(
                 894102341,
@@ -466,7 +466,7 @@ class Seeds {
             ))
         recommendPlaylists.append(playlist)
 
-        playlist = createPlaylist("クラブに行く前におすすめの曲達", comment: "予習くらいしていけよな！", playlister: "DJ SHIMBO", inspireNumber: 154)
+        playlist = createPlaylist("クラブに行く前におすすめの曲達", comment: "予習くらいしていけよな！", playlister: "DJ SHIMBO", inspireNumber: 154, userImageUrl: "https://s3.amazonaws.com/uifaces/faces/twitter/ladylexy/48.jpg")
         playlist.musicTracks.append(
             createMusicTrack(
                 565825199,
@@ -533,7 +533,7 @@ class Seeds {
             ))
         recommendPlaylists.append(playlist)
 
-        playlist = createPlaylist("洋楽 ~Best Of The Mix", comment: "Pitbull & Ne-Yo / Pitbull / Hardwell / Apollo / Hardwell / Hardwell /Pitbull / Pitbull", playlister: "mikematas", inspireNumber: 45)
+        playlist = createPlaylist("洋楽 ~Best Of The Mix", comment: "Pitbull & Ne-Yo / Pitbull / Hardwell / Apollo / Hardwell / Hardwell /Pitbull / Pitbull", playlister: "mikematas", inspireNumber: 45, userImageUrl: "https://s3.amazonaws.com/uifaces/faces/twitter/kolage/48.jpg")
         playlist.musicTracks.append(
             createMusicTrack(
                 933984166,
@@ -600,7 +600,7 @@ class Seeds {
             ))
         recommendPlaylists.append(playlist)
 
-        playlist = createPlaylist("クラブが嫌いな人でも聴いてほしい", comment: "本当にオススメの曲だけを集めたよ！", playlister: "Alex", inspireNumber: 67)
+        playlist = createPlaylist("クラブが嫌いな人でも聴いてほしい", comment: "本当にオススメの曲だけを集めたよ！", playlister: "Alex", inspireNumber: 67, userImageUrl:"https://s3.amazonaws.com/uifaces/faces/twitter/mutlu82/48.jpg")
         playlist.musicTracks.append(
             createMusicTrack(
                 482734113,
@@ -667,7 +667,7 @@ class Seeds {
             ))
         recommendPlaylists.append(playlist)
 
-        playlist = createPlaylist("運転中にオススメなEDM集", comment: "テンション上がってスピード出し過ぎるなよな！", playlister: "Saori", inspireNumber: 83)
+        playlist = createPlaylist("運転中にオススメなEDM集", comment: "テンション上がってスピード出し過ぎるなよな！", playlister: "Saori", inspireNumber: 83, userImageUrl:"https://s3.amazonaws.com/uifaces/faces/twitter/uxceo/48.jpg")
         playlist.musicTracks.append(
             createMusicTrack(
                 480054438,
@@ -734,7 +734,7 @@ class Seeds {
             ))
         recommendPlaylists.append(playlist)
 
-        playlist = createPlaylist("Maroon 5を中心におしゃれな曲を集めてみた", comment: "シャレオツや", playlister: "PLAYLISTER", inspireNumber: 293)
+        playlist = createPlaylist("Maroon 5を中心におしゃれな曲を集めてみた", comment: "シャレオツや", playlister: "kent", inspireNumber: 293, userImageUrl: "https://s3.amazonaws.com/uifaces/faces/twitter/claudioguglieri/48.jpg")
         playlist.musicTracks.append(
             createMusicTrack(
                 542469000,
@@ -801,7 +801,7 @@ class Seeds {
             ))
         recommendPlaylists.append(playlist)
 
-        playlist = createPlaylist("Dirty Vegas", comment: "Dirty Vegasいいね", playlister: "george", inspireNumber: 78)
+        playlist = createPlaylist("Dirty Vegas", comment: "Dirty Vegasいいね", playlister: "george", inspireNumber: 78, userImageUrl: "https://s3.amazonaws.com/uifaces/faces/twitter/michzen/48.jpg")
         playlist.musicTracks.append(
             createMusicTrack(
                 699729587,
@@ -868,7 +868,7 @@ class Seeds {
             ))
         recommendPlaylists.append(playlist)
 
-        playlist = createPlaylist("La Rouxって懐かしいよね", comment: "La Rouxの曲を集めたよ", playlister: "ケン", inspireNumber: 124)
+        playlist = createPlaylist("La Rouxって懐かしいよね", comment: "La Rouxの曲を集めたよ", playlister: "ケン", inspireNumber: 124, userImageUrl:"https://s3.amazonaws.com/uifaces/faces/twitter/joelbirch47/48.jpg")
         playlist.musicTracks.append(
             createMusicTrack(
                 331340577,
@@ -935,7 +935,7 @@ class Seeds {
             ))
         recommendPlaylists.append(playlist)
 
-        playlist = createPlaylist("Sleepy Tomって知ってる？", comment: "本当にいい曲ばかりだから聴いてみて！", playlister: "John", inspireNumber: 23)
+        playlist = createPlaylist("Sleepy Tomって知ってる？", comment: "本当にいい曲ばかりだから聴いてみて！", playlister: "John", inspireNumber: 23, userImageUrl: "https://s3.amazonaws.com/uifaces/faces/twitter/soyjavi/48.jpg")
         playlist.musicTracks.append(
             createMusicTrack(
                 1008393092,
@@ -1012,12 +1012,13 @@ class Seeds {
     }
 
 
-    func createPlaylist(title: String, comment: String, playlister: String, inspireNumber: Int) -> Playlist{
+    func createPlaylist(title: String, comment: String, playlister: String, inspireNumber: Int, userImageUrl: String) -> Playlist{
         var playlist = Playlist()
         playlist.title = title
         playlist.comment = comment
         playlist.playlister = playlister
         playlist.inspiredNumber = inspireNumber
+        playlist.userImageURL = userImageUrl
 
         return playlist
     }
