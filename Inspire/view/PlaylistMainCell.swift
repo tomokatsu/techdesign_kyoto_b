@@ -23,6 +23,7 @@ class PlaylistMainCell: ISPTableViewCell {
     }
 
     override func awakeFromNib() {
+        super.awakeFromNib()
         let screenWidth = UIScreen.mainScreen().bounds.width
         gradientView.frame = CGRectMake(0, 0, screenWidth, screenWidth)
         let gradient = CAGradientLayer()

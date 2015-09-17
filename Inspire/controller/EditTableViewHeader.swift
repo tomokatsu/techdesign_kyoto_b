@@ -34,7 +34,7 @@ class EditTableViewHeader: UITableViewHeaderFooterView, UITextFieldDelegate {
         blurView.frame = fixedFrame
         blurImageView.addSubview(blurView)
 
-        titleTextField.attributedPlaceholder = NSAttributedString(string:"タイトル(必須)", attributes:[NSForegroundColorAttributeName: UIColor(red: 219/255, green: 219/255, blue: 219/255, alpha: 0.7)])
+        titleTextField.attributedPlaceholder = NSAttributedString(string:"タイトル（必須）", attributes:[NSForegroundColorAttributeName: UIColor(red: 219/255, green: 219/255, blue: 219/255, alpha: 0.7)])
         commentTextField.attributedPlaceholder = NSAttributedString(string:"プレイリストの説明", attributes:[NSForegroundColorAttributeName: UIColor(red: 219/255, green: 219/255, blue: 219/255, alpha: 0.7)])
         titleTextField.delegate = self
         commentTextField.delegate = self

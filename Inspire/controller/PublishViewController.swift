@@ -28,7 +28,8 @@ class PublishViewController: ISPViewController, UITableViewDataSource, UITableVi
         thirdImageView.sd_setImageWithURL(NSURL(string: playlist!.musicTracks[2].artworkUrl ?? ""))
         titleLabel.text = "\(playlist!.title) inspired by \(playlist!.playlister)"
         commentLabel.text = playlist?.comment ?? ""
-        moodLabel.text = "MOOD: \(playlist!.mood)"
+        let mood = playlist!.mood == "" ? "NONE" : playlist!.mood
+        moodLabel.text = "MOOD: \(mood)"
     }
 
     func tableView(tableView: UITableView, heightForHeaderInSection section: Int) -> CGFloat {

@@ -113,10 +113,18 @@ class PlaylistViewController: ISPViewController, UITableViewDelegate, UITableVie
     func tableView(tableView: UITableView, didSelectRowAtIndexPath indexPath: NSIndexPath) {
         if indexPath.section != 2 { return }
         if playlist == PlayerManager.sharedInstance.playlist {
-            PlayerManager.sharedInstance.reset()
-            PlayerManager.sharedInstance.pause()
-            PlayerManager.sharedInstance.toPlayIndex = indexPath.row
-            PlayerManager.sharedInstance.play()
+            if indexPath.row == PlayerManager.sharedInstance.toPlayIndex {
+                if PlayerManager.sharedInstance.isPlaying() {
+                    PlayerManager.sharedInstance.pause()
+                } else {
+                    PlayerManager.sharedInstance.play()
+                }
+            } else {
+                PlayerManager.sharedInstance.reset()
+                PlayerManager.sharedInstance.pause()
+                PlayerManager.sharedInstance.toPlayIndex = indexPath.row
+                PlayerManager.sharedInstance.play()
+            }
         } else {
             PlayerManager.sharedInstance.reset()
             PlayerManager.sharedInstance.pause()
