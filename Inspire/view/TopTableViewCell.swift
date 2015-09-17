@@ -24,7 +24,10 @@ class TopTableViewCell: UITableViewCell {
         commentLabel.text = playlist?.comment
         playlisterLabel.text = playlist?.playlister
         userImageView.sd_setImageWithURL(NSURL(string: playlist!.userImageURL))
-
+        var rect = commentLabel.frame;
+        commentLabel.sizeToFit()
+        rect.size.height = CGRectGetHeight(commentLabel.frame);
+        commentLabel.frame = rect
         var artWorkURLs: [String] = []
         for track in playlist!.musicTracks {
             artWorkURLs.append(track.artworkUrl)

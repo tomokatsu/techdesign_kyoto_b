@@ -55,27 +55,81 @@ class PlaylistEditViewController: ISPViewController, UITextFieldDelegate, UITabl
         alertController.buttonBgColorHighlighted[.Default] = UIColor(red: 0.149019608, green: 0.149019608, blue: 0.164705882, alpha: 1)
         view.titleTextField.resignFirstResponder()
         view.commentTextField.resignFirstResponder()
-        alertController.addAction(DOAlertAction(title: "Happy", style: .Default) { action in
-            view.moodSelectButton.setTitle("Happy", forState: .Normal)
-            self.playlist?.mood = "Happy"
+        alertController.addAction(DOAlertAction(title: "NONE", style: .Default) { action in
+            view.moodSelectButton.setTitle("NONE", forState: .Normal)
+            self.playlist?.mood = "NONE"
+            view.moodSelectButton.setTitleColor(UIColor.whiteColor(), forState: .Normal)
+            view.pulldownImageView.hidden = true
+            })
+        alertController.addAction(DOAlertAction(title: "HAPPY", style: .Default) { action in
+            view.moodSelectButton.setTitle("HAPPY", forState: .Normal)
+            self.playlist?.mood = "HAPY"
             view.moodSelectButton.setTitleColor(UIColor.whiteColor(), forState: .Normal)
             view.pulldownImageView.hidden = true
         })
-        alertController.addAction(DOAlertAction(title: "Excited", style: .Default) { action in
-            view.moodSelectButton.setTitle("Excited", forState: .Normal)
-            self.playlist?.mood = "Excited"
+        alertController.addAction(DOAlertAction(title: "EXCITED", style: .Default) { action in
+            view.moodSelectButton.setTitle("EXCITED", forState: .Normal)
+            self.playlist?.mood = "EXCITED"
             view.moodSelectButton.setTitleColor(UIColor.whiteColor(), forState: .Normal)
             view.pulldownImageView.hidden = true
         })
-        alertController.addAction(DOAlertAction(title: "Relax", style: .Default) { action in
-            view.moodSelectButton.setTitle("Relax", forState: .Normal)
-            self.playlist?.mood = "Relax"
+        alertController.addAction(DOAlertAction(title: "RELAX", style: .Default) { action in
+            view.moodSelectButton.setTitle("RELAX", forState: .Normal)
+            self.playlist?.mood = "RELAX"
             view.moodSelectButton.setTitleColor(UIColor.whiteColor(), forState: .Normal)
             view.pulldownImageView.hidden = true
         })
-        alertController.addAction(DOAlertAction(title: "Love", style: .Default) { action in
-            view.moodSelectButton.setTitle("Love", forState: .Normal)
-            self.playlist?.mood = "Love"
+        alertController.addAction(DOAlertAction(title: "LOVE", style: .Default) { action in
+            view.moodSelectButton.setTitle("LOVE", forState: .Normal)
+            self.playlist?.mood = "LOVE"
+            view.moodSelectButton.setTitleColor(UIColor.whiteColor(), forState: .Normal)
+            view.pulldownImageView.hidden = true
+        })
+        alertController.addAction(DOAlertAction(title: "SAD", style: .Default) { action in
+            view.moodSelectButton.setTitle("SAD", forState: .Normal)
+            self.playlist?.mood = "SAD"
+            view.moodSelectButton.setTitleColor(UIColor.whiteColor(), forState: .Normal)
+            view.pulldownImageView.hidden = true
+        })
+        alertController.addAction(DOAlertAction(title: "DARK", style: .Default) { action in
+            view.moodSelectButton.setTitle("DARK", forState: .Normal)
+            self.playlist?.mood = "DARK"
+            view.moodSelectButton.setTitleColor(UIColor.whiteColor(), forState: .Normal)
+            view.pulldownImageView.hidden = true
+        })
+        alertController.addAction(DOAlertAction(title: "MORNING", style: .Default) { action in
+            view.moodSelectButton.setTitle("MORNING", forState: .Normal)
+            self.playlist?.mood = "MORNING"
+            view.moodSelectButton.setTitleColor(UIColor.whiteColor(), forState: .Normal)
+            view.pulldownImageView.hidden = true
+        })
+        alertController.addAction(DOAlertAction(title: "SLEEP", style: .Default) { action in
+            view.moodSelectButton.setTitle("SLEEP", forState: .Normal)
+            self.playlist?.mood = "SLEEP"
+            view.moodSelectButton.setTitleColor(UIColor.whiteColor(), forState: .Normal)
+            view.pulldownImageView.hidden = true
+        })
+        alertController.addAction(DOAlertAction(title: "STUDY", style: .Default) { action in
+            view.moodSelectButton.setTitle("STUDY", forState: .Normal)
+            self.playlist?.mood = "STUDY"
+            view.moodSelectButton.setTitleColor(UIColor.whiteColor(), forState: .Normal)
+            view.pulldownImageView.hidden = true
+        })
+        alertController.addAction(DOAlertAction(title: "WORKOUT", style: .Default) { action in
+            view.moodSelectButton.setTitle("WORKOUT", forState: .Normal)
+            self.playlist?.mood = "WORKOUT"
+            view.moodSelectButton.setTitleColor(UIColor.whiteColor(), forState: .Normal)
+            view.pulldownImageView.hidden = true
+        })
+        alertController.addAction(DOAlertAction(title: "PARTY", style: .Default) { action in
+            view.moodSelectButton.setTitle("PARTY", forState: .Normal)
+            self.playlist?.mood = "PARTY"
+            view.moodSelectButton.setTitleColor(UIColor.whiteColor(), forState: .Normal)
+            view.pulldownImageView.hidden = true
+        })
+        alertController.addAction(DOAlertAction(title: "DRIVE", style: .Default) { action in
+            view.moodSelectButton.setTitle("DRIVE", forState: .Normal)
+            self.playlist?.mood = "DRIVE"
             view.moodSelectButton.setTitleColor(UIColor.whiteColor(), forState: .Normal)
             view.pulldownImageView.hidden = true
         })
@@ -83,7 +137,7 @@ class PlaylistEditViewController: ISPViewController, UITextFieldDelegate, UITabl
         })
         presentViewController(alertController, animated: true, completion: nil)
         dispatch_after(dispatch_time(DISPATCH_TIME_NOW, Int64(0.1 * Double(NSEC_PER_SEC))), dispatch_get_main_queue()) {
-            let separatorView = UIView(frame: CGRectMake(0, alertController.buttonAreaScrollView.frame.height - 55, UIScreen.mainScreen().bounds.width, 0.3))
+            let separatorView = UIView(frame: CGRectMake(0, alertController.buttonAreaScrollView.frame.height + 220, UIScreen.mainScreen().bounds.width, 0.3))
             separatorView.backgroundColor = UIColor(red: 71/255, green: 71/255, blue: 75/255, alpha: 1)
             alertController.buttonAreaScrollView.addSubview(separatorView)
             alertController.buttonAreaScrollView.bringSubviewToFront(separatorView)
