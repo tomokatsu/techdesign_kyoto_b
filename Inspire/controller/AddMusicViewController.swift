@@ -7,8 +7,8 @@ class AddMusicViewController: ISPViewController, UITableViewDelegate, UITableVie
     var playlist: Playlist?
     var recomendSongs: List<MusicTrack>?
     var favoriteSongs: Results<MusicTrack>?
-    let realm_fav = Realm(path: NSBundle.mainBundle().bundlePath + "/favorite.realm")
-    let realm_rec = Realm(path: NSBundle.mainBundle().bundlePath + "/recommend.realm")
+    let realm_fav = Realm(path: "\(NSSearchPathForDirectoriesInDomains(.DocumentDirectory, .UserDomainMask, true)[0] as! String)/favorite.realm")
+    let realm_rec = Realm(path: "\(NSSearchPathForDirectoriesInDomains(.DocumentDirectory, .UserDomainMask, true)[0] as! String)/recommend.realm")
     var checked: [Bool] = []
     private var additionalSongs = List<MusicTrack>()
 
